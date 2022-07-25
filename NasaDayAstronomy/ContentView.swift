@@ -9,30 +9,53 @@ import SwiftUI
 
 struct ContentView: View {
 	@EnvironmentObject var astronomy: AstronomiApi
-    var body: some View {
-        VStack {
-			if astronomy.nasaReponses.isEmpty {
-				Text("Ya zebi")
-			}else {
-				ForEach(astronomy.nasaReponses, id: \.self) { response in
-					Text(response.title)
-					Text(response.copyright)
-					Text(response.date)
+	var body: some View {
+		NavigationStack {
+			ScrollView(.vertical, showsIndicators: false) {
+				if astronomy.nasaReponses.isEmpty {
+					ProgressView()
+				}else {
+					ForEach(astronomy.nasaReponses, id: \.self) { response in
+
+						HStack {
+							Text(response.title)
+								.font(.title3.bold())
+
+							Spacer()
+							Text(response.date)
+								.foregroundStyle(.secondary)
+						}.padding(.horizontal)
+
+						AstronomyImageView(astronomy: response)
+						VStack(alignment: .leading, spacing: 10) {
+							Text("Explanation:")
+								.font(.headline)
+							Text(response.explanation)
+						}
+							.padding()
+							.background(.thinMaterial)
+							   .clipShape(RoundedRectangle(cornerRadius: 10))
+							   .padding(.horizontal, 5)
+
+					}
 				}
 			}
-		}.task {
+			.navigationTitle("Astronomy Picture of the Day")
+			.navigationBarTitleDisplayMode(.inline)
+		}
+		.task {
 			do {
 				try await astronomy.nasaApiCall()
 			}catch {
 				print("Error, \(error)")
 			}
 		}
-    }
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+	static var previews: some View {
+		ContentView()
 			.environmentObject(AstronomiApi())
-    }
+	}
 }

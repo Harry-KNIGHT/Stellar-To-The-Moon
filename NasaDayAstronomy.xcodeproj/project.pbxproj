@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* AstronomyImageView.swift */; };
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
 		3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA110288E759A00AB15C7 /* ContentView.swift */; };
 		3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA112288E759B00AB15C7 /* Assets.xcassets */; };
 		3CDBA116288E759B00AB15C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */; };
 		3CDBA139288E75BA00AB15C7 /* AstronomyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA138288E75BA00AB15C7 /* AstronomyModel.swift */; };
-		3CDBA13B288E75C400AB15C7 /* AstronomiApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA13A288E75C400AB15C7 /* AstronomiApi.swift */; };
+		3CDBA13B288E75C400AB15C7 /* AstronomyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA13A288E75C400AB15C7 /* AstronomyApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C5555CA288F12640093122A /* AstronomyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageView.swift; sourceTree = "<group>"; };
 		3CDBA10B288E759A00AB15C7 /* NasaDayAstronomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaDayAstronomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDayAstronomyApp.swift; sourceTree = "<group>"; };
 		3CDBA110288E759A00AB15C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		3CDBA11B288E759B00AB15C7 /* NasaDayAstronomyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaDayAstronomyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDBA125288E759B00AB15C7 /* NasaDayAstronomyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaDayAstronomyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDBA138288E75BA00AB15C7 /* AstronomyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronomyModel.swift; sourceTree = "<group>"; };
-		3CDBA13A288E75C400AB15C7 /* AstronomiApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronomiApi.swift; sourceTree = "<group>"; };
+		3CDBA13A288E75C400AB15C7 /* AstronomyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronomyApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,8 @@
 				3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */,
 				3CDBA110288E759A00AB15C7 /* ContentView.swift */,
 				3CDBA138288E75BA00AB15C7 /* AstronomyModel.swift */,
-				3CDBA13A288E75C400AB15C7 /* AstronomiApi.swift */,
+				3CDBA13A288E75C400AB15C7 /* AstronomyApi.swift */,
+				3C5555CA288F12640093122A /* AstronomyImageView.swift */,
 				3CDBA112288E759B00AB15C7 /* Assets.xcassets */,
 				3CDBA114288E759B00AB15C7 /* Preview Content */,
 			);
@@ -238,10 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */,
 				3CDBA139288E75BA00AB15C7 /* AstronomyModel.swift in Sources */,
 				3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
-				3CDBA13B288E75C400AB15C7 /* AstronomiApi.swift in Sources */,
+				3CDBA13B288E75C400AB15C7 /* AstronomyApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
