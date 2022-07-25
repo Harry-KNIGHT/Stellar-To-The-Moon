@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-	@EnvironmentObject var astronomy: AstronomiApi
+	@StateObject var astronomy: AstronomiApi = AstronomiApi()
 	var body: some View {
 		NavigationStack {
 			ScrollView(.vertical, showsIndicators: false) {
