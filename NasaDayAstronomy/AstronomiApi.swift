@@ -8,7 +8,7 @@
 import Foundation
 
 class AstronomiApi: ObservableObject {
-	@Published public var nasaReponses = [NasaAstronomyResponse]()
+    @Published public var nasaReponses: [NasaAstronomyResponse] = []
 	
 	enum ApiError: Error {
 		case urlNotFound, dataError, badHttpResponse
@@ -29,10 +29,10 @@ class AstronomiApi: ObservableObject {
 				return
 			}
 
-			if let decodedResponse = try? JSONDecoder().decode([NasaAstronomyResponse].self, from: data) {
+            if let decodedResponse = try? JSONDecoder().decode(NasaAstronomyResponse.self, from: data) {
 				DispatchQueue.main.async {
 					print("Decoded response")
-					self.nasaReponses = decodedResponse
+                    self.nasaReponses.append(decodedResponse)
 				}
 			}
 		} catch {
