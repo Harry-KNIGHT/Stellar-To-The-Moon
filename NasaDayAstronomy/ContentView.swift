@@ -24,9 +24,21 @@ struct ContentView: View {
 							Spacer()
 							Text(response.date)
 								.foregroundStyle(.secondary)
-						}.padding(.horizontal)
+						}
 
-						AstronomyImageView(astronomy: response)
+						if response.mediaType == "video" {
+							VideoView(videoID: response.url)
+								.frame(minHeight: 450, maxHeight: 800)
+								.cornerRadius(15)
+							HStack {
+								Text("Copyright: \(response.copyright)")
+									.foregroundStyle(.secondary)
+								Spacer()
+							}
+						} else {
+							AstronomyImageView(astronomy: response)
+						}
+
 						VStack(alignment: .leading, spacing: 10) {
 							Text("Explanation:")
 								.font(.headline)
@@ -34,12 +46,13 @@ struct ContentView: View {
 						}
 							.padding()
 							.background(.thinMaterial)
-							   .clipShape(RoundedRectangle(cornerRadius: 10))
-							   .padding(.horizontal, 5)
+							.clipShape(RoundedRectangle(cornerRadius: 10))
 
+					
 					}
 				}
 			}
+			.padding(.horizontal, 5)
 			.navigationTitle("Astronomy Picture of the Day")
 			.navigationBarTitleDisplayMode(.inline)
 		}
