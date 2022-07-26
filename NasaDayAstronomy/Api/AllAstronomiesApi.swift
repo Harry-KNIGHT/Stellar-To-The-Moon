@@ -11,9 +11,16 @@ class AllAstronomiesApi: ObservableObject {
 	@Published var allAstronomies = [NasaAstronomyResponse]()
 
 
-	func fetchAstronomiesObject() async {
+	func fetchAstronomiesObject(to today: Date) async {
+		let  today = Date()
+		let formatter = DateFormatter()
+
+		formatter.dateFormat = "yyyy-MM-dd"
+		let dateString = formatter.string(from: today)
+		print(dateString)
+
 		let apiKey: String = "wHAZImKgLhzz4TzarBAWeznXG1TOSiUh3DqnrobZ"
-		let url: String = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&start_date=2022-06-06&end_date=2022-07-26"
+		let url: String = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&start_date=2022-06-06&end_date=\(dateString)"
 
 		guard let url = URL(string: url) else {
 			return

@@ -47,7 +47,7 @@ struct AstronomyList: View {
 			}
 		}
 		.task {
-			await astronomiesApi.fetchAstronomiesObject()
+			await astronomiesApi.fetchAstronomiesObject(to: Date.now)
 			  }
     }
 
