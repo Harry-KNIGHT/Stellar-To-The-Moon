@@ -12,7 +12,7 @@ struct AstronomyImageView: View {
 	@Environment(\.colorScheme) var colorScheme
 	var body: some View {
 		ZStack(alignment: .bottomTrailing) {
-			AsyncImage(url: URL(string:astronomy.hdurl)) { image in
+			AsyncImage(url: URL(string:astronomy.hdurl ?? "")) { image in
 				image
 					.resizable()
 					.frame(maxHeight: 500)
