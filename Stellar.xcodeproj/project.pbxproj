@@ -10,6 +10,9 @@
 		3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* AstronomyImageView.swift */; };
 		3C5555CD288F21440093122A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5555CC288F21440093122A /* README.md */; };
 		3C5555CF288FCDA30093122A /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CE288FCDA30093122A /* VideoView.swift */; };
+		3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D0289057E80093122A /* AstronomyDetailView.swift */; };
+		3C5555D3289058C50093122A /* AstronomyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D2289058C50093122A /* AstronomyList.swift */; };
+		3C5555D6289058FF0093122A /* AllAstronomiesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* AllAstronomiesApi.swift */; };
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
 		3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA110288E759A00AB15C7 /* ContentView.swift */; };
 		3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA112288E759B00AB15C7 /* Assets.xcassets */; };
@@ -39,13 +42,16 @@
 		3C5555CA288F12640093122A /* AstronomyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageView.swift; sourceTree = "<group>"; };
 		3C5555CC288F21440093122A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3C5555CE288FCDA30093122A /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		3CDBA10B288E759A00AB15C7 /* NasaDayAstronomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaDayAstronomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5555D0289057E80093122A /* AstronomyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDetailView.swift; sourceTree = "<group>"; };
+		3C5555D2289058C50093122A /* AstronomyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyList.swift; sourceTree = "<group>"; };
+		3C5555D5289058FF0093122A /* AllAstronomiesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAstronomiesApi.swift; sourceTree = "<group>"; };
+		3CDBA10B288E759A00AB15C7 /* Stellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDayAstronomyApp.swift; sourceTree = "<group>"; };
 		3CDBA110288E759A00AB15C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3CDBA112288E759B00AB15C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3CDBA11B288E759B00AB15C7 /* NasaDayAstronomyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaDayAstronomyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CDBA125288E759B00AB15C7 /* NasaDayAstronomyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaDayAstronomyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CDBA11B288E759B00AB15C7 /* StellarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StellarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CDBA125288E759B00AB15C7 /* StellarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StellarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDBA138288E75BA00AB15C7 /* AstronomyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronomyModel.swift; sourceTree = "<group>"; };
 		3CDBA13A288E75C400AB15C7 /* AstronomyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronomyApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +81,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C5555D4289058D80093122A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				3CDBA13A288E75C400AB15C7 /* AstronomyApi.swift */,
+				3C5555D5289058FF0093122A /* AllAstronomiesApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		3C5555D72890597B0093122A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CDBA138288E75BA00AB15C7 /* AstronomyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3C5555D8289059880093122A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CDBA110288E759A00AB15C7 /* ContentView.swift */,
+				3C5555D2289058C50093122A /* AstronomyList.swift */,
+				3C5555D0289057E80093122A /* AstronomyDetailView.swift */,
+				3CBF0C4028906B3100010691 /* ImageVideoView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CBF0C4028906B3100010691 /* ImageVideoView */ = {
+			isa = PBXGroup;
+			children = (
+				3C5555CA288F12640093122A /* AstronomyImageView.swift */,
+				3C5555CE288FCDA30093122A /* VideoView.swift */,
+			);
+			path = ImageVideoView;
+			sourceTree = "<group>";
+		};
 		3CDBA102288E759A00AB15C7 = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +129,9 @@
 		3CDBA10C288E759A00AB15C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3CDBA10B288E759A00AB15C7 /* NasaDayAstronomy.app */,
-				3CDBA11B288E759B00AB15C7 /* NasaDayAstronomyTests.xctest */,
-				3CDBA125288E759B00AB15C7 /* NasaDayAstronomyUITests.xctest */,
+				3CDBA10B288E759A00AB15C7 /* Stellar.app */,
+				3CDBA11B288E759B00AB15C7 /* StellarTests.xctest */,
+				3CDBA125288E759B00AB15C7 /* StellarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,11 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */,
-				3CDBA110288E759A00AB15C7 /* ContentView.swift */,
-				3C5555CE288FCDA30093122A /* VideoView.swift */,
-				3CDBA138288E75BA00AB15C7 /* AstronomyModel.swift */,
-				3CDBA13A288E75C400AB15C7 /* AstronomyApi.swift */,
-				3C5555CA288F12640093122A /* AstronomyImageView.swift */,
+				3C5555D8289059880093122A /* View */,
+				3C5555D72890597B0093122A /* Model */,
+				3C5555D4289058D80093122A /* Api */,
 				3C5555CC288F21440093122A /* README.md */,
 				3CDBA112288E759B00AB15C7 /* Assets.xcassets */,
 				3CDBA114288E759B00AB15C7 /* Preview Content */,
@@ -120,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3CDBA10A288E759A00AB15C7 /* NasaDayAstronomy */ = {
+		3CDBA10A288E759A00AB15C7 /* Stellar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CDBA12F288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "NasaDayAstronomy" */;
+			buildConfigurationList = 3CDBA12F288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "Stellar" */;
 			buildPhases = (
 				3CDBA107288E759A00AB15C7 /* Sources */,
 				3CDBA108288E759A00AB15C7 /* Frameworks */,
@@ -132,14 +173,14 @@
 			);
 			dependencies = (
 			);
-			name = NasaDayAstronomy;
+			name = Stellar;
 			productName = NasaDayAstronomy;
-			productReference = 3CDBA10B288E759A00AB15C7 /* NasaDayAstronomy.app */;
+			productReference = 3CDBA10B288E759A00AB15C7 /* Stellar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3CDBA11A288E759B00AB15C7 /* NasaDayAstronomyTests */ = {
+		3CDBA11A288E759B00AB15C7 /* StellarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CDBA132288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "NasaDayAstronomyTests" */;
+			buildConfigurationList = 3CDBA132288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "StellarTests" */;
 			buildPhases = (
 				3CDBA117288E759B00AB15C7 /* Sources */,
 				3CDBA118288E759B00AB15C7 /* Frameworks */,
@@ -150,14 +191,14 @@
 			dependencies = (
 				3CDBA11D288E759B00AB15C7 /* PBXTargetDependency */,
 			);
-			name = NasaDayAstronomyTests;
+			name = StellarTests;
 			productName = NasaDayAstronomyTests;
-			productReference = 3CDBA11B288E759B00AB15C7 /* NasaDayAstronomyTests.xctest */;
+			productReference = 3CDBA11B288E759B00AB15C7 /* StellarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3CDBA124288E759B00AB15C7 /* NasaDayAstronomyUITests */ = {
+		3CDBA124288E759B00AB15C7 /* StellarUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CDBA135288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "NasaDayAstronomyUITests" */;
+			buildConfigurationList = 3CDBA135288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "StellarUITests" */;
 			buildPhases = (
 				3CDBA121288E759B00AB15C7 /* Sources */,
 				3CDBA122288E759B00AB15C7 /* Frameworks */,
@@ -168,9 +209,9 @@
 			dependencies = (
 				3CDBA127288E759B00AB15C7 /* PBXTargetDependency */,
 			);
-			name = NasaDayAstronomyUITests;
+			name = StellarUITests;
 			productName = NasaDayAstronomyUITests;
-			productReference = 3CDBA125288E759B00AB15C7 /* NasaDayAstronomyUITests.xctest */;
+			productReference = 3CDBA125288E759B00AB15C7 /* StellarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3CDBA106288E759A00AB15C7 /* Build configuration list for PBXProject "NasaDayAstronomy" */;
+			buildConfigurationList = 3CDBA106288E759A00AB15C7 /* Build configuration list for PBXProject "Stellar" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -209,9 +250,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3CDBA10A288E759A00AB15C7 /* NasaDayAstronomy */,
-				3CDBA11A288E759B00AB15C7 /* NasaDayAstronomyTests */,
-				3CDBA124288E759B00AB15C7 /* NasaDayAstronomyUITests */,
+				3CDBA10A288E759A00AB15C7 /* Stellar */,
+				3CDBA11A288E759B00AB15C7 /* StellarTests */,
+				3CDBA124288E759B00AB15C7 /* StellarUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,9 +291,12 @@
 			files = (
 				3C5555CF288FCDA30093122A /* VideoView.swift in Sources */,
 				3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */,
+				3C5555D6289058FF0093122A /* AllAstronomiesApi.swift in Sources */,
+				3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */,
 				3CDBA139288E75BA00AB15C7 /* AstronomyModel.swift in Sources */,
 				3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
+				3C5555D3289058C50093122A /* AstronomyList.swift in Sources */,
 				3CDBA13B288E75C400AB15C7 /* AstronomyApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,12 +320,12 @@
 /* Begin PBXTargetDependency section */
 		3CDBA11D288E759B00AB15C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3CDBA10A288E759A00AB15C7 /* NasaDayAstronomy */;
+			target = 3CDBA10A288E759A00AB15C7 /* Stellar */;
 			targetProxy = 3CDBA11C288E759B00AB15C7 /* PBXContainerItemProxy */;
 		};
 		3CDBA127288E759B00AB15C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3CDBA10A288E759A00AB15C7 /* NasaDayAstronomy */;
+			target = 3CDBA10A288E759A00AB15C7 /* Stellar */;
 			targetProxy = 3CDBA126288E759B00AB15C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -412,11 +456,13 @@
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,11 +487,13 @@
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,7 +523,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NasaDayAstronomy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NasaDayAstronomy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stellar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stellar";
 			};
 			name = Debug;
 		};
@@ -495,7 +543,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NasaDayAstronomy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NasaDayAstronomy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stellar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stellar";
 			};
 			name = Release;
 		};
@@ -538,7 +586,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3CDBA106288E759A00AB15C7 /* Build configuration list for PBXProject "NasaDayAstronomy" */ = {
+		3CDBA106288E759A00AB15C7 /* Build configuration list for PBXProject "Stellar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CDBA12D288E759B00AB15C7 /* Debug */,
@@ -547,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CDBA12F288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "NasaDayAstronomy" */ = {
+		3CDBA12F288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "Stellar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CDBA130288E759B00AB15C7 /* Debug */,
@@ -556,7 +604,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CDBA132288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "NasaDayAstronomyTests" */ = {
+		3CDBA132288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "StellarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CDBA133288E759B00AB15C7 /* Debug */,
@@ -565,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CDBA135288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "NasaDayAstronomyUITests" */ = {
+		3CDBA135288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "StellarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CDBA136288E759B00AB15C7 /* Debug */,

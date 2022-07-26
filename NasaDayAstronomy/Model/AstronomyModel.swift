@@ -8,7 +8,8 @@
 import Foundation
 
 struct NasaAstronomyResponse: Hashable, Codable {
-	let copyright, date, explanation: String
+	let copyright: String?
+	let date, explanation: String
 	let hdurl: String?
 	let mediaType, serviceVersion, title: String
 	let url: String

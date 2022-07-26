@@ -9,23 +9,17 @@ import SwiftUI
 
 struct AstronomyImageView: View {
 	let astronomy: NasaAstronomyResponse
-	@Environment(\.colorScheme) var colorScheme
+	var maxHeight: CGFloat = 500
 	var body: some View {
 		ZStack(alignment: .bottomTrailing) {
 			AsyncImage(url: URL(string:astronomy.hdurl ?? "")) { image in
 				image
 					.resizable()
-					.frame(maxHeight: 500)
-					.clipShape(RoundedRectangle(cornerRadius: 20))
-					.padding(5)
+					.scaledToFill()
+					.frame(maxHeight: maxHeight)
 			} placeholder: {
 				ProgressView()
 			}
-			Text(astronomy.copyright)
-				.font(.caption)
-				.foregroundColor(colorScheme == .dark ? .white : .primary)
-				.padding([.all], 5)
-			   .background(colorScheme == .dark ? .black : .white)
 		}
 	}
 }
