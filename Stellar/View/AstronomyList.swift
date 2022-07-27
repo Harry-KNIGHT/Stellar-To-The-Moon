@@ -33,13 +33,8 @@ struct AstronomyList: View {
 						}
 					}
 				}
-			}
+			}.navigationTitle("Stellar")
 			.toolbar {
-				ToolbarItem(placement: .principal) {
-					Text("🪐")
-						.font(.title3)
-				}
-
 				ToolbarItem(placement: .navigationBarTrailing) {
 					Button(action: {
 						showSheet.toggle()

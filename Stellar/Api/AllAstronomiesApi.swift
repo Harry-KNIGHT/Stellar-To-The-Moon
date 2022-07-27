@@ -10,17 +10,26 @@ import SwiftUI
 class AllAstronomiesApi: ObservableObject {
 	@Published var allAstronomies = [NasaAstronomyResponse]()
 
-
-	func fetchAstronomiesObject(to today: Date) async {
-		let  today = Date()
+	func fetchAstronomiesObject(from hundredDayBefore: Int64 = Date().millisecondsSince1970 , to today: Date) async {
 		let formatter = DateFormatter()
-
 		formatter.dateFormat = "yyyy-MM-dd"
+
+		//100 days ago converter
+		let epochHundredDaysAgo: Int64 = 5184000000 // 60 days in milliseconds
+		let todayMinusHundredDay = (hundredDayBefore - epochHundredDaysAgo)
+		let hundredDayAgoDateType = Date(milliseconds: todayMinusHundredDay)
+		let hundredDayAgo = formatter.string(from: hundredDayAgoDateType)
+
+		// Today time converter
+		let  today = Date()
+
 		let dateString = formatter.string(from: today)
 		print(dateString)
 
+
+
 		let apiKey: String = "wHAZImKgLhzz4TzarBAWeznXG1TOSiUh3DqnrobZ"
-		let url: String = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&start_date=2022-06-06&end_date=\(dateString)"
+		let url: String = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&start_date=\(hundredDayAgo)&end_date=\(dateString)"
 
 		guard let url = URL(string: url) else {
 			return
@@ -43,5 +52,16 @@ class AllAstronomiesApi: ObservableObject {
 		} catch {
 			print("Something wrong append")
 		}
+	}
+}
+
+
+extension Date {
+	var millisecondsSince1970: Int64 {
+		Int64((self.timeIntervalSince1970 * 1000.0).rounded())
+	}
+
+	init(milliseconds: Int64) {
+		self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
 	}
 }

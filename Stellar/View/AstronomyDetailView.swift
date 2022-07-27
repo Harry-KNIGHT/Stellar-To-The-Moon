@@ -50,7 +50,7 @@ struct AstronomyDetailView: View {
 					}, label: {
 						Label("Add article to favorite", systemImage: favoriteVM.favoriteAstronomyArticles.contains(astronomyObject) ? "star.fill" : "star")
 							.foregroundColor(.primary)
-							.font(.headline)
+							.font(.title3)
 					})
 				}
 			}
