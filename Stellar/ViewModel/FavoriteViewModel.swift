@@ -33,6 +33,7 @@ class FavoriteViewModel: ObservableObject {
 
 	func deletFavorite(at offsets: IndexSet) {
 		favoriteAstronomyArticles.remove(atOffsets: offsets)
+		save()
 	}
 
 	func deletSelectedFavorite(article: NasaAstronomyResponse) {
@@ -41,6 +42,7 @@ class FavoriteViewModel: ObservableObject {
 
 	func moveFavorite(from index: IndexSet, to offset: Int) {
 		self.favoriteAstronomyArticles.move(fromOffsets: index, toOffset: offset)
+		save()
 	}
 
 	func addOrDeletFavorite(article: NasaAstronomyResponse) {
