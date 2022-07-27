@@ -8,7 +8,24 @@
 import Foundation
 
 class FavoriteViewModel: ObservableObject {
-	@Published public var favoriteAstronomyArticles = [NasaAstronomyResponse]()
+	@Published public var favoriteAstronomyArticles: [NasaAstronomyResponse]
+
+	init() {
+		if let data = UserDefaults.standard.data(forKey: "SavedData") {
+			if let decoded = try? JSONDecoder().decode([NasaAstronomyResponse].self, from: data) {
+				favoriteAstronomyArticles = decoded
+				return
+			}
+		}
+		// No Saved data
+		favoriteAstronomyArticles = []
+	}
+
+	func save() {
+		if let encoded = try? JSONEncoder().encode(favoriteAstronomyArticles) {
+			UserDefaults.standard.set(encoded, forKey: "SavedData")
+		}
+	}
 
 	func addToFavorite(article: NasaAstronomyResponse) {
 		self.favoriteAstronomyArticles.append(article)
@@ -29,8 +46,10 @@ class FavoriteViewModel: ObservableObject {
 	func addOrDeletFavorite(article: NasaAstronomyResponse) {
 		if self.favoriteAstronomyArticles.contains(article) {
 			deletSelectedFavorite(article: article)
+			save()
 		}else {
 			addToFavorite(article: article)
+			save()
 		}
 	}
 }
