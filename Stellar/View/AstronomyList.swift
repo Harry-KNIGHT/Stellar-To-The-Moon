@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AstronomyList: View {
 	@EnvironmentObject public var astronomiesApi: AllAstronomiesApi
-
+	@State private var showSheet = false
     var body: some View {
 		NavigationView {
 			VStack {
@@ -23,17 +23,7 @@ struct AstronomyList: View {
 					List {
 						ForEach(astronomiesApi.allAstronomies.reversed(), id: \.date) { astronomy in
 							NavigationLink(destination: AstronomyDetailView(astronomyObject: astronomy)) {
-								VStack(alignment: .leading, spacing: 3) {
-									Text(astronomy.title)
-										.font(.headline)
-									Text(astronomy.date)
-										.font(.callout)
-										.foregroundStyle(.secondary)
-									Text(astronomy.explanation)
-										.font(.body)
-										.foregroundColor(.secondary)
-										.lineLimit(2)
-								}
+								ListRowCell(title: astronomy.title, date: astronomy.date, explanation: astronomy.explanation)
 							}
 						}
 					}
@@ -43,6 +33,19 @@ struct AstronomyList: View {
 				ToolbarItem(placement: .principal) {
 					Text("🪐")
 						.font(.title3)
+				}
+
+				ToolbarItem(placement: .navigationBarTrailing) {
+					Button(action: {
+						showSheet.toggle()
+
+					}, label: {
+						Label("Add article to favorite", systemImage: "star.fill")
+							.font(.title3)
+							.foregroundColor(.primary)
+					}).sheet(isPresented: $showSheet) {
+						FavoritesList()
+					}
 				}
 			}
 		}
@@ -59,4 +62,23 @@ struct AstronomyList_Previews: PreviewProvider {
 			.environmentObject(AllAstronomiesApi())
 
     }
+}
+
+struct ListRowCell: View {
+	var title: String
+	var date: String
+	var explanation: String
+	var body: some View {
+		VStack(alignment: .leading, spacing: 3) {
+			Text(title)
+				.font(.headline)
+			Text(date)
+				.font(.callout)
+				.foregroundStyle(.secondary)
+			Text(explanation)
+				.font(.body)
+				.foregroundColor(.secondary)
+				.lineLimit(2)
+		}
+	}
 }
