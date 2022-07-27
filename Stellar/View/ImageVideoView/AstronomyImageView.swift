@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct AstronomyImageView: View {
 	let astronomy: NasaAstronomyResponse
 	var maxHeight: CGFloat = 500
+	@State private var isLoadingVisible = true
 	var body: some View {
 		ZStack(alignment: .bottomTrailing) {
 			AsyncImage(url: URL(string:astronomy.hdurl ?? "")) { image in
@@ -18,7 +20,9 @@ struct AstronomyImageView: View {
 					.scaledToFill()
 					.frame(maxHeight: maxHeight)
 			} placeholder: {
-				ProgressView()
+				ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
+					.frame(width: 100, height: 50)
+					.foregroundColor(.primary)
 			}
 		}
 	}
