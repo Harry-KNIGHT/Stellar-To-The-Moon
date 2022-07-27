@@ -16,6 +16,7 @@
 		3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */; };
 		3CBF0C452891371E00010691 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C442891371E00010691 /* FavoritesList.swift */; };
 		3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4628913B5700010691 /* EmptyView.swift */; };
+		3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */; };
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
 		3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA110288E759A00AB15C7 /* ContentView.swift */; };
 		3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA112288E759B00AB15C7 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +193,9 @@
 			dependencies = (
 			);
 			name = Stellar;
+			packageProductDependencies = (
+				3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */,
+			);
 			productName = NasaDayAstronomy;
 			productReference = 3CDBA10B288E759A00AB15C7 /* Stellar.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 3CDBA102288E759A00AB15C7;
+			packageReferences = (
+				3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+			);
 			productRefGroup = 3CDBA10C288E759A00AB15C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -643,6 +651,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3CDBA103288E759A00AB15C7 /* Project object */;
 }
