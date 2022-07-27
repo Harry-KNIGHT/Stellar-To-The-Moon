@@ -30,7 +30,7 @@ struct FavoritesList: View {
 					}
 				}
 			}
-		}
+		}.navigationTitle("Favoris")
 	}
 }
 
