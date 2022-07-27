@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct AstronomyList: View {
 	@EnvironmentObject public var astronomiesApi: AllAstronomiesApi
 	@State private var showSheet = false
+	@State private var showLoadingIndicator = true
+	var linewidth: CGFloat = 5
     var body: some View {
 		NavigationView {
 			VStack {
@@ -17,7 +20,9 @@ struct AstronomyList: View {
 				Text("Stellar is loading data...")
 					.font(.title3.bold())
 					.foregroundStyle(.primary)
-				ProgressView()
+				ActivityIndicatorView(isVisible: $showLoadingIndicator, type: .growingArc(lineWidth: linewidth))
+					.foregroundColor(.red)
+					.frame(width: 50.0, height: 50.0)
 			}else {
 
 					List {
