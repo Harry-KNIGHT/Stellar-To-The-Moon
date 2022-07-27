@@ -17,6 +17,13 @@ struct FavoritesList: View {
 						ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
 					}
 				}
+				.onDelete(perform: favoriteVM.deletFavorite)
+				.onMove(perform: favoriteVM.moveFavorite)
+			}
+			.toolbar {
+				ToolbarItem(placement: .navigationBarLeading) {
+					EditButton()
+				}
 			}
 		}
 	}
