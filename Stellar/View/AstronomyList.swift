@@ -12,17 +12,11 @@ struct AstronomyList: View {
 	@EnvironmentObject public var astronomiesApi: AllAstronomiesApi
 	@State private var showSheet = false
 	@State private var showLoadingIndicator = true
-	var linewidth: CGFloat = 5
 	var body: some View {
 		NavigationView {
 			VStack {
 				if astronomiesApi.allAstronomies.isEmpty {
-					Text("Stellar is loading data...")
-						.font(.title3.bold())
-						.foregroundStyle(.primary)
-					ActivityIndicatorView(isVisible: $showLoadingIndicator, type: .growingArc(lineWidth: linewidth))
-						.foregroundColor(.red)
-						.frame(width: 50.0, height: 50.0)
+					LoadingView()
 				}else {
 					List {
 						ForEach(astronomiesApi.allAstronomies.reversed(), id: \.date) { astronomy in
@@ -33,19 +27,20 @@ struct AstronomyList: View {
 					}
 				}
 			}
-			.navigationTitle("Stellar")
+
+			.navigationTitle(astronomiesApi.allAstronomies.isEmpty ? "" : "Stellar")
 			.toolbar {
 				ToolbarItem(placement: .navigationBarTrailing) {
-					Button(action: {
-						showSheet.toggle()
+						Button(action: {
+							showSheet.toggle()
 
-					}, label: {
-						Label("Add article to favorite", systemImage: "star.fill")
-							.font(.title3)
-							.foregroundColor(.primary)
-					}).sheet(isPresented: $showSheet) {
-						FavoritesList()
-					}
+						}, label: {
+							Label("Add article to favorite", systemImage: astronomiesApi.allAstronomies.isEmpty ? "" : "star.fill")
+								.font(.title3)
+								.foregroundColor(.primary)
+						}).sheet(isPresented: $showSheet) {
+							FavoritesList()
+						}
 				}
 			}
 		}.refreshable {
