@@ -9,8 +9,13 @@ import SwiftUI
 
 struct EmptyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+		VStack {
+			Text("Aucun favoris ")
+			Image(systemName: "star.slash")
+		}
+		.font(.largeTitle)
+		.foregroundStyle(.secondary)
+	}
 }
 
 struct EmptyView_Previews: PreviewProvider {

@@ -11,18 +11,23 @@ struct FavoritesList: View {
 	@EnvironmentObject public var favoriteVM: FavoriteViewModel
 	var body: some View {
 		NavigationView {
-			List {
-				ForEach(favoriteVM.favoriteAstronomyArticles, id: \.self) { article in
-					NavigationLink(destination: AstronomyDetailView(astronomyObject: article)) {
-						ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
+			if favoriteVM.favoriteAstronomyArticles.isEmpty {
+				EmptyView()
+
+			}else {
+				List {
+					ForEach(favoriteVM.favoriteAstronomyArticles, id: \.self) { article in
+						NavigationLink(destination: AstronomyDetailView(astronomyObject: article)) {
+							ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
+						}
 					}
+					.onDelete(perform: favoriteVM.deletFavorite)
+					.onMove(perform: favoriteVM.moveFavorite)
 				}
-				.onDelete(perform: favoriteVM.deletFavorite)
-				.onMove(perform: favoriteVM.moveFavorite)
-			}
-			.toolbar {
-				ToolbarItem(placement: .navigationBarLeading) {
-					EditButton()
+				.toolbar {
+					ToolbarItem(placement: .navigationBarLeading) {
+						EditButton()
+					}
 				}
 			}
 		}
