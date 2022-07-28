@@ -13,19 +13,18 @@ struct PeopleInSpaceView: View {
 		NavigationView {
 			List {
 				ForEach(peopleApi.spacePeoples, id: \.self) { p in
-
-					ForEach(p.people, id: \.self) { i in
-						NavigationLink(destination: PeopleInSpaceDetailView(peopleInSpace: p)) {
-						VStack(alignment: .leading) {
-							Text(i.name)
-								.font(.title3)
-							Text(i.agency)
-								.font(.headline)
-							Text(i.position)
-								.font(.subheadline)
-								.foregroundColor(.secondary)
+					ForEach(p.people, id: \.self) { person in
+						NavigationLink(destination: PeopleInSpaceDetailView(personInSpace: person)) {
+							VStack(alignment: .leading) {
+								Text(person.name)
+									.font(.title3)
+								Text(person.agency)
+									.font(.headline)
+								Text(person.position)
+									.font(.subheadline)
+									.foregroundColor(.secondary)
+							}
 						}
-					}
 					}
 				}
 			}.navigationTitle("Peoples in space")

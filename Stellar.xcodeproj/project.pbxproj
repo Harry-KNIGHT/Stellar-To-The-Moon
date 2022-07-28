@@ -27,7 +27,7 @@
 		3CFD115D28929C6C00F14F65 /* PeopleInSpaceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD115C28929C6C00F14F65 /* PeopleInSpaceApi.swift */; };
 		3CFD115F28929CE700F14F65 /* PeopleInspaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD115E28929CE700F14F65 /* PeopleInspaceModel.swift */; };
 		3CFD116128929F0F00F14F65 /* PeopleInSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD116028929F0F00F14F65 /* PeopleInSpaceView.swift */; };
-		3CFD11632892A8CC00F14F65 /* PeopleInSpaceAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD11622892A8CC00F14F65 /* PeopleInSpaceAsyncImage.swift */; };
+		3CFD11632892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD11622892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift */; };
 		3CFD11652892AC5400F14F65 /* PeopleInSpaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD11642892AC5400F14F65 /* PeopleInSpaceDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +71,7 @@
 		3CFD115C28929C6C00F14F65 /* PeopleInSpaceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInSpaceApi.swift; sourceTree = "<group>"; };
 		3CFD115E28929CE700F14F65 /* PeopleInspaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInspaceModel.swift; sourceTree = "<group>"; };
 		3CFD116028929F0F00F14F65 /* PeopleInSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInSpaceView.swift; sourceTree = "<group>"; };
-		3CFD11622892A8CC00F14F65 /* PeopleInSpaceAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInSpaceAsyncImage.swift; sourceTree = "<group>"; };
+		3CFD11622892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInSpaceAsyncImage.swift; sourceTree = "<group>"; };
 		3CFD11642892AC5400F14F65 /* PeopleInSpaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInSpaceDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5555CA288F12640093122A /* AstronomyImageView.swift */,
-				3CFD11622892A8CC00F14F65 /* PeopleInSpaceAsyncImage.swift */,
+				3CFD11622892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift */,
 				3C5555CE288FCDA30093122A /* VideoView.swift */,
 			);
 			path = ImageVideoView;
@@ -342,7 +342,7 @@
 				3CDBA139288E75BA00AB15C7 /* AstronomyModel.swift in Sources */,
 				3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
-				3CFD11632892A8CC00F14F65 /* PeopleInSpaceAsyncImage.swift in Sources */,
+				3CFD11632892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift in Sources */,
 				3C5555D3289058C50093122A /* AstronomyArticleList.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
 				3CDBA13B288E75C400AB15C7 /* AstronomyArticleApi.swift in Sources */,
