@@ -1,5 +1,5 @@
 //
-//  FavoritesList.swift
+//  FavoritesArticleList.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 27/07/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FavoritesList: View {
+struct FavoritesArticleList: View {
 	@EnvironmentObject public var favoriteVM: FavoriteViewModel
 	var body: some View {
 		NavigationView {
@@ -18,7 +18,7 @@ struct FavoritesList: View {
 				}else {
 					List {
 						ForEach(favoriteVM.favoriteAstronomyArticles, id: \.self) { article in
-							NavigationLink(destination: AstronomyDetailView(astronomyObject: article)) {
+							NavigationLink(destination: AstronomyDetailView(article: article)) {
 								ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
 							}
 						}
@@ -37,9 +37,9 @@ struct FavoritesList: View {
 	}
 }
 
-struct FavoritesList_Previews: PreviewProvider {
+struct FavoritesArticleList_Previews: PreviewProvider {
 	static var previews: some View {
-		FavoritesList()
+		FavoritesArticleList()
 			.environmentObject(FavoriteViewModel())
 	}
 }

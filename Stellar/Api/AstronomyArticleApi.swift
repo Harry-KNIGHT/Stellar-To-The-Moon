@@ -1,5 +1,5 @@
 //
-//  AstronomiApi.swift
+//  AstronomyArticleApi.swift
 //  NasaAstronomy
 //
 //  Created by Elliot Knight on 25/07/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AstronomiApi: ObservableObject {
+class AstronomyApi: ObservableObject {
     @Published public var nasaReponses: [NasaAstronomyResponse] = []
 	
 	enum ApiError: Error {

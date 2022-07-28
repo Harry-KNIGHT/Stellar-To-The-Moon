@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct NasaDayAstronomyApp: App {
-	@StateObject var astronomyApi = AstronomiApi()
-	@StateObject var allAstronomiesApi = AllAstronomiesApi()
+	@StateObject var astronomyApi = AstronomyApi()
+	@StateObject var allAstronomiesApi = AstronomiesArticleApi()
 	@StateObject var favoriteVM = FavoriteViewModel()
     var body: some Scene {
         WindowGroup {

@@ -8,56 +8,56 @@
 import SwiftUI
 import ActivityIndicatorView
 
-struct AstronomyList: View {
-	@EnvironmentObject public var astronomiesApi: AllAstronomiesApi
+struct AstronomyArticleList: View {
+	@EnvironmentObject public var articleApi: AstronomiesArticleApi
 	@State private var showSheet = false
 	@State private var showLoadingIndicator = true
 	var body: some View {
 		NavigationView {
 			VStack {
-				if astronomiesApi.allAstronomies.isEmpty {
+				if articleApi.allAstronomies.isEmpty {
 					LoadingView()
 				}else {
 					List {
-						ForEach(astronomiesApi.allAstronomies.reversed(), id: \.date) { astronomy in
-							NavigationLink(destination: AstronomyDetailView(astronomyObject: astronomy)) {
-								ListRowCell(title: astronomy.title, date: astronomy.date, explanation: astronomy.explanation)
+						ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
+							NavigationLink(destination: AstronomyDetailView(article: article)) {
+								ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
 							}
 						}
 					}
 				}
 			}
 
-			.navigationTitle(astronomiesApi.allAstronomies.isEmpty ? "" : "Stellar")
+			.navigationTitle(articleApi.allAstronomies.isEmpty ? "" : "Stellar")
 			.toolbar {
 				ToolbarItem(placement: .navigationBarTrailing) {
 						Button(action: {
 							showSheet.toggle()
 
 						}, label: {
-							Label("Add article to favorite", systemImage: astronomiesApi.allAstronomies.isEmpty ? "" : "star.fill")
+							Label("Add article to favorite", systemImage: articleApi.allAstronomies.isEmpty ? "" : "star.fill")
 								.font(.title3)
 								.foregroundColor(.primary)
 						}).sheet(isPresented: $showSheet) {
-							FavoritesList()
+							FavoritesArticleList()
 						}
 				}
 			}
 		}.refreshable {
 			Task {
-				astronomiesApi.allAstronomies
+				articleApi.allAstronomies
 			}
 		}
 		.task {
-			await astronomiesApi.fetchAstronomiesObject(to: Date.now)
+			await articleApi.fetchAstronomiesObject(to: Date.now)
 		}
 	}
 }
 
-struct AstronomyList_Previews: PreviewProvider {
+struct AstronomyArticleList_Previews: PreviewProvider {
 	static var previews: some View {
-		AstronomyList()
-			.environmentObject(AllAstronomiesApi())
+		AstronomyArticleList()
+			.environmentObject(AstronomiesArticleApi())
 	}
 }
 

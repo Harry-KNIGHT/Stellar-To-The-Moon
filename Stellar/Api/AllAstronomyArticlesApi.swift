@@ -1,5 +1,5 @@
 //
-//  AllAstronomiesApi.swift
+//  AllAstronomyArticlesApi.swift
 //  NasaDayAstronomy
 //
 //  Created by Elliot Knight on 26/07/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class AllAstronomiesApi: ObservableObject {
+class AstronomiesArticleApi: ObservableObject {
 	@Published var allAstronomies = [NasaAstronomyResponse]()
 
 	func fetchAstronomiesObject(from hundredDayBefore: Int64 = Date().millisecondsSince1970 , to today: Date) async {
