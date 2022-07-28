@@ -1,5 +1,5 @@
 //
-//  PeopleInspaceModel.swift
+//  PersonInSpaceMode.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 28/07/2022.

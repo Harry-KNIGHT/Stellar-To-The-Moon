@@ -7,10 +7,10 @@
 
 import Foundation
 
-class PeopleInSpaceApi: ObservableObject {
+class PersonInSpaceApi: ObservableObject {
 	@Published public var spacePeoples: [PeopleInSpaceResponse] = []
 
-	func fetchPeopleInSpace() async throws {
+	func fetchPersonInSpace() async throws {
 		let url = "https://corquaid.github.io/international-space-station-APIs/JSON/people-in-space.json"
 
 		guard let url = URL(string: url) else {

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PersonInSpaceView: View {
-	@EnvironmentObject public var peopleApi: PeopleInSpaceApi
+	@EnvironmentObject public var peopleApi: PersonInSpaceApi
 	var body: some View {
 		NavigationView {
 			List {
 				ForEach(peopleApi.spacePeoples, id: \.self) { p in
 					ForEach(p.people, id: \.self) { person in
-						NavigationLink(destination: PeopleInSpaceDetailView(personInSpace: person)) {
+						NavigationLink(destination: PersonSpaceDetailView(personInSpace: person)) {
 							VStack(alignment: .leading) {
 								Text(person.name)
 									.font(.title3)
@@ -31,7 +31,7 @@ struct PersonInSpaceView: View {
 		}
 		.task {
 			do {
-				try await peopleApi.fetchPeopleInSpace()
+				try await peopleApi.fetchPersonInSpace()
 			} catch {
 				print("Error append, \(error.localizedDescription)")
 			}
@@ -43,6 +43,6 @@ struct PersonInSpaceView: View {
 struct PersonInSpaceView_Previews: PreviewProvider {
 	static var previews: some View {
 		PersonInSpaceView()
-			.environmentObject(PeopleInSpaceApi())
+			.environmentObject(PersonInSpaceApi())
 	}
 }
