@@ -17,10 +17,11 @@ struct PersonSpaceDetailView: View {
 			PersonInSpaceAsyncImage(personInSpace: personInSpace)
 				.navigationBarTitleDisplayMode(.inline)
 				.navigationTitle("Navigaton")
+
+			Text(personInSpace.name)
+			Text(String(personInSpace.iss))
 		}
-
 	}
-
 }
 
 struct PersonSpaceDetailView_Previews: PreviewProvider {
