@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PeopleInSpaceView: View {
+struct PersonInSpaceView: View {
 	@EnvironmentObject public var peopleApi: PeopleInSpaceApi
 	var body: some View {
 		NavigationView {
@@ -40,9 +40,9 @@ struct PeopleInSpaceView: View {
 	}
 }
 
-struct PeopleInSpaceView_Previews: PreviewProvider {
+struct PersonInSpaceView_Previews: PreviewProvider {
 	static var previews: some View {
-		PeopleInSpaceView()
+		PersonInSpaceView()
 			.environmentObject(PeopleInSpaceApi())
 	}
 }

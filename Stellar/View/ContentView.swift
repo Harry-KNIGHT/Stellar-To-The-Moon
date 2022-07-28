@@ -15,7 +15,7 @@ struct ContentView: View {
 					Label("Articles", systemImage: "book.closed")
 				}
 
-			PeopleInSpaceView()
+			PersonInSpaceView()
 				.tabItem {
 					Label("Astronotes", systemImage: "globe.americas")
 				}
