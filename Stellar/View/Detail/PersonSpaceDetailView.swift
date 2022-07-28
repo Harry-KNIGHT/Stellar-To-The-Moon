@@ -13,14 +13,32 @@ struct PersonSpaceDetailView: View {
 	var maxHeight: CGFloat = 200
 	@State private var isLoadingVisible = true
 	var body: some View {
-		ScrollView {
+		ScrollView(.vertical, showsIndicators: false) {
 			PersonInSpaceAsyncImage(personInSpace: personInSpace)
-				.navigationBarTitleDisplayMode(.inline)
-				.navigationTitle("Navigaton")
+			VStack(alignment: .leading, spacing: 10) {
 
-			Text(personInSpace.name)
-			Text(String(personInSpace.iss))
+				HStack {
+					Text("Agency: \(personInSpace.agency)")
+					Spacer()
+					if personInSpace.iss {
+						Text("ISS")
+							.foregroundColor(.primary)
+					}
+				}
+				Text("Pays: \(personInSpace.country), \(personInSpace.flagCode)")
+
+				Text("Spacecraft: \(personInSpace.spacecraft.rawValue)")
+				Text(personInSpace.daysInSpace > 0 ? "Days in space: \(personInSpace.daysInSpace)" : "Day in space: \(personInSpace.daysInSpace)")
+				Text("Role: \(personInSpace.position)")
+			}
+			.padding()
+			.background(.thinMaterial)
+			.clipShape(RoundedRectangle(cornerRadius: 10))
+
+
 		}
+		.navigationBarTitleDisplayMode(.inline)
+		.navigationTitle(personInSpace.name)
 	}
 }
 
