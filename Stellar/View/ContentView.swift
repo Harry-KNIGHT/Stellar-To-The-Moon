@@ -9,7 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
 	var body: some View {
-		AstronomyArticleList()
+		TabView {
+			AstronomyArticleList()
+				.tabItem {
+					Label("Articles", systemImage: "book.closed")
+				}
+
+			PeopleInSpaceView()
+				.tabItem {
+					Label("Astronotes", systemImage: "globe.americas")
+				}
+		}
 	}
 }
 

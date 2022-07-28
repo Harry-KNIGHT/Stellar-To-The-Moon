@@ -7,12 +7,12 @@
 
 import Foundation
 
+enum ApiError: Error {
+	case urlNotFound, dataError, badHttpResponse, someThingWentWrong
+}
+
 class AstronomyApi: ObservableObject {
     @Published public var nasaReponses: [NasaAstronomyResponse] = []
-	
-	enum ApiError: Error {
-		case urlNotFound, dataError, badHttpResponse
-	}
 
 	func nasaApiCall() async throws {
 		let url = "https://api.nasa.gov/planetary/apod?api_key=wHAZImKgLhzz4TzarBAWeznXG1TOSiUh3DqnrobZ"
