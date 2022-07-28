@@ -19,7 +19,7 @@ struct PersonInSpaceAsyncImage: View {
 					image
 						.resizable()
 						.scaledToFill()
-						.frame(maxHeight: maxHeight)
+						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
 				} placeholder: {
 					ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
