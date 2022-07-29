@@ -28,6 +28,7 @@ struct PersonSpaceDetailView: View {
 				Text("Pays: \(personInSpace.country), \(personInSpace.flagCode)")
 
 				Text("Spacecraft: \(personInSpace.spacecraft.rawValue)")
+				Text("Launched at: \(lauchingDate)")
 				Text(personInSpace.daysInSpace > 0 ? "Days in space: \(personInSpace.daysInSpace)" : "Day in space: \(personInSpace.daysInSpace)")
 				Text("Role: \(personInSpace.position)")
 			}
@@ -39,6 +40,17 @@ struct PersonSpaceDetailView: View {
 		}
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationTitle(personInSpace.name)
+	}
+
+	var lauchingDate: String {
+		let launchedAt = personInSpace.launched
+		let formatter = DateFormatter()
+		formatter.dateFormat = "yyyy-MM-dd"
+		let launchDate = Date(timeIntervalSince1970: Double(launchedAt))
+
+		let dateString = formatter.string(from: launchDate)
+
+		return dateString
 	}
 }
 
