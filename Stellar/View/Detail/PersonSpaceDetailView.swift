@@ -25,7 +25,7 @@ struct PersonSpaceDetailView: View {
 							.foregroundColor(.primary)
 					}
 				}
-				Text("Pays: \(personInSpace.country), \(personInSpace.flagCode)")
+				Text("Country: \(personInSpace.country), \(personInSpace.flagCode)")
 
 				Text("Spacecraft: \(personInSpace.spacecraft.rawValue)")
 				Text("Launched at: \(lauchingDate)")
