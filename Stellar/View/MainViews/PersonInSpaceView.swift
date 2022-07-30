@@ -27,7 +27,7 @@ struct PersonInSpaceView: View {
 						}
 					}
 				}
-			}.navigationTitle("Peoples in space")
+			}.navigationTitle("Currently in space")
 		}
 		.task {
 			do {
