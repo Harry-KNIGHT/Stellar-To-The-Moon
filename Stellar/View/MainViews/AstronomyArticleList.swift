@@ -18,12 +18,23 @@ struct AstronomyArticleList: View {
 				if articleApi.allAstronomies.isEmpty {
 					LoadingView()
 				}else {
-					List {
-						ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
-							NavigationLink(destination: AstronomyDetailView(article: article)) {
-								ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
+					ScrollView {
+						LazyVStack {
+							ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
+								NavigationLink(destination: AstronomyDetailView(article: article)) {
+									ZStack {
+										RoundedRectangle(cornerRadius: 10)
+											.frame(maxWidth: .infinity, maxHeight: .infinity)
+											.foregroundStyle(.regularMaterial)
+
+										VStack(alignment: .leading) {
+											ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
+										}.padding()
+									}
+								}
 							}
-						}
+						}.padding([.horizontal, .top])
+
 					}
 				}
 			}
@@ -69,13 +80,15 @@ struct ListRowCell: View {
 		VStack(alignment: .leading, spacing: 3) {
 			Text(title)
 				.font(.headline)
+				.foregroundColor(.primary)
 			Text(date)
 				.font(.callout)
-				.foregroundStyle(.secondary)
-			Text(explanation)
+				.foregroundColor(.secondary)
+			Text(explanation.trimmingCharacters(in: .whitespacesAndNewlines))
 				.font(.body)
 				.foregroundColor(.secondary)
 				.lineLimit(2)
-		}
+
+		}	.multilineTextAlignment(.leading)
 	}
 }
