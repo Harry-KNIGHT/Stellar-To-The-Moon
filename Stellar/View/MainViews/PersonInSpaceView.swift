@@ -11,23 +11,38 @@ struct PersonInSpaceView: View {
 	@EnvironmentObject public var peopleApi: PersonInSpaceApi
 	var body: some View {
 		NavigationView {
-			List {
-				ForEach(peopleApi.spacePeoples, id: \.self) { p in
-					ForEach(p.people, id: \.self) { person in
-						NavigationLink(destination: PersonSpaceDetailView(personInSpace: person)) {
-							VStack(alignment: .leading) {
-								Text(person.name)
-									.font(.title3)
-								Text(person.agency)
-									.font(.headline)
-								Text(person.position)
-									.font(.subheadline)
-									.foregroundColor(.secondary)
+			ScrollView {
+				LazyVStack(alignment: .leading) {
+					ForEach(peopleApi.spacePeoples, id: \.self) { p in
+						ForEach(p.people, id: \.self) { person in
+							NavigationLink(destination: PersonSpaceDetailView(personInSpace: person)) {
+								ZStack {
+									RoundedRectangle(cornerRadius: 10)
+										.frame(maxWidth: .infinity, maxHeight: .infinity)
+										.foregroundStyle(.regularMaterial)
+
+									HStack {
+										VStack(alignment: .leading) {
+											Text(person.name)
+												.font(.title3)
+												.foregroundColor(.primary)
+											Text(person.agency)
+												.foregroundColor(.primary)
+												.font(.headline)
+											Text(person.position)
+												.font(.subheadline)
+												.foregroundColor(.secondary)
+										}.padding()
+										Spacer()
+									}
+								}
 							}
 						}
 					}
 				}
-			}.navigationTitle("Currently in space")
+				.padding()
+				.navigationTitle("Currently in space")
+			}
 		}
 		.task {
 			do {
