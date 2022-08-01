@@ -34,7 +34,7 @@ struct PersonInSpaceView: View {
 
 									} else if person.agency.lowercased() == "cnsa" {
 
-										PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position, image: "CNSAL", corner: 10)
+										PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position, image: "CNSAL", imageHeight: 50, corner: 10)
 
 									} else {
 										PersonInSpaceRow(hasGotImage: false, name: person.name, agency: person.agency, position: person.position, image: "")
@@ -78,7 +78,7 @@ struct PersonInSpaceRow: View {
 	var body: some View {
 		if hasGotImage {
 			HStack {
-				VStack(alignment: .leading) {
+				VStack(alignment: .leading, spacing: 7) {
 					Text(name)
 						.font(.title3)
 						.foregroundColor(.primary)
@@ -88,7 +88,7 @@ struct PersonInSpaceRow: View {
 					Text(position)
 						.font(.subheadline)
 						.foregroundColor(.secondary)
-				}.padding(.vertical)
+				}.padding(.vertical, 8)
 				Spacer()
 				Image(image)
 					.resizable()
