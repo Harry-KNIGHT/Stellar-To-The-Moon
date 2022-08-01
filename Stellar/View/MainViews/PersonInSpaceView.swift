@@ -50,7 +50,11 @@ struct PersonInSpaceView: View {
 		}
 		.task {
 			do {
+				if peopleApi.spacePeoples.isEmpty {
 				try await peopleApi.fetchPersonInSpace()
+				}else {
+					print("Data feched")
+				}
 			} catch {
 				print("Error append, \(error.localizedDescription)")
 			}
