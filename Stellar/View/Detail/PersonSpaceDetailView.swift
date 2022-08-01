@@ -12,6 +12,7 @@ struct PersonSpaceDetailView: View {
 	let personInSpace: Person
 	var maxHeight: CGFloat = 200
 	@State private var isLoadingVisible = true
+	@State private var isShwoingSheet: Bool = false
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			PersonInSpaceAsyncImage(personInSpace: personInSpace)
@@ -35,6 +36,22 @@ struct PersonSpaceDetailView: View {
 			.padding()
 			.background(.thinMaterial)
 			.clipShape(RoundedRectangle(cornerRadius: 10))
+
+			Button(action: {
+				isShwoingSheet.toggle()
+
+			}, label: {
+				Label("Show in Wikipedia", systemImage: "plus")
+					.font(.title3)
+					.padding(5)
+			})
+			.buttonStyle(.bordered)
+			.tint(.blue)
+			.buttonBorderShape(.roundedRectangle)
+			.padding(.bottom)
+			.sheet(isPresented: $isShwoingSheet) {
+				WebView(url: URL(string: personInSpace.url) ?? URL(string: "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal")!)
+			}
 
 
 		}
