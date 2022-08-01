@@ -22,19 +22,50 @@ struct PersonInSpaceView: View {
 										.foregroundStyle(.regularMaterial)
 
 									HStack {
-										VStack(alignment: .leading) {
-											Text(person.name)
-												.font(.title3)
-												.foregroundColor(.primary)
-											Text(person.agency)
-												.foregroundColor(.primary)
-												.font(.headline)
-											Text(person.position)
-												.font(.subheadline)
-												.foregroundColor(.secondary)
-										}.padding()
-										Spacer()
-									}
+										if person.agency.lowercased() == "nasa" {
+											PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position)
+											Spacer()
+											Image("NASAL")
+												.resizable()
+												.scaledToFit()
+												.frame(height: 60)
+
+
+
+										} else if person.agency.lowercased() == "roscosmos" {
+
+
+											PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position)
+											Spacer()
+											Image("ROSCOSMOSL")
+												.resizable()
+												.scaledToFit()
+												.frame(height: 60)
+										} else if person.agency.lowercased() == "esa" {
+
+											PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position)
+											Spacer()
+											Image("ESAL")
+												.resizable()
+												.scaledToFit()
+												.frame(height: 60)
+
+
+										} else if person.agency.lowercased() == "cnsa" {
+											PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position)
+											Spacer()
+											Image("CNSAL")
+												.resizable()
+												.scaledToFit()
+												.frame(height: 60)
+
+
+										} else {
+											PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position)
+										}
+
+
+									}.padding(.horizontal)
 								}
 							}
 						}
@@ -59,5 +90,24 @@ struct PersonInSpaceView_Previews: PreviewProvider {
 	static var previews: some View {
 		PersonInSpaceView()
 			.environmentObject(PersonInSpaceApi())
+	}
+}
+
+struct PersonInSpaceRow: View {
+	var name: String
+	var agency: String
+	var position: String
+	var body: some View {
+		VStack(alignment: .leading) {
+			Text(name)
+				.font(.title3)
+				.foregroundColor(.primary)
+			Text(agency)
+				.foregroundColor(.primary)
+				.font(.headline)
+			Text(position)
+				.font(.subheadline)
+				.foregroundColor(.secondary)
+		}.padding(.vertical)
 	}
 }
