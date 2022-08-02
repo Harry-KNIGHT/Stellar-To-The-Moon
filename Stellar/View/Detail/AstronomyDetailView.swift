@@ -26,21 +26,7 @@ struct AstronomyDetailView: View {
 							VideoView(videoID: article.url)
 								.frame(minHeight: 450, maxHeight: 800)
 						}
-					Button("Save to images") {
-						do {
-							guard let urlString = article.hdurl else {
-								throw ApiError.urlNotFound
-							}
-							Task {
-							   let image = try await astronomyApi.getImage(from: urlString)
-								UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-							}
-							
-						}catch {
-							print("Error \(error.localizedDescription)")
-						}
-					}
-					
+					HStack {
 					if  article.copyright != nil {
 						HStack(spacing: 3) {
 							Text("Copyright: ")
@@ -49,6 +35,26 @@ struct AstronomyDetailView: View {
 						}
 						.foregroundStyle(.secondary)
 						.padding(.leading)
+					}
+						Spacer()
+					if article.mediaType == "image" {
+						Button("Save to images") {
+							do {
+								guard let urlString = article.hdurl else {
+									throw ApiError.urlNotFound
+								}
+								Task {
+								   let image = try await astronomyApi.getImage(from: urlString)
+									UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+								}
+
+							}catch {
+								print("Error \(error.localizedDescription)")
+							}
+						}.buttonStyle(.bordered)
+							.tint(.blue)
+							.buttonBorderShape(.capsule)
+					}
 					}
 						VStack(alignment: .leading, spacing: 10) {
 							Text("Explanation:")
