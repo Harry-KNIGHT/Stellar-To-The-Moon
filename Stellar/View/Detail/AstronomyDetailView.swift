@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import UIKit
 
+// method get image
+// do urlDataTask 
 struct AstronomyDetailView: View {
 	let article: NasaAstronomyResponse
 	@State private var isSheetPresented = false
 	@EnvironmentObject var favoriteVM: FavoriteViewModel
+	@EnvironmentObject var astronomyApi: AstronomyApi
     var body: some View {
 			ScrollView(.vertical, showsIndicators: false) {
 				if article.url.isEmpty {
@@ -23,9 +27,18 @@ struct AstronomyDetailView: View {
 								.frame(minHeight: 450, maxHeight: 800)
 						}
 					Button("Save to images") {
-						let image = AstronomyImageView(astronomy: article) // asyncImageView from URL
-						let uiImage: UIImage = image.snapshot()
-						UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
+						do {
+							guard let urlString = article.hdurl else {
+								throw ApiError.urlNotFound
+							}
+							Task {
+							   let image = try await astronomyApi.getImage(from: urlString)
+								UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+							}
+							
+						}catch {
+							print("Error \(error.localizedDescription)")
+						}
 					}
 					
 					if  article.copyright != nil {
@@ -68,6 +81,7 @@ struct AstronomyDetailView_Previews: PreviewProvider {
 		AstronomyDetailView(article: NasaAstronomyResponse(copyright: "Mickaël MAS", date: "2022-06-07", explanation: "Do dragons fight on the altar of the sky?  Although it might appear that way, these dragons are illusions made of thin gas and dust. The emission nebula NGC 6188, home to the glowing clouds, is found about 4,000 light years away near the edge of a large molecular cloud unseen at visible wavelengths, in the southern constellation Ara (the Altar). Massive, young stars of the embedded Ara OB1 association were formed in that region only a few million years ago, sculpting the dark shapes and powering the nebular glow with stellar winds and intense ultraviolet radiation. The recent star formation itself was likely triggered by winds and supernova explosions, from previous generations of massive stars, that swept up and compressed the molecular gas. Joining NGC 6188 on this cosmic canvas, visible toward the lower right, is rare emission nebula NGC 6164, also created by one of the region's massive O-type stars. Similar in appearance to many planetary nebulae, NGC 6164's striking, symmetric gaseous shroud and faint halo surround its bright central star near the bottom edge. This impressively wide field of view spans over 2 degrees (four full Moons), corresponding to over 150 light years at the estimated distance of NGC 6188.", hdurl: "https://apod.nasa.gov/apod/image/2206/Ngc6188_Robertson_2000.jpg", mediaType: "image", serviceVersion: "v1", title: "NGC 6188: Dragons of Ara", url: "https://apod.nasa.gov/apod/image/2206/Ngc6188_Robertson_960.jpg"))
 			.environmentObject(AstronomyApi())
 			.environmentObject(FavoriteViewModel())
+			.environmentObject(AstronomyApi())
 	}
 }
 
@@ -87,3 +101,4 @@ extension View {
 		}
 	}
 }
+

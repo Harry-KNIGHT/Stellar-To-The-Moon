@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 enum ApiError: Error {
-	case urlNotFound, dataError, badHttpResponse, someThingWentWrong
+	case urlNotFound, dataError, badHttpResponse, someThingWentWrong, noDataForImage
 }
 
 class AstronomyApi: ObservableObject {
@@ -38,5 +39,23 @@ class AstronomyApi: ObservableObject {
 		} catch {
 			print("There was an error, \(error.localizedDescription)")
 		}
+	}
+
+	func getImage(from url: String) async throws -> UIImage  {
+		guard let url = URL(string: url) else {
+			throw ApiError.urlNotFound
+		}
+		do {
+			let (data, _) = try await URLSession.shared.data(from: url)
+			if let image = UIImage(data: data) {
+				return image
+			} else {
+				throw ApiError.noDataForImage
+			}
+
+		}catch {
+			print("Error fetching image: \(error.localizedDescription)")
+		}
+		return UIImage()
 	}
 }
