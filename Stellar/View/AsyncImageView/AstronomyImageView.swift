@@ -10,15 +10,26 @@ import ActivityIndicatorView
 
 struct AstronomyImageView: View {
 	let astronomy: NasaAstronomyResponse
+	@Environment(\.colorScheme) private var colorScheme
+
 	
 	@State private var isLoadingVisible = true
 	var body: some View {
 		ZStack(alignment: .bottomTrailing) {
 			AsyncImage(url: URL(string:astronomy.hdurl ?? "")) { image in
+				ZStack(alignment: .bottomTrailing) {
 				image
 					.resizable()
 					.scaledToFill()
 					.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+					if let copryRight = astronomy.copyright {
+						Text(copryRight)
+							.padding(4)
+							.background(colorScheme == .dark ? .black : .white)
+					}
+
+
+				}
 			} placeholder: {
 				ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
 					.frame(width: 100, height: 50)

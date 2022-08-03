@@ -41,7 +41,7 @@ struct PersonSpaceDetailView: View {
 				isShwoingSheet.toggle()
 
 			}, label: {
-				Label("Show in Wikipedia", systemImage: "plus")
+				Label("Show in Wikipedia", systemImage: "network")
 					.font(.title3)
 					.padding(5)
 			})
