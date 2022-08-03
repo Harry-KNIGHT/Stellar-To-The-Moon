@@ -9,16 +9,12 @@ import SwiftUI
 import UIKit
 import ActivityIndicatorView
 
-// method get image
-// do urlDataTask 
 struct AstronomyDetailView: View {
 	let article: NasaAstronomyResponse
 	@State private var isSheetPresented = false
 	@EnvironmentObject var favoriteVM: FavoriteViewModel
 	@EnvironmentObject var astronomyApi: AstronomyApi
-	@State private var isImageDowloaded: Bool = false
-	@State private var isDownloadingImage = false
-	@State private var showLoading = true
+
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 				if article.mediaType == "image" {
@@ -26,53 +22,6 @@ struct AstronomyDetailView: View {
 				} else {
 					VideoView(videoID: article.url)
 						.frame(minHeight: 450, maxHeight: 800)
-				}
-				HStack {
-					if article.mediaType == "image" {
-						if !isImageDowloaded {
-						Button(action: {
-							do {
-								self.isDownloadingImage.toggle()
-								guard let urlString = article.hdurl else {
-									throw ApiError.urlNotFound
-								}
-								Task {
-									let imageSaver = ImageSaver()
-									let image = try await astronomyApi.getImage(from: urlString)
-									imageSaver.writeToPhotoAlbum(image: image)
-									isImageDowloaded.toggle()
-								}
-
-							}catch {
-								print("Error \(error.localizedDescription)")
-							}
-
-						}, label: {
-							if !isDownloadingImage {
-							Label("Download image", systemImage: "arrow.down.circle.fill")
-									.font(.title3.bold())
-							}else {
-								HStack {
-									ActivityIndicatorView(isVisible: $showLoading, type: .arcs(count: 3, lineWidth: CGFloat(1.5)))
-										.frame(width: 20, height: 20)
-									Text("Downlading image")
-										.font(.title3.bold())
-								}
-							}
-
-						})
-						.buttonStyle(.bordered)
-						.tint(Color.blue)
-						.buttonBorderShape(.roundedRectangle)
-						} else  {
-							Text("\(Image(systemName: "checkmark.circle.fill")) Image downloaded")
-								.font(.title3.bold())
-								.padding(5)
-								.foregroundColor(.green)
-								.background(.regularMaterial)
-								.cornerRadius(10)
-						}
-					}
 				}
 				VStack(alignment: .leading, spacing: 10) {
 					Text("Explanation:")
