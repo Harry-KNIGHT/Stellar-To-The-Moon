@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import ActivityIndicatorView
 
 // method get image
 // do urlDataTask 
@@ -16,7 +17,8 @@ struct AstronomyDetailView: View {
 	@EnvironmentObject var favoriteVM: FavoriteViewModel
 	@EnvironmentObject var astronomyApi: AstronomyApi
 	@State private var isImageDowloaded: Bool = false
-	@State private var isImageDownloading: Bool = false
+	@State private var isDownloadingImage = false
+	@State private var showLoading = true
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 				if article.mediaType == "image" {
@@ -36,9 +38,10 @@ struct AstronomyDetailView: View {
 					}
 					Spacer()
 					if article.mediaType == "image" {
+						if !isImageDowloaded {
 						Button(action: {
-							self.isImageDowloaded.toggle()
 							do {
+								self.isDownloadingImage.toggle()
 								guard let urlString = article.hdurl else {
 									throw ApiError.urlNotFound
 								}
@@ -53,9 +56,31 @@ struct AstronomyDetailView: View {
 								print("Error \(error.localizedDescription)")
 							}
 
-						}, label: { Label("Download image", systemImage: "arrow.down.circle.fill")
+						}, label: {
+							if !isDownloadingImage {
+							Label("Download image", systemImage: "arrow.down.circle.fill")
+									.font(.title3.bold())
+							}else {
+								HStack {
+									ActivityIndicatorView(isVisible: $showLoading, type: .arcs(count: 3, lineWidth: CGFloat(1.5)))
+										.frame(width: 20, height: 20)
+									Text("Downlading image")
+										.font(.title3.bold())
+								}
+							}
 
 						})
+						.buttonStyle(.bordered)
+						.tint(Color.blue)
+						.buttonBorderShape(.roundedRectangle)
+						} else  {
+							Text("\(Image(systemName: "checkmark.circle.fill")) Image downloaded")
+								.font(.title3.bold())
+								.padding(5)
+								.foregroundColor(.green)
+								.background(.regularMaterial)
+								.cornerRadius(10)
+						}
 					}
 				}
 				VStack(alignment: .leading, spacing: 10) {
