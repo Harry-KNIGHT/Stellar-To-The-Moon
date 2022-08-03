@@ -15,18 +15,17 @@ struct AstronomyDetailView: View {
 	@State private var isSheetPresented = false
 	@EnvironmentObject var favoriteVM: FavoriteViewModel
 	@EnvironmentObject var astronomyApi: AstronomyApi
-    var body: some View {
-			ScrollView(.vertical, showsIndicators: false) {
-				if article.url.isEmpty {
-					ProgressView()
-				}else {
-						if article.mediaType == "image" {
-							AstronomyImageView(astronomy: article)
-						} else {
-							VideoView(videoID: article.url)
-								.frame(minHeight: 450, maxHeight: 800)
-						}
-					HStack {
+	@State private var isImageDowloaded: Bool = false
+	@State private var isImageDownloading: Bool = false
+	var body: some View {
+		ScrollView(.vertical, showsIndicators: false) {
+				if article.mediaType == "image" {
+					AstronomyImageView(astronomy: article)
+				} else {
+					VideoView(videoID: article.url)
+						.frame(minHeight: 450, maxHeight: 800)
+				}
+				HStack {
 					if  article.copyright != nil {
 						HStack(spacing: 3) {
 							Text("Copyright: ")
@@ -34,52 +33,55 @@ struct AstronomyDetailView: View {
 							Spacer()
 						}
 						.foregroundStyle(.secondary)
-						.padding(.leading)
 					}
-						Spacer()
+					Spacer()
 					if article.mediaType == "image" {
-						Button("Save to images") {
+						Button(action: {
+							self.isImageDowloaded.toggle()
 							do {
 								guard let urlString = article.hdurl else {
 									throw ApiError.urlNotFound
 								}
 								Task {
-								   let image = try await astronomyApi.getImage(from: urlString)
-									UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+									let imageSaver = ImageSaver()
+									let image = try await astronomyApi.getImage(from: urlString)
+									imageSaver.writeToPhotoAlbum(image: image)
+									isImageDowloaded.toggle()
 								}
 
 							}catch {
 								print("Error \(error.localizedDescription)")
 							}
-						}.buttonStyle(.bordered)
-							.tint(.blue)
-							.buttonBorderShape(.capsule)
+
+						}, label: { Label("Download image", systemImage: "arrow.down.circle.fill")
+
+						})
 					}
-					}
-						VStack(alignment: .leading, spacing: 10) {
-							Text("Explanation:")
-								.font(.headline)
-							Text(article.explanation)
-						}
-							.padding()
-							.background(.thinMaterial)
-							.clipShape(RoundedRectangle(cornerRadius: 10))
 				}
-			}
-			.navigationBarTitleDisplayMode(.inline)
-			.navigationBarTitle(article.title)
-			.toolbar {
-				ToolbarItem(placement: .navigationBarTrailing) {
-					Button(action: {
-						favoriteVM.addOrDeletFavorite(article: article)
-					}, label: {
-						Label("Add article to favorite", systemImage: favoriteVM.favoriteAstronomyArticles.contains(article) ? "star.fill" : "star")
-							.foregroundColor(.primary)
-							.font(.title3)
-					})
+				VStack(alignment: .leading, spacing: 10) {
+					Text("Explanation:")
+						.font(.headline)
+					Text(article.explanation)
 				}
+				.padding()
+				.background(.thinMaterial)
+				.clipShape(RoundedRectangle(cornerRadius: 10))
+
+		}
+		.navigationBarTitleDisplayMode(.inline)
+		.navigationBarTitle(article.title)
+		.toolbar {
+			ToolbarItem(placement: .navigationBarTrailing) {
+				Button(action: {
+					favoriteVM.addOrDeletFavorite(article: article)
+				}, label: {
+					Label("Add article to favorite", systemImage: favoriteVM.favoriteAstronomyArticles.contains(article) ? "star.fill" : "star")
+						.foregroundColor(.primary)
+						.font(.title3)
+				})
 			}
-    }
+		}
+	}
 }
 
 struct AstronomyDetailView_Previews: PreviewProvider {
@@ -90,21 +92,3 @@ struct AstronomyDetailView_Previews: PreviewProvider {
 			.environmentObject(AstronomyApi())
 	}
 }
-
-extension View {
-	func snapshot() -> UIImage {
-		let controller = UIHostingController(rootView: self)
-		let view = controller.view
-
-		let targetSize = controller.view.intrinsicContentSize
-		view?.bounds = CGRect(origin: .zero, size: targetSize)
-		view?.backgroundColor = .blue
-
-		let renderer = UIGraphicsImageRenderer(size: targetSize)
-
-		return renderer.image { _ in
-			view?.drawHierarchy(in: controller.view.bounds, afterScreenUpdates: true)
-		}
-	}
-}
-

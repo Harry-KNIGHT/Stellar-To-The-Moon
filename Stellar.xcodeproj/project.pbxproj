@@ -14,6 +14,7 @@
 		3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D0289057E80093122A /* AstronomyDetailView.swift */; };
 		3C5555D3289058C50093122A /* AstronomyArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D2289058C50093122A /* AstronomyArticleList.swift */; };
 		3C5555D6289058FF0093122A /* AstronomyArticlesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* AstronomyArticlesApi.swift */; };
+		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
 		3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */; };
 		3CBF0C452891371E00010691 /* FavoritesArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C442891371E00010691 /* FavoritesArticleList.swift */; };
 		3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4628913B5700010691 /* EmptyView.swift */; };
@@ -57,6 +58,7 @@
 		3C5555D0289057E80093122A /* AstronomyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDetailView.swift; sourceTree = "<group>"; };
 		3C5555D2289058C50093122A /* AstronomyArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticleList.swift; sourceTree = "<group>"; };
 		3C5555D5289058FF0093122A /* AstronomyArticlesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticlesApi.swift; sourceTree = "<group>"; };
+		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		3CBF0C442891371E00010691 /* FavoritesArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesArticleList.swift; sourceTree = "<group>"; };
 		3CBF0C4628913B5700010691 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5555D0289057E80093122A /* AstronomyDetailView.swift */,
+				3C6878F1289A5C3300B99797 /* ImageSaver.swift */,
 				3CFD11642892AC5400F14F65 /* PersonSpaceDetailView.swift */,
 			);
 			path = Detail;
@@ -382,6 +385,7 @@
 				3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */,
 				3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */,
 				3CFD116128929F0F00F14F65 /* PersonInSpaceView.swift in Sources */,
+				3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */,
 				3CDBA139288E75BA00AB15C7 /* AstronomyModel.swift in Sources */,
 				3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
@@ -547,7 +551,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -564,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.8;
+				MARKETING_VERSION = 0.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -579,7 +583,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -596,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.8;
+				MARKETING_VERSION = 0.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
