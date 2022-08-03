@@ -19,24 +19,23 @@ struct AstronomyDetailView: View {
 	@State private var isImageDowloaded: Bool = false
 	@State private var isDownloadingImage = false
 	@State private var showLoading = true
+	@Environment(\.colorScheme) private var colorScheme
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 				if article.mediaType == "image" {
+					ZStack(alignment: .bottomTrailing) {
 					AstronomyImageView(astronomy: article)
+						if let article = article.copyright {
+							Text(article)
+								.padding(4)
+								.background(colorScheme == .dark ? .black : .white)
+						}
+					}
 				} else {
 					VideoView(videoID: article.url)
 						.frame(minHeight: 450, maxHeight: 800)
 				}
 				HStack {
-					if  article.copyright != nil {
-						HStack(spacing: 3) {
-							Text("Copyright: ")
-							Text(article.copyright ?? "")
-							Spacer()
-						}
-						.foregroundStyle(.secondary)
-					}
-					Spacer()
 					if article.mediaType == "image" {
 						if !isImageDowloaded {
 						Button(action: {

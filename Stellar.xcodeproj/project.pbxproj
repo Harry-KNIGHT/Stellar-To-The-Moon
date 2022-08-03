@@ -134,8 +134,17 @@
 				3CFD11672892E18200F14F65 /* VideoView */,
 				3CFD116A2892EE6700F14F65 /* EmptyView */,
 				3CBF0C4028906B3100010691 /* AsyncImageView */,
+				3C6878F3289AA3DA00B99797 /* ImageSaver */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3C6878F3289AA3DA00B99797 /* ImageSaver */ = {
+			isa = PBXGroup;
+			children = (
+				3C6878F1289A5C3300B99797 /* ImageSaver.swift */,
+			);
+			path = ImageSaver;
 			sourceTree = "<group>";
 		};
 		3CBF0C4028906B3100010691 /* AsyncImageView */ = {
@@ -200,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				3C5555D0289057E80093122A /* AstronomyDetailView.swift */,
-				3C6878F1289A5C3300B99797 /* ImageSaver.swift */,
 				3CFD11642892AC5400F14F65 /* PersonSpaceDetailView.swift */,
 			);
 			path = Detail;
