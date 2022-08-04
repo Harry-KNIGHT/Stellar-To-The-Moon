@@ -19,6 +19,11 @@ struct ContentView: View {
 				.tabItem {
 					Label("Astronauts", systemImage: "globe.americas")
 				}
+
+			NewsView()
+				.tabItem {
+					Label("News", systemImage: "newspaper.fill")
+				}
 		}
 	}
 }
