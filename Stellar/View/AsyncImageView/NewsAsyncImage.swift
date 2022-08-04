@@ -21,7 +21,9 @@ struct NewsAsyncImage: View {
 					.frame(maxWidth: .infinity, maxHeight: .infinity)
 					.foregroundStyle(.secondary)
 				Text("Stellar To The 🌝")
+					.foregroundColor(.primary)
 					.padding(.vertical, 15)
+
 			}
 		}
     }
