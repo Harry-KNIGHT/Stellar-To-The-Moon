@@ -9,19 +9,25 @@ import SwiftUI
 
 struct NewsView: View {
 	@EnvironmentObject public var news: NewsSpaceApi
-    var body: some View {
+	var body: some View {
 		NavigationView {
 			ScrollView {
 				ForEach(news.spaceNews, id: \.self) { new in
-					VStack(alignment: .leading, spacing: 5) {
+					VStack {
 						NewsAsyncImage(news: new)
-					Text(new.title)
-					Text(new.publishedAt)
-						.foregroundColor(.secondary)
-					Text(new.summary)
-						.lineLimit(2)
+						VStack(alignment: .leading, spacing: 10) {
+							Text(new.title)
+							Text(new.publishedAt)
+								.foregroundColor(.secondary)
+							Text(new.summary)
+								.lineLimit(2)
+						}
+						.padding(5)
+						.padding(.bottom)
 					}
-
+					.background(.regularMaterial)
+					.cornerRadius(10)
+					.padding()
 				}
 			}.task {
 				do {
@@ -31,13 +37,13 @@ struct NewsView: View {
 				}
 			}.navigationTitle("News")
 		}
-    }
+	}
 }
 
 struct NewsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsView()
+	static var previews: some View {
+		NewsView()
 			.environmentObject(NewsSpaceApi())
-    }
+	}
 
 }
