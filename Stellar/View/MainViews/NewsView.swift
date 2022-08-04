@@ -17,17 +17,22 @@ struct NewsView: View {
 						NewsAsyncImage(news: new)
 						VStack(alignment: .leading, spacing: 10) {
 							Text(new.title)
+								.font(.headline)
 							Text(new.publishedAt)
 								.foregroundColor(.secondary)
 							Text(new.summary)
 								.lineLimit(2)
+								.foregroundColor(.secondary)
 						}
 						.padding(5)
 						.padding(.bottom)
 					}
+
 					.background(.regularMaterial)
 					.cornerRadius(10)
-					.padding()
+					.shadow(radius: 10)
+					.padding([.horizontal, .vertical])
+
 				}
 			}.task {
 				do {

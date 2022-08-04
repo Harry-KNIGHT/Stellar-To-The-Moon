@@ -17,7 +17,7 @@ struct NewsAsyncImage: View {
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
 		}placeholder: {
 			ZStack(alignment: .center) {
-			RoundedRectangle(cornerRadius: 10)
+			Rectangle()
 					.frame(maxWidth: .infinity, maxHeight: .infinity)
 					.foregroundStyle(.secondary)
 				Text("Stellar To The 🌝")
