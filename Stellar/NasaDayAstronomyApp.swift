@@ -13,6 +13,7 @@ struct NasaDayAstronomyApp: App {
 	@StateObject var allAstronomiesApi = AstronomiesArticleApi()
 	@StateObject var favoriteVM = FavoriteViewModel()
 	@StateObject var spacePeoples = PersonInSpaceApi()
+	@StateObject public var newsApi = NewsSpaceApi()
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -20,6 +21,7 @@ struct NasaDayAstronomyApp: App {
 				.environmentObject(allAstronomiesApi)
 				.environmentObject(favoriteVM)
 				.environmentObject(spacePeoples)
+				.environmentObject(newsApi)
         }
     }
 }
