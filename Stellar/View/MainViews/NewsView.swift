@@ -18,12 +18,13 @@ struct NewsView: View {
 						VStack {
 						NewsAsyncImage(news: new)
 						VStack(alignment: .leading, spacing: 10) {
-							Text(new.title)
+							Text(new.title.trimmingCharacters(in: .whitespacesAndNewlines))
+
 								.font(.headline)
 								.foregroundColor(.primary)
 							Text(new.newsSite.rawValue)
 								.foregroundColor(.secondary)
-							Text(new.summary)
+							Text(new.summary.trimmingCharacters(in: .whitespacesAndNewlines))
 								.lineLimit(2)
 								.foregroundColor(.secondary)
 						}.multilineTextAlignment(.leading)
