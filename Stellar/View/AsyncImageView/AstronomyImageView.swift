@@ -20,19 +20,21 @@ struct AstronomyImageView: View {
 	@State private var isLoadingVisible = true
 	@State private var showLoading = true
 	var body: some View {
-		ZStack(alignment: .bottom) {
-			AsyncImage(url: URL(string:astronomy.hdurl ?? "")) { image in
+		AsyncImage(url: URL(string:astronomy.hdurl ?? "")) { image in
+			ZStack(alignment: .bottomTrailing) {
+				ZStack(alignment: .bottomLeading) {
 				image
 					.resizable()
 					.scaledToFill()
 					.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-				HStack {
+
 					if let copryRight = astronomy.copyright {
 						Text(copryRight)
 							.padding(4)
 							.background(colorScheme == .dark ? .black : .white)
+
 					}
-					Spacer()
+				}
 					if !isImageDowloaded {
 						Button(action: {
 							do {
@@ -52,31 +54,51 @@ struct AstronomyImageView: View {
 						}, label: {
 
 							if !isDownloadingImage {
-							Image(systemName: "arrow.down.circle.fill")
+								Image(systemName: "arrow.down.to.line")
+									.font(.title2)
+									.foregroundColor(.white)
 							}else {
-								HStack {
-									ActivityIndicatorView(isVisible: $showLoading, type: .arcs(count: 3, lineWidth: CGFloat(1.5)))
-										.frame(width: 20, height: 20)
-									Text("Downlading image")
-										.font(.title3.bold())
-								}
+								ActivityIndicatorView(isVisible: $showLoading, type: .arcs(count: 3, lineWidth: CGFloat(1.5)))
+									.frame(width: 25, height: 25)
+									.foregroundColor(.white)
+
 							}
 						})
-					} else  {
-						Text("\(Image(systemName: "checkmark.circle.fill")) Image downloaded")
-							   .font(.title3.bold())
-							   .padding(5)
-							   .foregroundColor(.green)
-							   .background(.regularMaterial)
-							   .cornerRadius(10)
-					   }
-				}
+						.buttonStyle(.borderedProminent)
+						.clipShape(Circle())
+						.foregroundColor(.blue)
+						.overlay {
+							Circle()
+								.stroke(.white, lineWidth: 0.4)
+						}
+						.shadow(color: .blue, radius: 10)
+						.padding([.bottom, .trailing])
 
-			} placeholder: {
-				ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
-					.frame(width: 100, height: 50)
-					.foregroundColor(.primary)
+
+					} else  {
+
+						Button(action: {}, label: {
+							Image(systemName: "checkmark")
+								.font(.title2)
+								.foregroundColor(.white)
+						})
+						.buttonStyle(.borderedProminent)
+						.clipShape(Circle())
+						.tint(.green)
+						.overlay {
+							Circle()
+								.stroke(.white, lineWidth: 0.4)
+						}
+						.shadow(color: .green, radius: 10)
+						.padding([.bottom, .trailing])
+
+					}
+
 			}
+		} placeholder: {
+			ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
+				.frame(width: 100, height: 50)
+				.foregroundColor(.primary)
 		}
 	}
 }
