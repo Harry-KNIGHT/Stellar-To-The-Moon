@@ -24,6 +24,11 @@ struct ContentView: View {
 				.tabItem {
 					Label("News", systemImage: "newspaper.fill")
 				}
+
+			IssLiveView()
+				.tabItem {
+					Label("Iss Live", systemImage: "play.circle")
+				}
 		}
 	}
 }
