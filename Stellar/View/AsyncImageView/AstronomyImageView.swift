@@ -19,6 +19,7 @@ struct AstronomyImageView: View {
 
 	@State private var isLoadingVisible = true
 	@State private var showLoading = true
+	@State private var circleProgress: CGFloat = 0.0
 	var body: some View {
 		AsyncImage(url: URL(string:astronomy.hdurl ?? "")) { image in
 			ZStack(alignment: .bottomTrailing) {
@@ -39,6 +40,8 @@ struct AstronomyImageView: View {
 						Button(action: {
 							do {
 								self.isDownloadingImage.toggle()
+								self.startLoading()
+
 								guard let urlString = astronomy.hdurl else {
 									throw ApiError.urlNotFound
 								}
@@ -58,10 +61,7 @@ struct AstronomyImageView: View {
 									.font(.title2)
 									.foregroundColor(.white)
 							}else {
-								ActivityIndicatorView(isVisible: $showLoading, type: .arcs(count: 3, lineWidth: CGFloat(1.5)))
-									.frame(width: 25, height: 25)
-									.foregroundColor(.white)
-
+								CircularProgressBar(circleProgress: circleProgress, width: 25, height: 25, lineWidth: 4)
 							}
 						})
 						.buttonStyle(.borderedProminent)
@@ -99,6 +99,16 @@ struct AstronomyImageView: View {
 			ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
 				.frame(width: 100, height: 50)
 				.foregroundColor(.primary)
+		}
+	}
+	func startLoading() {
+		_ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+			withAnimation() {
+				self.circleProgress += 0.01
+				if self.circleProgress >= 0.95 {
+					timer.invalidate()
+				}
+			}
 		}
 	}
 }
