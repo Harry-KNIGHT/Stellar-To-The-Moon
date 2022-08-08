@@ -20,6 +20,8 @@ struct AstronomyImageView: View {
 	@State private var isLoadingVisible = true
 	@State private var showLoading = true
 	@State private var circleProgress: CGFloat = 0.0
+
+	@State private var animate = false
 	var body: some View {
 		AsyncImage(url: URL(string:astronomy.hdurl ?? "")) { image in
 			ZStack(alignment: .bottomTrailing) {
@@ -77,7 +79,9 @@ struct AstronomyImageView: View {
 
 					} else  {
 
-						Button(action: {}, label: {
+						Button(action: {
+
+						}, label: {
 							Image(systemName: "checkmark")
 								.font(.title2)
 								.foregroundColor(.white)
@@ -91,6 +95,13 @@ struct AstronomyImageView: View {
 						}
 						.shadow(color: .green, radius: 10)
 						.padding([.bottom, .trailing])
+						.opacity(animate ? 0 : 1)
+
+						.animation(.easeInOut(duration: 2).delay(1), value: animate ? 0 : 1)
+						.task {
+							animate = true
+							print(animate)
+						}
 
 					}
 

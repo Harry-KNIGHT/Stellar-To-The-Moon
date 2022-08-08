@@ -225,7 +225,6 @@
 			children = (
 				3C5555D0289057E80093122A /* AstronomyDetailView.swift */,
 				3CFD11642892AC5400F14F65 /* PersonSpaceDetailView.swift */,
-				3CC954CF289D99FF006D547C /* IssLiveView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -255,6 +254,7 @@
 				3CBF0C442891371E00010691 /* FavoritesArticleList.swift */,
 				3C45F9812897E76E003CBAA0 /* WebView.swift */,
 				3C035456289C03CB001E7DEC /* NewsView.swift */,
+				3CC954CF289D99FF006D547C /* IssLiveView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -583,7 +583,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -601,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.3;
+				MARKETING_VERSION = 0.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -616,7 +616,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -634,7 +634,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.3;
+				MARKETING_VERSION = 0.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
