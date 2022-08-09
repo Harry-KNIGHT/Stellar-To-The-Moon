@@ -10,7 +10,6 @@ import ActivityIndicatorView
 
 struct AstronomyArticleList: View {
 	@EnvironmentObject public var articleApi: AstronomiesArticleApi
-	@EnvironmentObject public var newsApi: NewsSpaceApi
 	@State private var showSheet = false
 	@State private var showLoadingIndicator = true
 
@@ -67,12 +66,6 @@ struct AstronomyArticleList: View {
 		.task {
 			await articleApi.fetchAstronomiesObject(to: Date.now)
 		}
-		
-		.onAppear {
-				Task {
-					try await newsApi.fetchSpaceNews()
-				}
-		}
 	}
 }
 
@@ -80,7 +73,6 @@ struct AstronomyArticleList_Previews: PreviewProvider {
 	static var previews: some View {
 		AstronomyArticleList()
 			.environmentObject(AstronomiesArticleApi())
-			.environmentObject(NewsSpaceApi())
 	}
 }
 

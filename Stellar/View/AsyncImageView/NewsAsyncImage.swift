@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NewsAsyncImage: View {
-	let news: NewsResponseElement
+
     var body: some View {
 		AsyncImage(url: URL(string: news.imageURL)) { image in
 			image
