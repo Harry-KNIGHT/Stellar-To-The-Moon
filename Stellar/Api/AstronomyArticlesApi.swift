@@ -10,7 +10,7 @@ import SwiftUI
 class AstronomiesArticleApi: ObservableObject {
 	@Published var allAstronomies = [NasaAstronomyResponse]()
 
-	func fetchAstronomiesObject(from hundredDayBefore: Int64 = Date().millisecondsSince1970 , to today: Date) async {
+	func fetchAstronomiesObject(from hundredDayBefore: Int64 = Date().millisecondsSince1970 , to today: Date) async throws {
 		let formatter = DateFormatter()
 		formatter.dateFormat = "yyyy-MM-dd"
 

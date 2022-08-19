@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ActivityIndicatorView
+import RefreshableScrollView
 
 struct AstronomyArticleList: View {
 	@EnvironmentObject public var articleApi: AstronomiesArticleApi
@@ -19,7 +20,7 @@ struct AstronomyArticleList: View {
 				if articleApi.allAstronomies.isEmpty {
 					LoadingView()
 				}else {
-					ScrollView {
+					RefreshableScrollView {
 						LazyVStack {
 							ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
 								NavigationLink(destination: AstronomyDetailView(article: article)) {
@@ -34,8 +35,15 @@ struct AstronomyArticleList: View {
 									}
 								}
 							}
-						}.padding([.horizontal, .top])
-
+						}
+						.padding([.horizontal, .top])
+					}
+					.refreshable {
+						do {
+							try await articleApi.fetchAstronomiesObject(to: Date.now)
+						}catch {
+							print("Error while refresh: \(error.localizedDescription)")
+						}
 					}
 				}
 			}
@@ -58,13 +66,13 @@ struct AstronomyArticleList: View {
 					}
 				}
 			}
-		}.refreshable {
-			Task {
-				articleApi.allAstronomies
-			}
 		}
 		.task {
-			await articleApi.fetchAstronomiesObject(to: Date.now)
+			do {
+				try await articleApi.fetchAstronomiesObject(to: Date.now)
+			} catch {
+				print("Error: \(error.localizedDescription)")
+			}
 		}
 	}
 }
