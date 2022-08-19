@@ -46,6 +46,7 @@ struct PersonInSpaceView: View {
 				}
 				.padding()
 				.navigationTitle("Currently in space")
+				.navigationBarTitleDisplayMode(.inline)
 			}
 		}
 		.task {

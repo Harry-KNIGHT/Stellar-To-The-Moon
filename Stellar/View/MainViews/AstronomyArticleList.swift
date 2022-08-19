@@ -37,31 +37,31 @@ struct AstronomyArticleList: View {
 							}
 						}
 						.padding([.horizontal, .top])
+						.navigationTitle("Stellar")
+						.navigationBarTitleDisplayMode(.inline)
+					}
+					.toolbar {
+						ToolbarItem(placement: .navigationBarTrailing) {
+							if !articleApi.allAstronomies.isEmpty {
+								Button(action: {
+									showSheet.toggle()
+
+								}, label: {
+									Label("Add article to favorite", systemImage: "star.fill")
+										.font(.title3)
+										.foregroundColor(.primary)
+								})
+								.sheet(isPresented: $showSheet) {
+									FavoritesArticleList()
+								}
+							}
+						}
 					}
 					.refreshable {
 						do {
 							try await articleApi.fetchAstronomiesObject(to: Date.now)
 						}catch {
 							print("Error while refresh: \(error.localizedDescription)")
-						}
-					}
-				}
-			}
-
-			.navigationTitle(articleApi.allAstronomies.isEmpty ? "" : "Stellar")
-			.toolbar {
-				ToolbarItem(placement: .navigationBarTrailing) {
-					if !articleApi.allAstronomies.isEmpty {
-						Button(action: {
-							showSheet.toggle()
-
-						}, label: {
-							Label("Add article to favorite", systemImage: "star.fill")
-								.font(.title3)
-								.foregroundColor(.primary)
-						})
-						.sheet(isPresented: $showSheet) {
-							FavoritesArticleList()
 						}
 					}
 				}
