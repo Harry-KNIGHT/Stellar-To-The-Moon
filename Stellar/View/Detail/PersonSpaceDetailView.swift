@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ActivityIndicatorView
+import StellarMoonKit
 
 struct PersonSpaceDetailView: View {
 	let personInSpace: Person
@@ -74,18 +75,7 @@ struct PersonSpaceDetailView: View {
 struct PersonSpaceDetailView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			PersonSpaceDetailView(personInSpace:
-									Person(
-										id: 1, name: "Oleg Artemyev",
-										country: "Russia", flagCode: "ru",
-										agency: "Roscosmos",
-										position: "Commander",
-										spacecraft: .soyuzMS21,
-										launched: 1647615318,
-										iss: true,
-										daysInSpace: 361,
-										url: "https://en.wikipedia.org/wiki/Oleg_Artemyev",
-										image: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Oleg_Artemyev_in_2021.jpg"))
+			PersonSpaceDetailView(personInSpace: .peopleSample)
 		}
 	}
 }

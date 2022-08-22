@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ActivityIndicatorView
+import StellarMoonKit
 
 struct PersonInSpaceAsyncImage: View {
 	let personInSpace: Person
@@ -32,16 +33,6 @@ struct PersonInSpaceAsyncImage: View {
 
 struct PersonInSpaceAsyncImage_Previews: PreviewProvider {
 	static var previews: some View {
-		PersonInSpaceAsyncImage(personInSpace: Person(
-			id: 1, name: "Oleg Artemyev",
-			country: "Russia", flagCode: "ru",
-			agency: "Roscosmos",
-			position: "Commander",
-			spacecraft: .soyuzMS21,
-			launched: 1647615318,
-			iss: true,
-			daysInSpace: 361,
-			url: "https://en.wikipedia.org/wiki/Oleg_Artemyev",
-			image: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Oleg_Artemyev_in_2021.jpg"))
+		PersonInSpaceAsyncImage(personInSpace: .peopleSample)
 	}
 }

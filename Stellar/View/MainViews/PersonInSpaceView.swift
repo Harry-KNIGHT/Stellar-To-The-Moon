@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PersonInSpaceView: View {
-	@EnvironmentObject public var peopleApi: PersonInSpaceApi
+	@EnvironmentObject public var peopleApi: PersonInSpaceViewModel
 	var body: some View {
 		NavigationView {
 			ScrollView {
@@ -52,7 +52,7 @@ struct PersonInSpaceView: View {
 		.task {
 			do {
 				if peopleApi.spacePeoples.isEmpty {
-				try await peopleApi.fetchPersonInSpace()
+					try await peopleApi.getPersonInsSpace()
 				}else {
 					print("Data feched")
 				}
@@ -67,7 +67,7 @@ struct PersonInSpaceView: View {
 struct PersonInSpaceView_Previews: PreviewProvider {
 	static var previews: some View {
 		PersonInSpaceView()
-			.environmentObject(PersonInSpaceApi())
+			.environmentObject(PersonInSpaceViewModel())
 	}
 }
 

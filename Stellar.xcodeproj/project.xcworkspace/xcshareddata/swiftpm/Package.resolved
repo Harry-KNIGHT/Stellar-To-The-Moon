@@ -17,6 +17,15 @@
         "revision" : "45ab1092d36ca77bbbeee1534251085d974dc40e",
         "version" : "0.0.2"
       }
+    },
+    {
+      "identity" : "stellarmoonkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Harry-KNIGHT/StellarMoonKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1b44cb86d207a14cdc72934b3fbec1c488d33254"
+      }
     }
   ],
   "version" : 2

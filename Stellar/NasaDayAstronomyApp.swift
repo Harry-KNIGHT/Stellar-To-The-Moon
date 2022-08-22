@@ -9,18 +9,18 @@ import SwiftUI
 
 @main
 struct NasaDayAstronomyApp: App {
-	@StateObject var astronomyApi = AstronomyApi()
-	@StateObject var allAstronomiesApi = AstronomiesArticleApi()
+	@StateObject var astronomyVM = AstronomyDetailViewModel()
+	@StateObject var allAstronomiesVM = AstronomiesArticleViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
-	@StateObject var spacePeoples = PersonInSpaceApi()
+	@StateObject var personInSpaceVM = PersonInSpaceViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-				.environmentObject(astronomyApi)
-				.environmentObject(allAstronomiesApi)
+				.environmentObject(astronomyVM)
+				.environmentObject(allAstronomiesVM)
 				.environmentObject(favoriteVM)
-				.environmentObject(spacePeoples)
+				.environmentObject(personInSpaceVM)
         }
     }
 }

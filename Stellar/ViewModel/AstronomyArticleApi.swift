@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
+import StellarMoonKit
 
 enum ApiError: Error {
 	case urlNotFound, dataError, badHttpResponse, someThingWentWrong, noDataForImage

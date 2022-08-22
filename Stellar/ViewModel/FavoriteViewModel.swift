@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import StellarMoonKit
 
 class FavoriteViewModel: ObservableObject {
 	@Published public var favoriteAstronomyArticles: [NasaAstronomyResponse]

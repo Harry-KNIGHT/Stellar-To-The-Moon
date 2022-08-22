@@ -10,7 +10,7 @@ import ActivityIndicatorView
 import RefreshableScrollView
 
 struct AstronomyArticleList: View {
-	@EnvironmentObject public var articleApi: AstronomiesArticleApi
+	@EnvironmentObject public var articleApi: AstronomiesArticleViewModel
 	@State private var showSheet = false
 	@State private var showLoadingIndicator = true
 
@@ -59,7 +59,7 @@ struct AstronomyArticleList: View {
 					}
 					.refreshable {
 						do {
-							try await articleApi.fetchAstronomiesObject(to: Date.now)
+							try await articleApi.getAstronomiesArticles(to: Date.now)
 						}catch {
 							print("Error while refresh: \(error.localizedDescription)")
 						}
@@ -69,7 +69,7 @@ struct AstronomyArticleList: View {
 		}
 		.task {
 			do {
-				try await articleApi.fetchAstronomiesObject(to: Date.now)
+				try await articleApi.getAstronomiesArticles(to: Date.now)
 			} catch {
 				print("Error: \(error.localizedDescription)")
 			}
@@ -80,7 +80,7 @@ struct AstronomyArticleList: View {
 struct AstronomyArticleList_Previews: PreviewProvider {
 	static var previews: some View {
 		AstronomyArticleList()
-			.environmentObject(AstronomiesArticleApi())
+			.environmentObject(AstronomiesArticleViewModel())
 	}
 }
 
