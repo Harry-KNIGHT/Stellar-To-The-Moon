@@ -28,6 +28,7 @@ struct AstronomyDetailView: View {
 					Text("Explanation:")
 						.font(.headline)
 					Text(article.explanation)
+						.textSelection(.enabled)
 				}
 				.padding()
 				.background(.thinMaterial)
