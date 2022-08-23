@@ -17,16 +17,22 @@ struct PersonInSpaceAsyncImage: View {
 	var body: some View {
 		ZStack(alignment: .bottomTrailing) {
 			AsyncImage(url: URL(string: personInSpace.image)) { image in
-					image
-						.resizable()
-						.scaledToFill()
-						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+				image
+					.resizable()
+					.scaledToFill()
+					.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+			} placeholder: {
+				ZStack {
+					Rectangle()
+						.frame(minHeight: 500, maxHeight: 600)
+						.foregroundStyle(.regularMaterial)
 
-				} placeholder: {
+
 					ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
 						.frame(width: 100, height: 50)
 						.foregroundColor(.primary)
 				}
+			}
 		}
 	}
 }

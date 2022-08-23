@@ -103,14 +103,18 @@ struct AstronomyImageView: View {
 							animate = true
 							print(animate)
 						}
-
 					}
-
 			}
 		} placeholder: {
+			ZStack {
+			Rectangle()
+				.frame(minHeight: 200, maxHeight: 350)
+				.foregroundStyle(.regularMaterial)
+
 			ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
 				.frame(width: 100, height: 50)
 				.foregroundColor(.primary)
+			}
 		}
 	}
 	func startLoading() {
