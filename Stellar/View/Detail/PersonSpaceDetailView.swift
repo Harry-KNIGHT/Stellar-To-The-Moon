@@ -51,7 +51,18 @@ struct PersonSpaceDetailView: View {
 			.buttonBorderShape(.roundedRectangle)
 			.padding(.bottom)
 			.sheet(isPresented: $isShwoingSheet) {
+				NavigationView {
 				WebView(url: URL(string: personInSpace.url) ?? URL(string: "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal")!)
+						.navigationBarTitleDisplayMode(.inline)
+						.navigationTitle(personInSpace.name)
+						.toolbar {
+							ToolbarItem(placement: .navigationBarTrailing) {
+								Button("Dismiss") {
+									self.isShwoingSheet.toggle()
+								}
+							}
+						}
+				}
 			}
 
 
