@@ -104,3 +104,11 @@ struct ListRowCell: View {
 		}	.multilineTextAlignment(.leading)
 	}
 }
+
+// Tableau d'articles sur l'astronomie
+
+// Récupère ce tableau
+
+// Affiche en liste
+
+// List à detail -> Chargement qui casse les couilles
