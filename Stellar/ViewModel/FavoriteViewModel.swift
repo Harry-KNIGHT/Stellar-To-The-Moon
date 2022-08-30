@@ -12,7 +12,7 @@ class FavoriteViewModel: ObservableObject {
 	@Published public var favoriteAstronomyArticles: [NasaAstronomyResponse]
 
 	init() {
-		if let data = UserDefaults.standard.data(forKey: "SavedData") {
+		if let data = UserDefaults.standard.data(forKey: "SavedFavoritesData") {
 			if let decoded = try? JSONDecoder().decode([NasaAstronomyResponse].self, from: data) {
 				favoriteAstronomyArticles = decoded
 				return
@@ -24,7 +24,7 @@ class FavoriteViewModel: ObservableObject {
 
 	func save() {
 		if let encoded = try? JSONEncoder().encode(favoriteAstronomyArticles) {
-			UserDefaults.standard.set(encoded, forKey: "SavedData")
+			UserDefaults.standard.set(encoded, forKey: "SavedFavoritesData")
 		}
 	}
 
