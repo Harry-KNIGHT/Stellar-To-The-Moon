@@ -15,6 +15,7 @@
 		3C5555D3289058C50093122A /* AstronomyArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D2289058C50093122A /* AstronomyArticleList.swift */; };
 		3C5555D6289058FF0093122A /* AstronomyArticlesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* AstronomyArticlesApi.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
+		3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBB34A328BE35F700AC0EDF /* RowCell.swift */; };
 		3CBBA48228AFA78D0062A498 /* RefreshableScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 3CBBA48128AFA78D0062A498 /* RefreshableScrollView */; };
 		3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */; };
 		3CBF0C452891371E00010691 /* FavoritesArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C442891371E00010691 /* FavoritesArticleList.swift */; };
@@ -61,6 +62,7 @@
 		3C5555D2289058C50093122A /* AstronomyArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticleList.swift; sourceTree = "<group>"; };
 		3C5555D5289058FF0093122A /* AstronomyArticlesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticlesApi.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		3CBB34A328BE35F700AC0EDF /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
 		3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		3CBF0C442891371E00010691 /* FavoritesArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesArticleList.swift; sourceTree = "<group>"; };
 		3CBF0C4628913B5700010691 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5555D2289058C50093122A /* AstronomyArticleList.swift */,
+				3CBB34A328BE35F700AC0EDF /* RowCell.swift */,
 				3CFD116028929F0F00F14F65 /* PersonInSpaceView.swift */,
 				3CBF0C442891371E00010691 /* FavoritesArticleList.swift */,
 				3C45F9812897E76E003CBAA0 /* WebView.swift */,
@@ -392,6 +395,7 @@
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
 				3CFD11632892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift in Sources */,
 				3C5555D3289058C50093122A /* AstronomyArticleList.swift in Sources */,
+				3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
 				3C45F9822897E76E003CBAA0 /* WebView.swift in Sources */,
 				3CFD11652892AC5400F14F65 /* PersonSpaceDetailView.swift in Sources */,

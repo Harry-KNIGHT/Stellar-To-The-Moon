@@ -28,9 +28,8 @@ struct AstronomyArticleList: View {
 										RoundedRectangle(cornerRadius: 10)
 											.frame(maxWidth: .infinity, maxHeight: .infinity)
 											.foregroundStyle(.regularMaterial)
-
 										VStack(alignment: .leading) {
-											ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
+											RowCell(article: article)
 										}.padding()
 									}
 								}
@@ -83,32 +82,3 @@ struct AstronomyArticleList_Previews: PreviewProvider {
 			.environmentObject(AstronomiesArticleViewModel())
 	}
 }
-
-struct ListRowCell: View {
-	var title: String
-	var date: String
-	var explanation: String
-	var body: some View {
-		VStack(alignment: .leading, spacing: 3) {
-			Text(title)
-				.font(.headline)
-				.foregroundColor(.primary)
-			Text(date)
-				.font(.callout)
-				.foregroundColor(.secondary)
-			Text(explanation.trimmingCharacters(in: .whitespacesAndNewlines))
-				.font(.body)
-				.foregroundColor(.secondary)
-				.lineLimit(2)
-
-		}	.multilineTextAlignment(.leading)
-	}
-}
-
-// Tableau d'articles sur l'astronomie
-
-// Récupère ce tableau
-
-// Affiche en liste
-
-// List à detail -> Chargement qui casse les couilles

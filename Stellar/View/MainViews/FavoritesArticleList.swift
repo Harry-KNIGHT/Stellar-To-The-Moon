@@ -19,7 +19,7 @@ struct FavoritesArticleList: View {
 					List {
 						ForEach(favoriteVM.favoriteAstronomyArticles, id: \.self) { article in
 							NavigationLink(destination: AstronomyDetailView(article: article)) {
-								ListRowCell(title: article.title, date: article.date, explanation: article.explanation)
+								RowCell(article: article)
 							}
 						}
 						.onDelete(perform: favoriteVM.deletFavorite)
