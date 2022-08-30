@@ -34,8 +34,9 @@ struct AstronomyImageView: View {
 
 					if let copryRight = astronomy.copyright {
 						Text(copryRight)
+							.foregroundColor(.white)
 							.padding(4)
-							.background(colorScheme == .dark ? .black : .white)
+							.background(LinearGradient(colors: [.black.opacity(0), .black.opacity(0.6)], startPoint: .top, endPoint: .center))
 
 					}
 				}
