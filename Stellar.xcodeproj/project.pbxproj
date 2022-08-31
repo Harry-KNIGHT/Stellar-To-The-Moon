@@ -16,13 +16,19 @@
 		3C5555D6289058FF0093122A /* AstronomyArticlesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* AstronomyArticlesApi.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
 		3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBB34A328BE35F700AC0EDF /* RowCell.swift */; };
+		3CBB34C628BE491800AC0EDF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBB34C528BE491800AC0EDF /* WidgetKit.framework */; };
+		3CBB34C828BE491800AC0EDF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBB34C728BE491800AC0EDF /* SwiftUI.framework */; };
+		3CBB34CB28BE491800AC0EDF /* StellarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBB34CA28BE491800AC0EDF /* StellarWidget.swift */; };
+		3CBB34CD28BE491800AC0EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CBB34CC28BE491800AC0EDF /* Assets.xcassets */; };
+		3CBB34D128BE491800AC0EDF /* StellarWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CBB34C328BE491800AC0EDF /* StellarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3CBBA48228AFA78D0062A498 /* RefreshableScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 3CBBA48128AFA78D0062A498 /* RefreshableScrollView */; };
 		3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */; };
 		3CBF0C452891371E00010691 /* FavoritesArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C442891371E00010691 /* FavoritesArticleList.swift */; };
 		3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4628913B5700010691 /* EmptyView.swift */; };
 		3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */; };
 		3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4D2891AA1D00010691 /* LoadingView.swift */; };
-		3CC944B328B39E0C00447BB6 /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC944B228B39E0C00447BB6 /* StellarMoonKit */; };
+		3CC4922E28BE5F4D00C0B89B /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */; };
+		3CC4926628BE632400C0B89B /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC4926528BE632400C0B89B /* StellarMoonKit */; };
 		3CC944B528B3A74800447BB6 /* AstronomyArticleDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC944B428B3A74800447BB6 /* AstronomyArticleDetailVM.swift */; };
 		3CC954C6289CFF25006D547C /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC954C5289CFF25006D547C /* CircularProgressBar.swift */; };
 		3CC954D0289D99FF006D547C /* IssLiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC954CF289D99FF006D547C /* IssLiveView.swift */; };
@@ -37,6 +43,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3CBB34CF28BE491800AC0EDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CBB34C228BE491800AC0EDF;
+			remoteInfo = StellarWidgetExtension;
+		};
 		3CDBA11C288E759B00AB15C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
@@ -53,6 +66,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3CBB34D228BE491800AC0EDF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3CBB34D128BE491800AC0EDF /* StellarWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3C45F9812897E76E003CBAA0 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* AstronomyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageView.swift; sourceTree = "<group>"; };
@@ -63,6 +90,12 @@
 		3C5555D5289058FF0093122A /* AstronomyArticlesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticlesApi.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		3CBB34A328BE35F700AC0EDF /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
+		3CBB34C328BE491800AC0EDF /* StellarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CBB34C528BE491800AC0EDF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3CBB34C728BE491800AC0EDF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3CBB34CA28BE491800AC0EDF /* StellarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarWidget.swift; sourceTree = "<group>"; };
+		3CBB34CC28BE491800AC0EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CBB34CE28BE491800AC0EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		3CBF0C442891371E00010691 /* FavoritesArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesArticleList.swift; sourceTree = "<group>"; };
 		3CBF0C4628913B5700010691 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
@@ -84,12 +117,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3CBB34C028BE491800AC0EDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CBB34C828BE491800AC0EDF /* SwiftUI.framework in Frameworks */,
+				3CC4926628BE632400C0B89B /* StellarMoonKit in Frameworks */,
+				3CBB34C628BE491800AC0EDF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CDBA108288E759A00AB15C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3CBBA48228AFA78D0062A498 /* RefreshableScrollView in Frameworks */,
-				3CC944B328B39E0C00447BB6 /* StellarMoonKit in Frameworks */,
+				3CC4922E28BE5F4D00C0B89B /* StellarMoonKit in Frameworks */,
 				3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +177,25 @@
 			path = ImageSaver;
 			sourceTree = "<group>";
 		};
+		3CBB34C428BE491800AC0EDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CBB34C528BE491800AC0EDF /* WidgetKit.framework */,
+				3CBB34C728BE491800AC0EDF /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CBB34C928BE491800AC0EDF /* StellarWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3CBB34CA28BE491800AC0EDF /* StellarWidget.swift */,
+				3CBB34CC28BE491800AC0EDF /* Assets.xcassets */,
+				3CBB34CE28BE491800AC0EDF /* Info.plist */,
+			);
+			path = StellarWidget;
+			sourceTree = "<group>";
+		};
 		3CBF0C4028906B3100010691 /* AsyncImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
+				3CBB34C928BE491800AC0EDF /* StellarWidget */,
+				3CBB34C428BE491800AC0EDF /* Frameworks */,
 				3CDBA10C288E759A00AB15C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -168,6 +232,7 @@
 				3CDBA10B288E759A00AB15C7 /* Stellar.app */,
 				3CDBA11B288E759B00AB15C7 /* StellarTests.xctest */,
 				3CDBA125288E759B00AB15C7 /* StellarUITests.xctest */,
+				3CBB34C328BE491800AC0EDF /* StellarWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +308,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3CBB34C228BE491800AC0EDF /* StellarWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CBB34D528BE491800AC0EDF /* Build configuration list for PBXNativeTarget "StellarWidgetExtension" */;
+			buildPhases = (
+				3CBB34BF28BE491800AC0EDF /* Sources */,
+				3CBB34C028BE491800AC0EDF /* Frameworks */,
+				3CBB34C128BE491800AC0EDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StellarWidgetExtension;
+			packageProductDependencies = (
+				3CC4926528BE632400C0B89B /* StellarMoonKit */,
+			);
+			productName = StellarWidgetExtension;
+			productReference = 3CBB34C328BE491800AC0EDF /* StellarWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3CDBA10A288E759A00AB15C7 /* Stellar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CDBA12F288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "Stellar" */;
@@ -250,16 +335,18 @@
 				3CDBA107288E759A00AB15C7 /* Sources */,
 				3CDBA108288E759A00AB15C7 /* Frameworks */,
 				3CDBA109288E759A00AB15C7 /* Resources */,
+				3CBB34D228BE491800AC0EDF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3CBB34D028BE491800AC0EDF /* PBXTargetDependency */,
 			);
 			name = Stellar;
 			packageProductDependencies = (
 				3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */,
 				3CBBA48128AFA78D0062A498 /* RefreshableScrollView */,
-				3CC944B228B39E0C00447BB6 /* StellarMoonKit */,
+				3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */,
 			);
 			productName = NasaDayAstronomy;
 			productReference = 3CDBA10B288E759A00AB15C7 /* Stellar.app */;
@@ -308,9 +395,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					3CBB34C228BE491800AC0EDF = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					3CDBA10A288E759A00AB15C7 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -336,7 +426,7 @@
 			packageReferences = (
 				3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				3CBBA48028AFA78D0062A498 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */,
-				3CC944B128B39E0C00447BB6 /* XCRemoteSwiftPackageReference "StellarMoonKit" */,
+				3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */,
 			);
 			productRefGroup = 3CDBA10C288E759A00AB15C7 /* Products */;
 			projectDirPath = "";
@@ -345,11 +435,20 @@
 				3CDBA10A288E759A00AB15C7 /* Stellar */,
 				3CDBA11A288E759B00AB15C7 /* StellarTests */,
 				3CDBA124288E759B00AB15C7 /* StellarUITests */,
+				3CBB34C228BE491800AC0EDF /* StellarWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3CBB34C128BE491800AC0EDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CBB34CD28BE491800AC0EDF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CDBA109288E759A00AB15C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +476,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3CBB34BF28BE491800AC0EDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CBB34CB28BE491800AC0EDF /* StellarWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CDBA107288E759A00AB15C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +529,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3CBB34D028BE491800AC0EDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CBB34C228BE491800AC0EDF /* StellarWidgetExtension */;
+			targetProxy = 3CBB34CF28BE491800AC0EDF /* PBXContainerItemProxy */;
+		};
 		3CDBA11D288E759B00AB15C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3CDBA10A288E759A00AB15C7 /* Stellar */;
@@ -435,6 +547,64 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3CBB34D328BE491800AC0EDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StellarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CBB34D428BE491800AC0EDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StellarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3CDBA12D288E759B00AB15C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -552,6 +722,7 @@
 		3CDBA130288E759B00AB15C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -585,6 +756,7 @@
 		3CDBA131288E759B00AB15C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -694,6 +866,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3CBB34D528BE491800AC0EDF /* Build configuration list for PBXNativeTarget "StellarWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CBB34D328BE491800AC0EDF /* Debug */,
+				3CBB34D428BE491800AC0EDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3CDBA106288E759A00AB15C7 /* Build configuration list for PBXProject "Stellar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -749,7 +930,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		3CC944B128B39E0C00447BB6 /* XCRemoteSwiftPackageReference "StellarMoonKit" */ = {
+		3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Harry-KNIGHT/StellarMoonKit";
 			requirement = {
@@ -770,9 +951,14 @@
 			package = 3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
 			productName = ActivityIndicatorView;
 		};
-		3CC944B228B39E0C00447BB6 /* StellarMoonKit */ = {
+		3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3CC944B128B39E0C00447BB6 /* XCRemoteSwiftPackageReference "StellarMoonKit" */;
+			package = 3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */;
+			productName = StellarMoonKit;
+		};
+		3CC4926528BE632400C0B89B /* StellarMoonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */;
 			productName = StellarMoonKit;
 		};
 /* End XCSwiftPackageProductDependency section */
