@@ -37,7 +37,7 @@ struct Provider: TimelineProvider {
 
 struct ArticleEntry: TimelineEntry {
 	var date: Date
-	var article: ArticleModel
+	var article: AstronomyArticleModel
 }
 
 struct StellarWidgetEntryView: View {
@@ -46,7 +46,7 @@ struct StellarWidgetEntryView: View {
 
 	var body: some View {
 		ZStack {
-			if entry.article.mediaType == "image" {
+			if entry.article.mediaType == .image {
 				if let url = entry.article.url, let imageData = try? Data(contentsOf: URL(string: url) ?? URL(string: applePark)!), let uiImage = UIImage(data: imageData) {
 					Image(uiImage: uiImage)
 						.resizable()

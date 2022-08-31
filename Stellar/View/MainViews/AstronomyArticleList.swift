@@ -22,7 +22,7 @@ struct AstronomyArticleList: View {
 				} else {
 					RefreshableScrollView {
 						LazyVStack {
-							ForEach(articleApi.allAstronomies.reversed()) { article in
+							ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
 								NavigationLink(destination: AstronomyDetailView(article: article)) {
 									ZStack {
 										RoundedRectangle(cornerRadius: 10)

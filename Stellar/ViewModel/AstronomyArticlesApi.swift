@@ -9,11 +9,11 @@ import SwiftUI
 import StellarMoonKit
 
 class AstronomiesArticleViewModel: ObservableObject {
-	@Published var allAstronomies: [ArticleModel]
+	@Published var allAstronomies: [AstronomyArticleModel]
 
 	init() {
 		if let data = UserDefaults.standard.data(forKey: "SavedData") {
-			if let decoded = try? JSONDecoder().decode([ArticleModel].self, from: data) {
+			if let decoded = try? JSONDecoder().decode([AstronomyArticleModel].self, from: data) {
 				allAstronomies = decoded
 				return
 			}

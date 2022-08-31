@@ -11,14 +11,14 @@ import ActivityIndicatorView
 import StellarMoonKit
 
 struct AstronomyDetailView: View {
-	let article: ArticleModel
+	let article: AstronomyArticleModel
 	@State private var isSheetPresented = false
 	@EnvironmentObject var favoriteVM: FavoriteViewModel
 	@EnvironmentObject var astronomyApi: AstronomyDetailViewModel
 
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
-				if article.mediaType == "image" {
+			if article.mediaType == .image {
 					AstronomyImageView(astronomy: article)
 				} else {
 					VideoView(videoID: article.url)

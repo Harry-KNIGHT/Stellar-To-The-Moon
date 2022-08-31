@@ -16,7 +16,7 @@ struct FavoritesArticleList: View {
 					EmptyView()
 				} else {
 					List {
-						ForEach(favoriteVM.favoriteAstronomyArticles, id: \.self) { article in
+						ForEach(favoriteVM.favoriteAstronomyArticles, id: \.date) { article in
 							NavigationLink(destination: AstronomyDetailView(article: article)) {
 								RowCell(article: article)
 							}
