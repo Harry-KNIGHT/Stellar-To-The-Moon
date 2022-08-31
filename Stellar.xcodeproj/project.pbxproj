@@ -312,6 +312,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CBB34D528BE491800AC0EDF /* Build configuration list for PBXNativeTarget "StellarWidgetExtension" */;
 			buildPhases = (
+				3C61FF7528BF574000B94A23 /* SwiftLint */,
 				3CBB34BF28BE491800AC0EDF /* Sources */,
 				3CBB34C028BE491800AC0EDF /* Frameworks */,
 				3CBB34C128BE491800AC0EDF /* Resources */,
@@ -474,6 +475,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C61FF7528BF574000B94A23 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CBB34BF28BE491800AC0EDF /* Sources */ = {

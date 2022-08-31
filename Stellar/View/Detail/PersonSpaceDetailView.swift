@@ -64,8 +64,6 @@ struct PersonSpaceDetailView: View {
 						}
 				}
 			}
-
-
 		}
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationTitle(personInSpace.name)

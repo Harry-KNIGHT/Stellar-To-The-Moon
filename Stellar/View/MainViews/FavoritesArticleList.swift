@@ -14,8 +14,7 @@ struct FavoritesArticleList: View {
 			VStack {
 				if favoriteVM.favoriteAstronomyArticles.isEmpty {
 					EmptyView()
-
-				}else {
+				} else {
 					List {
 						ForEach(favoriteVM.favoriteAstronomyArticles, id: \.self) { article in
 							NavigationLink(destination: AstronomyDetailView(article: article)) {

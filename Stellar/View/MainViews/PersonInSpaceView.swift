@@ -13,8 +13,8 @@ struct PersonInSpaceView: View {
 		NavigationView {
 			ScrollView {
 				LazyVStack(alignment: .leading) {
-					ForEach(peopleApi.spacePeoples, id: \.self) { p in
-						ForEach(p.people, id: \.self) { person in
+					ForEach(peopleApi.spacePeoples, id: \.self) { person in
+						ForEach(person.people, id: \.self) { person in
 							NavigationLink(destination: PersonSpaceDetailView(personInSpace: person)) {
 								ZStack {
 									RoundedRectangle(cornerRadius: 10)
@@ -53,7 +53,7 @@ struct PersonInSpaceView: View {
 			do {
 				if peopleApi.spacePeoples.isEmpty {
 					try await peopleApi.getPersonInsSpace()
-				}else {
+				} else {
 					print("Data feched")
 				}
 			} catch {
@@ -101,7 +101,7 @@ struct PersonInSpaceRow: View {
 					.frame(height: imageHeight)
 					.clipShape(RoundedRectangle(cornerRadius: corner, style: .continuous))
 			}.padding(.horizontal, 8)
-		}else {
+		} else {
 				VStack(alignment: .leading) {
 					Text(name)
 						.font(.title3)

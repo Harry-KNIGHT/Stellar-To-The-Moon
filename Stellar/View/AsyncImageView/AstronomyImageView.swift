@@ -64,7 +64,7 @@ struct AstronomyImageView: View {
 								Image(systemName: "arrow.down.to.line")
 									.font(.title2)
 									.foregroundColor(.white)
-							}else {
+							} else {
 								CircularProgressBar(circleProgress: circleProgress, width: 25, height: 25, lineWidth: 4)
 							}
 						})
@@ -77,9 +77,7 @@ struct AstronomyImageView: View {
 						}
 						.shadow(color: .blue, radius: 10)
 						.padding([.bottom, .trailing])
-
-
-					} else  {
+					} else {
 
 						Button(action: {
 
@@ -120,7 +118,7 @@ struct AstronomyImageView: View {
 	}
 	func startLoading() {
 		_ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-			withAnimation() {
+			withAnimation {
 				self.circleProgress += 0.01
 				if self.circleProgress >= 0.95 {
 					timer.invalidate()

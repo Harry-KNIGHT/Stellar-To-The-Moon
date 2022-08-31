@@ -9,28 +9,25 @@ import WidgetKit
 import SwiftUI
 import StellarMoonKit
 
-
 struct Provider: TimelineProvider {
 	func placeholder(in context: Context) -> ArticleEntry {
 		ArticleEntry(date: Date(), article: .astronomySample)
 	}
 
-	func getSnapshot(in context: Context, completion: @escaping (ArticleEntry) -> ()) {
+	func getSnapshot(in context: Context, completion: @escaping (ArticleEntry) -> Void) {
 		let entry = ArticleEntry(date: Date(), article: .astronomySample)
 		completion(entry)
 	}
 
-	func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+	func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
 		Task {
 			do {
-				let article = try await AstronomyApi.nasaApi()
-				
+			let article = try await AstronomyApi.nasaApi()
 				let entry = ArticleEntry(date: .now, article: article)
-				
+
 				let timeline = Timeline(entries: [entry], policy: .after(.now.advanced(by: 15 * 60)))
 
 				completion(timeline)
-				
 			} catch {
 				print(error)
 			}
@@ -43,10 +40,10 @@ struct ArticleEntry: TimelineEntry {
 	var article: NasaAstronomyResponse
 }
 
-struct StellarWidgetEntryView : View {
+struct StellarWidgetEntryView: View {
 	var entry: Provider.Entry
 	let applePark = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Apple_park_cupertino_2019.jpg/2560px-Apple_park_cupertino_2019.jpg"
-	
+
 	var body: some View {
 		ZStack {
 			if entry.article.mediaType == "image" {
@@ -71,7 +68,7 @@ struct StellarWidgetEntryView : View {
 @main
 struct StellarWidget: Widget {
 	let kind: String = "StellarWidget"
-	
+
 	var body: some WidgetConfiguration {
 		StaticConfiguration(kind: kind, provider: Provider()) { entry in
 			StellarWidgetEntryView(entry: entry)

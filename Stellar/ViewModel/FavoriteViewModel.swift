@@ -62,7 +62,7 @@ class FavoriteViewModel: ObservableObject {
 		if self.favoriteAstronomyArticles.contains(article) {
 			deletSelectedFavorite(article: article)
 			save()
-		}else {
+		} else {
 			addToFavorite(article: article)
 			save()
 		}

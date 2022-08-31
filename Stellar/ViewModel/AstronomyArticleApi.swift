@@ -22,7 +22,6 @@ class AstronomyApi: ObservableObject {
 			print(ApiError.urlNotFound)
 			return
 		}
-		
 		do {
 			let (data, response) = try await URLSession.shared.data(from: url)
 
@@ -42,7 +41,7 @@ class AstronomyApi: ObservableObject {
 		}
 	}
 
-	func getImage(from url: String) async throws -> UIImage  {
+	func getImage(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
 			throw ApiError.urlNotFound
 		}
@@ -54,7 +53,7 @@ class AstronomyApi: ObservableObject {
 				throw ApiError.noDataForImage
 			}
 
-		}catch {
+		} catch {
 			print("Error fetching image: \(error.localizedDescription)")
 		}
 		return UIImage()

@@ -27,7 +27,6 @@ struct PersonInSpaceAsyncImage: View {
 						.frame(minHeight: 500, maxHeight: 600)
 						.foregroundStyle(.regularMaterial)
 
-
 					ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
 						.frame(width: 100, height: 50)
 						.foregroundColor(.primary)

@@ -28,7 +28,7 @@ class AstronomiesArticleViewModel: ObservableObject {
 		}
 	}
 
-	@MainActor func getAstronomiesArticles(from hundredDayBefore: Int64 = Date().millisecondsSince1970 , to today: Date) async throws {
+	@MainActor func getAstronomiesArticles(from hundredDayBefore: Int64 = Date().millisecondsSince1970, to today: Date) async throws {
 		do {
 			allAstronomies = try await AstronomiesArticleApi.fetchAstronomiesObject(from: hundredDayBefore, to: today)
 			save()

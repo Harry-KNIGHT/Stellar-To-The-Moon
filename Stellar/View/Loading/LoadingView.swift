@@ -11,7 +11,6 @@ struct LoadingView: View {
 	@State private var showLoadingIndicator = true
     var body: some View {
 		ZStack {
-			RadialGradient(gradient: Gradient(colors: [Color("PurpleKalash"), Color("PurpleHaze")]), center: .center, startRadius: 350, endRadius: 150).ignoresSafeArea(.container, edges: .top)
 			VStack {
 				Text("Stellar is loading data")
 					.font(.title2.bold())

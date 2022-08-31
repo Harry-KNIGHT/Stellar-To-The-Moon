@@ -20,7 +20,7 @@ class AstronomyDetailViewModel: ObservableObject {
 		}
 	}
 
-	func getImage(from url: String) async throws -> UIImage  {
+	func getImage(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
 			throw ApiError.urlNotFound
 		}
@@ -32,7 +32,7 @@ class AstronomyDetailViewModel: ObservableObject {
 				throw ApiError.noDataForImage
 			}
 
-		}catch {
+		} catch {
 			print("Error fetching image: \(error.localizedDescription)")
 		}
 		return UIImage()

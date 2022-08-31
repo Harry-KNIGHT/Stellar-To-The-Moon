@@ -14,7 +14,7 @@ struct ContentView: View {
 			ScrollView(.vertical, showsIndicators: false) {
 				if astronomy.nasaReponses.isEmpty {
 					ProgressView()
-				}else {
+				} else {
 					ForEach(astronomy.nasaReponses, id: \.self) { response in
 
 						HStack {
@@ -47,8 +47,6 @@ struct ContentView: View {
 							.padding()
 							.background(.thinMaterial)
 							.clipShape(RoundedRectangle(cornerRadius: 10))
-
-					
 					}
 				}
 			}
@@ -59,7 +57,7 @@ struct ContentView: View {
 		.task {
 			do {
 				try await astronomy.nasaApiCall()
-			}catch {
+			} catch {
 				print("Error, \(error)")
 			}
 		}

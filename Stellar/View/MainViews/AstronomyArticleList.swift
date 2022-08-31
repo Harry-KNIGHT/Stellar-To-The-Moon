@@ -19,7 +19,7 @@ struct AstronomyArticleList: View {
 			VStack {
 				if articleApi.allAstronomies.isEmpty {
 					LoadingView()
-				}else {
+				} else {
 					RefreshableScrollView {
 						LazyVStack {
 							ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
@@ -59,7 +59,7 @@ struct AstronomyArticleList: View {
 					.refreshable {
 						do {
 							try await articleApi.getAstronomiesArticles(to: Date.now)
-						}catch {
+						} catch {
 							print("Error while refresh: \(error.localizedDescription)")
 						}
 					}

@@ -14,7 +14,7 @@ struct NewsView: View {
 		NavigationView {
 			ScrollView {
 				ForEach(news.spaceNews, id: \.self) { new in
-					NavigationLink(destination: Text(new.url)  , isActive: $isNavigationIsActive) {
+					NavigationLink(destination: Text(new.url), isActive: $isNavigationIsActive) {
 						VStack {
 						NewsAsyncImage(news: new)
 						VStack(alignment: .leading, spacing: 10) {
@@ -22,7 +22,7 @@ struct NewsView: View {
 								.font(.headline)
 								.foregroundColor(.primary)
 							Text(new.url)
-							//Link("DevTechie", destination: URL(string: "https://www.devtechie.com")!)
+							// Link("DevTechie", destination: URL(string: "https://www.devtechie.com")!)
 							Text(new.newsSite.rawValue)
 								.foregroundColor(.secondary)
 							Text(new.summary.trimmingCharacters(in: .whitespacesAndNewlines))
