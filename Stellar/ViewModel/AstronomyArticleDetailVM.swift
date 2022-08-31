@@ -10,7 +10,7 @@ import UIKit
 import StellarMoonKit
 
 class AstronomyDetailViewModel: ObservableObject {
-	@Published public var nasaReponses: [NasaAstronomyResponse] = []
+	@Published public var nasaReponses: [ArticleModel] = []
 
 	func getAstronomyArticle() async throws {
 		do {

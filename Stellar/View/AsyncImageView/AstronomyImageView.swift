@@ -10,7 +10,7 @@ import ActivityIndicatorView
 import StellarMoonKit
 
 struct AstronomyImageView: View {
-	let astronomy: NasaAstronomyResponse
+	let astronomy: ArticleModel
 	@EnvironmentObject var astronomyApi: AstronomyDetailViewModel
 
 	@Environment(\.colorScheme) private var colorScheme

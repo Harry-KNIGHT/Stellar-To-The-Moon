@@ -9,7 +9,7 @@ import SwiftUI
 import StellarMoonKit
 
 struct RowCell: View {
-	let article: NasaAstronomyResponse
+	let article: ArticleModel
 
 	var body: some View {
 		VStack(alignment: .leading, spacing: 3) {

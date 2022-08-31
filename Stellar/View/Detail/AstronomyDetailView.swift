@@ -11,7 +11,7 @@ import ActivityIndicatorView
 import StellarMoonKit
 
 struct AstronomyDetailView: View {
-	let article: NasaAstronomyResponse
+	let article: ArticleModel
 	@State private var isSheetPresented = false
 	@EnvironmentObject var favoriteVM: FavoriteViewModel
 	@EnvironmentObject var astronomyApi: AstronomyDetailViewModel

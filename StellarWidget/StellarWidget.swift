@@ -37,7 +37,7 @@ struct Provider: TimelineProvider {
 
 struct ArticleEntry: TimelineEntry {
 	var date: Date
-	var article: NasaAstronomyResponse
+	var article: ArticleModel
 }
 
 struct StellarWidgetEntryView: View {

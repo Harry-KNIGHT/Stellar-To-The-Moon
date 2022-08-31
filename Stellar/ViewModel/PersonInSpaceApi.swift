@@ -9,7 +9,7 @@ import Foundation
 import StellarMoonKit
 
 class PersonInSpaceViewModel: ObservableObject {
-	@Published public var spacePeoples: [PeopleInSpaceResponse] = []
+	@Published public var spacePeoples: [PersonInSpaceModel] = []
 
 	@MainActor func getPersonInsSpace() async throws {
 		do {
