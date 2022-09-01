@@ -36,8 +36,8 @@ struct AstronomyImageView: View {
 						Text(copryRight)
 							.foregroundColor(.white)
 							.padding(4)
-							.background(LinearGradient(colors: [.black.opacity(0), .black.opacity(0.6)], startPoint: .top, endPoint: .center))
-
+							.padding(.top, 8)
+							.background(LinearGradient(colors: [.clear, .black.opacity(0.6)], startPoint: .top, endPoint: .center))
 					}
 				}
 					if !isImageDowloaded {
