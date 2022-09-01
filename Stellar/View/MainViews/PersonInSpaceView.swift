@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PersonInSpaceView: View {
-	@EnvironmentObject public var peopleApi: PersonInSpaceViewModel
+	@ObservedObject public var peopleApi = PersonInSpaceViewModel()
 	var body: some View {
 		NavigationView {
 			ScrollView {
@@ -22,22 +22,22 @@ struct PersonInSpaceView: View {
 										.foregroundStyle(.regularMaterial)
 									if person.agency.lowercased() == "nasa" {
 
-										PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position, image: "NASAL")
+										PersonInSpaceRowCell(name: person.name, agency: person.agency, position: person.position, image: "NASAL")
 
 									} else if person.agency.lowercased() == "roscosmos" {
 
-										PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position, image: "ROSCOSMOSL")
+										PersonInSpaceRowCell(name: person.name, agency: person.agency, position: person.position, image: "ROSCOSMOSL")
 
 									} else if person.agency.lowercased() == "esa" {
 
-										PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position, image: "ESAL", imageHeight: 30)
+										PersonInSpaceRowCell(name: person.name, agency: person.agency, position: person.position, image: "ESAL", imageHeight: 30)
 
 									} else if person.agency.lowercased() == "cnsa" {
 
-										PersonInSpaceRow(name: person.name, agency: person.agency, position: person.position, image: "CNSAL", imageHeight: 50, corner: 10)
+										PersonInSpaceRowCell(name: person.name, agency: person.agency, position: person.position, image: "CNSAL", imageHeight: 50, corner: 10)
 
 									} else {
-										PersonInSpaceRow(hasGotImage: false, name: person.name, agency: person.agency, position: person.position, image: "")
+										PersonInSpaceRowCell(hasGotImage: false, name: person.name, agency: person.agency, position: person.position, image: "")
 									}
 								}
 							}
@@ -69,51 +69,4 @@ struct PersonInSpaceView_Previews: PreviewProvider {
 		PersonInSpaceView()
 			.environmentObject(PersonInSpaceViewModel())
 	}
-}
-
-struct PersonInSpaceRow: View {
-	var hasGotImage: Bool = true
-	var name: String
-	var agency: String
-	var position: String
-	var image: String
-	var imageHeight: CGFloat = 60
-	var corner: CGFloat = 0
-
-	var body: some View {
-		if hasGotImage {
-			HStack {
-				VStack(alignment: .leading, spacing: 7) {
-					Text(name)
-						.font(.title3)
-						.foregroundColor(.primary)
-					Text(agency)
-						.foregroundColor(.primary)
-						.font(.headline)
-					Text(position)
-						.font(.subheadline)
-						.foregroundColor(.secondary)
-				}.padding(.vertical, 8)
-				Spacer()
-				Image(image)
-					.resizable()
-					.scaledToFit()
-					.frame(height: imageHeight)
-					.clipShape(RoundedRectangle(cornerRadius: corner, style: .continuous))
-			}.padding(.horizontal, 8)
-		} else {
-				VStack(alignment: .leading) {
-					Text(name)
-						.font(.title3)
-						.foregroundColor(.primary)
-					Text(agency)
-						.foregroundColor(.primary)
-						.font(.headline)
-					Text(position)
-						.font(.subheadline)
-						.foregroundColor(.secondary)
-				}
-				.padding()
-			}
-		}
 }

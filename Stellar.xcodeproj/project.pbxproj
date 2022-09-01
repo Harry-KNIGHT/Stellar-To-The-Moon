@@ -36,6 +36,7 @@
 		3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA110288E759A00AB15C7 /* ContentView.swift */; };
 		3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA112288E759B00AB15C7 /* Assets.xcassets */; };
 		3CDBA116288E759B00AB15C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */; };
+		3CF7AC8F28C1141F008A7C70 /* PersonInSpaceRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7AC8E28C1141F008A7C70 /* PersonInSpaceRowCell.swift */; };
 		3CFD115D28929C6C00F14F65 /* PersonInSpaceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD115C28929C6C00F14F65 /* PersonInSpaceApi.swift */; };
 		3CFD116128929F0F00F14F65 /* PersonInSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD116028929F0F00F14F65 /* PersonInSpaceView.swift */; };
 		3CFD11632892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD11622892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift */; };
@@ -110,6 +111,7 @@
 		3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3CDBA11B288E759B00AB15C7 /* StellarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StellarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDBA125288E759B00AB15C7 /* StellarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StellarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF7AC8E28C1141F008A7C70 /* PersonInSpaceRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInSpaceRowCell.swift; sourceTree = "<group>"; };
 		3CFD115C28929C6C00F14F65 /* PersonInSpaceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInSpaceApi.swift; sourceTree = "<group>"; };
 		3CFD116028929F0F00F14F65 /* PersonInSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInSpaceView.swift; sourceTree = "<group>"; };
 		3CFD11622892A8CC00F14F65 /* PersonInSpaceAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInSpaceAsyncImage.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				3CDBA110288E759A00AB15C7 /* ContentView.swift */,
 				3CFD11692892E1E200F14F65 /* MainViews */,
 				3CFD11662892E15E00F14F65 /* Detail */,
+				3CF7AC8D28C112A9008A7C70 /* Components */,
 				3CFD11682892E1C200F14F65 /* Loading */,
 				3CFD11672892E18200F14F65 /* VideoView */,
 				3CFD116A2892EE6700F14F65 /* EmptyView */,
@@ -258,6 +261,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3CF7AC8D28C112A9008A7C70 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3CBB34A328BE35F700AC0EDF /* RowCell.swift */,
+				3CF7AC8E28C1141F008A7C70 /* PersonInSpaceRowCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		3CFD11662892E15E00F14F65 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,7 +300,6 @@
 			isa = PBXGroup;
 			children = (
 				3C5555D2289058C50093122A /* AstronomyArticleList.swift */,
-				3CBB34A328BE35F700AC0EDF /* RowCell.swift */,
 				3CFD116028929F0F00F14F65 /* PersonInSpaceView.swift */,
 				3CBF0C442891371E00010691 /* FavoritesArticleList.swift */,
 				3C45F9812897E76E003CBAA0 /* WebView.swift */,
@@ -531,6 +542,7 @@
 				3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */,
 				3CBF0C452891371E00010691 /* FavoritesArticleList.swift in Sources */,
 				3CC944B528B3A74800447BB6 /* AstronomyArticleDetailVM.swift in Sources */,
+				3CF7AC8F28C1141F008A7C70 /* PersonInSpaceRowCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
