@@ -24,10 +24,6 @@ struct CircularProgressBar: View {
 					.stroke(lineColor, lineWidth: lineWidth)
 					.frame(width: width, height: height)
 					.rotationEffect(Angle(degrees: -90))
-
-//				Text("\(Int(self.circleProgress*100))%")
-//					.font(.callout)
-//					.foregroundColor(.white)
 			}
 		}
 	}
