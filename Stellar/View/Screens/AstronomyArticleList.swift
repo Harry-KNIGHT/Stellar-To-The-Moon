@@ -36,8 +36,6 @@ struct AstronomyArticleList: View {
 							}
 						}
 						.padding([.horizontal, .top])
-						.navigationTitle("Stellar")
-						.navigationBarTitleDisplayMode(.inline)
 					}
 					.toolbar {
 						ToolbarItem(placement: .navigationBarTrailing) {
@@ -65,6 +63,8 @@ struct AstronomyArticleList: View {
 					}
 				}
 			}
+			.navigationTitle("Stellar")
+			.navigationBarTitleDisplayMode(.inline)
 		}
 		.task {
 			do {
