@@ -156,11 +156,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C40477C28D8549F008A5936 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3C45F9812897E76E003CBAA0 /* WebView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		3C5555D8289059880093122A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3CDBA110288E759A00AB15C7 /* ContentView.swift */,
-				3CFD11692892E1E200F14F65 /* MainViews */,
+				3CFD11692892E1E200F14F65 /* Screens */,
 				3CFD11662892E15E00F14F65 /* Detail */,
 				3CF7AC8D28C112A9008A7C70 /* Components */,
 				3CFD11682892E1C200F14F65 /* Loading */,
@@ -168,6 +176,7 @@
 				3CFD116A2892EE6700F14F65 /* EmptyView */,
 				3CBF0C4028906B3100010691 /* AsyncImageView */,
 				3C6878F3289AA3DA00B99797 /* ImageSaver */,
+				3C40477C28D8549F008A5936 /* WebView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5555CE288FCDA30093122A /* VideoView.swift */,
+				3CC954CF289D99FF006D547C /* IssLiveView.swift */,
 			);
 			path = VideoView;
 			sourceTree = "<group>";
@@ -296,16 +306,14 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
-		3CFD11692892E1E200F14F65 /* MainViews */ = {
+		3CFD11692892E1E200F14F65 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				3C5555D2289058C50093122A /* AstronomyArticleList.swift */,
 				3CFD116028929F0F00F14F65 /* PersonInSpaceView.swift */,
 				3CBF0C442891371E00010691 /* FavoritesArticleList.swift */,
-				3C45F9812897E76E003CBAA0 /* WebView.swift */,
-				3CC954CF289D99FF006D547C /* IssLiveView.swift */,
 			);
-			path = MainViews;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		3CFD116A2892EE6700F14F65 /* EmptyView */ = {
@@ -323,7 +331,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CBB34D528BE491800AC0EDF /* Build configuration list for PBXNativeTarget "StellarWidgetExtension" */;
 			buildPhases = (
-				3C61FF7528BF574000B94A23 /* SwiftLint */,
 				3CBB34BF28BE491800AC0EDF /* Sources */,
 				3CBB34C028BE491800AC0EDF /* Frameworks */,
 				3CBB34C128BE491800AC0EDF /* Resources */,
@@ -486,27 +493,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3C61FF7528BF574000B94A23 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CBB34BF28BE491800AC0EDF /* Sources */ = {
