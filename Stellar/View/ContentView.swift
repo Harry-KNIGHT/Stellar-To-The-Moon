@@ -15,11 +15,6 @@ struct ContentView: View {
 					Label("Articles", systemImage: "book.closed")
 				}
 
-			PersonInSpaceView()
-				.tabItem {
-					Label("Astronauts", systemImage: "globe.americas")
-				}
-
 			IssLiveView()
 				.tabItem {
 					Label("Iss Live", systemImage: "play.circle")
