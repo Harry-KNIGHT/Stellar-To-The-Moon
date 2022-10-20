@@ -1,8 +1,18 @@
-# NasaPictureDayAstronomy
+<div align="center">
+<img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/AppIcon/StellarAppIcon.png" width="300"/>
+#Stellar To The Moon 
 
-SwiftUI project, show each day picture from Nasa's API. 
+[Stellar To The Moon]("https://apps.apple.com/fr/app/stellar-to-the-moon/id1636548200?l=en") display new astronomical picture daily from [NASA's API]("https://api.nasa.gov").
 
-Use async api call, thanks to Paul Hudson & Apprendre SwiftUI.
+ <img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/RealizedAppHDMockup/StellarMainView.png" width="250"/>
+ <img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/RealizedAppHDMockup/StellarMoonHDMockup.png" width="250"/>
+
+
+</div>
+
+## Contact 
+
+Me contacter par mail: elliot.knight@appiwedia.com 📩
 
 ## Authors
 
