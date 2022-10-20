@@ -1,6 +1,5 @@
 <div align="center">
 <img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/AppIcon/StellarAppIcon.png" width="300"/>
-#Stellar To The Moon 
 
 [Stellar To The Moon]("https://apps.apple.com/fr/app/stellar-to-the-moon/id1636548200?l=en") display new astronomical picture daily from [NASA's API]("https://api.nasa.gov").
 
