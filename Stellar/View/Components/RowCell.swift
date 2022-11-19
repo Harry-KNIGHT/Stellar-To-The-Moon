@@ -15,6 +15,8 @@ struct RowCell: View {
 		HStack(alignment: .center, spacing: 10) {
 			if article.mediaType == .image {
 				AstronomyImageListCell(article: article)
+			} else {
+				VideoPlaceHolderCell()
 			}
 			VStack(alignment: .leading, spacing: 3) {
 				Text(article.title)
