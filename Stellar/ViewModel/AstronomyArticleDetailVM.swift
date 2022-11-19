@@ -10,7 +10,7 @@ import UIKit
 import StellarMoonKit
 
 class AstronomyDetailViewModel: ObservableObject {
-	@Published public var nasaReponses: [AstronomyArticleModel] = []
+	@Published var nasaReponses: [AstronomyArticleModel] = []
 
 	func getAstronomyArticle() async throws {
 		do {
@@ -31,10 +31,9 @@ class AstronomyDetailViewModel: ObservableObject {
 			} else {
 				throw ApiError.noDataForImage
 			}
-
 		} catch {
-			print("Error fetching image: \(error.localizedDescription)")
+			throw ApiError.cantFetchImage
 		}
-		return UIImage()
+		
 	}
 }

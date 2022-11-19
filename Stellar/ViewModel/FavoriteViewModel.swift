@@ -9,7 +9,7 @@ import Foundation
 import StellarMoonKit
 
 class FavoriteViewModel: ObservableObject {
-	@Published public var favoriteAstronomyArticles: [AstronomyArticleModel]
+	@Published var favoriteAstronomyArticles: [AstronomyArticleModel]
 
 	init() {
 		if let data = UserDefaults.standard.data(forKey: "SavedFavoritesData") {
