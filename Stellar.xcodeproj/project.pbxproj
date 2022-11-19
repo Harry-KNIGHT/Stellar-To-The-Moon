@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */; };
 		3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* AstronomyImageView.swift */; };
 		3C5555CD288F21440093122A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5555CC288F21440093122A /* README.md */; };
 		3C5555CF288FCDA30093122A /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CE288FCDA30093122A /* VideoView.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageListCell.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* AstronomyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageView.swift; sourceTree = "<group>"; };
 		3C5555CC288F21440093122A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3C5555CE288FCDA30093122A /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5555CA288F12640093122A /* AstronomyImageView.swift */,
+				3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */,
 			);
 			path = AsyncImageView;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				3C5555D3289058C50093122A /* AstronomyArticleList.swift in Sources */,
 				3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
+				3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */,
 				3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */,
 				3CBF0C452891371E00010691 /* FavoritesArticleList.swift in Sources */,
 				3CC944B528B3A74800447BB6 /* AstronomyArticleDetailVM.swift in Sources */,

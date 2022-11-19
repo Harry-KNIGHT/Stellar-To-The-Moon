@@ -10,21 +10,29 @@ import StellarMoonKit
 
 struct RowCell: View {
 	let article: AstronomyArticleModel
-
+	let size: CGFloat = 90
 	var body: some View {
-		VStack(alignment: .leading, spacing: 3) {
-			Text(article.title)
-				.font(.headline)
-				.foregroundColor(.primary)
-			Text(article.date)
-				.font(.callout)
-				.foregroundColor(.secondary)
-			Text(article.explanation.trimmingCharacters(in: .whitespacesAndNewlines))
-				.font(.body)
-				.foregroundColor(.secondary)
-				.lineLimit(2)
+		HStack(alignment: .center, spacing: 10) {
+			if article.mediaType == .image {
+				AstronomyImageListCell(article: article)
+			}
+			VStack(alignment: .leading, spacing: 3) {
+				Text(article.title)
+					.font(.body)
+					.fontWeight(.semibold)
+					.foregroundColor(.primary)
+					.lineLimit(1)
+				Text(article.date)
+					.font(.callout)
+					.foregroundColor(.secondary)
+				Text(article.explanation.trimmingCharacters(in: .whitespacesAndNewlines))
+					.font(.body)
+					.foregroundColor(.secondary)
+					.lineLimit(2)
+			}
+			.multilineTextAlignment(.leading)
+			Spacer()
 		}
-		.multilineTextAlignment(.leading)
 	}
 }
 
