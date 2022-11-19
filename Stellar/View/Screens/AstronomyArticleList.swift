@@ -40,18 +40,7 @@ struct AstronomyArticleList: View {
 					.toolbar {
 						ToolbarItem(placement: .navigationBarTrailing) {
 							if !articleApi.allAstronomies.isEmpty {
-								Button(action: {
-									showSheet.toggle()
-
-								}, label: {
-									Label("Add article to favorite", systemImage: "star.fill")
-										.font(.title3)
-										.foregroundColor(.primary)
-								})
-								.accessibilityLabel("See your favorites astronomy articles.")
-								.sheet(isPresented: $showSheet) {
-									FavoritesArticleList()
-								}
+								ShowFavSheetButtonCell(showSheet: $showSheet)
 							}
 						}
 					}
