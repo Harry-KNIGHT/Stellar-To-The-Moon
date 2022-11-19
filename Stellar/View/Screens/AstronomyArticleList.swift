@@ -55,13 +55,11 @@ struct AstronomyArticleList: View {
 			}
 			.navigationTitle("Stellar")
 			.navigationBarTitleDisplayMode(.inline)
-			.onAppear {
-				Task {
-					do {
-						try await articleApi.getAstronomiesArticles(to: Date.now)
-					} catch {
-						print("Error: \(error.localizedDescription)")
-					}
+			.task {
+				do {
+					try await articleApi.getAstronomiesArticles(to: Date.now)
+				} catch {
+					print("Error: \(error.localizedDescription)")
 				}
 			}
 		}
