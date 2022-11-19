@@ -13,7 +13,7 @@ import StellarMoonKit
 struct AstronomyDetailView: View {
 	let article: AstronomyArticleModel
 	@State private var isSheetPresented = false
-	@EnvironmentObject var favoriteVM: FavoriteViewModel
+
 	@EnvironmentObject var astronomyApi: AstronomyDetailViewModel
 
 	var body: some View {
@@ -41,14 +41,7 @@ struct AstronomyDetailView: View {
 		.navigationBarTitle(article.title)
 		.toolbar {
 			ToolbarItem(placement: .navigationBarTrailing) {
-				Button(action: {
-					favoriteVM.addOrDeletFavorite(article: article)
-				}, label: {
-					Label("Add article to favorite", systemImage: favoriteVM.favoriteAstronomyArticles.contains(article) ? "star.fill" : "star")
-						.foregroundColor(.primary)
-						.font(.title3)
-				})
-				.accessibilityLabel("Add this article to favorites")
+				AddFavoriteButtonCell(article: article)
 			}
 		}
 	}
