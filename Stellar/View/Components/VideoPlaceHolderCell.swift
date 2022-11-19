@@ -20,6 +20,7 @@ struct VideoPlaceHolderCell: View {
 				.font(.system(size: size / 2))
 				.shadow(radius: 5)
 		}
+		.accessibilityLabel("Video placeholder")
 	}
 }
 

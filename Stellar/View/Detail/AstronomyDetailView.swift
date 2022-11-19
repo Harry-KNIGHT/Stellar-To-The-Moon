@@ -23,12 +23,14 @@ struct AstronomyDetailView: View {
 				} else {
 					VideoView(videoID: article.url)
 						.frame(minHeight: 450, maxHeight: 800)
+						.accessibilityLabel("Video of the article")
 				}
 				VStack(alignment: .leading, spacing: 10) {
 					Text("Explanation:")
 						.font(.headline)
 					Text(article.explanation)
 						.textSelection(.enabled)
+						.accessibilityLabel(article.explanation)
 				}
 				.padding()
 				.background(.thinMaterial)
@@ -46,6 +48,7 @@ struct AstronomyDetailView: View {
 						.foregroundColor(.primary)
 						.font(.title3)
 				})
+				.accessibilityLabel("Add this article to favorites")
 			}
 		}
 	}

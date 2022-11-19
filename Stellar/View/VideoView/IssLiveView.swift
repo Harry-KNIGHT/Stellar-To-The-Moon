@@ -13,6 +13,7 @@ struct IssLiveView: View {
 			VideoView(videoID: "https://www.youtube.com/embed/86YLFOog4GM")
 				.frame(maxWidth: .infinity, maxHeight: .infinity)
 				.ignoresSafeArea(.container, edges: .top)
+				.accessibilityLabel("Live video of the International Space Station")
 		}
 	}
 }

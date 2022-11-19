@@ -48,6 +48,7 @@ struct AstronomyArticleList: View {
 										.font(.title3)
 										.foregroundColor(.primary)
 								})
+								.accessibilityLabel("See your favorites astronomy articles.")
 								.sheet(isPresented: $showSheet) {
 									FavoritesArticleList()
 								}

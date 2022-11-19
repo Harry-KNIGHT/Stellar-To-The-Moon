@@ -31,6 +31,7 @@ struct AstronomyImageView: View {
 					.resizable()
 					.scaledToFill()
 					.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+					.accessibilityLabel("Image of \(astronomy.title)")
 
 					if let copryRight = astronomy.copyright {
 						Text(copryRight)
@@ -38,6 +39,7 @@ struct AstronomyImageView: View {
 							.padding(4)
 							.padding(.top, 8)
 							.background(LinearGradient(colors: [.clear, .black.opacity(0.6)], startPoint: .top, endPoint: .center))
+							.accessibilityLabel("Photo taken by \(copryRight)")
 					}
 				}
 					if !isImageDowloaded {
@@ -68,6 +70,7 @@ struct AstronomyImageView: View {
 								CircularProgressBar(circleProgress: circleProgress, width: 25, height: 25, lineWidth: 4)
 							}
 						})
+						.accessibilityLabel("Download image button")
 						.buttonStyle(.borderedProminent)
 						.clipShape(Circle())
 						.foregroundColor(.blue)
@@ -86,6 +89,7 @@ struct AstronomyImageView: View {
 								.font(.title2)
 								.foregroundColor(.white)
 						})
+						.accessibilityLabel("Download done.")
 						.buttonStyle(.borderedProminent)
 						.clipShape(Circle())
 						.tint(.green)
@@ -113,6 +117,7 @@ struct AstronomyImageView: View {
 			ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
 				.frame(width: 100, height: 50)
 				.foregroundColor(.primary)
+				.accessibilityLabel("Loading image")
 			}
 		}
 	}

@@ -16,6 +16,7 @@ struct AstronomyImageListCell: View {
 				.resizable()
 				.frame(maxWidth: size, maxHeight: size)
 				.cornerRadius(10)
+				.accessibilityLabel("Image of \(article.title)")
 
 		} placeholder: {
 			ZStack {
@@ -25,6 +26,7 @@ struct AstronomyImageListCell: View {
 				ProgressView()
 					.foregroundStyle(.primary)
 			}
+			.accessibilityLabel("Image loading placeholder")
 		}
     }
 }
