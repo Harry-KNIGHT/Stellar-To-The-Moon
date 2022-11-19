@@ -22,6 +22,7 @@ struct LoadingView: View {
 			.clipShape(RoundedRectangle(cornerRadius: 10))
 			.foregroundColor(.primary)
 			.shadow(radius: 10)
+			.accessibilityLabel("Stellar is loading data, please wait.")
 		}
     }
 }

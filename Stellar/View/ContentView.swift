@@ -13,11 +13,13 @@ struct ContentView: View {
 			AstronomyArticleList()
 				.tabItem {
 					Label("Articles", systemImage: "book.closed")
+						.accessibilityLabel("Articles")
 				}
 
 			IssLiveView()
 				.tabItem {
 					Label("Iss Live", systemImage: "play.circle")
+						.accessibilityLabel("International Space Station live video.")
 				}
 		}
 	}

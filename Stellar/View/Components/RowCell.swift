@@ -24,6 +24,7 @@ struct RowCell: View {
 					.fontWeight(.semibold)
 					.foregroundColor(.primary)
 					.lineLimit(1)
+					.accessibilityLabel(article.title)
 				Text(article.date)
 					.font(.callout)
 					.foregroundColor(.secondary)
@@ -31,6 +32,7 @@ struct RowCell: View {
 					.font(.body)
 					.foregroundColor(.secondary)
 					.lineLimit(2)
+					.accessibilityHidden(true)
 			}
 			.multilineTextAlignment(.leading)
 			Spacer()

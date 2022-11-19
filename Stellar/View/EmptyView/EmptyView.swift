@@ -15,6 +15,7 @@ struct EmptyView: View {
 		}
 		.font(.largeTitle)
 		.foregroundStyle(.secondary)
+		.accessibilityLabel("You don't have any favorite.")
 	}
 }
 
