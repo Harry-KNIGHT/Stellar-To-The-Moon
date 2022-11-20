@@ -23,6 +23,7 @@ struct AstronomyImageListCell: View {
 					Text(article.title)
 						.lineLimit(1)
 						.foregroundStyle(.white)
+						.padding(.leading, 4)
 					Spacer()
 				}
 				.padding(.top, 2)
