@@ -25,7 +25,8 @@ struct AstronomyImageListCell: View {
 						.foregroundStyle(.white)
 					Spacer()
 				}
-				.background(.black.opacity(0.8))
+				.padding(.top, 2)
+				.background(.linearGradient(colors: [.clear, .black.opacity(0.7)], startPoint: .top, endPoint: .center))
 
 			}
 		} placeholder: {
