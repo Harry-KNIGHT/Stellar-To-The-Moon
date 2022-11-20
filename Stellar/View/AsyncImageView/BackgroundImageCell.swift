@@ -16,7 +16,7 @@ struct BackgroundImageCell: View {
 			image
 				.resizable()
 				.scaledToFill()
-				.blur(radius: 2)
+				.blur(radius: 2, opaque: true)
 		} placeholder: {
 			Rectangle()
 				.fill(colorScheme == .dark ? .black : .white)
