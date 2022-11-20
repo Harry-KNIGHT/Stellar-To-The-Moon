@@ -19,13 +19,15 @@ struct AstronomyImageListCell: View {
 					.frame(maxWidth: size, maxHeight: size)
 					.cornerRadius(0)
 					.accessibilityLabel("Image of \(article.title)")
-				Text(article.title)
-					.lineLimit(1)
-					.foregroundStyle(.white)
-					.background(.black.opacity(0.8))
-			}
-			.background(.red)
+				HStack {
+					Text(article.title)
+						.lineLimit(1)
+						.foregroundStyle(.white)
+					Spacer()
+				}
+				.background(.black.opacity(0.8))
 
+			}
 		} placeholder: {
 			ZStack {
 				RoundedRectangle(cornerRadius: 0)
@@ -34,6 +36,7 @@ struct AstronomyImageListCell: View {
 				ProgressView()
 					.foregroundStyle(.primary)
 			}
+			.padding(.vertical, 3)
 			.accessibilityLabel("Image loading placeholder")
 		}
 	}
