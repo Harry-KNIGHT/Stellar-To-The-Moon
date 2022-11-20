@@ -16,7 +16,7 @@ struct RowCell: View {
 			if article.mediaType == .image {
 				AstronomyImageListCell(article: article)
 			} else {
-				VideoPlaceHolderCell()
+				VideoPlaceHolderCell(article: article)
 			}
 			VStack(alignment: .leading, spacing: 3) {
 				Text(article.title)

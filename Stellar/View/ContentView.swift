@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
 	var body: some View {
 		TabView {
-			AstronomyArticleList()
+			AstronomyImageGrid()
 				.tabItem {
 					Label("Articles", systemImage: "book.closed")
 						.accessibilityLabel("Articles")
