@@ -13,7 +13,7 @@ struct AstronomyImageGrid: View {
 	@EnvironmentObject public var articleApi: AstronomiesArticleViewModel
 	@State private var showSheet = false
 	@State private var showLoadingIndicator = true
-
+	@State private var showDetailViewSheet = false
 	let columns = [
 		GridItem(.flexible(), spacing: 0),
 		GridItem(.flexible(), spacing: 0)
@@ -28,16 +28,24 @@ struct AstronomyImageGrid: View {
 					ScrollView {
 						LazyVGrid(columns: columns, alignment: .center, spacing: 0) {
 							ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
-								NavigationLink(destination: AstronomyDetailView(article: article)) {
-									if article.mediaType == .image {
-										AstronomyImageListCell(article: article)
-									} else {
-										VideoPlaceHolderCell(article: article)
-									}
+								if article.mediaType == .image {
+									AstronomyImageListCell(article: article)
+										.sheet(isPresented: $showDetailViewSheet) {
+											AstronomyDetailView(article: article)
+										}
+								} else {
+									VideoPlaceHolderCell(article: article)
+										.sheet(isPresented: $showDetailViewSheet) {
+											AstronomyDetailView(article: article)
+										}
 								}
+							}
+							.onTapGesture {
+								showDetailViewSheet = true
 							}
 						}
 					}
+
 					.toolbar {
 						ToolbarItem(placement: .navigationBarTrailing) {
 							if !articleApi.allAstronomies.isEmpty {
