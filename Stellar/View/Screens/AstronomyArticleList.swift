@@ -14,28 +14,29 @@ struct AstronomyArticleList: View {
 	@State private var showSheet = false
 	@State private var showLoadingIndicator = true
 
+	let columns = [
+		GridItem(.flexible()),
+		GridItem(.flexible())
+	]
+
 	var body: some View {
 		NavigationView {
 			VStack {
 				if articleApi.allAstronomies.isEmpty {
 					LoadingView()
 				} else {
-					RefreshableScrollView {
-						LazyVStack {
+					ScrollView {
+						LazyVGrid(columns: columns) {
 							ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
 								NavigationLink(destination: AstronomyDetailView(article: article)) {
-									ZStack {
-										RoundedRectangle(cornerRadius: 10)
-											.frame(maxWidth: .infinity, maxHeight: .infinity)
-											.foregroundStyle(.regularMaterial)
-										VStack(alignment: .leading) {
-											RowCell(article: article)
-										}.padding()
+									if article.mediaType == .image {
+										AstronomyImageListCell(article: article)
+									} else {
+										VideoPlaceHolderCell()
 									}
 								}
 							}
 						}
-						.padding([.horizontal, .top])
 					}
 					.toolbar {
 						ToolbarItem(placement: .navigationBarTrailing) {

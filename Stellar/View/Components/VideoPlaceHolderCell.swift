@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VideoPlaceHolderCell: View {
-	let size: CGFloat = 90
+	let size = (deviceWidth / 2)
 	let linearGradient = LinearGradient(colors: [Color(red: 237/255, green: 116/255, blue: 103/255), .red], startPoint: .top, endPoint: .bottom)
 	var body: some View {
 		ZStack {
