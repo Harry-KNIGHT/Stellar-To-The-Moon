@@ -165,6 +165,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3CCF165E292A178F0037BB50 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */,
+				3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		3CDBA102288E759A00AB15C7 = {
 			isa = PBXGroup;
 			children = (
@@ -187,8 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */,
-				3CBF0C43289134F300010691 /* ViewModel */,
 				3C5555D8289059880093122A /* View */,
+				3CBF0C43289134F300010691 /* ViewModel */,
 				3C5555CC288F21440093122A /* README.md */,
 				3CDBA112288E759B00AB15C7 /* Assets.xcassets */,
 				3CDBA114288E759B00AB15C7 /* Preview Content */,
@@ -209,7 +218,7 @@
 			children = (
 				3CBB34A328BE35F700AC0EDF /* RowCell.swift */,
 				3CA718CB292950CC0075E0D5 /* VideoPlaceHolderCell.swift */,
-				3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */,
+				3CCF165E292A178F0037BB50 /* Buttons */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -218,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				3C5555D0289057E80093122A /* AstronomyDetailView.swift */,
-				3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
