@@ -32,7 +32,7 @@ struct AstronomyArticleList: View {
 									if article.mediaType == .image {
 										AstronomyImageListCell(article: article)
 									} else {
-										VideoPlaceHolderCell()
+										VideoPlaceHolderCell(article: article)
 									}
 								}
 							}
