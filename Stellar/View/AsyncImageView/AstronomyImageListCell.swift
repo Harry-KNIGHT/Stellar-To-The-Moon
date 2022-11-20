@@ -30,6 +30,7 @@ struct AstronomyImageListCell: View {
 				.background(.linearGradient(colors: [.clear, .black.opacity(0.7)], startPoint: .top, endPoint: .center))
 
 			}
+			.border(.black)
 		} placeholder: {
 			ZStack {
 				RoundedRectangle(cornerRadius: 0)
@@ -38,7 +39,6 @@ struct AstronomyImageListCell: View {
 				ProgressView()
 					.foregroundStyle(.primary)
 			}
-			.padding(.vertical, 3)
 			.accessibilityLabel("Image loading placeholder")
 		}
 	}

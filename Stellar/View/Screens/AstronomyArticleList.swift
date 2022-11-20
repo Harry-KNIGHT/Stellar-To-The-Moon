@@ -15,8 +15,8 @@ struct AstronomyArticleList: View {
 	@State private var showLoadingIndicator = true
 
 	let columns = [
-		GridItem(.flexible()),
-		GridItem(.flexible())
+		GridItem(.flexible(), spacing: 0),
+		GridItem(.flexible(), spacing: 0)
 	]
 
 	var body: some View {
@@ -26,7 +26,7 @@ struct AstronomyArticleList: View {
 					LoadingView()
 				} else {
 					ScrollView {
-						LazyVGrid(columns: columns) {
+						LazyVGrid(columns: columns, alignment: .center, spacing: 0) {
 							ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
 								NavigationLink(destination: AstronomyDetailView(article: article)) {
 									if article.mediaType == .image {
