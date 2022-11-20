@@ -32,7 +32,7 @@ struct VideoPlaceHolderCell: View {
 				Spacer()
 			}
 			.padding(.top, 2)
-			.background(.linearGradient(colors: [.clear, .secondary.opacity(0.7)], startPoint: .top, endPoint: .center))
+			.background(.linearGradient(colors: [.clear, .black.opacity(0.7)], startPoint: .top, endPoint: .center))
 		}
 		.border(.black)
 	}
