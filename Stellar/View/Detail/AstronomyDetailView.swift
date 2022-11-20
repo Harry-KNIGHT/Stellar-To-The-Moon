@@ -37,6 +37,7 @@ struct AstronomyDetailView: View {
 				.clipShape(RoundedRectangle(cornerRadius: 10))
 
 		}
+		.background(BackgroundImageCell(article: article))
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarTitle(article.title)
 		.toolbar {

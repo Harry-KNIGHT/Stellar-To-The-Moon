@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */; };
+		3C46134C292A68320087214C /* BackgroundImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46134B292A68320087214C /* BackgroundImageCell.swift */; };
 		3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* AstronomyImageView.swift */; };
 		3C5555CD288F21440093122A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5555CC288F21440093122A /* README.md */; };
 		3C5555CF288FCDA30093122A /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CE288FCDA30093122A /* VideoView.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageListCell.swift; sourceTree = "<group>"; };
+		3C46134B292A68320087214C /* BackgroundImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageCell.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* AstronomyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageView.swift; sourceTree = "<group>"; };
 		3C5555CC288F21440093122A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3C5555CE288FCDA30093122A /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5555CA288F12640093122A /* AstronomyImageView.swift */,
+				3C46134B292A68320087214C /* BackgroundImageCell.swift */,
 				3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */,
 			);
 			path = AsyncImageView;
@@ -429,6 +432,7 @@
 				3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */,
 				3CBF0C452891371E00010691 /* FavoritesArticleList.swift in Sources */,
 				3CC944B528B3A74800447BB6 /* AstronomyArticleDetailVM.swift in Sources */,
+				3C46134C292A68320087214C /* BackgroundImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
