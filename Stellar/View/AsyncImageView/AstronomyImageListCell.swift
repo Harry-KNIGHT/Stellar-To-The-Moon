@@ -39,6 +39,7 @@ struct AstronomyImageListCell: View {
 				ProgressView()
 					.foregroundStyle(.primary)
 			}
+			.border(.black)
 			.accessibilityLabel("Image loading placeholder")
 		}
 	}
