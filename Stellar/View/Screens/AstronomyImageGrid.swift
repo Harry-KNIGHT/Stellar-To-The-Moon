@@ -14,10 +14,15 @@ struct AstronomyImageGrid: View {
 	@State private var showSheet = false
 	@State private var showLoadingIndicator = true
 
-	let columns = [
+	private let columnsiPhone = [
 		GridItem(.flexible(), spacing: 0),
 		GridItem(.flexible(), spacing: 0)
 	]
+	private let columnsiPad = [
+		GridItem(.flexible(), spacing: 0),
+	]
+	
+	private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
 
 	var body: some View {
 		NavigationView {
@@ -26,7 +31,7 @@ struct AstronomyImageGrid: View {
 					LoadingView()
 				} else {
 					ScrollView {
-						LazyVGrid(columns: columns, alignment: .center, spacing: 0) {
+						LazyVGrid(columns: idiom == .phone ? columnsiPhone : columnsiPad, alignment: .center, spacing: 0) {
 							ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
 								NavigationLink(destination: AstronomyDetailView(article: article)) {
 									if article.mediaType == .image {
