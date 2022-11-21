@@ -5,8 +5,8 @@
 
 
 
- <img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/RealizedAppHDMockup/StellarMainView.png" width="250"/>
- <img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/RealizedAppHDMockup/StellarMoonHDMockup.png" width="250"/>
+ <img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/RealizedAppHDMockup/StellarGridViewMockup14ProMax.png" width="280"/>
+ <img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/RealizedAppHDMockup/StellarDetailViewMockup14ProMax.png" width="280"/>
 
 
 </div>
