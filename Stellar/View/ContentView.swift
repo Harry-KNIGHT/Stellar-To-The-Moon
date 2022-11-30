@@ -9,19 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 	var body: some View {
-		TabView {
-			AstronomyImageGrid()
-				.tabItem {
-					Label("Articles", systemImage: "book.closed")
-						.accessibilityLabel("Articles")
-				}
-
-			IssLiveView()
-				.tabItem {
-					Label("Iss Live", systemImage: "play.circle")
-						.accessibilityLabel("International Space Station live video.")
-				}
-		}
+		AstronomyImageGrid()
 	}
 }
 
