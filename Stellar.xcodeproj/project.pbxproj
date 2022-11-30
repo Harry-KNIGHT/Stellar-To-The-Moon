@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C03EADC2937E8FE0023EC26 /* ArticlesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C03EADB2937E8FE0023EC26 /* ArticlesGridView.swift */; };
 		3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C03EADE2937EC190023EC26 /* FavoritesListView.swift */; };
+		3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */; };
 		3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */; };
 		3C46134C292A68320087214C /* BackgroundImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46134B292A68320087214C /* BackgroundImageCell.swift */; };
 		3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* AstronomyImageView.swift */; };
@@ -68,8 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C03EADB2937E8FE0023EC26 /* ArticlesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArticlesGridView.swift; path = "/Users/elliotknight/Documents/SwiftUI/Personal Projects /Stellar-To-The-Moon/Stellar/View/Screens/ArticlesGridView.swift"; sourceTree = "<absolute>"; };
 		3C03EADE2937EC190023EC26 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
+		3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGridView.swift; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageListCell.swift; sourceTree = "<group>"; };
 		3C46134B292A68320087214C /* BackgroundImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageCell.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* AstronomyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageView.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		3C03EADD2937E97A0023EC26 /* Grids */ = {
 			isa = PBXGroup;
 			children = (
-				3C03EADB2937E8FE0023EC26 /* ArticlesGridView.swift */,
+				3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */,
 			);
 			path = Grids;
 			sourceTree = "<group>";
@@ -439,8 +439,8 @@
 				3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */,
 				3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */,
 				3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */,
-				3C03EADC2937E8FE0023EC26 /* ArticlesGridView.swift in Sources */,
 				3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */,
+				3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */,
 				3CA718CC292950CC0075E0D5 /* VideoPlaceHolderCell.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
 				3C5555D3289058C50093122A /* MainScreen.swift in Sources */,
