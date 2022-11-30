@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/elliotknight/Documents/SwiftUI/Personal Projects /Stellar-To-The-Moon/Stellar/View/Screens/ArticlesGridView.swift">
+   </FileRef>
+   <FileRef
       location = "group:Stellar.xcodeproj">
    </FileRef>
 </Workspace>

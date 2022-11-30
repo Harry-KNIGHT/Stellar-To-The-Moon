@@ -11,10 +11,18 @@ import StellarMoonKit
 struct RowCell: View {
 	let article: AstronomyArticleModel
 	let size: CGFloat = 90
+	let isInFavoriteListView: Bool
+
 	var body: some View {
 		HStack(alignment: .center, spacing: 10) {
 			if article.mediaType == .image {
-				AstronomyImageListCell(article: article)
+				if isInFavoriteListView {
+					AstronomyImageListCell(article: article)
+						.frame(width: 90, height: 90)
+						.cornerRadius(10)
+				} else {
+					AstronomyImageListCell(article: article)
+				}
 			} else {
 				VideoPlaceHolderCell(article: article)
 			}
@@ -42,9 +50,9 @@ struct RowCell: View {
 
 struct RowCell_Previews: PreviewProvider {
 	static var previews: some View {
-		RowCell(article: .astronomySample)
+		RowCell(article: .astronomySample, isInFavoriteListView: false)
 			.previewLayout(.sizeThatFits)
-		RowCell(article: .astronomySample)
+		RowCell(article: .astronomySample, isInFavoriteListView: true)
 			.previewLayout(.sizeThatFits)
 			.preferredColorScheme(.dark)
 	}
