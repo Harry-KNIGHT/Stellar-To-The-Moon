@@ -25,7 +25,7 @@ struct ArticlesGridView: View {
 				ForEach(articleApi.allAstronomies.reversed(), id: \.date) { article in
 					NavigationLink(destination: AstronomyDetailView(article: article)) {
 						if article.mediaType == .image {
-							AstronomyImageListCell(article: article)
+							AstronomyImageListCell(article: article, isInFavoriteListView: false)
 						} else {
 							VideoPlaceHolderCell(article: article)
 						}

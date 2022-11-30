@@ -17,11 +17,11 @@ struct RowCell: View {
 		HStack(alignment: .center, spacing: 10) {
 			if article.mediaType == .image {
 				if isInFavoriteListView {
-					AstronomyImageListCell(article: article)
+					AstronomyImageListCell(article: article, isInFavoriteListView: isInFavoriteListView)
 						.frame(width: 90, height: 90)
 						.cornerRadius(10)
 				} else {
-					AstronomyImageListCell(article: article)
+					AstronomyImageListCell(article: article, isInFavoriteListView: isInFavoriteListView)
 				}
 			} else {
 				VideoPlaceHolderCell(article: article)
