@@ -21,7 +21,7 @@ struct ShowFavSheetButtonCell: View {
 		})
 		.accessibilityLabel("See your favorites astronomy articles.")
 		.sheet(isPresented: $showSheet) {
-			FavoritesArticleList()
+			FavoritesArticlesView()
 		}
     }
 }

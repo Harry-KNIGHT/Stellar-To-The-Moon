@@ -18,7 +18,9 @@ struct ArticlesGridView: View {
 		GridItem(.flexible(), spacing: 0),
 	]
 	private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
+	
 	@Binding var showSheet: Bool
+
 	var body: some View {
 		ScrollView {
 			LazyVGrid(columns: idiom == .phone ? columnsiPhone : columnsiPad, alignment: .center, spacing: 0) {
@@ -54,5 +56,6 @@ struct ArticlesGridView: View {
 struct ArticlesGridView_Previews: PreviewProvider {
     static var previews: some View {
 		ArticlesGridView(showSheet: .constant(false))
+			.environmentObject(AstronomiesArticleViewModel())
     }
 }
