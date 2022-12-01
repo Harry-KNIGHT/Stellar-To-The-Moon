@@ -7,12 +7,13 @@
 
 import SwiftUI
 import StellarMoonKit
+import CachedAsyncImage
 
 struct BackgroundImageCell: View {
 	let article: AstronomyArticleModel
 	@Environment(\.colorScheme) var colorScheme
     var body: some View {
-		AsyncImage(url: URL(string: article.url)) { image in
+		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
 			image
 				.resizable()
 				.scaledToFill()

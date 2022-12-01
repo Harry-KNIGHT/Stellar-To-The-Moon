@@ -7,12 +7,15 @@
 
 import SwiftUI
 import StellarMoonKit
+import CachedAsyncImage
+
 struct AstronomyImageListCell: View {
 	let article: AstronomyArticleModel
 	let size = (deviceWidth / 2)
 	var isInFavoriteListView: Bool
+
 	var body: some View {
-		AsyncImage(url: URL(string: article.url)) { image in
+		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
 			ZStack(alignment: .bottomLeading) {
 				image
 					.resizable()
