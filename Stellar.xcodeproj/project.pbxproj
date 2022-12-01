@@ -17,6 +17,8 @@
 		3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D0289057E80093122A /* AstronomyDetailView.swift */; };
 		3C5555D3289058C50093122A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D2289058C50093122A /* MainScreen.swift */; };
 		3C5555D6289058FF0093122A /* AstronomyArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* AstronomyArticlesViewModel.swift */; };
+		3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C57F3312938A1DB001F74A0 /* CachedAsyncImage */; };
+		3C57F3342938A213001F74A0 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57F3332938A213001F74A0 /* URLCache.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
 		3CA718CC292950CC0075E0D5 /* VideoPlaceHolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CB292950CC0075E0D5 /* VideoPlaceHolderCell.swift */; };
 		3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */; };
@@ -78,6 +80,7 @@
 		3C5555D0289057E80093122A /* AstronomyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDetailView.swift; sourceTree = "<group>"; };
 		3C5555D2289058C50093122A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		3C5555D5289058FF0093122A /* AstronomyArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticlesViewModel.swift; sourceTree = "<group>"; };
+		3C57F3332938A213001F74A0 /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		3CA718CB292950CC0075E0D5 /* VideoPlaceHolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaceHolderCell.swift; sourceTree = "<group>"; };
 		3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFavSheetButtonCell.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CBBA48228AFA78D0062A498 /* RefreshableScrollView in Frameworks */,
+				3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */,
 				3CC4922E28BE5F4D00C0B89B /* StellarMoonKit in Frameworks */,
 				3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */,
 			);
@@ -158,6 +162,14 @@
 				3C6878F3289AA3DA00B99797 /* ImageSaver */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3C57F3352938A219001F74A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C57F3332938A213001F74A0 /* URLCache.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3C6878F3289AA3DA00B99797 /* ImageSaver */ = {
@@ -221,6 +233,7 @@
 				3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */,
 				3C5555D8289059880093122A /* View */,
 				3CBF0C43289134F300010691 /* ViewModel */,
+				3C57F3352938A219001F74A0 /* Extensions */,
 				3C5555CC288F21440093122A /* README.md */,
 				3CDBA112288E759B00AB15C7 /* Assets.xcassets */,
 				3CDBA114288E759B00AB15C7 /* Preview Content */,
@@ -309,6 +322,7 @@
 				3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */,
 				3CBBA48128AFA78D0062A498 /* RefreshableScrollView */,
 				3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */,
+				3C57F3312938A1DB001F74A0 /* CachedAsyncImage */,
 			);
 			productName = NasaDayAstronomy;
 			productReference = 3CDBA10B288E759A00AB15C7 /* Stellar.app */;
@@ -387,6 +401,7 @@
 				3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				3CBBA48028AFA78D0062A498 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */,
 				3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */,
+				3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 3CDBA10C288E759A00AB15C7 /* Products */;
 			projectDirPath = "";
@@ -435,6 +450,7 @@
 				3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */,
 				3C5555D6289058FF0093122A /* AstronomyArticlesViewModel.swift in Sources */,
 				3CC954C6289CFF25006D547C /* CircularProgressBar.swift in Sources */,
+				3C57F3342938A213001F74A0 /* URLCache.swift in Sources */,
 				3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */,
 				3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */,
 				3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */,
@@ -786,6 +802,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		3CBBA48028AFA78D0062A498 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Q42/RefreshableScrollView";
@@ -813,6 +837,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3C57F3312938A1DB001F74A0 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
 		3CBBA48128AFA78D0062A498 /* RefreshableScrollView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3CBBA48028AFA78D0062A498 /* XCRemoteSwiftPackageReference "RefreshableScrollView" */;

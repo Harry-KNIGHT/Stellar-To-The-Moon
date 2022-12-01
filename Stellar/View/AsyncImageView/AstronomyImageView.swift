@@ -8,6 +8,7 @@
 import SwiftUI
 import ActivityIndicatorView
 import StellarMoonKit
+import CachedAsyncImage
 
 struct AstronomyImageView: View {
 	let astronomy: AstronomyArticleModel
@@ -24,7 +25,7 @@ struct AstronomyImageView: View {
 
 	@State private var animate = false
 	var body: some View {
-			AsyncImage(url: URL(string: astronomy.url)) { image in
+		CachedAsyncImage(url: URL(string: astronomy.url), urlCache: .imageCache) { image in
 			ZStack(alignment: .bottomTrailing) {
 				ZStack(alignment: .bottomLeading) {
 				image
