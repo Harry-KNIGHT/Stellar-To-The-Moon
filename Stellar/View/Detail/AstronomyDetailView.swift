@@ -19,7 +19,7 @@ struct AstronomyDetailView: View {
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			if article.mediaType == .image {
-					AstronomyImageView(astronomy: article)
+					AstronomyImageView(article: article)
 				} else {
 					VideoView(videoID: article.url)
 						.frame(minHeight: 450, maxHeight: 800)

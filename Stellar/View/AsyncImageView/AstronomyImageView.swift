@@ -11,7 +11,7 @@ import StellarMoonKit
 import CachedAsyncImage
 
 struct AstronomyImageView: View {
-	let astronomy: AstronomyArticleModel
+	let article: AstronomyArticleModel
 	@EnvironmentObject var astronomyApi: AstronomyDetailViewModel
 
 	@Environment(\.colorScheme) private var colorScheme
@@ -25,22 +25,22 @@ struct AstronomyImageView: View {
 
 	@State private var animate = false
 	var body: some View {
-		CachedAsyncImage(url: URL(string: astronomy.url), urlCache: .imageCache) { image in
+		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
 			ZStack(alignment: .bottomTrailing) {
 				ZStack(alignment: .bottomLeading) {
 					image
 						.resizable()
 						.scaledToFill()
 						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-						.accessibilityLabel(astronomy.title)
+						.accessibilityLabel(article.title)
 
-					if let copryRight = astronomy.copyright {
+					if let copryRight = article.copyright {
 						Text(copryRight)
 							.modifier(CopyrightStyle())
 					}
 				}
 				if !isImageDowloaded {
-					DownloadImageButton(article: astronomy, circleProgress: $circleProgress, isImageDowloaded: $isImageDowloaded, isDownloadingImage: $isDownloadingImage)
+					DownloadImageButton(article: article, circleProgress: $circleProgress, isImageDowloaded: $isImageDowloaded, isDownloadingImage: $isDownloadingImage)
 				} else {
 					ImageDownloadedButton(animate: $animate)
 				}
@@ -53,7 +53,7 @@ struct AstronomyImageView: View {
 
 struct AstronomyImageView_Previews: PreviewProvider {
 	static var previews: some View {
-		AstronomyImageView(astronomy: .astronomySample)
+		AstronomyImageView(article: .astronomySample)
 			.environmentObject(AstronomyDetailViewModel())
 	}
 }
