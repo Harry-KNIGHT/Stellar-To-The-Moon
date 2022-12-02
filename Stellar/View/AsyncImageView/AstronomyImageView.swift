@@ -32,15 +32,11 @@ struct AstronomyImageView: View {
 					.resizable()
 					.scaledToFill()
 					.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-					.accessibilityLabel("Image of \(astronomy.title)")
+					.accessibilityLabel(astronomy.title)
 
 					if let copryRight = astronomy.copyright {
 						Text(copryRight)
-							.foregroundColor(.white)
-							.padding(4)
-							.padding(.top, 8)
-							.background(LinearGradient(colors: [.clear, .black.opacity(0.6)], startPoint: .top, endPoint: .center))
-							.accessibilityLabel("Photo taken by \(copryRight)")
+							.modifier(CopyrightStyle())
 					}
 				}
 					if !isImageDowloaded {
@@ -71,16 +67,7 @@ struct AstronomyImageView: View {
 								CircularProgressBar(circleProgress: circleProgress, width: 25, height: 25, lineWidth: 4)
 							}
 						})
-						.accessibilityLabel("Download image button")
-						.buttonStyle(.borderedProminent)
-						.clipShape(Circle())
-						.foregroundColor(.blue)
-						.overlay {
-							Circle()
-								.stroke(.white, lineWidth: 0.4)
-						}
-						.shadow(color: .blue, radius: 10)
-						.padding([.bottom, .trailing])
+						.modifier(DownloadImageButtonStyle())
 					} else {
 
 						Button(action: {
@@ -90,19 +77,7 @@ struct AstronomyImageView: View {
 								.font(.title2)
 								.foregroundColor(.white)
 						})
-						.accessibilityLabel("Download done.")
-						.buttonStyle(.borderedProminent)
-						.clipShape(Circle())
-						.tint(.green)
-						.overlay {
-							Circle()
-								.stroke(.white, lineWidth: 0.4)
-						}
-						.shadow(color: .green, radius: 10)
-						.padding([.bottom, .trailing])
-						.opacity(animate ? 0 : 1)
-
-						.animation(.easeInOut(duration: 2).delay(1), value: animate ? 0 : 1)
+						.modifier(DownloadDoneButtonStyle(animate: $animate))
 						.task {
 							animate = true
 							print(animate)
