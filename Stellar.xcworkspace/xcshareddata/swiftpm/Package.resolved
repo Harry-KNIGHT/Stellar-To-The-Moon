@@ -10,21 +10,12 @@
       }
     },
     {
-      "identity" : "refreshablescrollview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Q42/RefreshableScrollView",
-      "state" : {
-        "revision" : "45ab1092d36ca77bbbeee1534251085d974dc40e",
-        "version" : "0.0.2"
-      }
-    },
-    {
       "identity" : "stellarmoonkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Harry-KNIGHT/StellarMoonKit",
       "state" : {
         "branch" : "main",
-        "revision" : "39f70aa1b31ec6179add59df763f36f0a4dd2f1c"
+        "revision" : "25c35c589740bf6a3ca42bc377cefb12d40b4dd2"
       }
     },
     {

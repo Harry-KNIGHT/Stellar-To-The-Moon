@@ -43,11 +43,7 @@ struct ArticlesGridView: View {
 			}
 		}
 		.refreshable {
-			do {
-				try await articleApi.getAstronomiesArticles(to: Date.now)
-			} catch {
-				print("Error while refresh: \(error.localizedDescription)")
-			}
+				articleApi.getAstronomiesArticles(to: Date.now)
 		}
 	}
 }

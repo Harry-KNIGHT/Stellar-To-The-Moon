@@ -7,7 +7,7 @@
 
 import SwiftUI
 import ActivityIndicatorView
-import RefreshableScrollView
+
 
 struct MainScreen: View {
 	@EnvironmentObject public var articleApi: AstronomiesArticleViewModel
@@ -25,11 +25,9 @@ struct MainScreen: View {
 			}
 			.navigationTitle("Stellar")
 			.navigationBarTitleDisplayMode(.inline)
-			.task {
-				do {
-					try await articleApi.getAstronomiesArticles(to: Date.now)
-				} catch {
-					print("Error: \(error.localizedDescription)")
+			.onAppear {
+				Task {
+					articleApi.getAstronomiesArticles(to: Date.now)
 				}
 			}
 		}

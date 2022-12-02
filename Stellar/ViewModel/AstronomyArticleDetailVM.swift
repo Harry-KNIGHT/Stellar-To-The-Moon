@@ -12,11 +12,13 @@ import StellarMoonKit
 class AstronomyDetailViewModel: ObservableObject {
 	@Published var nasaReponses: [AstronomyArticleModel] = []
 
-	func getAstronomyArticle() async throws {
-		do {
-			try await self.nasaReponses.append(AstronomyApi.nasaApi())
-		} catch {
-			print("Error: \(error.localizedDescription)")
+	func getAstronomyArticle() {
+		Task {
+			do {
+				try await self.nasaReponses.append(AstronomyApi.nasaApi())
+			} catch {
+				print("Error: \(error.localizedDescription)")
+			}
 		}
 	}
 

@@ -28,12 +28,14 @@ class AstronomiesArticleViewModel: ObservableObject {
 		}
 	}
 
-	@MainActor func getAstronomiesArticles(from hundredDayBefore: Int64 = Date().millisecondsSince1970, to today: Date) async throws {
-		do {
-			allAstronomies = try await AstronomiesArticleApi.fetchAstronomiesObject(from: hundredDayBefore, to: today)
-			save()
-		} catch {
-			print("Error \(error.localizedDescription)")
+	@MainActor func getAstronomiesArticles(from hundredDayBefore: Int64 = Date().millisecondsSince1970, to today: Date) {
+		Task {
+			do {
+				allAstronomies = try await AstronomiesArticleApi.fetchAstronomiesObject(from: hundredDayBefore, to: today)
+				save()
+			} catch {
+				print("Error \(error.localizedDescription)")
+			}
 		}
 	}
 }
