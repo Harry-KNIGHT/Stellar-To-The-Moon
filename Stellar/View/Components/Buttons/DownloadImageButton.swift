@@ -19,22 +19,7 @@ struct DownloadImageButton: View {
 
     var body: some View {
 		Button(action: {
-			do {
-				self.isDownloadingImage.toggle()
-				self.startLoading()
-
-				guard let urlString = article.hdurl else {
-					throw ApiError.urlNotFound
-				}
-				Task {
-					let imageSaver = ImageSaver()
-					let image = try await astronomyVM.getImage(from: urlString)
-					imageSaver.writeToPhotoAlbum(image: image)
-					isImageDowloaded.toggle()
-				}
-			} catch {
-				print("Error \(error.localizedDescription)")
-			}
+			downloadImage(article: article, isDownloadingImage: isDownloadingImage, isImageDowloaded: isImageDowloaded)
 		}, label: {
 
 			if !isDownloadingImage {
@@ -57,10 +42,32 @@ struct DownloadImageButton: View {
 			}
 		}
 	}
+
+	func downloadImage(article: AstronomyArticleModel, isDownloadingImage: Bool, isImageDowloaded: Bool) {
+		Task {
+			do {
+				self.isDownloadingImage.toggle()
+				self.startLoading()
+
+				guard let urlString = article.hdurl else {
+					throw ApiError.urlNotFound
+				}
+				Task {
+					let imageSaver = ImageSaver()
+					let image = try await astronomyVM.getImage(from: urlString)
+					imageSaver.writeToPhotoAlbum(image: image)
+					self.isImageDowloaded.toggle()
+				}
+			} catch {
+				print("Error \(error.localizedDescription)")
+			}
+		}
+	}
 }
 
 struct DownloadImageButton_Previews: PreviewProvider {
     static var previews: some View {
 		DownloadImageButton(article: .astronomySample, circleProgress: .constant(0.0), isImageDowloaded: .constant(false), isDownloadingImage: .constant(false))
+			.environmentObject(AstronomyDetailViewModel())
     }
 }
