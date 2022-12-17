@@ -20,6 +20,14 @@
 		3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C57F3312938A1DB001F74A0 /* CachedAsyncImage */; };
 		3C57F3342938A213001F74A0 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57F3332938A213001F74A0 /* URLCache.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
+		3C6B0A75294E2D04008A9611 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B0A74294E2D03008A9611 /* WidgetKit.framework */; };
+		3C6B0A77294E2D04008A9611 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B0A76294E2D04008A9611 /* SwiftUI.framework */; };
+		3C6B0A7A294E2D04008A9611 /* StellarWidgetImageBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0A79294E2D04008A9611 /* StellarWidgetImageBundle.swift */; };
+		3C6B0A7C294E2D04008A9611 /* StellarWidgetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0A7B294E2D04008A9611 /* StellarWidgetImage.swift */; };
+		3C6B0A7E294E2D06008A9611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6B0A7D294E2D06008A9611 /* Assets.xcassets */; };
+		3C6B0A82294E2D06008A9611 /* StellarWidgetImageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3C6B0A87294E2D1A008A9611 /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C6B0A86294E2D1A008A9611 /* StellarMoonKit */; };
+		3C6B0A8A294E2F40008A9611 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0A88294E2F15008A9611 /* NetworkImage.swift */; };
 		3C7F9676293A32C100B949DD /* DownloadDoneButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9675293A32C100B949DD /* DownloadDoneButtonStyle.swift */; };
 		3C7F9679293A331B00B949DD /* DownloadImageButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9678293A331B00B949DD /* DownloadImageButtonStyle.swift */; };
 		3C7F967B293A33D700B949DD /* CopyrightStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F967A293A33D700B949DD /* CopyrightStyle.swift */; };
@@ -45,6 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3C6B0A80294E2D06008A9611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C6B0A71294E2D03008A9611;
+			remoteInfo = StellarWidgetImageExtension;
+		};
 		3CDBA11C288E759B00AB15C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
@@ -68,6 +83,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				3C6B0A82294E2D06008A9611 /* StellarWidgetImageExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +103,14 @@
 		3C5555D5289058FF0093122A /* AstronomyArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticlesViewModel.swift; sourceTree = "<group>"; };
 		3C57F3332938A213001F74A0 /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarWidgetImageExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C6B0A74294E2D03008A9611 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3C6B0A76294E2D04008A9611 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3C6B0A79294E2D04008A9611 /* StellarWidgetImageBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarWidgetImageBundle.swift; sourceTree = "<group>"; };
+		3C6B0A7B294E2D04008A9611 /* StellarWidgetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarWidgetImage.swift; sourceTree = "<group>"; };
+		3C6B0A7D294E2D06008A9611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C6B0A7F294E2D06008A9611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C6B0A88294E2F15008A9611 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		3C7F9675293A32C100B949DD /* DownloadDoneButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDoneButtonStyle.swift; sourceTree = "<group>"; };
 		3C7F9678293A331B00B949DD /* DownloadImageButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageButtonStyle.swift; sourceTree = "<group>"; };
 		3C7F967A293A33D700B949DD /* CopyrightStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightStyle.swift; sourceTree = "<group>"; };
@@ -113,6 +137,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3C6B0A6F294E2D03008A9611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6B0A77294E2D04008A9611 /* SwiftUI.framework in Frameworks */,
+				3C6B0A87294E2D1A008A9611 /* StellarMoonKit in Frameworks */,
+				3C6B0A75294E2D04008A9611 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CDBA108288E759A00AB15C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,6 +225,27 @@
 			path = ImageSaver;
 			sourceTree = "<group>";
 		};
+		3C6B0A73294E2D03008A9611 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C6B0A74294E2D03008A9611 /* WidgetKit.framework */,
+				3C6B0A76294E2D04008A9611 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C6B0A78294E2D04008A9611 /* StellarWidgetImage */ = {
+			isa = PBXGroup;
+			children = (
+				3C6B0A79294E2D04008A9611 /* StellarWidgetImageBundle.swift */,
+				3C6B0A7B294E2D04008A9611 /* StellarWidgetImage.swift */,
+				3C6B0A88294E2F15008A9611 /* NetworkImage.swift */,
+				3C6B0A7D294E2D06008A9611 /* Assets.xcassets */,
+				3C6B0A7F294E2D06008A9611 /* Info.plist */,
+			);
+			path = StellarWidgetImage;
+			sourceTree = "<group>";
+		};
 		3C7F9677293A32D500B949DD /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
+				3C6B0A78294E2D04008A9611 /* StellarWidgetImage */,
+				3C6B0A73294E2D03008A9611 /* Frameworks */,
 				3CDBA10C288E759A00AB15C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -246,6 +303,7 @@
 				3CDBA10B288E759A00AB15C7 /* Stellar.app */,
 				3CDBA11B288E759B00AB15C7 /* StellarTests.xctest */,
 				3CDBA125288E759B00AB15C7 /* StellarUITests.xctest */,
+				3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,6 +386,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3C6B0A71294E2D03008A9611 /* StellarWidgetImageExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C6B0A85294E2D06008A9611 /* Build configuration list for PBXNativeTarget "StellarWidgetImageExtension" */;
+			buildPhases = (
+				3C6B0A6E294E2D03008A9611 /* Sources */,
+				3C6B0A6F294E2D03008A9611 /* Frameworks */,
+				3C6B0A70294E2D03008A9611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StellarWidgetImageExtension;
+			packageProductDependencies = (
+				3C6B0A86294E2D1A008A9611 /* StellarMoonKit */,
+			);
+			productName = StellarWidgetImageExtension;
+			productReference = 3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3CDBA10A288E759A00AB15C7 /* Stellar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CDBA12F288E759B00AB15C7 /* Build configuration list for PBXNativeTarget "Stellar" */;
@@ -340,6 +418,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3C6B0A81294E2D06008A9611 /* PBXTargetDependency */,
 			);
 			name = Stellar;
 			packageProductDependencies = (
@@ -394,9 +473,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					3C6B0A71294E2D03008A9611 = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					3CDBA10A288E759A00AB15C7 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -432,11 +514,20 @@
 				3CDBA10A288E759A00AB15C7 /* Stellar */,
 				3CDBA11A288E759B00AB15C7 /* StellarTests */,
 				3CDBA124288E759B00AB15C7 /* StellarUITests */,
+				3C6B0A71294E2D03008A9611 /* StellarWidgetImageExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3C6B0A70294E2D03008A9611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6B0A7E294E2D06008A9611 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CDBA109288E759A00AB15C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +555,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3C6B0A6E294E2D03008A9611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6B0A7A294E2D04008A9611 /* StellarWidgetImageBundle.swift in Sources */,
+				3C6B0A8A294E2F40008A9611 /* NetworkImage.swift in Sources */,
+				3C6B0A7C294E2D04008A9611 /* StellarWidgetImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CDBA107288E759A00AB15C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,6 +618,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3C6B0A81294E2D06008A9611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C6B0A71294E2D03008A9611 /* StellarWidgetImageExtension */;
+			targetProxy = 3C6B0A80294E2D06008A9611 /* PBXContainerItemProxy */;
+		};
 		3CDBA11D288E759B00AB15C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3CDBA10A288E759A00AB15C7 /* Stellar */;
@@ -530,6 +636,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3C6B0A83294E2D06008A9611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 38;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarWidgetImage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StellarWidgetImage;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarWidgetImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C6B0A84294E2D06008A9611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 38;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarWidgetImage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StellarWidgetImage;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarWidgetImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3CDBA12D288E759B00AB15C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -649,10 +811,11 @@
 		3CDBA130288E759B00AB15C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -670,7 +833,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.7;
+				MARKETING_VERSION = 2.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -682,10 +845,11 @@
 		3CDBA131288E759B00AB15C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -703,7 +867,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.7;
+				MARKETING_VERSION = 2.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -791,6 +955,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C6B0A85294E2D06008A9611 /* Build configuration list for PBXNativeTarget "StellarWidgetImageExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C6B0A83294E2D06008A9611 /* Debug */,
+				3C6B0A84294E2D06008A9611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3CDBA106288E759A00AB15C7 /* Build configuration list for PBXProject "Stellar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -861,6 +1034,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		3C6B0A86294E2D1A008A9611 /* StellarMoonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */;
+			productName = StellarMoonKit;
 		};
 		3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
