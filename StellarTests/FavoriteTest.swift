@@ -13,6 +13,8 @@ final class FavoriteTest: XCTestCase {
 	var favoriteVM: FavoriteViewModel!
     override func setUpWithError() throws {
 		favoriteVM = FavoriteViewModel()
+		favoriteVM.favoriteAstronomyArticles = [AstronomyArticleModel]()
+
     }
 
     override func tearDownWithError() throws {
@@ -37,5 +39,19 @@ final class FavoriteTest: XCTestCase {
 
 		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 0)
 		XCTAssertTrue(favoriteVM.favoriteAstronomyArticles.isEmpty)
+	}
+
+	func test_addOrDeletFavorite() throws {
+		// Add astronomy article sample on the array
+		let _: Void = favoriteVM.addOrDeletFavorite(article: .astronomySample)
+		XCTAssertTrue(favoriteVM.favoriteAstronomyArticles.contains(.astronomySample))
+		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 1)
+		XCTAssertNotEqual(favoriteVM.favoriteAstronomyArticles.count, 10)
+
+		// Remove astronomy article sample from the array
+		let _: Void = favoriteVM.addOrDeletFavorite(article: .astronomySample)
+		XCTAssertFalse(favoriteVM.favoriteAstronomyArticles.contains(.astronomySample))
+		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 0)
+		XCTAssertNotEqual(favoriteVM.favoriteAstronomyArticles.count, 5)
 	}
 }
