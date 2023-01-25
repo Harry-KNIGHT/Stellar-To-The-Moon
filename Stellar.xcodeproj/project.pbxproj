@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C03EADE2937EC190023EC26 /* FavoritesListView.swift */; };
 		3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */; };
+		3C266B9D2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift */; };
+		3C266B9F2981C06500A9A888 /* SheetButtonsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* SheetButtonsStyle.swift */; };
 		3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */; };
 		3C46134C292A68320087214C /* BackgroundImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46134B292A68320087214C /* BackgroundImageCell.swift */; };
 		3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* AstronomyImageView.swift */; };
@@ -20,6 +22,7 @@
 		3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C57F3312938A1DB001F74A0 /* CachedAsyncImage */; };
 		3C57F3342938A213001F74A0 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57F3332938A213001F74A0 /* URLCache.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
+		3C69A5562981BADF00F2FBC9 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69A5552981BADF00F2FBC9 /* DatePickerView.swift */; };
 		3C6B0A75294E2D04008A9611 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B0A74294E2D03008A9611 /* WidgetKit.framework */; };
 		3C6B0A77294E2D04008A9611 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B0A76294E2D04008A9611 /* SwiftUI.framework */; };
 		3C6B0A7A294E2D04008A9611 /* StellarWidgetImageBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0A79294E2D04008A9611 /* StellarWidgetImageBundle.swift */; };
@@ -38,6 +41,7 @@
 		3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */; };
 		3CA718D0292965530075E0D5 /* AddFavoriteButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */; };
 		3CA91F0F2961B6AB0030069B /* FavoriteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA91F0E2961B6AB0030069B /* FavoriteTest.swift */; };
+		3CAD9C3E2981BC2A00384F4D /* SearchDateArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD9C3D2981BC2A00384F4D /* SearchDateArticleView.swift */; };
 		3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBB34A328BE35F700AC0EDF /* RowCell.swift */; };
 		3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */; };
 		3CBF0C452891371E00010691 /* FavoritesArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C442891371E00010691 /* FavoritesArticlesView.swift */; };
@@ -87,6 +91,8 @@
 /* Begin PBXFileReference section */
 		3C03EADE2937EC190023EC26 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
 		3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGridView.swift; sourceTree = "<group>"; };
+		3C266B9C2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBirthdayPickerButtonView.swift; sourceTree = "<group>"; };
+		3C266B9E2981C06500A9A888 /* SheetButtonsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtonsStyle.swift; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageListCell.swift; sourceTree = "<group>"; };
 		3C46134B292A68320087214C /* BackgroundImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageCell.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* AstronomyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 		3C5555D5289058FF0093122A /* AstronomyArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticlesViewModel.swift; sourceTree = "<group>"; };
 		3C57F3332938A213001F74A0 /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		3C69A5552981BADF00F2FBC9 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarWidgetImageExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6B0A74294E2D03008A9611 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3C6B0A76294E2D04008A9611 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -116,6 +123,7 @@
 		3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteButtonCell.swift; sourceTree = "<group>"; };
 		3CA91F052961B6730030069B /* StellarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StellarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA91F0E2961B6AB0030069B /* FavoriteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTest.swift; sourceTree = "<group>"; };
+		3CAD9C3D2981BC2A00384F4D /* SearchDateArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateArticleView.swift; sourceTree = "<group>"; };
 		3CBB34A328BE35F700AC0EDF /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
 		3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		3CBF0C442891371E00010691 /* FavoritesArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesArticlesView.swift; sourceTree = "<group>"; };
@@ -212,6 +220,14 @@
 			path = ImageSaver;
 			sourceTree = "<group>";
 		};
+		3C69A5572981BBC100F2FBC9 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				3C69A5552981BADF00F2FBC9 /* DatePickerView.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
 		3C6B0A73294E2D03008A9611 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +255,7 @@
 				3C7F9675293A32C100B949DD /* DownloadDoneButtonStyle.swift */,
 				3C7F9678293A331B00B949DD /* DownloadImageButtonStyle.swift */,
 				3C7F967A293A33D700B949DD /* CopyrightStyle.swift */,
+				3C266B9E2981C06500A9A888 /* SheetButtonsStyle.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -275,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */,
+				3C266B9C2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift */,
 				3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */,
 				3C7F9680293A390200B949DD /* DownloadImageButton.swift */,
 				3C7F9682293A3BDE00B949DD /* ImageDownloadedButton.swift */,
@@ -331,6 +349,7 @@
 				3CBB34A328BE35F700AC0EDF /* RowCell.swift */,
 				3CA718CB292950CC0075E0D5 /* VideoPlaceHolderCell.swift */,
 				3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */,
+				3C69A5572981BBC100F2FBC9 /* Pickers */,
 				3CCF165E292A178F0037BB50 /* Buttons */,
 			);
 			path = Components;
@@ -366,6 +385,7 @@
 			children = (
 				3C5555D2289058C50093122A /* MainScreen.swift */,
 				3CBF0C442891371E00010691 /* FavoritesArticlesView.swift */,
+				3CAD9C3D2981BC2A00384F4D /* SearchDateArticleView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -549,7 +569,10 @@
 				3CC954C6289CFF25006D547C /* CircularProgressBar.swift in Sources */,
 				3C7F9679293A331B00B949DD /* DownloadImageButtonStyle.swift in Sources */,
 				3C57F3342938A213001F74A0 /* URLCache.swift in Sources */,
+				3C69A5562981BADF00F2FBC9 /* DatePickerView.swift in Sources */,
 				3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */,
+				3C266B9D2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift in Sources */,
+				3CAD9C3E2981BC2A00384F4D /* SearchDateArticleView.swift in Sources */,
 				3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */,
 				3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */,
 				3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */,
@@ -562,6 +585,7 @@
 				3CA718CC292950CC0075E0D5 /* VideoPlaceHolderCell.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
 				3C5555D3289058C50093122A /* MainScreen.swift in Sources */,
+				3C266B9F2981C06500A9A888 /* SheetButtonsStyle.swift in Sources */,
 				3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
 				3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */,

@@ -20,6 +20,7 @@ struct ArticlesGridView: View {
 	private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
 
 	@Binding var showSheet: Bool
+	@Binding var showBirthdayPicker: Bool
 
 	var body: some View {
 		ScrollView {
@@ -41,6 +42,9 @@ struct ArticlesGridView: View {
 					ShowFavSheetButtonCell(showSheet: $showSheet)
 				}
 			}
+			ToolbarItem(placement: .navigationBarLeading) {
+				ShowBirthdayPickerButtonView(showBirthdayPicker: $showBirthdayPicker)
+			}
 		}
 		.refreshable {
 				articleApi.getAstronomiesArticles(to: Date.now)
@@ -51,7 +55,12 @@ struct ArticlesGridView: View {
 
 struct ArticlesGridView_Previews: PreviewProvider {
 	static var previews: some View {
-		ArticlesGridView(showSheet: .constant(false))
+		NavigationView {
+			ArticlesGridView(
+				showSheet: .constant(false),
+				showBirthdayPicker: .constant(false)
+			)
 			.environmentObject(AstronomiesArticleViewModel())
+		}
 	}
 }

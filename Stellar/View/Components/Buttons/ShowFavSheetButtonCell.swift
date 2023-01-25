@@ -16,8 +16,7 @@ struct ShowFavSheetButtonCell: View {
 
 		}, label: {
 			Label("Add article to favorite", systemImage: "star.fill")
-				.font(.title3)
-				.foregroundColor(.primary)
+				.sheetButtonsStyle()
 		})
 		.accessibilityLabel("See your favorites astronomy articles.")
 		.sheet(isPresented: $showSheet) {
