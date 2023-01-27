@@ -27,5 +27,6 @@ struct AddFavoriteButtonCell: View {
 struct AddFavoriteButtonCell_Previews: PreviewProvider {
     static var previews: some View {
 		AddFavoriteButtonCell(article: .astronomySample)
+			.environmentObject(FavoriteViewModel())
     }
 }
