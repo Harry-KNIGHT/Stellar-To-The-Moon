@@ -12,21 +12,20 @@ struct SearchDateArticleView: View {
 	@ObservedObject var articlesVM = AstronomiesArticleViewModel()
 
 	var body: some View {
-		VStack {
-			
+		NavigationView {
 			if let search = searchDateVM.article  {
 				AstronomyDetailView(article: search)
-			} else {
-				if let lastArticle = articlesVM.allAstronomies.last {
-					AstronomyDetailView(article: lastArticle)
-				} else {
-					AstronomyDetailView(article: .astronomySample)
-				}
+					.toolbar {
+						ToolbarItem(placement: .navigationBarLeading) {
+							GenerateRandomArticleButton()
+						}
+					}
 			}
 		}
 		.onAppear {
 			searchDateVM.generateOneArticle()
 		}
+
 	}
 }
 
