@@ -10,31 +10,22 @@ import SwiftUI
 struct SearchDateArticleView: View {
 	@EnvironmentObject var searchDateVM: SearchDateArticleViewModel
 	@ObservedObject var articlesVM = AstronomiesArticleViewModel()
-	@State private var date: Date = Date.now
+
 	var body: some View {
-		NavigationView {
-			VStack {
-				HStack {
-					DatePickerView(date: $date)
-				}
-				.padding(.horizontal)
-				.padding(.top, 5)
-				
-				Spacer()
-				if let search = searchDateVM.article  {
-					AstronomyDetailView(article: search)
+		VStack {
+			
+			if let search = searchDateVM.article  {
+				AstronomyDetailView(article: search)
+			} else {
+				if let lastArticle = articlesVM.allAstronomies.last {
+					AstronomyDetailView(article: lastArticle)
 				} else {
-					if let lastArticle = articlesVM.allAstronomies.last {
-						AstronomyDetailView(article: lastArticle)
-					} else {
-						AstronomyDetailView(article: .astronomySample)
-					}
+					AstronomyDetailView(article: .astronomySample)
 				}
-				Spacer()
 			}
-			.onChange(of: date, perform: { newDateSearch in
-				searchDateVM.searchOneArticle(date: newDateSearch)
-			})
+		}
+		.onAppear {
+			searchDateVM.generateOneArticle()
 		}
 	}
 }

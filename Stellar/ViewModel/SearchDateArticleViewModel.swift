@@ -12,10 +12,10 @@ class SearchDateArticleViewModel: ObservableObject {
 	@Published var article: AstronomyArticleModel?
 
 	@MainActor
-	func searchOneArticle(date: Date)  {
+	func generateOneArticle()  {
 		Task {
 			do {
-				article = try await SearchSingleArticleApi.searchOneArticle(date: date)
+				article = try await GenerateRandomArticleApi.generateOneArticle()
 			} catch {
 				DispatchQueue.main.async {
 					print(error)
@@ -23,6 +23,4 @@ class SearchDateArticleViewModel: ObservableObject {
 			}
 		}
 	}
-
-	
 }
