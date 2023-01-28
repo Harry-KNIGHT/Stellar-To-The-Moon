@@ -15,13 +15,13 @@ struct DatePickerView: View {
 
     var body: some View {
 		DatePicker(
-			"Select date",
+			"Select one date",
 			selection: $date,
 			in: firstJanuaryTwoThousandTen...now,
 			displayedComponents: [.date]
 		)
 			.datePickerStyle(.compact)
-			.labelsHidden()
+
 			.frame(maxWidth: .infinity)
     }
 }

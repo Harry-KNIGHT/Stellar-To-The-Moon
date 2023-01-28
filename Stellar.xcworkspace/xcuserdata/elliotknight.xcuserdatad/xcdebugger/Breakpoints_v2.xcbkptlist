@@ -32,7 +32,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
                   endingLineNumber = "12"
-                  offsetFromSymbolStart = "412">
+                  offsetFromSymbolStart = "492">
                </Location>
                <Location
                   uuid = "796318ED-50DE-41D0-9619-BD628E7C1AAC - e47e5f075af2536c"
@@ -47,7 +47,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
                   endingLineNumber = "12"
-                  offsetFromSymbolStart = "192">
+                  offsetFromSymbolStart = "288">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -82,6 +82,53 @@
             endingLineNumber = "33"
             landmarkName = "searchOneArticle(date:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54747A94-85D8-4355-B612-96B8A5B6DFCE - e47e5f075af25686"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for static StellarMoonKit.SearchSingleArticleApi.searchOneArticle(date: Foundation.Date) async throws -&gt; StellarMoonKit.AstronomyArticleModel"
+                  moduleName = "Stellar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elliotknight/Library/Developer/Xcode/DerivedData/Stellar-fkgdrsgkcrlgtlgjbrwedfbhfzdz/SourcePackages/checkouts/StellarMoonKit/Sources/StellarMoonKit/Api/SearchSingleArticleApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1864">
+               </Location>
+               <Location
+                  uuid = "54747A94-85D8-4355-B612-96B8A5B6DFCE - c5ee8f9888c91a84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static StellarMoonKit.SearchSingleArticleApi.searchOneArticle(date: Foundation.Date) async throws -&gt; StellarMoonKit.AstronomyArticleModel"
+                  moduleName = "Stellar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elliotknight/Library/Developer/Xcode/DerivedData/Stellar-fkgdrsgkcrlgtlgjbrwedfbhfzdz/SourcePackages/checkouts/StellarMoonKit/Sources/StellarMoonKit/Api/SearchSingleArticleApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "2116">
+               </Location>
+               <Location
+                  uuid = "54747A94-85D8-4355-B612-96B8A5B6DFCE - 3516d7d01fb2bc85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for static StellarMoonKit.SearchSingleArticleApi.searchOneArticle(date: Foundation.Date) async throws -&gt; StellarMoonKit.AstronomyArticleModel"
+                  moduleName = "Stellar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elliotknight/Library/Developer/Xcode/DerivedData/Stellar-fkgdrsgkcrlgtlgjbrwedfbhfzdz/SourcePackages/checkouts/StellarMoonKit/Sources/StellarMoonKit/Api/SearchSingleArticleApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "344">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
