@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C03EADE2937EC190023EC26 /* FavoritesListView.swift */; };
 		3C08D3602984537E0030D45B /* SearchDateArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */; };
-		3C08D3622985130A0030D45B /* SearchArticleByDateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D3612985130A0030D45B /* SearchArticleByDateButtonView.swift */; };
 		3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */; };
 		3C266B9D2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift */; };
 		3C266B9F2981C06500A9A888 /* SheetButtonsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* SheetButtonsStyle.swift */; };
@@ -93,7 +92,6 @@
 /* Begin PBXFileReference section */
 		3C03EADE2937EC190023EC26 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
 		3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateArticleViewModel.swift; sourceTree = "<group>"; };
-		3C08D3612985130A0030D45B /* SearchArticleByDateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArticleByDateButtonView.swift; sourceTree = "<group>"; };
 		3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGridView.swift; sourceTree = "<group>"; };
 		3C266B9C2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBirthdayPickerButtonView.swift; sourceTree = "<group>"; };
 		3C266B9E2981C06500A9A888 /* SheetButtonsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtonsStyle.swift; sourceTree = "<group>"; };
@@ -301,7 +299,6 @@
 				3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */,
 				3C7F9680293A390200B949DD /* DownloadImageButton.swift */,
 				3C7F9682293A3BDE00B949DD /* ImageDownloadedButton.swift */,
-				3C08D3612985130A0030D45B /* SearchArticleByDateButtonView.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -575,7 +572,6 @@
 				3C5555D6289058FF0093122A /* AstronomyArticlesViewModel.swift in Sources */,
 				3CC954C6289CFF25006D547C /* CircularProgressBar.swift in Sources */,
 				3C7F9679293A331B00B949DD /* DownloadImageButtonStyle.swift in Sources */,
-				3C08D3622985130A0030D45B /* SearchArticleByDateButtonView.swift in Sources */,
 				3C57F3342938A213001F74A0 /* URLCache.swift in Sources */,
 				3C69A5562981BADF00F2FBC9 /* DatePickerView.swift in Sources */,
 				3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */,

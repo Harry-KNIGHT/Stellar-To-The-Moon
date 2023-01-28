@@ -9,14 +9,13 @@ import SwiftUI
 
 struct SearchDateArticleView: View {
 	@EnvironmentObject var searchDateVM: SearchDateArticleViewModel
+	@ObservedObject var articlesVM = AstronomiesArticleViewModel()
 	@State private var date: Date = Date.now
 	var body: some View {
 		NavigationView {
 			VStack {
 				HStack {
 					DatePickerView(date: $date)
-
-					SearchArticleByDateButtonView(date: $date)
 				}
 				.padding(.horizontal)
 				.padding(.top, 5)
@@ -24,10 +23,18 @@ struct SearchDateArticleView: View {
 				Spacer()
 				if let search = searchDateVM.article  {
 					AstronomyDetailView(article: search)
+				} else {
+					if let lastArticle = articlesVM.allAstronomies.last {
+						AstronomyDetailView(article: lastArticle)
+					} else {
+						AstronomyDetailView(article: .astronomySample)
+					}
 				}
 				Spacer()
 			}
-			.navigationTitle("Search by date")
+			.onChange(of: date, perform: { newDateSearch in
+				searchDateVM.searchOneArticle(date: newDateSearch)
+			})
 		}
 	}
 }
@@ -37,6 +44,7 @@ struct SearchDateArticleView_Previews: PreviewProvider {
 		NavigationView {
 			SearchDateArticleView()
 				.environmentObject(SearchDateArticleViewModel())
+				.environmentObject(AstronomiesArticleViewModel())
 		}
 	}
 }
