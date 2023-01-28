@@ -16,13 +16,7 @@ struct SearchDateArticleView: View {
 				HStack {
 					DatePickerView(date: $date)
 
-					Button(action: {
-						searchDateVM.searchOneArticle(date: date)
-					}, label: {
-						Text("Search")
-							.frame(maxWidth: .infinity)
-					})
-					.buttonStyle(.borderedProminent)
+					SearchArticleByDateButtonView(date: $date)
 				}
 				.padding(.horizontal)
 				.padding(.top, 5)
