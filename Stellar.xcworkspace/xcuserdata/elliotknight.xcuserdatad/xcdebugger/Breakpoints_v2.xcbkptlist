@@ -3,4 +3,86 @@
    uuid = "656A012D-54DD-4C45-BD0D-1B0DD4CED533"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "796318ED-50DE-41D0-9619-BD628E7C1AAC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Library/Developer/Xcode/DerivedData/Stellar-fkgdrsgkcrlgtlgjbrwedfbhfzdz/SourcePackages/checkouts/StellarMoonKit/Sources/StellarMoonKit/Api/SearchSingleArticleApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "searchOneArticle(date:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "796318ED-50DE-41D0-9619-BD628E7C1AAC - b5f972ca60433274"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static StellarMoonKit.SearchSingleArticleApi.searchOneArticle(date: Foundation.Date) async throws -&gt; StellarMoonKit.AstronomyArticleModel"
+                  moduleName = "Stellar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elliotknight/Library/Developer/Xcode/DerivedData/Stellar-fkgdrsgkcrlgtlgjbrwedfbhfzdz/SourcePackages/checkouts/StellarMoonKit/Sources/StellarMoonKit/Api/SearchSingleArticleApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "796318ED-50DE-41D0-9619-BD628E7C1AAC - e47e5f075af2536c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for static StellarMoonKit.SearchSingleArticleApi.searchOneArticle(date: Foundation.Date) async throws -&gt; StellarMoonKit.AstronomyArticleModel"
+                  moduleName = "Stellar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elliotknight/Library/Developer/Xcode/DerivedData/Stellar-fkgdrsgkcrlgtlgjbrwedfbhfzdz/SourcePackages/checkouts/StellarMoonKit/Sources/StellarMoonKit/Api/SearchSingleArticleApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A975663D-5707-46CD-AABA-3B35F760E7FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Library/Developer/Xcode/DerivedData/Stellar-fkgdrsgkcrlgtlgjbrwedfbhfzdz/SourcePackages/checkouts/StellarMoonKit/Sources/StellarMoonKit/Api/SearchSingleArticleApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "searchOneArticle(date:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54747A94-85D8-4355-B612-96B8A5B6DFCE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Library/Developer/Xcode/DerivedData/Stellar-fkgdrsgkcrlgtlgjbrwedfbhfzdz/SourcePackages/checkouts/StellarMoonKit/Sources/StellarMoonKit/Api/SearchSingleArticleApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "searchOneArticle(date:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -11,7 +11,7 @@ struct DatePickerView: View {
 	@Binding var date: Date
     var body: some View {
 		DatePicker("Select date", selection: $date, displayedComponents: [.date])
-			.datePickerStyle(.graphical)
+			.datePickerStyle(.compact)
 			.labelsHidden()
 			.frame(maxWidth: .infinity)
     }
