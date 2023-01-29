@@ -13,7 +13,7 @@ struct GenerateRandomArticleButton: View {
 		Button(action: {
 			generateArticleVM.generateOneArticle()
 		}, label: {
-			Text("Generate random image")
+			Text("Next image")
 				.font(.title3)
 				.fontWeight(.semibold)
 				.frame(maxWidth: .infinity)

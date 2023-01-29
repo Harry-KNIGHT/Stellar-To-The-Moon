@@ -58,5 +58,6 @@ struct AstronomyDetailView_Previews: PreviewProvider {
 		AstronomyDetailView(article: .astronomySample)
 			.environmentObject(AstronomyDetailViewModel())
 			.environmentObject(FavoriteViewModel())
+		AstronomyDetailView(article: .astronomySample, isShowingRandArticleGenration: true)
 	}
 }
