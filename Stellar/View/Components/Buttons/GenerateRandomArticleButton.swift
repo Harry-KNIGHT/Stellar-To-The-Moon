@@ -13,12 +13,13 @@ struct GenerateRandomArticleButton: View {
 		Button(action: {
 			generateArticleVM.generateOneArticle()
 		}, label: {
-			Image(systemName: "shuffle")
-				.padding(9)
-				.foregroundColor(.white)
-				.font(.title)
+			Text("Generate random image")
+				.font(.title3)
+				.fontWeight(.semibold)
+				.frame(maxWidth: .infinity)
 		})
-		.downloadOrShuffleImageButtonStyle(isInDetailView: false)
+		.buttonStyle(.borderedProminent)
+		.shadow(radius: 3)
     }
 }
 

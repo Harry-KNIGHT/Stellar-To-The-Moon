@@ -14,17 +14,12 @@ struct SearchDateArticleView: View {
 	var body: some View {
 		NavigationView {
 			if let search = searchDateVM.article  {
-				ZStack(alignment: .bottomTrailing) {
-					AstronomyDetailView(article: search)
-					GenerateRandomArticleButton()
-				}
+				AstronomyDetailView(article: search, isShowingRandArticleGenration: true)
 			}
 		}
 		.onAppear {
 			searchDateVM.generateOneArticle()
 		}
-
-
 	}
 }
 
