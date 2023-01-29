@@ -13,9 +13,12 @@ struct GenerateRandomArticleButton: View {
 		Button(action: {
 			generateArticleVM.generateOneArticle()
 		}, label: {
-			Image(systemName: "shuffle.circle.fill")
+			Image(systemName: "shuffle")
+				.padding(9)
+				.foregroundColor(.white)
+				.font(.title)
 		})
-		.sheetButtonsStyle()
+		.modifier(DownloadImageButtonStyle(isInDetailView: false))
     }
 }
 

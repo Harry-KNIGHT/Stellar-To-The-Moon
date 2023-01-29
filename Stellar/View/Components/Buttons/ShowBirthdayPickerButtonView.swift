@@ -14,7 +14,7 @@ struct ShowBirthdayPickerButtonView: View {
         Button(action: {
 			showBirthdayPicker.toggle()
 		}, label: {
-			Image(systemName: "magnifyingglass.circle.fill")
+			Image(systemName: "shuffle.circle.fill")
 				.sheetButtonsStyle()
 		})
 		.sheet(isPresented: $showBirthdayPicker) {

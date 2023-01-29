@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DownloadImageButtonStyle: ViewModifier {
+	var isInDetailView = true
 	func body(content: Content) -> some View {
 		content
 			.accessibilityLabel("Download image button")
@@ -19,6 +20,7 @@ struct DownloadImageButtonStyle: ViewModifier {
 					.stroke(.white, lineWidth: 0.4)
 			}
 			.shadow(color: .blue, radius: 10)
-			.padding([.bottom, .trailing])
+			.padding(.bottom, isInDetailView ? 10 : 0)
+			.padding(.trailing)
 	}
 }
