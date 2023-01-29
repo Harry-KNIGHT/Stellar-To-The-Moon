@@ -12,7 +12,7 @@
 		3C08D3642985C4BA0030D45B /* GenerateRandomArticleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */; };
 		3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */; };
 		3C266B9D2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift */; };
-		3C266B9F2981C06500A9A888 /* SheetButtonsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* SheetButtonsStyle.swift */; };
+		3C266B9F2981C06500A9A888 /* NavigationButtonLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */; };
 		3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */; };
 		3C46134C292A68320087214C /* BackgroundImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46134B292A68320087214C /* BackgroundImageCell.swift */; };
 		3C5555CB288F12640093122A /* AstronomyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* AstronomyImageView.swift */; };
@@ -95,7 +95,7 @@
 		3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomArticleButton.swift; sourceTree = "<group>"; };
 		3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGridView.swift; sourceTree = "<group>"; };
 		3C266B9C2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBirthdayPickerButtonView.swift; sourceTree = "<group>"; };
-		3C266B9E2981C06500A9A888 /* SheetButtonsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtonsStyle.swift; sourceTree = "<group>"; };
+		3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonLabelStyle.swift; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* AstronomyImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageListCell.swift; sourceTree = "<group>"; };
 		3C46134B292A68320087214C /* BackgroundImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageCell.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* AstronomyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyImageView.swift; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 				3C7F9675293A32C100B949DD /* DownloadDoneButtonStyle.swift */,
 				3C7F9678293A331B00B949DD /* DownloadImageButtonStyle.swift */,
 				3C7F967A293A33D700B949DD /* CopyrightStyle.swift */,
-				3C266B9E2981C06500A9A888 /* SheetButtonsStyle.swift */,
+				3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -581,7 +581,7 @@
 				3CA718CC292950CC0075E0D5 /* VideoPlaceHolderCell.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
 				3C5555D3289058C50093122A /* MainScreen.swift in Sources */,
-				3C266B9F2981C06500A9A888 /* SheetButtonsStyle.swift in Sources */,
+				3C266B9F2981C06500A9A888 /* NavigationButtonLabelStyle.swift in Sources */,
 				3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
 				3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */,

@@ -30,7 +30,7 @@ struct DownloadImageButton: View {
 				CircularProgressBar(circleProgress: circleProgress, width: 25, height: 25, lineWidth: 4)
 			}
 		})
-		.modifier(DownloadImageButtonStyle())
+		.downloadOrShuffleImageButtonStyle()
     }
 	func startLoading() {
 		_ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in

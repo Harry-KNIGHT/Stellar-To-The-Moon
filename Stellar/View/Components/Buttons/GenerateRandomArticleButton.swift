@@ -18,7 +18,7 @@ struct GenerateRandomArticleButton: View {
 				.foregroundColor(.white)
 				.font(.title)
 		})
-		.modifier(DownloadImageButtonStyle(isInDetailView: false))
+		.downloadOrShuffleImageButtonStyle(isInDetailView: false)
     }
 }
 

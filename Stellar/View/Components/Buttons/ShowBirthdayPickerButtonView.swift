@@ -15,7 +15,7 @@ struct ShowBirthdayPickerButtonView: View {
 			showBirthdayPicker.toggle()
 		}, label: {
 			Image(systemName: "shuffle.circle.fill")
-				.sheetButtonsStyle()
+				.navigationButtonLabelStyle()
 		})
 		.sheet(isPresented: $showBirthdayPicker) {
 			SearchDateArticleView()

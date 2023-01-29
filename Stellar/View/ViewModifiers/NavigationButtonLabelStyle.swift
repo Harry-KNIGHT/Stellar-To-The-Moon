@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct SheetButtonsStyle: ViewModifier {
+struct NavigationButtonLabelStyle: ViewModifier {
 	func body(content: Content) -> some View {
 		content
-			.font(.title3)
+			.font(.title2)
 			.foregroundColor(.primary)
 	}
 }
 
 extension View {
-	func sheetButtonsStyle() -> some View {
-		modifier(SheetButtonsStyle())
+	func navigationButtonLabelStyle() -> some View {
+		modifier(NavigationButtonLabelStyle())
 	}
 }

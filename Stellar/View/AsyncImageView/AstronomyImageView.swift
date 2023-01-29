@@ -36,7 +36,7 @@ struct AstronomyImageView: View {
 
 					if let copryRight = article.copyright {
 						Text(copryRight)
-							.modifier(CopyrightStyle())
+							.copyrightStyle()
 					}
 				}
 				if !isImageDowloaded {
