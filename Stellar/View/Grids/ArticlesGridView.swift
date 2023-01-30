@@ -45,9 +45,6 @@ struct ArticlesGridView: View {
 				}
 			}
 		}
-		.refreshable {
-				articleApi.getAstronomiesArticles(to: Date.now)
-		}
 	}
 }
 
