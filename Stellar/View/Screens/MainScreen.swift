@@ -13,6 +13,7 @@ struct MainScreen: View {
 	@EnvironmentObject public var articleApi: AstronomiesArticleViewModel
 	@State private var showSheet = false
 	@State private var showLoadingIndicator = true
+	@State private var showBirthdayPicker = false
 
 	var body: some View {
 		NavigationView {
@@ -20,7 +21,7 @@ struct MainScreen: View {
 				if articleApi.allAstronomies.isEmpty {
 					LoadingView()
 				} else {
-					ArticlesGridView(showSheet: $showSheet)
+					ArticlesGridView(showSheet: $showSheet, showBirthdayPicker: $showBirthdayPicker)
 				}
 			}
 			.navigationTitle("Stellar")

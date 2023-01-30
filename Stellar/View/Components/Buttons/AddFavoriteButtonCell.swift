@@ -17,8 +17,7 @@ struct AddFavoriteButtonCell: View {
 			favoriteVM.addOrDeletFavorite(article: article)
 		}, label: {
 			Label("Add article to favorite", systemImage: favoriteVM.favoriteAstronomyArticles.contains(article) ? "star.fill" : "star")
-				.foregroundColor(.primary)
-				.font(.title3)
+				.navigationButtonLabelStyle()
 		})
 		.accessibilityLabel("Add this article to favorites")
     }
@@ -27,5 +26,6 @@ struct AddFavoriteButtonCell: View {
 struct AddFavoriteButtonCell_Previews: PreviewProvider {
     static var previews: some View {
 		AddFavoriteButtonCell(article: .astronomySample)
+			.environmentObject(FavoriteViewModel())
     }
 }

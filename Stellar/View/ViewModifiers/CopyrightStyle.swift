@@ -20,3 +20,9 @@ struct CopyrightStyle: ViewModifier {
 			.accessibilityLabel("Photo taken by \(article.copyright ?? "unknown")")
 	}
 }
+
+extension View {
+	func copyrightStyle() -> some View {
+		modifier(CopyrightStyle())
+	}
+}

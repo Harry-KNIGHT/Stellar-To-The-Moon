@@ -18,5 +18,6 @@ struct ContentView_Previews: PreviewProvider {
 		ContentView()
 			.environmentObject(AstronomiesArticleViewModel())
 			.environmentObject(AstronomyDetailViewModel())
+			.environmentObject(SearchDateArticleViewModel())
 	}
 }
