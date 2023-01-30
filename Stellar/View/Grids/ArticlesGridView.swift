@@ -37,13 +37,12 @@ struct ArticlesGridView: View {
 			}
 		}
 		.toolbar {
-			ToolbarItem(placement: .navigationBarTrailing) {
-				if !articleApi.allAstronomies.isEmpty {
+			ToolbarItemGroup(placement: .navigationBarTrailing) {
+				ShowBirthdayPickerButtonView(showBirthdayPicker: $showBirthdayPicker)
+
+				if !articleApi.allAstronomies.isEmpty.self {
 					ShowFavSheetButtonCell(showSheet: $showSheet)
 				}
-			}
-			ToolbarItem(placement: .navigationBarLeading) {
-				ShowBirthdayPickerButtonView(showBirthdayPicker: $showBirthdayPicker)
 			}
 		}
 		.refreshable {
