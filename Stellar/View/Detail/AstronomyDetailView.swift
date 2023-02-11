@@ -30,17 +30,14 @@ struct AstronomyDetailView: View {
 				GenerateRandomArticleButton()
 					.padding(.horizontal, 10)
 			}
-			VStack(alignment: .leading, spacing: 10) {
-				Text("Explanation:")
-					.font(.headline)
-				Text(article.explanation)
-					.textSelection(.enabled)
-					.accessibilityLabel(article.explanation)
-			}
-			.padding()
-			.background(.thinMaterial)
-			.clipShape(RoundedRectangle(cornerRadius: 10))
 
+			Text(article.explanation)
+				.fontWeight(.medium)
+				.multilineTextAlignment(.leading)
+				.textSelection(.enabled)
+				.accessibilityLabel(article.explanation)
+				.padding()
+				.background(.regularMaterial)
 		}
 		.background(BackgroundImageCell(article: article))
 		.navigationBarTitleDisplayMode(.inline)
