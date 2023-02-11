@@ -35,7 +35,7 @@ struct AstronomyImageListCell: View {
 				}
 
 			}
-			.border(.black)
+			.border(isInFavoriteListView ? .clear : .black)
 		} placeholder: {
 			ZStack {
 				RoundedRectangle(cornerRadius: 0)
