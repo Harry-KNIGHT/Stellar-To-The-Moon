@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DownloadDoneButtonStyle: ViewModifier {
-	@Binding var animate: Bool
+	var animate: Bool
 	func body(content: Content) -> some View {
 		content
 			.accessibilityLabel("Download done.")
@@ -23,5 +23,11 @@ struct DownloadDoneButtonStyle: ViewModifier {
 			.padding([.bottom, .trailing])
 			.opacity(animate ? 0 : 1)
 			.animation(.easeInOut(duration: 2).delay(1), value: animate ? 0 : 1)
+	}
+}
+
+extension View {
+	func downloadDoneButtonStyle(animate: Bool) -> some View {
+		modifier(DownloadDoneButtonStyle(animate: animate))
 	}
 }

@@ -19,7 +19,7 @@ struct DownloadOrShuffleImageButtonStyle: ViewModifier {
 				Circle()
 					.stroke(.white, lineWidth: 0.4)
 			}
-			.shadow(color: .blue, radius: 10)
+			.shadow(color: .blue, radius: 05)
 			.padding(.bottom, isInDetailView ? 10 : 0)
 			.padding(.trailing)
 	}

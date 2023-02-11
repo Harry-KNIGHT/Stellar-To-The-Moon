@@ -17,7 +17,7 @@ struct ImageDownloadedButton: View {
 				.font(.title2)
 				.foregroundColor(.white)
 		})
-		.modifier(DownloadDoneButtonStyle(animate: $animate))
+		.downloadDoneButtonStyle(animate: animate)
 		.task {
 			animate = true
 			print(animate)
