@@ -10,25 +10,25 @@ import ActivityIndicatorView
 
 
 struct MainScreen: View {
-	@EnvironmentObject public var articleApi: AstronomiesArticleViewModel
-	@State private var showSheet = false
+	@EnvironmentObject public var articleVm: AstronomiesArticleViewModel
+	@State private var showFavoritesSheet = false
 	@State private var showLoadingIndicator = true
 	@State private var showBirthdayPicker = false
 
 	var body: some View {
 		NavigationView {
 			VStack {
-				if articleApi.allAstronomies.isEmpty {
+				if articleVm.allAstronomies.isEmpty {
 					LoadingView()
 				} else {
-					ArticlesGridView(showSheet: $showSheet, showBirthdayPicker: $showBirthdayPicker)
+					ArticlesGridView(showFavoritesSheet: $showFavoritesSheet, showBirthdayPicker: $showBirthdayPicker)
 				}
 			}
 			.navigationTitle("Stellar")
 			.navigationBarTitleDisplayMode(.inline)
 			.onAppear {
 				Task {
-					articleApi.getAstronomiesArticles(to: Date.now)
+					articleVm.getAstronomiesArticles(to: Date.now)
 				}
 			}
 		}

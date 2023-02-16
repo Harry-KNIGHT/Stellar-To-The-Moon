@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct ShowFavSheetButtonCell: View {
-	@Binding var showSheet: Bool
+	@Binding var showFavoritesSheet: Bool
 
     var body: some View {
 		Button(action: {
-			showSheet.toggle()
+			showFavoritesSheet.toggle()
 
 		}, label: {
 			Label("Add article to favorite", systemImage: "star.fill")
 				.navigationButtonLabelStyle()
 		})
 		.accessibilityLabel("See your favorites astronomy articles.")
-		.sheet(isPresented: $showSheet) {
+		.sheet(isPresented: $showFavoritesSheet) {
 			FavoritesArticlesView()
 		}
     }
@@ -27,6 +27,6 @@ struct ShowFavSheetButtonCell: View {
 
 struct ShowFavSheetButtonCell_Previews: PreviewProvider {
     static var previews: some View {
-		ShowFavSheetButtonCell(showSheet: .constant(false))
+		ShowFavSheetButtonCell(showFavoritesSheet: .constant(false))
     }
 }
