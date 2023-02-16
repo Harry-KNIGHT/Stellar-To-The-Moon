@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArticlesGridView: View {
-	@EnvironmentObject public var articleVm: AstronomiesArticleViewModel
+	@EnvironmentObject var articleVm: AstronomiesArticleViewModel
 
 	private let columnsiPhone = [
 		GridItem(.flexible(), spacing: 0),

@@ -11,7 +11,7 @@ import ActivityIndicatorView
 import StellarMoonKit
 
 struct AstronomyDetailView: View {
-	let article: AstronomyArticleModel
+	public let article: AstronomyArticleModel
 	@State private var isSheetPresented = false
 
 	@EnvironmentObject var astronomyApi: AstronomyDetailViewModel

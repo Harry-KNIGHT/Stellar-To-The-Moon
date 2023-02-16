@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GenerateRandomArticleButton: View {
-	@EnvironmentObject var generateArticleVM: SearchDateArticleViewModel
+	@EnvironmentObject private var generateArticleVM: SearchDateArticleViewModel
     var body: some View {
 		Button(action: {
 			generateArticleVM.generateOneArticle()

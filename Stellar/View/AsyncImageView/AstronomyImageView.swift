@@ -12,7 +12,7 @@ import CachedAsyncImage
 
 struct AstronomyImageView: View {
 	let article: AstronomyArticleModel
-	@EnvironmentObject var astronomyDetailVm: AstronomyDetailViewModel
+	@EnvironmentObject private var astronomyDetailVm: AstronomyDetailViewModel
 
 	@Environment(\.colorScheme) private var colorScheme
 

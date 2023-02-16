@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SearchDateArticleView: View {
-	@EnvironmentObject var searchDateVM: SearchDateArticleViewModel
-	@ObservedObject var articlesVM = AstronomiesArticleViewModel()
+	@EnvironmentObject private var searchDateVM: SearchDateArticleViewModel
+	@ObservedObject private var articlesVM = AstronomiesArticleViewModel()
 
 	var body: some View {
 		NavigationView {

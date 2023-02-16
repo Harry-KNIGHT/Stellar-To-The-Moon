@@ -11,7 +11,7 @@ import CachedAsyncImage
 
 struct AstronomyImageListCell: View {
 	let article: AstronomyArticleModel
-	let size = (deviceWidth / 2)
+	private let size = (deviceWidth / 2)
 	var isInFavoriteListView: Bool
 
 	var body: some View {

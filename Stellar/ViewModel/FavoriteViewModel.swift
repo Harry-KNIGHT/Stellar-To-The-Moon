@@ -22,7 +22,7 @@ class FavoriteViewModel: ObservableObject {
 		favoriteAstronomyArticles = []
 	}
 
-	func save() {
+	private func save() {
 		if let encoded = try? JSONEncoder().encode(favoriteAstronomyArticles) {
 			UserDefaults.standard.set(encoded, forKey: "SavedFavoritesData")
 		}
@@ -30,7 +30,7 @@ class FavoriteViewModel: ObservableObject {
 
 	/// Add article to favorite
 	/// - Parameter article: Article is from NasaAstronomy model
-	func addToFavorite(article: AstronomyArticleModel) {
+	private func addToFavorite(article: AstronomyArticleModel) {
 		self.favoriteAstronomyArticles.insert(article, at: 0)
 	}
 
@@ -43,7 +43,7 @@ class FavoriteViewModel: ObservableObject {
 
 	/// Delet selected article
 	/// - Parameter article: Article is from NasaAstronomy model
-	func deletSelectedFavorite(article: AstronomyArticleModel) {
+	private func deletSelectedFavorite(article: AstronomyArticleModel) {
 		self.favoriteAstronomyArticles.removeAll { $0.date == article.date }
 	}
 

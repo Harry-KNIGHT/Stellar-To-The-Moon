@@ -10,7 +10,7 @@ import ActivityIndicatorView
 
 
 struct MainScreen: View {
-	@EnvironmentObject public var articleVm: AstronomiesArticleViewModel
+	@EnvironmentObject private var articleVm: AstronomiesArticleViewModel
 	@State private var showFavoritesSheet = false
 	@State private var showLoadingIndicator = true
 	@State private var showBirthdayPicker = false

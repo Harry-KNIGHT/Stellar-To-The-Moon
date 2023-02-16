@@ -9,8 +9,8 @@ import SwiftUI
 import StellarMoonKit
 
 struct VideoPlaceHolderCell: View {
-	let size = (deviceWidth / 2)
-	let linearGradient = LinearGradient(colors: [Color(red: 237/255, green: 116/255, blue: 103/255), .red], startPoint: .top, endPoint: .bottom)
+	private let size = (deviceWidth / 2)
+	private let linearGradient = LinearGradient(colors: [Color(red: 237/255, green: 116/255, blue: 103/255), .red], startPoint: .top, endPoint: .bottom)
 	let article: AstronomyArticleModel
 	var body: some View {
 		ZStack(alignment: .bottomLeading) {

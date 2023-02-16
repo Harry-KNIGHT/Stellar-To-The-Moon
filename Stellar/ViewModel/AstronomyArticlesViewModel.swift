@@ -22,7 +22,7 @@ class AstronomiesArticleViewModel: ObservableObject {
 		allAstronomies = []
 	}
 
-	func save() {
+	private func save() {
 		if let encoded = try? JSONEncoder().encode(allAstronomies) {
 			UserDefaults.standard.set(encoded, forKey: "SavedData")
 		}

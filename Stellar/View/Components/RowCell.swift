@@ -10,7 +10,7 @@ import StellarMoonKit
 
 struct RowCell: View {
 	let article: AstronomyArticleModel
-	let size: CGFloat = 90
+	private let size: CGFloat = 90
 	let isInFavoriteListView: Bool
 
 	var body: some View {
