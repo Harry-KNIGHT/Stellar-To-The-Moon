@@ -31,7 +31,7 @@ class FavoriteViewModel: ObservableObject {
 	/// Add article to favorite
 	/// - Parameter article: Article is from NasaAstronomy model
 	func addToFavorite(article: AstronomyArticleModel) {
-		self.favoriteAstronomyArticles.append(article)
+		self.favoriteAstronomyArticles.insert(article, at: 0)
 	}
 
 	/// Delet Favorite from list swipe
