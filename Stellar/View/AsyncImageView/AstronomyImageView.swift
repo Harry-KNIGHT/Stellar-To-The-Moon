@@ -25,28 +25,31 @@ struct AstronomyImageView: View {
 
 	@State private var animate = false
 	var body: some View {
-		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
-			ZStack(alignment: .bottomTrailing) {
-				ZStack(alignment: .bottomLeading) {
-					image
-						.resizable()
-						.scaledToFill()
-						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-						.accessibilityLabel(article.title)
-
-					if let copryRight = article.copyright {
-						Text(copryRight)
-							.copyrightStyle()
+		StickyHeader {
+			CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
+				ZStack(alignment: .bottomTrailing) {
+					ZStack(alignment: .bottomLeading) {
+						image
+							.resizable()
+							.aspectRatio(contentMode: .fill)
+						
+							.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+							.accessibilityLabel(article.title)
+						
+						if let copryRight = article.copyright {
+							Text(copryRight)
+								.copyrightStyle()
+						}
+					}
+					if !isImageDowloaded {
+						DownloadImageButton(article: article, circleProgress: $circleProgress, isImageDowloaded: $isImageDowloaded, isDownloadingImage: $isDownloadingImage)
+					} else {
+						ImageDownloadedButton(animate: $animate)
 					}
 				}
-				if !isImageDowloaded {
-					DownloadImageButton(article: article, circleProgress: $circleProgress, isImageDowloaded: $isImageDowloaded, isDownloadingImage: $isDownloadingImage)
-				} else {
-					ImageDownloadedButton(animate: $animate)
-				}
+			} placeholder: {
+				LoadingArticleImagePlaceholder(isLoadingVisible: $isLoadingVisible)
 			}
-		} placeholder: {
-			LoadingArticleImagePlaceholder(isLoadingVisible: $isLoadingVisible)
 		}
 	}
 }

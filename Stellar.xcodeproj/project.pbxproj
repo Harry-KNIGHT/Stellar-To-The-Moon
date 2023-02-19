@@ -23,6 +23,7 @@
 		3C5555D6289058FF0093122A /* AstronomyArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* AstronomyArticlesViewModel.swift */; };
 		3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C57F3312938A1DB001F74A0 /* CachedAsyncImage */; };
 		3C57F3342938A213001F74A0 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57F3332938A213001F74A0 /* URLCache.swift */; };
+		3C60BB1429A0F7590086A620 /* StickyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C60BB1329A0F7590086A620 /* StickyHeader.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
 		3C6B0A75294E2D04008A9611 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B0A74294E2D03008A9611 /* WidgetKit.framework */; };
 		3C6B0A77294E2D04008A9611 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B0A76294E2D04008A9611 /* SwiftUI.framework */; };
@@ -105,6 +106,7 @@
 		3C5555D2289058C50093122A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		3C5555D5289058FF0093122A /* AstronomyArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticlesViewModel.swift; sourceTree = "<group>"; };
 		3C57F3332938A213001F74A0 /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
+		3C60BB1329A0F7590086A620 /* StickyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeader.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarWidgetImageExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6B0A74294E2D03008A9611 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -342,6 +344,7 @@
 		3CF7AC8D28C112A9008A7C70 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3C60BB1329A0F7590086A620 /* StickyHeader.swift */,
 				3CBB34A328BE35F700AC0EDF /* RowCell.swift */,
 				3CA718CB292950CC0075E0D5 /* VideoPlaceHolderCell.swift */,
 				3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */,
@@ -586,6 +589,7 @@
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
 				3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */,
 				3CA718D0292965530075E0D5 /* AddFavoriteButtonCell.swift in Sources */,
+				3C60BB1429A0F7590086A620 /* StickyHeader.swift in Sources */,
 				3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */,
 				3C7F9676293A32C100B949DD /* DownloadDoneButtonStyle.swift in Sources */,
 				3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */,
