@@ -38,6 +38,7 @@ struct AstronomyDetailView: View {
 					.textSelection(.enabled)
 					.accessibilityLabel(article.explanation)
 					.padding()
+					.frame(maxWidth: .infinity)
 					.background(.regularMaterial)
 			}
 		}
