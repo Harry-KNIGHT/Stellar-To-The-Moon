@@ -31,7 +31,11 @@ struct AstronomyImageView: View {
 					image
 						.resizable()
 						.scaledToFill()
-						.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+						.frame(
+							maxWidth: .infinity,
+							maxHeight: .infinity,
+							alignment: .top
+						)
 						.accessibilityLabel(article.title)
 
 					if let copryRight = article.copyright {
@@ -40,7 +44,12 @@ struct AstronomyImageView: View {
 					}
 				}
 				if !isImageDowloaded {
-					DownloadImageButton(article: article, circleProgress: $circleProgress, isImageDowloaded: $isImageDowloaded, isDownloadingImage: $isDownloadingImage)
+					DownloadImageButton(
+						article: article,
+						circleProgress: $circleProgress,
+						isImageDowloaded: $isImageDowloaded,
+						isDownloadingImage: $isDownloadingImage
+					)
 				} else {
 					ImageDownloadedButton(animate: $animate)
 				}

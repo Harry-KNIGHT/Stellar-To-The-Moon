@@ -18,26 +18,28 @@ struct AstronomyDetailView: View {
 	var isShowingRandArticleGenration = false
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
-			if article.mediaType == .image {
-				AstronomyImageView(article: article)
-			} else {
-				VideoView(videoID: article.url)
-					.frame(minHeight: 450, maxHeight: 800)
-					.accessibilityLabel("Video of the article")
+			VStack(spacing: 0) {
+				if article.mediaType == .image {
+					AstronomyImageView(article: article)
+				} else {
+					VideoView(videoID: article.url)
+						.frame(minHeight: 450, maxHeight: 800)
+						.accessibilityLabel("Video of the article")
+				}
+				
+				if isShowingRandArticleGenration {
+					GenerateRandomArticleButton()
+						.padding(.horizontal, 10)
+				}
+				
+				Text(article.explanation)
+					.fontWeight(.medium)
+					.multilineTextAlignment(.leading)
+					.textSelection(.enabled)
+					.accessibilityLabel(article.explanation)
+					.padding()
+					.background(.regularMaterial)
 			}
-
-			if isShowingRandArticleGenration {
-				GenerateRandomArticleButton()
-					.padding(.horizontal, 10)
-			}
-
-			Text(article.explanation)
-				.fontWeight(.medium)
-				.multilineTextAlignment(.leading)
-				.textSelection(.enabled)
-				.accessibilityLabel(article.explanation)
-				.padding()
-				.background(.regularMaterial)
 		}
 		.background(BackgroundImageCell(article: article))
 		.navigationBarTitleDisplayMode(.inline)

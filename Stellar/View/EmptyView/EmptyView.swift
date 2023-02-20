@@ -10,7 +10,7 @@ import SwiftUI
 struct EmptyView: View {
     var body: some View {
 		VStack {
-			Text("Aucun favoris ")
+			Text("No favorites")
 			Image(systemName: "star.slash")
 		}
 		.font(.largeTitle)
