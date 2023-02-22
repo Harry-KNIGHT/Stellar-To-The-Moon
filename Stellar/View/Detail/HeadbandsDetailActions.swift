@@ -1,0 +1,39 @@
+//
+//  HeadbandsDetailActions.swift
+//  Stellar
+//
+//  Created by Elliot Knight on 22/02/2023.
+//
+import StellarMoonKit
+import SwiftUI
+
+struct HeadbandsDetailActions: View {
+	let article: AstronomyArticleModel
+	@Binding var isImageDowloaded: Bool
+	@Binding var isDownloadingImage: Bool
+    var body: some View {
+		HStack {
+			Spacer()
+
+			AddFavoriteButtonCell(article: article)
+			Spacer()
+
+			DownloadImageButton(
+				article: article,
+				isImageDowloaded: $isImageDowloaded,
+				isDownloadingImage: $isDownloadingImage
+			)
+			Spacer()
+		}
+    }
+}
+
+struct HeadbandsDetailActions_Previews: PreviewProvider {
+    static var previews: some View {
+        HeadbandsDetailActions(
+			article: .astronomySample,
+			isImageDowloaded: .constant(false),
+			isDownloadingImage: .constant(false)
+		)
+    }
+}
