@@ -32,7 +32,7 @@ struct AstronomyDetailView: View {
 				
 				if isShowingRandArticleGenration {
 					GenerateRandomArticleButton()
-						.padding(.horizontal, 10)
+						.padding(5)
 				}
 				VStack {
 					HeadbandsDetailActions(
