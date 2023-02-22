@@ -10,7 +10,7 @@ import SwiftUI
 struct NavigationButtonLabelStyle: ViewModifier {
 	func body(content: Content) -> some View {
 		content
-			.font(.title2)
+			.font(.title)
 			.foregroundColor(.primary)
 	}
 }

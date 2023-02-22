@@ -32,11 +32,8 @@
 		3C6B0A82294E2D06008A9611 /* StellarWidgetImageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C6B0A87294E2D1A008A9611 /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C6B0A86294E2D1A008A9611 /* StellarMoonKit */; };
 		3C6B0A8A294E2F40008A9611 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0A88294E2F15008A9611 /* NetworkImage.swift */; };
-		3C7F9676293A32C100B949DD /* DownloadDoneButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9675293A32C100B949DD /* DownloadDoneButtonStyle.swift */; };
-		3C7F9679293A331B00B949DD /* DownloadImageButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9678293A331B00B949DD /* DownloadImageButtonStyle.swift */; };
 		3C7F967B293A33D700B949DD /* CopyrightStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F967A293A33D700B949DD /* CopyrightStyle.swift */; };
 		3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9680293A390200B949DD /* DownloadImageButton.swift */; };
-		3C7F9683293A3BDE00B949DD /* ImageDownloadedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9682293A3BDE00B949DD /* ImageDownloadedButton.swift */; };
 		3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */; };
 		3CA718CC292950CC0075E0D5 /* VideoPlaceHolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CB292950CC0075E0D5 /* VideoPlaceHolderCell.swift */; };
 		3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */; };
@@ -56,6 +53,7 @@
 		3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA110288E759A00AB15C7 /* ContentView.swift */; };
 		3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA112288E759B00AB15C7 /* Assets.xcassets */; };
 		3CDBA116288E759B00AB15C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */; };
+		3CEC397F29A6A4E7009CEB2A /* HeadbandsDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,11 +112,8 @@
 		3C6B0A7D294E2D06008A9611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C6B0A7F294E2D06008A9611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C6B0A88294E2F15008A9611 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
-		3C7F9675293A32C100B949DD /* DownloadDoneButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDoneButtonStyle.swift; sourceTree = "<group>"; };
-		3C7F9678293A331B00B949DD /* DownloadImageButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageButtonStyle.swift; sourceTree = "<group>"; };
 		3C7F967A293A33D700B949DD /* CopyrightStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightStyle.swift; sourceTree = "<group>"; };
 		3C7F9680293A390200B949DD /* DownloadImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageButton.swift; sourceTree = "<group>"; };
-		3C7F9682293A3BDE00B949DD /* ImageDownloadedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadedButton.swift; sourceTree = "<group>"; };
 		3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingArticleImagePlaceholder.swift; sourceTree = "<group>"; };
 		3CA718CB292950CC0075E0D5 /* VideoPlaceHolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaceHolderCell.swift; sourceTree = "<group>"; };
 		3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFavSheetButtonCell.swift; sourceTree = "<group>"; };
@@ -138,6 +133,7 @@
 		3CDBA110288E759A00AB15C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3CDBA112288E759B00AB15C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadbandsDetailActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,8 +242,6 @@
 		3C7F9677293A32D500B949DD /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				3C7F9675293A32C100B949DD /* DownloadDoneButtonStyle.swift */,
-				3C7F9678293A331B00B949DD /* DownloadImageButtonStyle.swift */,
 				3C7F967A293A33D700B949DD /* CopyrightStyle.swift */,
 				3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */,
 			);
@@ -290,7 +284,6 @@
 				3C266B9C2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift */,
 				3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */,
 				3C7F9680293A390200B949DD /* DownloadImageButton.swift */,
-				3C7F9682293A3BDE00B949DD /* ImageDownloadedButton.swift */,
 				3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */,
 			);
 			path = Buttons;
@@ -354,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5555D0289057E80093122A /* AstronomyDetailView.swift */,
+				3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailActions.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -564,7 +558,6 @@
 				3C08D3602984537E0030D45B /* SearchDateArticleViewModel.swift in Sources */,
 				3C5555D6289058FF0093122A /* AstronomyArticlesViewModel.swift in Sources */,
 				3CC954C6289CFF25006D547C /* CircularProgressBar.swift in Sources */,
-				3C7F9679293A331B00B949DD /* DownloadImageButtonStyle.swift in Sources */,
 				3C57F3342938A213001F74A0 /* URLCache.swift in Sources */,
 				3C5555D1289057E80093122A /* AstronomyDetailView.swift in Sources */,
 				3C266B9D2981BEC400A9A888 /* ShowBirthdayPickerButtonView.swift in Sources */,
@@ -572,7 +565,6 @@
 				3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */,
 				3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */,
 				3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */,
-				3C7F9683293A3BDE00B949DD /* ImageDownloadedButton.swift in Sources */,
 				3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */,
 				3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */,
 				3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */,
@@ -581,13 +573,13 @@
 				3CA718CC292950CC0075E0D5 /* VideoPlaceHolderCell.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
 				3C5555D3289058C50093122A /* MainScreen.swift in Sources */,
+				3CEC397F29A6A4E7009CEB2A /* HeadbandsDetailActions.swift in Sources */,
 				3C266B9F2981C06500A9A888 /* NavigationButtonLabelStyle.swift in Sources */,
 				3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
 				3C41BEA52928D3B5002043D4 /* AstronomyImageListCell.swift in Sources */,
 				3CA718D0292965530075E0D5 /* AddFavoriteButtonCell.swift in Sources */,
 				3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */,
-				3C7F9676293A32C100B949DD /* DownloadDoneButtonStyle.swift in Sources */,
 				3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */,
 				3CBF0C452891371E00010691 /* FavoritesArticlesView.swift in Sources */,
 				3CC944B528B3A74800447BB6 /* AstronomyArticleDetailVM.swift in Sources */,

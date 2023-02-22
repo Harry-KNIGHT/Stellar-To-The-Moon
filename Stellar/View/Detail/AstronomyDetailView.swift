@@ -15,6 +15,9 @@ struct AstronomyDetailView: View {
 	@State private var isSheetPresented = false
 
 	@EnvironmentObject var astronomyApi: AstronomyDetailViewModel
+	@State private var isImageDownloaded = false
+	@State private var isImageDownloading = false
+
 	var isShowingRandArticleGenration = false
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
@@ -31,33 +34,40 @@ struct AstronomyDetailView: View {
 					GenerateRandomArticleButton()
 						.padding(.horizontal, 10)
 				}
-				
-				Text(article.explanation)
-					.fontWeight(.medium)
-					.multilineTextAlignment(.leading)
-					.textSelection(.enabled)
-					.accessibilityLabel(article.explanation)
-					.padding()
-					.frame(maxWidth: .infinity)
-					.background(.regularMaterial)
+				VStack {
+					HeadbandsDetailActions(
+						article: article,
+						isImageDowloaded: $isImageDownloaded,
+						isDownloadingImage: $isImageDownloading
+					)
+					.padding(.top, 10)
+
+					Text(article.explanation)
+						.fontWeight(.medium)
+						.multilineTextAlignment(.leading)
+						.textSelection(.enabled)
+						.accessibilityLabel(article.explanation)
+						.padding()
+				}
+				.frame(maxWidth: .infinity)
+				.background(.regularMaterial)
 			}
 		}
 		.background(BackgroundImageCell(article: article))
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarTitle(article.title)
-		.toolbar {
-			ToolbarItem(placement: .navigationBarTrailing) {
-				AddFavoriteButtonCell(article: article)
-			}
-		}
 	}
 }
 
 struct AstronomyDetailView_Previews: PreviewProvider {
 	static var previews: some View {
-		AstronomyDetailView(article: .astronomySample)
-			.environmentObject(AstronomyDetailViewModel())
-			.environmentObject(FavoriteViewModel())
-		AstronomyDetailView(article: .astronomySample, isShowingRandArticleGenration: true)
+		NavigationView {
+			AstronomyDetailView(article: .astronomySample)
+				.environmentObject(AstronomyDetailViewModel())
+				.environmentObject(FavoriteViewModel())
+		}
+		NavigationView {
+			AstronomyDetailView(article: .astronomySample, isShowingRandArticleGenration: true)
+		}
 	}
 }
