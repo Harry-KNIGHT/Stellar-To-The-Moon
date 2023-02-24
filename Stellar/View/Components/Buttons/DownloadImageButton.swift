@@ -28,8 +28,7 @@ struct DownloadImageButton: View {
 				Image(systemName: "square.and.arrow.down")
 			}
 		})
-
-		.navigationButtonLabelStyle()
+		.navigationButtonLabelStyle(.title)
 	}
 
 

@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct NavigationButtonLabelStyle: ViewModifier {
+	var font: Font = .title2
 	func body(content: Content) -> some View {
 		content
-			.font(.title)
+			.font(font)
 			.foregroundColor(.primary)
 	}
 }
 
 extension View {
-	func navigationButtonLabelStyle() -> some View {
-		modifier(NavigationButtonLabelStyle())
+	func navigationButtonLabelStyle(_ font: Font = .title2) -> some View {
+		modifier(NavigationButtonLabelStyle(font: font))
 	}
 }
