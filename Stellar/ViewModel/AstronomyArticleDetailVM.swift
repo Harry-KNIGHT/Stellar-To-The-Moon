@@ -12,16 +12,6 @@ import StellarMoonKit
 class AstronomyDetailViewModel: ObservableObject {
 	@Published var nasaReponses: [AstronomyArticleModel] = []
 
-	func getAstronomyArticle() {
-		Task {
-			do {
-				try await self.nasaReponses.append(AstronomyApi.nasaApi())
-			} catch {
-				print("Error: \(error.localizedDescription)")
-			}
-		}
-	}
-
 	func getImage(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
 			throw ApiError.urlNotFound
