@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>We would like to send you notifications to keep you informed of new astronomical images and features.</string>
+	<key>OneSignal_app_groups_key</key>
+	<string>group.com.elliot.knight.NasaAstronomy.onesignal</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+</dict>
 </plist>
