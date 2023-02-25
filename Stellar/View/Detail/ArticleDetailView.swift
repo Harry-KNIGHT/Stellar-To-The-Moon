@@ -1,5 +1,5 @@
 //
-//  AstronomyDetailView.swift
+//  ArticleDetailView.swift
 //  NasaDayAstronomy
 //
 //  Created by Elliot Knight on 26/07/2022.
@@ -10,11 +10,11 @@ import UIKit
 import ActivityIndicatorView
 import StellarMoonKit
 
-struct AstronomyDetailView: View {
+struct ArticleDetailView: View {
 	public let article: Article
 	@State private var isSheetPresented = false
 
-	@EnvironmentObject var astronomyApi: AstronomyDetailViewModel
+	@EnvironmentObject var astronomyApi: ArticleDetailViewModel
 	@State private var isImageDownloaded = false
 	@State private var isImageDownloading = false
 
@@ -23,7 +23,7 @@ struct AstronomyDetailView: View {
 		ScrollView(.vertical, showsIndicators: false) {
 			VStack(spacing: 0) {
 				if article.mediaType == .image {
-					AstronomyImageView(article: article)
+					ArticleImageView(article: article)
 				} else {
 					VideoView(videoID: article.url)
 						.frame(minHeight: 450, maxHeight: 800)
@@ -59,15 +59,15 @@ struct AstronomyDetailView: View {
 	}
 }
 
-struct AstronomyDetailView_Previews: PreviewProvider {
+struct ArticleDetailView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			AstronomyDetailView(article: .articleSample)
-				.environmentObject(AstronomyDetailViewModel())
+			ArticleDetailView(article: .articleSample)
+				.environmentObject(ArticleDetailViewModel())
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
-			AstronomyDetailView(article: .articleSample, isShowingRandArticleGenration: true)
+			ArticleDetailView(article: .articleSample, isShowingRandArticleGenration: true)
 		}
 	}
 }

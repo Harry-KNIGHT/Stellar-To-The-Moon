@@ -1,5 +1,5 @@
 //
-//  AllAstronomyArticlesApi.swift
+//  ArticleViewModel.swift
 //  NasaDayAstronomy
 //
 //  Created by Elliot Knight on 26/07/2022.
@@ -8,30 +8,30 @@
 import SwiftUI
 import StellarMoonKit
 
-class AstronomiesArticleViewModel: ObservableObject {
-	@Published var allAstronomies: [Article]
+class ArticleViewModel: ObservableObject {
+	@Published var articles: [Article]
 
 	init() {
 		if let data = UserDefaults.standard.data(forKey: "SavedData") {
 			if let decoded = try? JSONDecoder().decode([Article].self, from: data) {
-				allAstronomies = decoded
+				articles = decoded
 				return
 			}
 		}
 		// No Saved data
-		allAstronomies = []
+		articles = []
 	}
 
 	private func save() {
-		if let encoded = try? JSONEncoder().encode(allAstronomies) {
+		if let encoded = try? JSONEncoder().encode(articles) {
 			UserDefaults.standard.set(encoded, forKey: "SavedData")
 		}
 	}
 
-	@MainActor func getAstronomiesArticles(from hundredDayBefore: Int64 = Date().millisecondsSince1970, to today: Date) {
+	@MainActor func getArticles(from hundredDayBefore: Int64 = Date().millisecondsSince1970, to today: Date) {
 		Task {
 			do {
-				allAstronomies = try await FetchArticlesApi.fetchAstronomiesObject(from: hundredDayBefore, to: today)
+				articles = try await FetchArticlesApi.fetchAstronomiesObject(from: hundredDayBefore, to: today)
 				save()
 			} catch {
 				print("Error \(error.localizedDescription)")

@@ -1,5 +1,5 @@
 //
-//  AstronomyArticleDetailVM.swift
+//  ArticleDetailViewModel.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 22/08/2022.
@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 import StellarMoonKit
 
-class AstronomyDetailViewModel: ObservableObject {
-	@Published var nasaReponses: [Article] = []
-
+class ArticleDetailViewModel: ObservableObject {
 	func getImage(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
 			throw ApiError.urlNotFound

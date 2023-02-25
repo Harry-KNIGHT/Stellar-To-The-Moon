@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct NasaDayAstronomyApp: App {
-	@StateObject var astronomyVM = AstronomyDetailViewModel()
-	@StateObject var allAstronomiesVM = AstronomiesArticleViewModel()
+	@StateObject var astronomyVM = ArticleDetailViewModel()
+	@StateObject var articlesVM = ArticleViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
 	@StateObject var searchDateArticleVM = SearchDateArticleViewModel()
 
@@ -18,7 +18,7 @@ struct NasaDayAstronomyApp: App {
         WindowGroup {
             ContentView()
 				.environmentObject(astronomyVM)
-				.environmentObject(allAstronomiesVM)
+				.environmentObject(articlesVM)
 				.environmentObject(favoriteVM)
 				.environmentObject(searchDateArticleVM)
         }

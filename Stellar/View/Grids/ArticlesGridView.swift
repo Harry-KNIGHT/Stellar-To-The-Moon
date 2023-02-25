@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArticlesGridView: View {
-	@EnvironmentObject var articleVm: AstronomiesArticleViewModel
+	@EnvironmentObject var articleVm: ArticleViewModel
 
 	private let columnsiPhone = [
 		GridItem(.flexible(), spacing: 0),
@@ -25,10 +25,10 @@ struct ArticlesGridView: View {
 	var body: some View {
 		ScrollView {
 			LazyVGrid(columns: idiom == .phone ? columnsiPhone : columnsiPad, alignment: .center, spacing: 0) {
-				ForEach(articleVm.allAstronomies.reversed(), id: \.date) { article in
-					NavigationLink(destination: AstronomyDetailView(article: article)) {
+				ForEach(articleVm.articles.reversed(), id: \.date) { article in
+					NavigationLink(destination: ArticleDetailView(article: article)) {
 						if article.mediaType == .image {
-							AstronomyImageListCell(article: article, isInFavoriteListView: false)
+							ArticleImageListCell(article: article, isInFavoriteListView: false)
 						} else {
 							VideoPlaceHolderCell(article: article)
 						}
@@ -38,9 +38,9 @@ struct ArticlesGridView: View {
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				ShowBirthdayPickerButtonView(showBirthdayPicker: $showBirthdayPicker)
+				ShowRandomArticleView(showBirthdayPicker: $showBirthdayPicker)
 
-				if !articleVm.allAstronomies.isEmpty.self {
+				if !articleVm.articles.isEmpty.self {
 					ShowFavSheetButtonCell(showFavoritesSheet: $showFavoritesSheet)
 				}
 			}
@@ -56,7 +56,7 @@ struct ArticlesGridView_Previews: PreviewProvider {
 				showFavoritesSheet: .constant(false),
 				showBirthdayPicker: .constant(false)
 			)
-			.environmentObject(AstronomiesArticleViewModel())
+			.environmentObject(ArticleViewModel())
 		}
 	}
 }

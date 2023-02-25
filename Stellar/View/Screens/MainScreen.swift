@@ -1,5 +1,5 @@
 //
-//  AstronomyImageGrid.swift
+//  MainScreen.swift
 //  NasaDayAstronomy
 //
 //  Created by Elliot Knight on 26/07/2022.
@@ -10,7 +10,7 @@ import ActivityIndicatorView
 
 
 struct MainScreen: View {
-	@EnvironmentObject private var articleVm: AstronomiesArticleViewModel
+	@EnvironmentObject private var articleVm: ArticleViewModel
 	@State private var showFavoritesSheet = false
 	@State private var showLoadingIndicator = true
 	@State private var showBirthdayPicker = false
@@ -18,7 +18,7 @@ struct MainScreen: View {
 	var body: some View {
 		NavigationView {
 			VStack {
-				if articleVm.allAstronomies.isEmpty {
+				if articleVm.articles.isEmpty {
 					LoadingView()
 				} else {
 					ArticlesGridView(showFavoritesSheet: $showFavoritesSheet, showBirthdayPicker: $showBirthdayPicker)
@@ -28,7 +28,7 @@ struct MainScreen: View {
 			.navigationBarTitleDisplayMode(.inline)
 			.onAppear {
 				Task {
-					articleVm.getAstronomiesArticles(to: Date.now)
+					articleVm.getArticles(to: Date.now)
 				}
 			}
 		}
@@ -38,6 +38,6 @@ struct MainScreen: View {
 struct AstronomyImageGrid_Previews: PreviewProvider {
 	static var previews: some View {
 		MainScreen()
-			.environmentObject(AstronomiesArticleViewModel())
+			.environmentObject(ArticleViewModel())
 	}
 }

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SearchDateArticleView: View {
 	@EnvironmentObject private var searchDateVM: SearchDateArticleViewModel
-	@ObservedObject private var articlesVM = AstronomiesArticleViewModel()
+	@ObservedObject private var articlesVM = ArticleViewModel()
 
 	var body: some View {
 		NavigationView {
 			if let search = searchDateVM.article  {
-				AstronomyDetailView(article: search, isShowingRandArticleGenration: true)
+				ArticleDetailView(article: search, isShowingRandArticleGenration: true)
 			}
 		}
 		.onAppear {
@@ -28,7 +28,7 @@ struct SearchDateArticleView_Previews: PreviewProvider {
 		NavigationView {
 			SearchDateArticleView()
 				.environmentObject(SearchDateArticleViewModel())
-				.environmentObject(AstronomiesArticleViewModel())
+				.environmentObject(ArticleViewModel())
 		}
 	}
 }

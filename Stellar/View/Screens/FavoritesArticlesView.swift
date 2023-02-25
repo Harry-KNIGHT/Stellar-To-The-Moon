@@ -12,7 +12,7 @@ struct FavoritesArticlesView: View {
 	var body: some View {
 		NavigationView {
 			VStack {
-				if favoriteVM.favoriteAstronomyArticles.isEmpty {
+				if favoriteVM.favoriteArticles.isEmpty {
 					EmptyView()
 				} else {
 					FavoritesListView()

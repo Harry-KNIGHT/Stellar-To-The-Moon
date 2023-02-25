@@ -13,7 +13,7 @@ final class FavoriteTest: XCTestCase {
 	var favoriteVM: FavoriteViewModel!
     override func setUpWithError() throws {
 		favoriteVM = FavoriteViewModel()
-		favoriteVM.favoriteAstronomyArticles = [Article]()
+		favoriteVM.favoriteArticles = [Article]()
 
     }
 
@@ -22,36 +22,35 @@ final class FavoriteTest: XCTestCase {
     }
 
 	func test_emptyFavorite() throws {
-		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 0)
-		XCTAssertTrue(favoriteVM.favoriteAstronomyArticles.isEmpty)
+		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
+		XCTAssertTrue(favoriteVM.favoriteArticles.isEmpty)
 	}
 
 	func test_addFavorite() throws {
-		let _ = favoriteVM.favoriteAstronomyArticles.append(.articleSample)
+		let _ = favoriteVM.favoriteArticles.append(.articleSample)
 
-		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 1)
-		XCTAssertFalse(favoriteVM.favoriteAstronomyArticles.isEmpty)
+		XCTAssertEqual(favoriteVM.favoriteArticles.count, 1)
+		XCTAssertFalse(favoriteVM.favoriteArticles.isEmpty)
 	}
 
 	func test_removeFavorite() throws {
-		let _ = favoriteVM.favoriteAstronomyArticles.append(.articleSample)
-		let _ = favoriteVM.deletSelectedFavorite(article: favoriteVM.favoriteAstronomyArticles[0])
+		let _ = favoriteVM.favoriteArticles.append(.articleSample)
 
-		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 0)
-		XCTAssertTrue(favoriteVM.favoriteAstronomyArticles.isEmpty)
+		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
+		XCTAssertTrue(favoriteVM.favoriteArticles.isEmpty)
 	}
 
 	func test_addOrDeletFavorite() throws {
 		// Add astronomy article sample on the array
 		let _: Void = favoriteVM.addOrDeletFavorite(article: .articleSample)
-		XCTAssertTrue(favoriteVM.favoriteAstronomyArticles.contains(.articleSample))
-		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 1)
-		XCTAssertNotEqual(favoriteVM.favoriteAstronomyArticles.count, 10)
+		XCTAssertTrue(favoriteVM.favoriteArticles.contains(.articleSample))
+		XCTAssertEqual(favoriteVM.favoriteArticles.count, 1)
+		XCTAssertNotEqual(favoriteVM.favoriteArticles.count, 10)
 
 		// Remove astronomy article sample from the array
 		let _: Void = favoriteVM.addOrDeletFavorite(article: .articleSample)
-		XCTAssertFalse(favoriteVM.favoriteAstronomyArticles.contains(.articleSample))
-		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 0)
-		XCTAssertNotEqual(favoriteVM.favoriteAstronomyArticles.count, 5)
+		XCTAssertFalse(favoriteVM.favoriteArticles.contains(.articleSample))
+		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
+		XCTAssertNotEqual(favoriteVM.favoriteArticles.count, 5)
 	}
 }

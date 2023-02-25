@@ -11,7 +11,7 @@ import ActivityIndicatorView
 
 struct DownloadImageButton: View {
 	let article: Article
-	@EnvironmentObject var astronomyVM: AstronomyDetailViewModel
+	@EnvironmentObject var articleDetailVm: ArticleDetailViewModel
 
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
@@ -42,7 +42,7 @@ struct DownloadImageButton: View {
 				}
 				Task {
 					let imageSaver = ImageSaver()
-					let image = try await astronomyVM.getImage(from: urlString)
+					let image = try await articleDetailVm.getImage(from: urlString)
 					imageSaver.writeToPhotoAlbum(image: image)
 					self.isImageDowloaded = true
 					self.isDownloadingImage = false
@@ -61,6 +61,6 @@ struct DownloadImageButton_Previews: PreviewProvider {
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
-		.environmentObject(AstronomyDetailViewModel())
+		.environmentObject(ArticleDetailViewModel())
 	}
 }

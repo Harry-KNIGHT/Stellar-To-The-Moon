@@ -1,5 +1,5 @@
 //
-//  AstronomyImageView.swift
+//  ArticleImageView.swift
 //  NasaDayAstronomy
 //
 //  Created by Elliot Knight on 25/07/2022.
@@ -10,9 +10,9 @@ import ActivityIndicatorView
 import StellarMoonKit
 import CachedAsyncImage
 
-struct AstronomyImageView: View {
+struct ArticleImageView: View {
 	let article: Article
-	@EnvironmentObject private var astronomyDetailVm: AstronomyDetailViewModel
+	@EnvironmentObject private var articleDetailVm: ArticleDetailViewModel
 	
 	@Environment(\.colorScheme) private var colorScheme
 	
@@ -45,7 +45,7 @@ struct AstronomyImageView: View {
 
 struct AstronomyImageView_Previews: PreviewProvider {
 	static var previews: some View {
-		AstronomyImageView(article: .articleSample)
-			.environmentObject(AstronomyDetailViewModel())
+		ArticleImageView(article: .articleSample)
+			.environmentObject(ArticleDetailViewModel())
 	}
 }

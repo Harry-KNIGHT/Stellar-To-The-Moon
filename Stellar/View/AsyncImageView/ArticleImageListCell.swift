@@ -1,5 +1,5 @@
 //
-//  AstronomyImageListCell.swift
+//  ArticleImageListCell.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 19/11/2022.
@@ -9,7 +9,7 @@ import SwiftUI
 import StellarMoonKit
 import CachedAsyncImage
 
-struct AstronomyImageListCell: View {
+struct ArticleImageListCell: View {
 	let article: Article
 	private let size = (deviceWidth / 2)
 	var isInFavoriteListView: Bool
@@ -50,9 +50,9 @@ struct AstronomyImageListCell: View {
 	}
 }
 
-struct AstronomyImageListCell_Previews: PreviewProvider {
+struct ArticleImageListCell_Previews: PreviewProvider {
 	static var previews: some View {
-		AstronomyImageListCell(article: .articleSample, isInFavoriteListView: false)
+		ArticleImageListCell(article: .articleSample, isInFavoriteListView: false)
 	}
 }
 

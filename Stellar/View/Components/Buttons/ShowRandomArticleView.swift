@@ -1,5 +1,5 @@
 //
-//  ShowBirthdayPickerView.swift
+//  ShowRandomArticleView.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 25/01/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShowBirthdayPickerButtonView: View {
+struct ShowRandomArticleView: View {
 	@Binding var showBirthdayPicker: Bool
 
     var body: some View {
@@ -23,8 +23,8 @@ struct ShowBirthdayPickerButtonView: View {
     }
 }
 
-struct ShowBirthdayPickerButtonView_Previews: PreviewProvider {
+struct ShowRandomArticleView_Previews: PreviewProvider {
     static var previews: some View {
-		ShowBirthdayPickerButtonView(showBirthdayPicker: .constant(false))
+		ShowRandomArticleView(showBirthdayPicker: .constant(false))
     }
 }
