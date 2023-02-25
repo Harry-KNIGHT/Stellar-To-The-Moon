@@ -14,6 +14,10 @@
 		3C266B9D2981BEC400A9A888 /* ShowRandomArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* ShowRandomArticleView.swift */; };
 		3C266B9F2981C06500A9A888 /* NavigationButtonLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */; };
 		3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */; };
+		3C44F34D29AA810E00E47CB1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F34C29AA810E00E47CB1 /* NotificationService.swift */; };
+		3C44F35129AA810E00E47CB1 /* StellarNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3C44F35629AA826000E47CB1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F35529AA826000E47CB1 /* NotificationService.swift */; };
+		3C44F35929AA82AF00E47CB1 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 3C44F35829AA82AF00E47CB1 /* OneSignal */; };
 		3C46134C292A68320087214C /* BackgroundImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46134B292A68320087214C /* BackgroundImageCell.swift */; };
 		3C5555CB288F12640093122A /* ArticleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* ArticleImageView.swift */; };
 		3C5555CD288F21440093122A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5555CC288F21440093122A /* README.md */; };
@@ -48,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3C44F34F29AA810E00E47CB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C44F34929AA810E00E47CB1;
+			remoteInfo = StellarNotificationServiceExtension;
+		};
 		3CA91F092961B6730030069B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
@@ -64,6 +75,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				3C44F35129AA810E00E47CB1 /* StellarNotificationServiceExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +90,13 @@
 		3C266B9C2981BEC400A9A888 /* ShowRandomArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRandomArticleView.swift; sourceTree = "<group>"; };
 		3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonLabelStyle.swift; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageListCell.swift; sourceTree = "<group>"; };
+		3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C44F34C29AA810E00E47CB1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		3C44F34E29AA810E00E47CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C44F35529AA826000E47CB1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		3C44F35A29AA82D300E47CB1 /* Stellar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stellar.entitlements; sourceTree = "<group>"; };
+		3C44F35B29AA82DC00E47CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C44F35C29AA93B600E47CB1 /* StellarNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StellarNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		3C46134B292A68320087214C /* BackgroundImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageCell.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* ArticleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageView.swift; sourceTree = "<group>"; };
 		3C5555CC288F21440093122A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -111,6 +130,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3C44F34729AA810E00E47CB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CA91F022961B6730030069B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */,
+				3C44F35929AA82AF00E47CB1 /* OneSignal in Frameworks */,
 				3CC4922E28BE5F4D00C0B89B /* StellarMoonKit in Frameworks */,
 				3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */,
 			);
@@ -145,6 +172,16 @@
 				3C03EADE2937EC190023EC26 /* FavoritesListView.swift */,
 			);
 			path = Lists;
+			sourceTree = "<group>";
+		};
+		3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F35C29AA93B600E47CB1 /* StellarNotificationServiceExtension.entitlements */,
+				3C44F34C29AA810E00E47CB1 /* NotificationService.swift */,
+				3C44F34E29AA810E00E47CB1 /* Info.plist */,
+			);
+			path = StellarNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		3C5555D8289059880093122A /* View */ = {
@@ -237,6 +274,7 @@
 			children = (
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
 				3CA91F062961B6730030069B /* StellarTests */,
+				3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */,
 				3CDBA10C288E759A00AB15C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -246,6 +284,7 @@
 			children = (
 				3CDBA10B288E759A00AB15C7 /* Stellar.app */,
 				3CA91F052961B6730030069B /* StellarTests.xctest */,
+				3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,7 +292,10 @@
 		3CDBA10D288E759A00AB15C7 /* Stellar */ = {
 			isa = PBXGroup;
 			children = (
+				3C44F35A29AA82D300E47CB1 /* Stellar.entitlements */,
 				3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */,
+				3C44F35529AA826000E47CB1 /* NotificationService.swift */,
+				3C44F35B29AA82DC00E47CB1 /* Info.plist */,
 				3C5555D8289059880093122A /* View */,
 				3CBF0C43289134F300010691 /* ViewModel */,
 				3C57F3352938A219001F74A0 /* Extensions */,
@@ -329,6 +371,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C44F35429AA810E00E47CB1 /* Build configuration list for PBXNativeTarget "StellarNotificationServiceExtension" */;
+			buildPhases = (
+				3C44F34629AA810E00E47CB1 /* Sources */,
+				3C44F34729AA810E00E47CB1 /* Frameworks */,
+				3C44F34829AA810E00E47CB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StellarNotificationServiceExtension;
+			productName = StellarNotificationServiceExtension;
+			productReference = 3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3CA91F042961B6730030069B /* StellarTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CA91F0B2961B6730030069B /* Build configuration list for PBXNativeTarget "StellarTests" */;
@@ -359,12 +418,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				3C44F35029AA810E00E47CB1 /* PBXTargetDependency */,
 			);
 			name = Stellar;
 			packageProductDependencies = (
 				3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */,
 				3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */,
 				3C57F3312938A1DB001F74A0 /* CachedAsyncImage */,
+				3C44F35829AA82AF00E47CB1 /* OneSignal */,
 			);
 			productName = NasaDayAstronomy;
 			productReference = 3CDBA10B288E759A00AB15C7 /* Stellar.app */;
@@ -377,9 +438,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					3C44F34929AA810E00E47CB1 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					3CA91F042961B6730030069B = {
 						CreatedOnToolsVersion = 14.1;
 						LastSwiftMigration = 1410;
@@ -404,6 +468,7 @@
 				3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */,
 				3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				3C44F35729AA82AF00E47CB1 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
 			productRefGroup = 3CDBA10C288E759A00AB15C7 /* Products */;
 			projectDirPath = "";
@@ -411,11 +476,19 @@
 			targets = (
 				3CDBA10A288E759A00AB15C7 /* Stellar */,
 				3CA91F042961B6730030069B /* StellarTests */,
+				3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3C44F34829AA810E00E47CB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CA91F032961B6730030069B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,6 +509,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3C44F34629AA810E00E47CB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C44F34D29AA810E00E47CB1 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CA91F012961B6730030069B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,6 +541,7 @@
 				3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */,
 				3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */,
 				3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */,
+				3C44F35629AA826000E47CB1 /* NotificationService.swift in Sources */,
 				3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */,
 				3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */,
 				3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */,
@@ -485,6 +567,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3C44F35029AA810E00E47CB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */;
+			targetProxy = 3C44F34F29AA810E00E47CB1 /* PBXContainerItemProxy */;
+		};
 		3CA91F0A2961B6730030069B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3CDBA10A288E759A00AB15C7 /* Stellar */;
@@ -493,6 +580,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3C44F35229AA810E00E47CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = StellarNotificationServiceExtension/StellarNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StellarNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C44F35329AA810E00E47CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = StellarNotificationServiceExtension/StellarNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StellarNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3CA91F0C2961B6730030069B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -666,12 +807,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Stellar/Stellar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stellar/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "If you autorise Stellar To The Moon to access to your library, you'll be able to download images, use it as wallpaper, share it and so on.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -699,12 +842,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Stellar/Stellar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stellar/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "If you autorise Stellar To The Moon to access to your library, you'll be able to download images, use it as wallpaper, share it and so on.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -729,6 +874,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C44F35429AA810E00E47CB1 /* Build configuration list for PBXNativeTarget "StellarNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C44F35229AA810E00E47CB1 /* Debug */,
+				3C44F35329AA810E00E47CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3CA91F0B2961B6730030069B /* Build configuration list for PBXNativeTarget "StellarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -759,6 +913,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3C44F35729AA82AF00E47CB1 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
@@ -786,6 +948,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3C44F35829AA82AF00E47CB1 /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C44F35729AA82AF00E47CB1 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
 		3C57F3312938A1DB001F74A0 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
