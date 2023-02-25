@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/exyte/ActivityIndicatorView",
       "state" : {
-        "revision" : "0fb57e69b6130b4beb8ba49eaafe13563f2f6bd6",
-        "version" : "1.1.0"
+        "revision" : "9970fd0bb7a05dad0b6566ae1f56937716686b24",
+        "version" : "1.1.1"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/Harry-KNIGHT/StellarMoonKit",
       "state" : {
         "branch" : "main",
-        "revision" : "d51a62863f1a56084bd502bd603f8a9b764cd11e"
+        "revision" : "17f10e0116be97ffd014f406336d66fc0bd7e6cb"
       }
     },
     {

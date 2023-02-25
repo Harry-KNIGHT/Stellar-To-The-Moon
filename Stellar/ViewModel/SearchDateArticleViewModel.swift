@@ -9,7 +9,7 @@ import SwiftUI
 import StellarMoonKit
 
 class SearchDateArticleViewModel: ObservableObject {
-	@Published var article: AstronomyArticleModel?
+	@Published var article: Article?
 
 	@MainActor
 	func generateOneArticle()  {

@@ -9,7 +9,7 @@ import SwiftUI
 import StellarMoonKit
 
 struct RowCell: View {
-	let article: AstronomyArticleModel
+	let article: Article
 	private let size: CGFloat = 90
 	let isInFavoriteListView: Bool
 
@@ -50,9 +50,9 @@ struct RowCell: View {
 
 struct RowCell_Previews: PreviewProvider {
 	static var previews: some View {
-		RowCell(article: .astronomySample, isInFavoriteListView: false)
+		RowCell(article: .articleSample, isInFavoriteListView: false)
 			.previewLayout(.sizeThatFits)
-		RowCell(article: .astronomySample, isInFavoriteListView: true)
+		RowCell(article: .articleSample, isInFavoriteListView: true)
 			.previewLayout(.sizeThatFits)
 			.preferredColorScheme(.dark)
 	}

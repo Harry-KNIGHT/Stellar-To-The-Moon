@@ -24,14 +24,6 @@
 		3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C57F3312938A1DB001F74A0 /* CachedAsyncImage */; };
 		3C57F3342938A213001F74A0 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57F3332938A213001F74A0 /* URLCache.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
-		3C6B0A75294E2D04008A9611 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B0A74294E2D03008A9611 /* WidgetKit.framework */; };
-		3C6B0A77294E2D04008A9611 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B0A76294E2D04008A9611 /* SwiftUI.framework */; };
-		3C6B0A7A294E2D04008A9611 /* StellarWidgetImageBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0A79294E2D04008A9611 /* StellarWidgetImageBundle.swift */; };
-		3C6B0A7C294E2D04008A9611 /* StellarWidgetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0A7B294E2D04008A9611 /* StellarWidgetImage.swift */; };
-		3C6B0A7E294E2D06008A9611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6B0A7D294E2D06008A9611 /* Assets.xcassets */; };
-		3C6B0A82294E2D06008A9611 /* StellarWidgetImageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3C6B0A87294E2D1A008A9611 /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C6B0A86294E2D1A008A9611 /* StellarMoonKit */; };
-		3C6B0A8A294E2F40008A9611 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B0A88294E2F15008A9611 /* NetworkImage.swift */; };
 		3C7F967B293A33D700B949DD /* CopyrightStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F967A293A33D700B949DD /* CopyrightStyle.swift */; };
 		3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9680293A390200B949DD /* DownloadImageButton.swift */; };
 		3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */; };
@@ -56,13 +48,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3C6B0A80294E2D06008A9611 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C6B0A71294E2D03008A9611;
-			remoteInfo = StellarWidgetImageExtension;
-		};
 		3CA91F092961B6730030069B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
@@ -79,7 +64,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3C6B0A82294E2D06008A9611 /* StellarWidgetImageExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,14 +87,8 @@
 		3C5555D5289058FF0093122A /* AstronomyArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticlesViewModel.swift; sourceTree = "<group>"; };
 		3C57F3332938A213001F74A0 /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
-		3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarWidgetImageExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6B0A74294E2D03008A9611 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3C6B0A76294E2D04008A9611 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		3C6B0A79294E2D04008A9611 /* StellarWidgetImageBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarWidgetImageBundle.swift; sourceTree = "<group>"; };
-		3C6B0A7B294E2D04008A9611 /* StellarWidgetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarWidgetImage.swift; sourceTree = "<group>"; };
-		3C6B0A7D294E2D06008A9611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3C6B0A7F294E2D06008A9611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C6B0A88294E2F15008A9611 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		3C7F967A293A33D700B949DD /* CopyrightStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightStyle.swift; sourceTree = "<group>"; };
 		3C7F9680293A390200B949DD /* DownloadImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageButton.swift; sourceTree = "<group>"; };
 		3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingArticleImagePlaceholder.swift; sourceTree = "<group>"; };
@@ -135,16 +113,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3C6B0A6F294E2D03008A9611 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C6B0A77294E2D04008A9611 /* SwiftUI.framework in Frameworks */,
-				3C6B0A87294E2D1A008A9611 /* StellarMoonKit in Frameworks */,
-				3C6B0A75294E2D04008A9611 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CA91F022961B6730030069B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,18 +193,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3C6B0A78294E2D04008A9611 /* StellarWidgetImage */ = {
-			isa = PBXGroup;
-			children = (
-				3C6B0A79294E2D04008A9611 /* StellarWidgetImageBundle.swift */,
-				3C6B0A7B294E2D04008A9611 /* StellarWidgetImage.swift */,
-				3C6B0A88294E2F15008A9611 /* NetworkImage.swift */,
-				3C6B0A7D294E2D06008A9611 /* Assets.xcassets */,
-				3C6B0A7F294E2D06008A9611 /* Info.plist */,
-			);
-			path = StellarWidgetImage;
-			sourceTree = "<group>";
-		};
 		3C7F9677293A32D500B949DD /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
-				3C6B0A78294E2D04008A9611 /* StellarWidgetImage */,
 				3CA91F062961B6730030069B /* StellarTests */,
 				3C6B0A73294E2D03008A9611 /* Frameworks */,
 				3CDBA10C288E759A00AB15C7 /* Products */,
@@ -302,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				3CDBA10B288E759A00AB15C7 /* Stellar.app */,
-				3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */,
 				3CA91F052961B6730030069B /* StellarTests.xctest */,
 			);
 			name = Products;
@@ -387,26 +341,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C6B0A71294E2D03008A9611 /* StellarWidgetImageExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3C6B0A85294E2D06008A9611 /* Build configuration list for PBXNativeTarget "StellarWidgetImageExtension" */;
-			buildPhases = (
-				3C6B0A6E294E2D03008A9611 /* Sources */,
-				3C6B0A6F294E2D03008A9611 /* Frameworks */,
-				3C6B0A70294E2D03008A9611 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = StellarWidgetImageExtension;
-			packageProductDependencies = (
-				3C6B0A86294E2D1A008A9611 /* StellarMoonKit */,
-			);
-			productName = StellarWidgetImageExtension;
-			productReference = 3C6B0A72294E2D03008A9611 /* StellarWidgetImageExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		3CA91F042961B6730030069B /* StellarTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CA91F0B2961B6730030069B /* Build configuration list for PBXNativeTarget "StellarTests" */;
@@ -437,7 +371,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3C6B0A81294E2D06008A9611 /* PBXTargetDependency */,
 			);
 			name = Stellar;
 			packageProductDependencies = (
@@ -459,9 +392,6 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					3C6B0A71294E2D03008A9611 = {
-						CreatedOnToolsVersion = 14.1;
-					};
 					3CA91F042961B6730030069B = {
 						CreatedOnToolsVersion = 14.1;
 						LastSwiftMigration = 1410;
@@ -492,21 +422,12 @@
 			projectRoot = "";
 			targets = (
 				3CDBA10A288E759A00AB15C7 /* Stellar */,
-				3C6B0A71294E2D03008A9611 /* StellarWidgetImageExtension */,
 				3CA91F042961B6730030069B /* StellarTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3C6B0A70294E2D03008A9611 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C6B0A7E294E2D06008A9611 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CA91F032961B6730030069B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,16 +448,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3C6B0A6E294E2D03008A9611 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C6B0A7A294E2D04008A9611 /* StellarWidgetImageBundle.swift in Sources */,
-				3C6B0A8A294E2F40008A9611 /* NetworkImage.swift in Sources */,
-				3C6B0A7C294E2D04008A9611 /* StellarWidgetImage.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CA91F012961B6730030069B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,11 +497,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3C6B0A81294E2D06008A9611 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3C6B0A71294E2D03008A9611 /* StellarWidgetImageExtension */;
-			targetProxy = 3C6B0A80294E2D06008A9611 /* PBXContainerItemProxy */;
-		};
 		3CA91F0A2961B6730030069B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3CDBA10A288E759A00AB15C7 /* Stellar */;
@@ -599,60 +505,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3C6B0A83294E2D06008A9611 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 44;
-				DEVELOPMENT_TEAM = 99M75C322U;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StellarWidgetImage/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = StellarWidgetImage;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarWidgetImage;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3C6B0A84294E2D06008A9611 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 44;
-				DEVELOPMENT_TEAM = 99M75C322U;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StellarWidgetImage/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = StellarWidgetImage;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarWidgetImage;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		3CA91F0C2961B6730030069B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -889,15 +741,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C6B0A85294E2D06008A9611 /* Build configuration list for PBXNativeTarget "StellarWidgetImageExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3C6B0A83294E2D06008A9611 /* Debug */,
-				3C6B0A84294E2D06008A9611 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3CA91F0B2961B6730030069B /* Build configuration list for PBXNativeTarget "StellarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -959,11 +802,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
-		};
-		3C6B0A86294E2D1A008A9611 /* StellarMoonKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */;
-			productName = StellarMoonKit;
 		};
 		3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -10,7 +10,7 @@ import StellarMoonKit
 import CachedAsyncImage
 
 struct AstronomyImageListCell: View {
-	let article: AstronomyArticleModel
+	let article: Article
 	private let size = (deviceWidth / 2)
 	var isInFavoriteListView: Bool
 
@@ -52,7 +52,7 @@ struct AstronomyImageListCell: View {
 
 struct AstronomyImageListCell_Previews: PreviewProvider {
 	static var previews: some View {
-		AstronomyImageListCell(article: .astronomySample, isInFavoriteListView: false)
+		AstronomyImageListCell(article: .articleSample, isInFavoriteListView: false)
 	}
 }
 

@@ -13,7 +13,7 @@ final class FavoriteTest: XCTestCase {
 	var favoriteVM: FavoriteViewModel!
     override func setUpWithError() throws {
 		favoriteVM = FavoriteViewModel()
-		favoriteVM.favoriteAstronomyArticles = [AstronomyArticleModel]()
+		favoriteVM.favoriteAstronomyArticles = [Article]()
 
     }
 
@@ -27,14 +27,14 @@ final class FavoriteTest: XCTestCase {
 	}
 
 	func test_addFavorite() throws {
-		let _ = favoriteVM.favoriteAstronomyArticles.append(.astronomySample)
+		let _ = favoriteVM.favoriteAstronomyArticles.append(.articleSample)
 
 		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 1)
 		XCTAssertFalse(favoriteVM.favoriteAstronomyArticles.isEmpty)
 	}
 
 	func test_removeFavorite() throws {
-		let _ = favoriteVM.favoriteAstronomyArticles.append(.astronomySample)
+		let _ = favoriteVM.favoriteAstronomyArticles.append(.articleSample)
 		let _ = favoriteVM.deletSelectedFavorite(article: favoriteVM.favoriteAstronomyArticles[0])
 
 		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 0)
@@ -43,14 +43,14 @@ final class FavoriteTest: XCTestCase {
 
 	func test_addOrDeletFavorite() throws {
 		// Add astronomy article sample on the array
-		let _: Void = favoriteVM.addOrDeletFavorite(article: .astronomySample)
-		XCTAssertTrue(favoriteVM.favoriteAstronomyArticles.contains(.astronomySample))
+		let _: Void = favoriteVM.addOrDeletFavorite(article: .articleSample)
+		XCTAssertTrue(favoriteVM.favoriteAstronomyArticles.contains(.articleSample))
 		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 1)
 		XCTAssertNotEqual(favoriteVM.favoriteAstronomyArticles.count, 10)
 
 		// Remove astronomy article sample from the array
-		let _: Void = favoriteVM.addOrDeletFavorite(article: .astronomySample)
-		XCTAssertFalse(favoriteVM.favoriteAstronomyArticles.contains(.astronomySample))
+		let _: Void = favoriteVM.addOrDeletFavorite(article: .articleSample)
+		XCTAssertFalse(favoriteVM.favoriteAstronomyArticles.contains(.articleSample))
 		XCTAssertEqual(favoriteVM.favoriteAstronomyArticles.count, 0)
 		XCTAssertNotEqual(favoriteVM.favoriteAstronomyArticles.count, 5)
 	}

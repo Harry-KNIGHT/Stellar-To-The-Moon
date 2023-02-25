@@ -9,7 +9,7 @@ import SwiftUI
 import StellarMoonKit
 
 struct AddFavoriteButtonCell: View {
-	let article: AstronomyArticleModel
+	let article: Article
 	@EnvironmentObject var favoriteVM: FavoriteViewModel
 	
 	var body: some View {
@@ -25,7 +25,7 @@ struct AddFavoriteButtonCell: View {
 
 struct AddFavoriteButtonCell_Previews: PreviewProvider {
 	static var previews: some View {
-		AddFavoriteButtonCell(article: .astronomySample)
+		AddFavoriteButtonCell(article: .articleSample)
 			.environmentObject(FavoriteViewModel())
 	}
 }

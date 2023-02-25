@@ -11,7 +11,7 @@ import StellarMoonKit
 struct VideoPlaceHolderCell: View {
 	private let size = (deviceWidth / 2)
 	private let linearGradient = LinearGradient(colors: [Color(red: 237/255, green: 116/255, blue: 103/255), .red], startPoint: .top, endPoint: .bottom)
-	let article: AstronomyArticleModel
+	let article: Article
 	var body: some View {
 		ZStack(alignment: .bottomLeading) {
 			ZStack {
@@ -40,6 +40,6 @@ struct VideoPlaceHolderCell: View {
 
 struct VideoPlaceHolderCell_Previews: PreviewProvider {
 	static var previews: some View {
-		VideoPlaceHolderCell(article: .astronomySample)
+		VideoPlaceHolderCell(article: .articleSample)
 	}
 }
