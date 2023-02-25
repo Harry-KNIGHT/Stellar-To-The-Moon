@@ -10,7 +10,7 @@ import StellarMoonKit
 import ActivityIndicatorView
 
 struct DownloadImageButton: View {
-	let article: AstronomyArticleModel
+	let article: Article
 	@EnvironmentObject var astronomyVM: AstronomyDetailViewModel
 
 	@Binding var isImageDowloaded: Bool
@@ -32,7 +32,7 @@ struct DownloadImageButton: View {
 	}
 
 
-	func downloadImage(article: AstronomyArticleModel, isDownloadingImage: Bool, isImageDowloaded: Bool) {
+	func downloadImage(article: Article, isDownloadingImage: Bool, isImageDowloaded: Bool) {
 		Task {
 			do {
 				self.isDownloadingImage = true
@@ -57,7 +57,7 @@ struct DownloadImageButton: View {
 struct DownloadImageButton_Previews: PreviewProvider {
 	static var previews: some View {
 		DownloadImageButton(
-			article: .astronomySample,
+			article: .articleSample,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)

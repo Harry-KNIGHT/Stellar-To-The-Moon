@@ -11,7 +11,7 @@ import StellarMoonKit
 import CachedAsyncImage
 
 struct AstronomyImageView: View {
-	let article: AstronomyArticleModel
+	let article: Article
 	@EnvironmentObject private var astronomyDetailVm: AstronomyDetailViewModel
 	
 	@Environment(\.colorScheme) private var colorScheme
@@ -45,7 +45,7 @@ struct AstronomyImageView: View {
 
 struct AstronomyImageView_Previews: PreviewProvider {
 	static var previews: some View {
-		AstronomyImageView(article: .astronomySample)
+		AstronomyImageView(article: .articleSample)
 			.environmentObject(AstronomyDetailViewModel())
 	}
 }

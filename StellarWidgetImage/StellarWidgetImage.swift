@@ -11,7 +11,7 @@ import StellarMoonKit
 
 struct Provider: TimelineProvider {
 	func placeholder(in context: Context) -> SimpleEntry {
-		SimpleEntry(date: Date(), article: .astronomySample)
+		SimpleEntry(date: Date(), article: .articleSample)
 	}
 
 	func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {

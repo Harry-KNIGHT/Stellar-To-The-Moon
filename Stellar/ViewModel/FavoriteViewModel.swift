@@ -9,11 +9,11 @@ import Foundation
 import StellarMoonKit
 
 class FavoriteViewModel: ObservableObject {
-	@Published var favoriteAstronomyArticles: [AstronomyArticleModel]
+	@Published var favoriteAstronomyArticles: [Article]
 
 	init() {
 		if let data = UserDefaults.standard.data(forKey: "SavedFavoritesData") {
-			if let decoded = try? JSONDecoder().decode([AstronomyArticleModel].self, from: data) {
+			if let decoded = try? JSONDecoder().decode([Article].self, from: data) {
 				favoriteAstronomyArticles = decoded
 				return
 			}
@@ -30,7 +30,7 @@ class FavoriteViewModel: ObservableObject {
 
 	/// Add article to favorite
 	/// - Parameter article: Article is from NasaAstronomy model
-	private func addToFavorite(article: AstronomyArticleModel) {
+	private func addToFavorite(article: Article) {
 		self.favoriteAstronomyArticles.insert(article, at: 0)
 	}
 
@@ -43,7 +43,7 @@ class FavoriteViewModel: ObservableObject {
 
 	/// Delet selected article
 	/// - Parameter article: Article is from NasaAstronomy model
-	private func deletSelectedFavorite(article: AstronomyArticleModel) {
+	private func deletSelectedFavorite(article: Article) {
 		self.favoriteAstronomyArticles.removeAll { $0.date == article.date }
 	}
 
@@ -58,7 +58,7 @@ class FavoriteViewModel: ObservableObject {
 
 	/// Add or delet article if it's on array yet or no.
 	/// - Parameter article: Picture, description and copyright.
-	func addOrDeletFavorite(article: AstronomyArticleModel) {
+	func addOrDeletFavorite(article: Article) {
 		if self.favoriteAstronomyArticles.contains(article) {
 			deletSelectedFavorite(article: article)
 			save()

@@ -10,7 +10,7 @@ import StellarMoonKit
 import CachedAsyncImage
 
 struct BackgroundImageCell: View {
-	let article: AstronomyArticleModel
+	let article: Article
 	@Environment(\.colorScheme) var colorScheme
     var body: some View {
 		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
@@ -28,6 +28,6 @@ struct BackgroundImageCell: View {
 
 struct BackgroundImageCell_Previews: PreviewProvider {
     static var previews: some View {
-		BackgroundImageCell(article: .astronomySample)
+		BackgroundImageCell(article: .articleSample)
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 import StellarMoonKit
 
 class AstronomyDetailViewModel: ObservableObject {
-	@Published var nasaReponses: [AstronomyArticleModel] = []
+	@Published var nasaReponses: [Article] = []
 
 	func getImage(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {

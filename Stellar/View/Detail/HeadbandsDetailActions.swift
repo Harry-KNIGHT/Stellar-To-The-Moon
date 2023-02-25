@@ -8,7 +8,7 @@ import StellarMoonKit
 import SwiftUI
 
 struct HeadbandsDetailActions: View {
-	let article: AstronomyArticleModel
+	let article: Article
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
     var body: some View {
@@ -31,7 +31,7 @@ struct HeadbandsDetailActions: View {
 struct HeadbandsDetailActions_Previews: PreviewProvider {
     static var previews: some View {
         HeadbandsDetailActions(
-			article: .astronomySample,
+			article: .articleSample,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
