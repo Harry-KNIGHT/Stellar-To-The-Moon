@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StellarMoonKit
+@preconcurrency import StellarMoonKit
 
 class ArticleViewModel: ObservableObject {
 	@Published var articles: [Article]
