@@ -9,6 +9,7 @@ import SwiftUI
 import ActivityIndicatorView
 struct LoadingView: View {
 	@State private var showLoadingIndicator = true
+	@EnvironmentObject var articleVm: ArticleViewModel
     var body: some View {
 		ZStack {
 			VStack {
@@ -24,11 +25,15 @@ struct LoadingView: View {
 			.shadow(radius: 10)
 			.accessibilityLabel("Stellar is loading data, please wait.")
 		}
+		.onAppear {
+			articleVm.getArticles(to: Date.now)
+		}
     }
 }
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingView()
+			.environmentObject(ArticleViewModel())
     }
 }
