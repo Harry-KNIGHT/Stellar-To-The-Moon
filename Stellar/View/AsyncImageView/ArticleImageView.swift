@@ -21,22 +21,15 @@ struct ArticleImageView: View {
 	@State private var animate = false
 	var body: some View {
 		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
-			ZStack(alignment: .bottomLeading) {
-				image
-					.resizable()
-					.scaledToFill()
-					.frame(
-						maxWidth: .infinity,
-						maxHeight: .infinity,
-						alignment: .top
-					)
-					.accessibilityLabel(article.title)
-				
-				if let copryRight = article.copyright {
-					Text(copryRight)
-						.copyrightStyle()
-				}
-			}
+			image
+				.resizable()
+				.scaledToFill()
+				.frame(
+					maxWidth: .infinity,
+					maxHeight: .infinity,
+					alignment: .top
+				)
+				.accessibilityLabel(article.title)
 		} placeholder: {
 			LoadingArticleImagePlaceholder(isLoadingVisible: $isLoadingVisible)
 		}

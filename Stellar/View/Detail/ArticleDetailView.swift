@@ -34,22 +34,31 @@ struct ArticleDetailView: View {
 					GenerateRandomArticleButton()
 						.padding(5)
 				}
-				VStack {
+				VStack(alignment: .leading) {
 					HeadbandsDetailActions(
 						article: article,
 						isImageDowloaded: $isImageDownloaded,
 						isDownloadingImage: $isImageDownloading
 					)
-					.padding(.top, 10)
+					.padding(.vertical, 10)
+					VStack(alignment: .leading, spacing: 10) {
+						Text(article.explanation)
+							.fontWeight(.medium)
+							.multilineTextAlignment(.leading)
+							.textSelection(.enabled)
+							.accessibilityLabel(article.explanation)
 
-					Text(article.explanation)
-						.fontWeight(.medium)
-						.multilineTextAlignment(.leading)
-						.textSelection(.enabled)
-						.accessibilityLabel(article.explanation)
-						.padding()
+						HStack(alignment: .top) {
+							if let copyright = article.copyright {
+								Text("Copyright:")
+								Text(copyright)
+
+							}
+						}
+					}
 				}
-				.frame(maxWidth: .infinity)
+				.padding(.horizontal)
+				.padding(.bottom)
 				.background(.regularMaterial)
 			}
 		}
