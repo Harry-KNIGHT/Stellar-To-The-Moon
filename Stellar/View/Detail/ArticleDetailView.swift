@@ -60,6 +60,9 @@ struct ArticleDetailView_Previews: PreviewProvider {
 		}
 		NavigationView {
 			ArticleDetailView(article: .articleSample, isShowingRandArticleGenration: true)
+				.environmentObject(DownloadImageViewModel())
+				.environmentObject(FavoriteViewModel())
+				.environmentObject(SearchDateArticleViewModel())
 		}
 	}
 }
