@@ -39,5 +39,6 @@ struct AstronomyImageGrid_Previews: PreviewProvider {
 			.environmentObject(ArticleViewModel())
 			.environmentObject(FavoriteViewModel())
 			.environmentObject(SearchDateArticleViewModel())
+			.environmentObject(DownloadImageViewModel())
 	}
 }
