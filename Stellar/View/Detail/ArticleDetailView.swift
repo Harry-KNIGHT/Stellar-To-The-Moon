@@ -34,25 +34,12 @@ struct ArticleDetailView: View {
 					GenerateRandomArticleButton()
 						.padding(5)
 				}
-				VStack(alignment: .leading) {
-					HeadbandsDetailActions(
-						article: article,
-						isImageDowloaded: $isImageDownloaded,
-						isDownloadingImage: $isImageDownloading
-					)
-					.padding(.vertical, 10)
-					VStack(alignment: .leading, spacing: 10) {
-						Text(article.explanation)
-							.fontWeight(.medium)
-							.multilineTextAlignment(.leading)
-							.textSelection(.enabled)
-							.accessibilityLabel(article.explanation)
 
-						if let copyright = article.copyright {
-							Text("© \(copyright)")
-						}
-					}
-				}
+				ArticleDetailBodyView(
+					article: article,
+					isImageDownloading: $isImageDownloading,
+					isImageDownloaded: $isImageDownloaded
+				)
 				.padding(.horizontal)
 				.padding(.bottom)
 				.background(.regularMaterial)
