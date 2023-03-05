@@ -29,7 +29,7 @@ struct ArticleDetailView: View {
 						.frame(minHeight: 450, maxHeight: 800)
 						.accessibilityLabel("Video of the article")
 				}
-				
+
 				if isShowingRandArticleGenration {
 					GenerateRandomArticleButton()
 						.padding(5)
@@ -48,12 +48,8 @@ struct ArticleDetailView: View {
 							.textSelection(.enabled)
 							.accessibilityLabel(article.explanation)
 
-						HStack(alignment: .top) {
-							if let copyright = article.copyright {
-								Text("Copyright:")
-								Text(copyright)
-
-							}
+						if let copyright = article.copyright {
+							Text("© \(copyright)")
 						}
 					}
 				}
