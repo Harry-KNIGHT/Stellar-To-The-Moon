@@ -45,7 +45,7 @@ struct ArticleDetailBodyView_Previews: PreviewProvider {
 			isImageDownloading: .constant(false),
 			isImageDownloaded: .constant(false)
 		)
-		.environmentObject(ArticleDetailViewModel())
+		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())
     }
 }

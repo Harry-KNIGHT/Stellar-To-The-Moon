@@ -14,7 +14,7 @@ struct ArticleDetailView: View {
 	public let article: Article
 	@State private var isSheetPresented = false
 
-	@EnvironmentObject var astronomyApi: ArticleDetailViewModel
+	@EnvironmentObject var astronomyApi: DownloadImageViewModel
 	@State private var isImageDownloaded = false
 	@State private var isImageDownloading = false
 
@@ -55,7 +55,7 @@ struct ArticleDetailView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
 			ArticleDetailView(article: .articleSample)
-				.environmentObject(ArticleDetailViewModel())
+				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {

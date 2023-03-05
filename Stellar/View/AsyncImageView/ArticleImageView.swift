@@ -12,7 +12,7 @@ import CachedAsyncImage
 
 struct ArticleImageView: View {
 	let article: Article
-	@EnvironmentObject private var articleDetailVm: ArticleDetailViewModel
+	@EnvironmentObject private var articleDetailVm: DownloadImageViewModel
 	
 	@Environment(\.colorScheme) private var colorScheme
 	
@@ -39,6 +39,6 @@ struct ArticleImageView: View {
 struct AstronomyImageView_Previews: PreviewProvider {
 	static var previews: some View {
 		ArticleImageView(article: .articleSample)
-			.environmentObject(ArticleDetailViewModel())
+			.environmentObject(DownloadImageViewModel())
 	}
 }

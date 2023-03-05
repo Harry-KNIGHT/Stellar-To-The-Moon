@@ -11,7 +11,7 @@ import ActivityIndicatorView
 
 struct DownloadImageButton: View {
 	let article: Article
-	@EnvironmentObject var articleDetailVm: ArticleDetailViewModel
+	@EnvironmentObject var articleDetailVm: DownloadImageViewModel
 
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
@@ -61,6 +61,6 @@ struct DownloadImageButton_Previews: PreviewProvider {
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
-		.environmentObject(ArticleDetailViewModel())
+		.environmentObject(DownloadImageViewModel())
 	}
 }

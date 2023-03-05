@@ -10,7 +10,7 @@ import OneSignal
 
 @main
 struct NasaDayAstronomyApp: App {
-	@StateObject var astronomyVM = ArticleDetailViewModel()
+	@StateObject var astronomyVM = DownloadImageViewModel()
 	@StateObject var articlesVM = ArticleViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
 	@StateObject var searchDateArticleVM = SearchDateArticleViewModel()

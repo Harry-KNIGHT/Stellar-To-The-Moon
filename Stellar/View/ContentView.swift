@@ -17,7 +17,7 @@ struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		ContentView()
 			.environmentObject(ArticleViewModel())
-			.environmentObject(ArticleDetailViewModel())
+			.environmentObject(DownloadImageViewModel())
 			.environmentObject(SearchDateArticleViewModel())
 	}
 }

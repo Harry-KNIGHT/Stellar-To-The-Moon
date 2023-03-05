@@ -1,5 +1,5 @@
 //
-//  ArticleDetailViewModel.swift
+//  DownloadImageViewModel.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 22/08/2022.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import StellarMoonKit
 
-class ArticleDetailViewModel: ObservableObject {
+class DownloadImageViewModel: ObservableObject {
 	func getImage(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
 			throw ApiError.urlNotFound
@@ -24,6 +24,5 @@ class ArticleDetailViewModel: ObservableObject {
 		} catch {
 			throw ApiError.cantFetchImage
 		}
-		
 	}
 }
