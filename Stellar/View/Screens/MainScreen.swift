@@ -37,5 +37,7 @@ struct AstronomyImageGrid_Previews: PreviewProvider {
 	static var previews: some View {
 		MainScreen()
 			.environmentObject(ArticleViewModel())
+			.environmentObject(FavoriteViewModel())
+			.environmentObject(SearchDateArticleViewModel())
 	}
 }
