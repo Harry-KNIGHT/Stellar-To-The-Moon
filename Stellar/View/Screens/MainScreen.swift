@@ -27,9 +27,7 @@ struct MainScreen: View {
 			.navigationTitle("Stellar")
 			.navigationBarTitleDisplayMode(.inline)
 			.onAppear {
-				Task {
-					articleVm.getArticles(to: Date.now)
-				}
+				articleVm.getArticles(to: Date.now)
 			}
 		}
 	}
