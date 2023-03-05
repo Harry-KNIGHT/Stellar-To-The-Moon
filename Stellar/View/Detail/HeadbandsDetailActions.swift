@@ -35,5 +35,7 @@ struct HeadbandsDetailActions_Previews: PreviewProvider {
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
+		.environmentObject(DownloadImageViewModel())
+		.environmentObject(FavoriteViewModel())
     }
 }
