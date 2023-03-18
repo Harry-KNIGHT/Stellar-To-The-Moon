@@ -1,0 +1,38 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  },
+  "stickers" : [
+    {
+      "filename" : "emoji medium 1.sticker"
+    },
+    {
+      "filename" : "emoji medium 2.sticker"
+    },
+    {
+      "filename" : "emoji medium 3.sticker"
+    },
+    {
+      "filename" : "emoji medium 4.sticker"
+    },
+    {
+      "filename" : "emoji medium 5.sticker"
+    },
+    {
+      "filename" : "emoji medium 6.sticker"
+    },
+    {
+      "filename" : "emoji medium 7.sticker"
+    },
+    {
+      "filename" : "emoji medium 8.sticker"
+    },
+    {
+      "filename" : "emoji medium 9.sticker"
+    }
+  ]
+}

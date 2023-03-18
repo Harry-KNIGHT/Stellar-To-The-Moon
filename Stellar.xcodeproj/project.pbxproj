@@ -11,6 +11,8 @@
 		3C08D3602984537E0030D45B /* SearchDateArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */; };
 		3C08D3642985C4BA0030D45B /* GenerateRandomArticleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */; };
 		3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */; };
+		3C20C9F129C5A51A0045523A /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C20C9F029C5A51A0045523A /* Stickers.xcassets */; };
+		3C20C9F529C5A51A0045523A /* StellarStickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C20C9EE29C5A5190045523A /* StellarStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C266B9D2981BEC400A9A888 /* ShowRandomArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* ShowRandomArticleView.swift */; };
 		3C266B9F2981C06500A9A888 /* NavigationButtonLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */; };
 		3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */; };
@@ -53,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3C20C9F329C5A51A0045523A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C20C9ED29C5A5190045523A;
+			remoteInfo = StellarStickers;
+		};
 		3C44F34F29AA810E00E47CB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
@@ -76,6 +85,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				3C20C9F529C5A51A0045523A /* StellarStickers.appex in Embed Foundation Extensions */,
 				3C44F35129AA810E00E47CB1 /* StellarNotificationServiceExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -88,6 +98,9 @@
 		3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateArticleViewModel.swift; sourceTree = "<group>"; };
 		3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomArticleButton.swift; sourceTree = "<group>"; };
 		3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGridView.swift; sourceTree = "<group>"; };
+		3C20C9EE29C5A5190045523A /* StellarStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C20C9F029C5A51A0045523A /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		3C20C9F229C5A51A0045523A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C266B9C2981BEC400A9A888 /* ShowRandomArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRandomArticleView.swift; sourceTree = "<group>"; };
 		3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonLabelStyle.swift; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageListCell.swift; sourceTree = "<group>"; };
@@ -174,6 +187,15 @@
 				3C03EADE2937EC190023EC26 /* FavoritesListView.swift */,
 			);
 			path = Lists;
+			sourceTree = "<group>";
+		};
+		3C20C9EF29C5A5190045523A /* StellarStickers */ = {
+			isa = PBXGroup;
+			children = (
+				3C20C9F029C5A51A0045523A /* Stickers.xcassets */,
+				3C20C9F229C5A51A0045523A /* Info.plist */,
+			);
+			path = StellarStickers;
 			sourceTree = "<group>";
 		};
 		3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */ = {
@@ -277,6 +299,7 @@
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
 				3CA91F062961B6730030069B /* StellarTests */,
 				3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */,
+				3C20C9EF29C5A5190045523A /* StellarStickers */,
 				3CDBA10C288E759A00AB15C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -287,6 +310,7 @@
 				3CDBA10B288E759A00AB15C7 /* Stellar.app */,
 				3CA91F052961B6730030069B /* StellarTests.xctest */,
 				3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */,
+				3C20C9EE29C5A5190045523A /* StellarStickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -374,6 +398,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3C20C9ED29C5A5190045523A /* StellarStickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C20C9F629C5A51A0045523A /* Build configuration list for PBXNativeTarget "StellarStickers" */;
+			buildPhases = (
+				3C20C9EC29C5A5190045523A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StellarStickers;
+			productName = StellarStickers;
+			productReference = 3C20C9EE29C5A5190045523A /* StellarStickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C44F35429AA810E00E47CB1 /* Build configuration list for PBXNativeTarget "StellarNotificationServiceExtension" */;
@@ -422,6 +461,7 @@
 			);
 			dependencies = (
 				3C44F35029AA810E00E47CB1 /* PBXTargetDependency */,
+				3C20C9F429C5A51A0045523A /* PBXTargetDependency */,
 			);
 			name = Stellar;
 			packageProductDependencies = (
@@ -444,6 +484,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					3C20C9ED29C5A5190045523A = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					3C44F34929AA810E00E47CB1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -480,11 +523,20 @@
 				3CDBA10A288E759A00AB15C7 /* Stellar */,
 				3CA91F042961B6730030069B /* StellarTests */,
 				3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */,
+				3C20C9ED29C5A5190045523A /* StellarStickers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3C20C9EC29C5A5190045523A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C20C9F129C5A51A0045523A /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C44F34829AA810E00E47CB1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,6 +623,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3C20C9F429C5A51A0045523A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C20C9ED29C5A5190045523A /* StellarStickers */;
+			targetProxy = 3C20C9F329C5A51A0045523A /* PBXContainerItemProxy */;
+		};
 		3C44F35029AA810E00E47CB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */;
@@ -584,12 +641,52 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3C20C9F729C5A51A0045523A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarStickers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Stellar;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 3.3.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarStickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C20C9F829C5A51A0045523A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StellarStickers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Stellar;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 3.3.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarStickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3C44F35229AA810E00E47CB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = StellarNotificationServiceExtension/StellarNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
@@ -601,7 +698,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.2.3;
+				MARKETING_VERSION = 3.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -616,7 +713,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = StellarNotificationServiceExtension/StellarNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
@@ -628,7 +725,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.2.3;
+				MARKETING_VERSION = 3.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -813,7 +910,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Stellar/Stellar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -832,7 +929,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2.3;
+				MARKETING_VERSION = 3.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -849,7 +946,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Stellar/Stellar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -868,7 +965,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2.3;
+				MARKETING_VERSION = 3.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -880,6 +977,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C20C9F629C5A51A0045523A /* Build configuration list for PBXNativeTarget "StellarStickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C20C9F729C5A51A0045523A /* Debug */,
+				3C20C9F829C5A51A0045523A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3C44F35429AA810E00E47CB1 /* Build configuration list for PBXNativeTarget "StellarNotificationServiceExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
