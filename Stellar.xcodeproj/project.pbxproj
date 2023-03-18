@@ -33,6 +33,8 @@
 		3C7F967B293A33D700B949DD /* CopyrightStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F967A293A33D700B949DD /* CopyrightStyle.swift */; };
 		3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9680293A390200B949DD /* DownloadImageButton.swift */; };
 		3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */; };
+		3C80B18F29C653A5003D8E69 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 3C80B18E29C653A5003D8E69 /* RswiftLibrary */; };
+		3C80B19129C653A5003D8E69 /* rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 3C80B19029C653A5003D8E69 /* rswift */; };
 		3CA718CC292950CC0075E0D5 /* VideoPlaceHolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CB292950CC0075E0D5 /* VideoPlaceHolderCell.swift */; };
 		3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */; };
 		3CA718D0292965530075E0D5 /* AddFavoriteButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */; };
@@ -163,10 +165,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C80B18F29C653A5003D8E69 /* RswiftLibrary in Frameworks */,
 				3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */,
 				3C44F35929AA82AF00E47CB1 /* OneSignal in Frameworks */,
 				3CC4922E28BE5F4D00C0B89B /* StellarMoonKit in Frameworks */,
 				3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */,
+				3C80B19129C653A5003D8E69 /* rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +464,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3C80B19329C653D0003D8E69 /* PBXTargetDependency */,
 				3C44F35029AA810E00E47CB1 /* PBXTargetDependency */,
 				3C20C9F429C5A51A0045523A /* PBXTargetDependency */,
 			);
@@ -469,6 +474,8 @@
 				3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */,
 				3C57F3312938A1DB001F74A0 /* CachedAsyncImage */,
 				3C44F35829AA82AF00E47CB1 /* OneSignal */,
+				3C80B18E29C653A5003D8E69 /* RswiftLibrary */,
+				3C80B19029C653A5003D8E69 /* rswift */,
 			);
 			productName = NasaDayAstronomy;
 			productReference = 3CDBA10B288E759A00AB15C7 /* Stellar.app */;
@@ -515,6 +522,7 @@
 				3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */,
 				3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 				3C44F35729AA82AF00E47CB1 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+				3C80B18D29C653A5003D8E69 /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			productRefGroup = 3CDBA10C288E759A00AB15C7 /* Products */;
 			projectDirPath = "";
@@ -632,6 +640,10 @@
 			isa = PBXTargetDependency;
 			target = 3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */;
 			targetProxy = 3C44F34F29AA810E00E47CB1 /* PBXContainerItemProxy */;
+		};
+		3C80B19329C653D0003D8E69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 3C80B19229C653D0003D8E69 /* RswiftGenerateInternalResources */;
 		};
 		3CA91F0A2961B6730030069B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1041,6 +1053,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		3C80B18D29C653A5003D8E69 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/ActivityIndicatorView";
@@ -1069,6 +1089,20 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		3C80B18E29C653A5003D8E69 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C80B18D29C653A5003D8E69 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		3C80B19029C653A5003D8E69 /* rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C80B18D29C653A5003D8E69 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = rswift;
+		};
+		3C80B19229C653D0003D8E69 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
 		};
 		3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
