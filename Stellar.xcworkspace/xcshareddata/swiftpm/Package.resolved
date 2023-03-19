@@ -15,16 +15,7 @@
       "location" : "https://github.com/OneSignal/OneSignal-XCFramework",
       "state" : {
         "branch" : "main",
-        "revision" : "abec6c380c1f2852bd6bf11cc72330184ed347bc"
-      }
-    },
-    {
-      "identity" : "r.swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mac-cain13/R.swift.git",
-      "state" : {
-        "revision" : "589493fe3907251b62f7684c8451330ee08f4426",
-        "version" : "7.3.0"
+        "revision" : "539db4b16e3718b3a0ed4ca210421a6def8442b0"
       }
     },
     {
@@ -33,16 +24,7 @@
       "location" : "https://github.com/Harry-KNIGHT/StellarMoonKit",
       "state" : {
         "branch" : "main",
-        "revision" : "17f10e0116be97ffd014f406336d66fc0bd7e6cb"
-      }
-    },
-    {
-      "identity" : "swift-argument-parser",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-argument-parser",
-      "state" : {
-        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
-        "version" : "1.2.2"
+        "revision" : "c66a0708057499a8249cf200d7790a13f3c58cdb"
       }
     },
     {
@@ -52,15 +34,6 @@
       "state" : {
         "revision" : "467a3d17479887943ab917a379e62bbaff60ac8a",
         "version" : "2.1.1"
-      }
-    },
-    {
-      "identity" : "xcodeedit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/tomlokhorst/XcodeEdit",
-      "state" : {
-        "revision" : "cd466d6e8c5ffd2f2b61165d37b0646f09068e1e",
-        "version" : "2.9.0"
       }
     }
   ],
