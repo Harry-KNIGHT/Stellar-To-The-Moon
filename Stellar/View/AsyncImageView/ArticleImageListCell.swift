@@ -19,8 +19,6 @@ struct ArticleImageListCell: View {
 			ZStack(alignment: .bottomLeading) {
 				image
 					.resizable()
-					.frame(maxWidth: deviceSizeDivisedByTwo, maxHeight: deviceSizeDivisedByTwo)
-					.cornerRadius(0)
 					.accessibilityLabel("Image of \(article.title)")
 				if !isInFavoriteListView {
 					HStack {
@@ -33,9 +31,9 @@ struct ArticleImageListCell: View {
 					.padding(.top, 2)
 					.background(.linearGradient(colors: [.clear, .black.opacity(0.7)], startPoint: .top, endPoint: .center))
 				}
-
 			}
 			.border(isInFavoriteListView ? .clear : .black)
+			.frame(maxWidth: deviceSizeDivisedByTwo, maxHeight: deviceSizeDivisedByTwo)
 		} placeholder: {
 			ZStack {
 				RoundedRectangle(cornerRadius: 0)
@@ -53,5 +51,6 @@ struct ArticleImageListCell: View {
 struct ArticleImageListCell_Previews: PreviewProvider {
 	static var previews: some View {
 		ArticleImageListCell(article: .articleSample, isInFavoriteListView: false)
+			.previewLayout(.sizeThatFits)
 	}
 }

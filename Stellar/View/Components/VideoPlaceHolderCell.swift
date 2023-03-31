@@ -17,7 +17,7 @@ struct VideoPlaceHolderCell: View {
 		ZStack(alignment: .bottomLeading) {
 			ZStack {
 				RoundedRectangle(cornerRadius: 0)
-					.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
+
 					.foregroundStyle(linearGradient)
 				Image(systemName: "play.fill")
 					.foregroundStyle(.white)
@@ -36,11 +36,13 @@ struct VideoPlaceHolderCell: View {
 			.background(.linearGradient(colors: [.clear, .black.opacity(0.7)], startPoint: .top, endPoint: .center))
 		}
 		.border(.black)
+		.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
 	}
 }
 
 struct VideoPlaceHolderCell_Previews: PreviewProvider {
 	static var previews: some View {
 		VideoPlaceHolderCell(article: .articleSample)
+			.previewLayout(.sizeThatFits)
 	}
 }
