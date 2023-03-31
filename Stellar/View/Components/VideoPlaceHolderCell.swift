@@ -9,18 +9,19 @@ import SwiftUI
 import StellarMoonKit
 
 struct VideoPlaceHolderCell: View {
-	private let size = (deviceWidth / 2)
+
 	private let linearGradient = LinearGradient(colors: [Color(red: 237/255, green: 116/255, blue: 103/255), .red], startPoint: .top, endPoint: .bottom)
 	let article: Article
+	
 	var body: some View {
 		ZStack(alignment: .bottomLeading) {
 			ZStack {
 				RoundedRectangle(cornerRadius: 0)
-					.frame(width: size, height: size)
+					.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
 					.foregroundStyle(linearGradient)
 				Image(systemName: "play.fill")
 					.foregroundStyle(.white)
-					.font(.system(size: size / 2))
+					.font(.system(size: deviceSizeDivisedByTwo))
 					.shadow(radius: 5)
 			}
 			.accessibilityLabel("Video placeholder")

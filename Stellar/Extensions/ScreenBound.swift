@@ -7,10 +7,16 @@
 
 import SwiftUI
 
-// Extending view to get screen bounds
-extension View {
+public extension View {
 	func getRect() -> CGRect {
 		return UIScreen.main.bounds
 	}
-}
 
+	var deviceWidth: CGFloat {
+		UIScreen.main.bounds.width
+	}
+
+	var deviceSizeDivisedByTwo: CGFloat {
+		deviceWidth / 2
+	}
+}
