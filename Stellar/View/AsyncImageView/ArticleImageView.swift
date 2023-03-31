@@ -9,6 +9,7 @@ import SwiftUI
 import ActivityIndicatorView
 import StellarMoonKit
 import CachedAsyncImage
+import UIKit
 
 struct ArticleImageView: View {
 	let article: Article
@@ -17,17 +18,17 @@ struct ArticleImageView: View {
 	@Environment(\.colorScheme) private var colorScheme
 	
 	@State private var isLoadingVisible = true
-	
+
 	@State private var animate = false
 	var body: some View {
 		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
 			image
 				.resizable()
-				.scaledToFill()
+				.aspectRatio(contentMode: .fill)
+				.addPinchZoom()
 				.frame(
-					maxWidth: .infinity,
-					maxHeight: .infinity,
-					alignment: .top
+					maxWidth: getRect().width,
+					maxHeight: getRect().height
 				)
 				.accessibilityLabel(article.title)
 		} placeholder: {
