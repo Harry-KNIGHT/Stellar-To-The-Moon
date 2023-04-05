@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Stellar
+
+  Created by Elliot Knight on 31/03/2023.
+  
+*/
+
+// MARK: - Favorites
+
+"navigationTitle_favorites" = "Favorites";
+
+// MARK: - Homepage
+
+"navigationTitle_homepage" = "Stellar";
+
+

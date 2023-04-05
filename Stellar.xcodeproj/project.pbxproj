@@ -11,6 +11,7 @@
 		3C08D3602984537E0030D45B /* SearchDateArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */; };
 		3C08D3642985C4BA0030D45B /* GenerateRandomArticleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */; };
 		3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */; };
+		3C0F8FBE29D716FF001134B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0F8FBD29D716FF001134B5 /* Localizable.strings */; };
 		3C20C9F129C5A51A0045523A /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C20C9F029C5A51A0045523A /* Stickers.xcassets */; };
 		3C20C9F529C5A51A0045523A /* StellarStickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C20C9EE29C5A5190045523A /* StellarStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C266B9D2981BEC400A9A888 /* ShowRandomArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* ShowRandomArticleView.swift */; };
@@ -100,6 +101,7 @@
 		3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateArticleViewModel.swift; sourceTree = "<group>"; };
 		3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomArticleButton.swift; sourceTree = "<group>"; };
 		3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGridView.swift; sourceTree = "<group>"; };
+		3C0F8FBD29D716FF001134B5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3C20C9EE29C5A5190045523A /* StellarStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C20C9F029C5A51A0045523A /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		3C20C9F229C5A51A0045523A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 				3C03EADE2937EC190023EC26 /* FavoritesListView.swift */,
 			);
 			path = Lists;
+			sourceTree = "<group>";
+		};
+		3C0F8FBC29D716CF001134B5 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				3C0F8FBD29D716FF001134B5 /* Localizable.strings */,
+			);
+			name = Ressources;
 			sourceTree = "<group>";
 		};
 		3C20C9EF29C5A5190045523A /* StellarStickers */ = {
@@ -330,6 +340,7 @@
 				3C44F35B29AA82DC00E47CB1 /* Info.plist */,
 				3C5555D8289059880093122A /* View */,
 				3CBF0C43289134F300010691 /* ViewModel */,
+				3C0F8FBC29D716CF001134B5 /* Ressources */,
 				3C57F3352938A219001F74A0 /* Extensions */,
 				3C5555CC288F21440093122A /* README.md */,
 				3CDBA112288E759B00AB15C7 /* Assets.xcassets */,
@@ -562,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5555CD288F21440093122A /* README.md in Resources */,
+				3C0F8FBE29D716FF001134B5 /* Localizable.strings in Resources */,
 				3CDBA116288E759B00AB15C7 /* Preview Assets.xcassets in Resources */,
 				3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */,
 			);

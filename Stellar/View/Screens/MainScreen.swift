@@ -24,7 +24,7 @@ struct MainScreen: View {
 					ArticlesGridView(showFavoritesSheet: $showFavoritesSheet, showBirthdayPicker: $showBirthdayPicker)
 				}
 			}
-			.navigationTitle("Stellar")
+			.navigationTitle("navigationTitle_homepage")
 			.navigationBarTitleDisplayMode(.inline)
 			.onAppear {
 				articleVm.getArticles(to: Date.now)
