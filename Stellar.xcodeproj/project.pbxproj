@@ -22,6 +22,7 @@
 		3C44F35629AA826000E47CB1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F35529AA826000E47CB1 /* NotificationService.swift */; };
 		3C44F35929AA82AF00E47CB1 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 3C44F35829AA82AF00E47CB1 /* OneSignal */; };
 		3C46134C292A68320087214C /* BackgroundImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46134B292A68320087214C /* BackgroundImageCell.swift */; };
+		3C4B73CE29DF5FA600462FFB /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C4B73CD29DF5FA600462FFB /* StellarMoonKit */; };
 		3C5555CB288F12640093122A /* ArticleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* ArticleImageView.swift */; };
 		3C5555CD288F21440093122A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5555CC288F21440093122A /* README.md */; };
 		3C5555CF288FCDA30093122A /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CE288FCDA30093122A /* VideoView.swift */; };
@@ -46,7 +47,6 @@
 		3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4628913B5700010691 /* EmptyView.swift */; };
 		3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */; };
 		3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4D2891AA1D00010691 /* LoadingView.swift */; };
-		3CC4922E28BE5F4D00C0B89B /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */; };
 		3CC944B528B3A74800447BB6 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */; };
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
 		3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA110288E759A00AB15C7 /* ContentView.swift */; };
@@ -140,6 +140,7 @@
 		3CBF0C4628913B5700010691 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		3CBF0C4D2891AA1D00010691 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
+		3CCCAD6229DF5E780022E9A2 /* StellarMoonKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = StellarMoonKit; path = ../StellarMoonKit; sourceTree = "<group>"; };
 		3CDBA10B288E759A00AB15C7 /* Stellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDayAstronomyApp.swift; sourceTree = "<group>"; };
 		3CDBA110288E759A00AB15C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,7 +172,7 @@
 			files = (
 				3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */,
 				3C44F35929AA82AF00E47CB1 /* OneSignal in Frameworks */,
-				3CC4922E28BE5F4D00C0B89B /* StellarMoonKit in Frameworks */,
+				3C4B73CE29DF5FA600462FFB /* StellarMoonKit in Frameworks */,
 				3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +221,13 @@
 				3C44F34E29AA810E00E47CB1 /* Info.plist */,
 			);
 			path = StellarNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		3C4B73CC29DF5FA600462FFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3C5555D8289059880093122A /* View */ = {
@@ -297,6 +305,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3CCCAD6129DF5E780022E9A2 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				3CCCAD6229DF5E780022E9A2 /* StellarMoonKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		3CCF165E292A178F0037BB50 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,11 +328,13 @@
 		3CDBA102288E759A00AB15C7 = {
 			isa = PBXGroup;
 			children = (
+				3CCCAD6129DF5E780022E9A2 /* Packages */,
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
 				3CA91F062961B6730030069B /* StellarTests */,
 				3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */,
 				3C20C9EF29C5A5190045523A /* StellarStickers */,
 				3CDBA10C288E759A00AB15C7 /* Products */,
+				3C4B73CC29DF5FA600462FFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -483,9 +501,9 @@
 			name = Stellar;
 			packageProductDependencies = (
 				3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */,
-				3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */,
 				3C57F3312938A1DB001F74A0 /* CachedAsyncImage */,
 				3C44F35829AA82AF00E47CB1 /* OneSignal */,
+				3C4B73CD29DF5FA600462FFB /* StellarMoonKit */,
 			);
 			productName = NasaDayAstronomy;
 			productReference = 3CDBA10B288E759A00AB15C7 /* Stellar.app */;
@@ -529,7 +547,6 @@
 			mainGroup = 3CDBA102288E759A00AB15C7;
 			packageReferences = (
 				3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
-				3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */,
 				3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 				3C44F35729AA82AF00E47CB1 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
@@ -1069,14 +1086,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Harry-KNIGHT/StellarMoonKit";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1084,6 +1093,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3C44F35729AA82AF00E47CB1 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
 			productName = OneSignal;
+		};
+		3C4B73CD29DF5FA600462FFB /* StellarMoonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StellarMoonKit;
 		};
 		3C57F3312938A1DB001F74A0 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1094,11 +1107,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
 			productName = ActivityIndicatorView;
-		};
-		3CC4922D28BE5F4D00C0B89B /* StellarMoonKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3CC4922C28BE5F4D00C0B89B /* XCRemoteSwiftPackageReference "StellarMoonKit" */;
-			productName = StellarMoonKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

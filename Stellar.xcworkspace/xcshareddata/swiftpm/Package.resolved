@@ -19,15 +19,6 @@
       }
     },
     {
-      "identity" : "stellarmoonkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Harry-KNIGHT/StellarMoonKit",
-      "state" : {
-        "branch" : "main",
-        "revision" : "c66a0708057499a8249cf200d7790a13f3c58cdb"
-      }
-    },
-    {
       "identity" : "swiftui-cached-async-image",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lorenzofiamingo/swiftui-cached-async-image",
