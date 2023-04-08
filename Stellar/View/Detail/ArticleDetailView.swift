@@ -11,6 +11,8 @@ import StellarMoonKit
 
 struct ArticleDetailView: View {
 	public let article: Article
+	var isInFavoriteDetail: Bool
+
 	@State private var isSheetPresented = false
 
 	@EnvironmentObject var astronomyApi: DownloadImageViewModel
@@ -44,7 +46,7 @@ struct ArticleDetailView: View {
 				.background(.regularMaterial)
 			}
 		}
-		.background(BackgroundImageCell(article: article))
+		.background(BackgroundImageCell(article: article).opacity(isInFavoriteDetail ? 0.0 : 1.0))
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarTitle(article.title)
 	}
@@ -53,12 +55,12 @@ struct ArticleDetailView: View {
 struct ArticleDetailView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			ArticleDetailView(article: .articleSample)
+			ArticleDetailView(article: .articleSample, isInFavoriteDetail: true)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
-			ArticleDetailView(article: .articleSample, isShowingRandArticleGenration: true)
+			ArticleDetailView(article: .articleSample, isInFavoriteDetail: false, isShowingRandArticleGenration: true)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 				.environmentObject(SearchDateArticleViewModel())

@@ -13,7 +13,7 @@ struct FavoritesListView: View {
 	var body: some View {
 		List {
 			ForEach(favoriteVM.favoriteArticles, id: \.date) { article in
-				NavigationLink(destination: ArticleDetailView(article: article)) {
+				NavigationLink(destination: ArticleDetailView(article: article, isInFavoriteDetail: true)) {
 					RowCell(article: article, isInFavoriteListView: true)
 				}
 			}

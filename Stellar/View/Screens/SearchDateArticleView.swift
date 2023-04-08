@@ -14,7 +14,7 @@ struct SearchDateArticleView: View {
 	var body: some View {
 		NavigationView {
 			if let search = searchDateVM.article  {
-				ArticleDetailView(article: search, isShowingRandArticleGenration: true)
+				ArticleDetailView(article: search, isInFavoriteDetail: false, isShowingRandArticleGenration: true)
 			}
 		}
 		.onAppear {
