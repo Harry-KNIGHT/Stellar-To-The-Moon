@@ -45,7 +45,6 @@
 		3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */; };
 		3CBF0C452891371E00010691 /* FavoritesArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C442891371E00010691 /* FavoritesArticlesView.swift */; };
 		3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4628913B5700010691 /* EmptyView.swift */; };
-		3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */; };
 		3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4D2891AA1D00010691 /* LoadingView.swift */; };
 		3CC944B528B3A74800447BB6 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */; };
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
@@ -173,7 +172,6 @@
 				3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */,
 				3C44F35929AA82AF00E47CB1 /* OneSignal in Frameworks */,
 				3C4B73CE29DF5FA600462FFB /* StellarMoonKit in Frameworks */,
-				3CBF0C4C28917A7E00010691 /* ActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +498,6 @@
 			);
 			name = Stellar;
 			packageProductDependencies = (
-				3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */,
 				3C57F3312938A1DB001F74A0 /* CachedAsyncImage */,
 				3C44F35829AA82AF00E47CB1 /* OneSignal */,
 				3C4B73CD29DF5FA600462FFB /* StellarMoonKit */,
@@ -546,7 +543,6 @@
 			);
 			mainGroup = 3CDBA102288E759A00AB15C7;
 			packageReferences = (
-				3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 				3C44F35729AA82AF00E47CB1 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
@@ -1078,14 +1074,6 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/ActivityIndicatorView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1102,11 +1090,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
-		};
-		3CBF0C4B28917A7E00010691 /* ActivityIndicatorView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3CBF0C4A28917A7E00010691 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
-			productName = ActivityIndicatorView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

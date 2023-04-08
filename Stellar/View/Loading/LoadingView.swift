@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import ActivityIndicatorView
+
 struct LoadingView: View {
 	@State private var showLoadingIndicator = true
 	@EnvironmentObject var articleVm: ArticleViewModel
@@ -15,7 +15,7 @@ struct LoadingView: View {
 			VStack {
 				Text("Stellar is loading data")
 					.font(.title2.bold())
-				ActivityIndicatorView(isVisible: $showLoadingIndicator, type: .scalingDots())
+				ProgressView()
 					.frame(width: 50, height: 50.0)
 			}
 			.padding()

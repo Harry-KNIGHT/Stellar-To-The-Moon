@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import ActivityIndicatorView
-
 
 struct MainScreen: View {
 	@EnvironmentObject private var articleVm: ArticleViewModel

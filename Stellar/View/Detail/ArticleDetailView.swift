@@ -7,7 +7,6 @@
 
 import SwiftUI
 import UIKit
-import ActivityIndicatorView
 import StellarMoonKit
 
 struct ArticleDetailView: View {

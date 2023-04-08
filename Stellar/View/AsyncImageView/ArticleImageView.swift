@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ActivityIndicatorView
 import StellarMoonKit
 import CachedAsyncImage
 import UIKit

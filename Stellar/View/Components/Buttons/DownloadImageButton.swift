@@ -7,7 +7,6 @@
 
 import SwiftUI
 import StellarMoonKit
-import ActivityIndicatorView
 
 struct DownloadImageButton: View {
 	let article: Article

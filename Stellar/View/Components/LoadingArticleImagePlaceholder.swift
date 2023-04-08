@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ActivityIndicatorView
 
 struct LoadingArticleImagePlaceholder: View {
 	@Binding var isLoadingVisible: Bool
@@ -16,7 +15,7 @@ struct LoadingArticleImagePlaceholder: View {
 				.frame(minHeight: 200, maxHeight: 350)
 				.foregroundStyle(.regularMaterial)
 
-			ActivityIndicatorView(isVisible: $isLoadingVisible, type: .equalizer(count: 10))
+			ProgressView()
 				.frame(width: 100, height: 50)
 				.foregroundColor(.primary)
 				.accessibilityLabel("Loading image")
