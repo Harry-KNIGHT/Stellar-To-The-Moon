@@ -7,6 +7,7 @@
 
 import SwiftUI
 import OneSignal
+import StellarMoonKit
 
 @main
 struct NasaDayAstronomyApp: App {
@@ -16,31 +17,87 @@ struct NasaDayAstronomyApp: App {
 	@StateObject var searchDateArticleVM = SearchDateArticleViewModel()
 
 	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+	@State private var selectedRoute: AppRoute? = nil
 
-    var body: some Scene {
-        WindowGroup {
-            MainScreen()
-				.environmentObject(astronomyVM)
-				.environmentObject(articlesVM)
-				.environmentObject(favoriteVM)
-				.environmentObject(searchDateArticleVM)
-        }
-    }
+	var body: some Scene {
+		WindowGroup {
+			NavigationView {
+
+				MainScreen()
+					.environmentObject(astronomyVM)
+					.environmentObject(articlesVM)
+					.environmentObject(favoriteVM)
+					.environmentObject(searchDateArticleVM)
+					.fullScreenCover(item: $selectedRoute) { route in
+						switch route {
+						case .articleDetail(let article):
+							ArticleDetailView(article: article, isInFavoriteDetail: false)
+								.environmentObject(astronomyVM)
+								.environmentObject(articlesVM)
+								.environmentObject(favoriteVM)
+								.environmentObject(searchDateArticleVM)
+						}
+					}
+			}.onOpenURL { url in
+				handleUrl(url)
+			}
+		}
+	}
+
+	func getArticleById(_ id: String) -> Article? {
+		let articles: [Article] = articlesVM.articles
+
+		return  articles.first { $0.date == id }
+
+	}
+	func handleUrl(_ url: URL) {
+		// Analyse de l'URL et de la définition de la route sélectionnée.
+		// Exemple: myapp://articleDetail?id=123
+		guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: false),
+			  let host = components.host else {
+			return
+		}
+	// stellar://articleDetail?id=2023-04-01
+
+		switch host {
+		case "articleDetail":
+			if let id = components.queryItems?.first(where: { $0.name == "id" })?.value {
+				// Récupérer l'article correspondant à l'ID, puis définir la route sélectionnée.
+				// Remplacez `getArticleById(_:)` par la méthode appropriée pour récupérer un article en fonction de l'ID.
+				if let article = getArticleById(id) {
+					selectedRoute = .articleDetail(article)
+				}
+			}
+		default:
+			break
+		}
+	}
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-	   // Remove this method to stop OneSignal Debugging
-	   OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
+		// Remove this method to stop OneSignal Debugging
+		OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
 
-	   OneSignal.initWithLaunchOptions(launchOptions)
-	   OneSignal.setAppId("6b80052a-a147-45bb-bfc3-de331f2c33f6")
+		OneSignal.initWithLaunchOptions(launchOptions)
+		OneSignal.setAppId("6b80052a-a147-45bb-bfc3-de331f2c33f6")
 
-	   OneSignal.promptForPushNotifications(userResponse: { accepted in
-		 print("User accepted notification: \(accepted)")
-	   })
-	  // Set your customer userId
-	  // OneSignal.setExternalUserId("userId")
-	   return true
+		OneSignal.promptForPushNotifications(userResponse: { accepted in
+			print("User accepted notification: \(accepted)")
+		})
+		// Set your customer userId
+		// OneSignal.setExternalUserId("userId")
+		return true
+	}
+}
+
+enum AppRoute: Identifiable {
+	case articleDetail(Article)
+
+	var id: String {
+		switch self {
+		case .articleDetail(let article):
+			return article.title
+		}
 	}
 }

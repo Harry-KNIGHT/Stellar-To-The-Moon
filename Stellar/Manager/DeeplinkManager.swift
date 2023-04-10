@@ -19,3 +19,5 @@ class DeepLinkManager: ObservableObject {
 		}
 	}
 }
+
+// URL = stellar://article/23-02-2023
