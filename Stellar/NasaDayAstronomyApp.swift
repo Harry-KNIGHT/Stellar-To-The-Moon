@@ -44,12 +44,13 @@ struct NasaDayAstronomyApp: App {
 		}
 	}
 
-	func getArticleById(_ id: String) -> Article? {
+	func getArticleByDate(_ date: String) -> Article? {
 		let articles: [Article] = articlesVM.articles
 
-		return  articles.first { $0.date == id }
+		return  articles.first { $0.date == date }
 
 	}
+	
 	func handleUrl(_ url: URL) {
 		// Analyse de l'URL et de la définition de la route sélectionnée.
 		// Exemple: myapp://articleDetail?id=123
@@ -57,14 +58,14 @@ struct NasaDayAstronomyApp: App {
 			  let host = components.host else {
 			return
 		}
-	// stellar://articleDetail?id=2023-04-01
 
+		// stellar://article?date=2023-04-01
 		switch host {
-		case "articleDetail":
-			if let id = components.queryItems?.first(where: { $0.name == "id" })?.value {
+		case "article":
+			if let id = components.queryItems?.first(where: { $0.name == "date" })?.value {
 				// Récupérer l'article correspondant à l'ID, puis définir la route sélectionnée.
 				// Remplacez `getArticleById(_:)` par la méthode appropriée pour récupérer un article en fonction de l'ID.
-				if let article = getArticleById(id) {
+				if let article = getArticleByDate(id) {
 					selectedRoute = .articleDetail(article)
 				}
 			}
