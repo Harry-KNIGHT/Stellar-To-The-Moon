@@ -15,10 +15,10 @@ struct NasaDayAstronomyApp: App {
 	@StateObject var articlesVM = FetchArticlesViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
 	@StateObject var searchDateArticleVM = SearchDateArticleViewModel()
-
+	
 	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-	@State private var selectedRoute: AppRoute? = nil
-
+	@StateObject var deeplinkManager = DeepLinkManager()
+	
 	var body: some Scene {
 		WindowGroup {
 			NavigationView {
@@ -27,7 +27,8 @@ struct NasaDayAstronomyApp: App {
 					.environmentObject(articlesVM)
 					.environmentObject(favoriteVM)
 					.environmentObject(searchDateArticleVM)
-					.sheet(item: $selectedRoute) { route in
+					.environmentObject(deeplinkManager)
+					.sheet(item: $deeplinkManager.selectedRoute) { route in
 						switch route {
 						case .articleDetail(let article):
 							ArticleDetailView(article: article, isInFavoriteDetail: false)
@@ -35,55 +36,18 @@ struct NasaDayAstronomyApp: App {
 								.environmentObject(articlesVM)
 								.environmentObject(favoriteVM)
 								.environmentObject(searchDateArticleVM)
+								.environmentObject(deeplinkManager)
 						}
 					}
 					.navigationTitle("navigationTitle_homepage")
 					.navigationBarTitleDisplayMode(.inline)
 			}
 			.onOpenURL { url in
-				handleUrl(url)
+				deeplinkManager.handleUrl(url)
 			}
-		}
-	}
-
-	func getArticleByDate(_ date: String) -> Article? {
-		let articles: [Article] = articlesVM.articles
-
-		return  articles.first { $0.date == date }
-
-	}
-
-	func handleUrl(_ url: URL) {
-		// Analyse de l'URL et de la définition de la route sélectionnée.
-		// Exemple: myapp://articleDetail?id=123
-		guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: false),
-			  let host = components.host else {
-			return
-		}
-
-		// stellar://article?date=2023-04-01
-		switch host {
-		case "article":
-			if let id = components.queryItems?.first(where: { $0.name == "date" })?.value {
-				// Récupérer l'article correspondant à l'ID, puis définir la route sélectionnée.
-				// Remplacez `getArticleById(_:)` par la méthode appropriée pour récupérer un article en fonction de l'ID.
-				if let article = getArticleByDate(id) {
-					selectedRoute = .articleDetail(article)
-				}
+			.onDisappear {
+				deeplinkManager.removeSelectedRoute()
 			}
-		default:
-			break
-		}
-	}
-}
-
-enum AppRoute: Identifiable {
-	case articleDetail(Article)
-
-	var id: String {
-		switch self {
-		case .articleDetail(let article):
-			return article.title
 		}
 	}
 }
