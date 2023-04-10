@@ -22,13 +22,12 @@ struct NasaDayAstronomyApp: App {
 	var body: some Scene {
 		WindowGroup {
 			NavigationView {
-
 				MainScreen()
 					.environmentObject(astronomyVM)
 					.environmentObject(articlesVM)
 					.environmentObject(favoriteVM)
 					.environmentObject(searchDateArticleVM)
-					.fullScreenCover(item: $selectedRoute) { route in
+					.sheet(item: $selectedRoute) { route in
 						switch route {
 						case .articleDetail(let article):
 							ArticleDetailView(article: article, isInFavoriteDetail: false)
@@ -38,7 +37,10 @@ struct NasaDayAstronomyApp: App {
 								.environmentObject(searchDateArticleVM)
 						}
 					}
-			}.onOpenURL { url in
+					.navigationTitle("navigationTitle_homepage")
+					.navigationBarTitleDisplayMode(.inline)
+			}
+			.onOpenURL { url in
 				handleUrl(url)
 			}
 		}
@@ -50,7 +52,7 @@ struct NasaDayAstronomyApp: App {
 		return  articles.first { $0.date == date }
 
 	}
-	
+
 	func handleUrl(_ url: URL) {
 		// Analyse de l'URL et de la définition de la route sélectionnée.
 		// Exemple: myapp://articleDetail?id=123
@@ -75,6 +77,17 @@ struct NasaDayAstronomyApp: App {
 	}
 }
 
+enum AppRoute: Identifiable {
+	case articleDetail(Article)
+
+	var id: String {
+		switch self {
+		case .articleDetail(let article):
+			return article.title
+		}
+	}
+}
+
 class AppDelegate: NSObject, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 		// Remove this method to stop OneSignal Debugging
@@ -89,16 +102,5 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 		// Set your customer userId
 		// OneSignal.setExternalUserId("userId")
 		return true
-	}
-}
-
-enum AppRoute: Identifiable {
-	case articleDetail(Article)
-
-	var id: String {
-		switch self {
-		case .articleDetail(let article):
-			return article.title
-		}
 	}
 }
