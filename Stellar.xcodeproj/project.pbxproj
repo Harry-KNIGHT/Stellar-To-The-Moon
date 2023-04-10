@@ -622,6 +622,7 @@
 				3C44F35629AA826000E47CB1 /* NotificationService.swift in Sources */,
 				3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */,
 				3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */,
+				3C7F967B293A33D700B949DD /* CopyrightStyle.swift in Sources */,
 				3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
 				3C5555D3289058C50093122A /* MainScreen.swift in Sources */,
