@@ -9,23 +9,41 @@ import SwiftUI
 
 struct HeadbandsDetailActions: View {
 	let article: Article
+
+	private let shareLinkImage: Image = Image("StellarIcon")
+
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
 	@StateObject var favorites = FavoriteViewModel()
+	@StateObject var deeplinkManager = DeepLinkManager()
+
     var body: some View {
 		HStack {
 			Spacer()
 
-			AddFavoriteButtonCell(article: article)
-			Spacer()
+				AddFavoriteButtonCell(article: article)
+				Spacer()
 
-			DownloadImageButton(
-				article: article,
-				isImageDowloaded: $isImageDowloaded,
-				isDownloadingImage: $isDownloadingImage
-			)
-			Spacer()
+				DownloadImageButton(
+					article: article,
+					isImageDowloaded: $isImageDowloaded,
+					isDownloadingImage: $isDownloadingImage
+				)
+
+				Spacer()
+
+				if #available(iOS 16.0, *) {
+					ShareLink(
+						item: URL(string: "stellar://article?date=\(article.date)")!,
+						message: Text("Hey ! Check this beautiful photo on Stellar To The Moon !"),
+						preview: SharePreview("Stellar To The Moon", image: shareLinkImage)
+					) {
+						Image(systemName: "square.and.arrow.up")
+					}
+					Spacer()
+				}
 		}
+		.navigationButtonLabelStyle(.title)
     }
 }
 
