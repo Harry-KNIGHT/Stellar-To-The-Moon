@@ -14,6 +14,7 @@ struct HeadbandsDetailActions: View {
 
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
+	var isShowingRandArticleGenration: Bool = false
 	@StateObject var favorites = FavoriteViewModel()
 	@StateObject var deeplinkManager = DeepLinkManager()
 
@@ -32,7 +33,7 @@ struct HeadbandsDetailActions: View {
 
 				Spacer()
 
-				if #available(iOS 16.0, *) {
+			if #available(iOS 16.0, *), !isShowingRandArticleGenration {
 					ShareLink(
 						item: URL(string: "stellar://article?date=\(article.date)")!,
 						message: Text("Hey ! Check this beautiful photo on Stellar To The Moon !"),
@@ -49,10 +50,11 @@ struct HeadbandsDetailActions: View {
 
 struct HeadbandsDetailActions_Previews: PreviewProvider {
     static var previews: some View {
-        HeadbandsDetailActions(
+		HeadbandsDetailActions(
 			article: .articleSample,
 			isImageDowloaded: .constant(false),
-			isDownloadingImage: .constant(false)
+			isDownloadingImage: .constant(false),
+			isShowingRandArticleGenration: false
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())

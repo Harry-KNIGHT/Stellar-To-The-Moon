@@ -31,8 +31,7 @@ struct ArticlesGridView: View {
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				RandomArticleButtonCell(showBirthdayPicker: $showBirthdayPicker)
-
+				ShowRandomArticleView(showBirthdayPicker: $showBirthdayPicker, isShowingRandArticleGeneration: true)
 				if !articleVm.articles.isEmpty.self {
 					ShowFavSheetButtonCell(showFavoritesSheet: $showFavoritesSheet)
 				}

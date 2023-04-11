@@ -31,6 +31,7 @@ struct ArticleDetailView: View {
 				ArticleDetailBodyView(
 					article: article,
 					isOnRandomArticleGeneration: isOnRandomArticleGeneration,
+
 					isImageDownloading: $isImageDownloading,
 					isImageDownloaded: $isImageDownloaded
 				)
