@@ -15,12 +15,6 @@ final class DeepLinkManager: ObservableObject {
 	@Published var selectedArticleID: String?
 	@Published var selectedRoute: AppRoute? = nil
 
-	func getArticleByDate(_ date: String) -> Article? {
-		let articles: [Article] = articlesVM.articles
-
-		return  articles.first { $0.date == date }
-	}
-
 	func handleUrl(_ url: URL) {
 		// Analyse de l'URL et de la définition de la route sélectionnée.
 		// Exemple: stellar://article?date=2023-04-01
@@ -55,5 +49,9 @@ final class DeepLinkManager: ObservableObject {
 				return article.title
 			}
 		}
+	}
+
+	func getArticleByDate(_ date: String) -> Article? {
+		return articlesVM.articles.first { $0.date == date }
 	}
 }
