@@ -11,6 +11,7 @@ import StellarMoonKit
 final class DeepLinkManager: ObservableObject {
 
 	private var articlesVM = ArticleViewModel()
+	private let fetchDeeplinkArticleViewModel = FetchDeeplinkArticleViewModel()
 	
 	@Published var selectedArticleID: String?
 	@Published var selectedRoute: AppRoute? = nil
@@ -27,7 +28,7 @@ final class DeepLinkManager: ObservableObject {
 		case "article":
 			if let id = components.queryItems?.first(where: { $0.name == "date" })?.value {
 				// Récupérer l'article correspondant à l'ID, puis définir la route sélectionnée.
-				if let article = getArticleByDate(id) {
+				if let article = getArticleLocalyOrRemotely(id) {
 					selectedRoute = .articleDetail(article)
 				}
 			}
@@ -51,7 +52,17 @@ final class DeepLinkManager: ObservableObject {
 		}
 	}
 
-	func getArticleByDate(_ date: String) -> Article? {
+	func getArticleLocaly(_ date: String) -> Article? {
 		return articlesVM.articles.first { $0.date == date }
+	}
+
+	func getArticleLocalyOrRemotely(_ date: String) -> Article? {
+		if articlesVM.articles.map({ $0.date }).contains(date) {
+			return getArticleLocaly(date)
+		}
+
+		fetchDeeplinkArticleViewModel.fetchRemoteDeeplinkArticle(date)
+		guard let article = fetchDeeplinkArticleViewModel.deeplinkArticle else { return nil }
+		return article
 	}
 }
