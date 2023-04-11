@@ -52,17 +52,22 @@ final class DeepLinkManager: ObservableObject {
 		}
 	}
 
-	func getArticleLocaly(_ date: String) -> Article? {
+	private func getArticleLocaly(_ date: String) -> Article? {
 		return articlesVM.articles.first { $0.date == date }
 	}
 
+	private func getArticleRemotely(_ date: String) -> Article? {
+		fetchDeeplinkArticleViewModel.fetchRemoteDeeplinkArticle(date)
+
+		guard let remoteArticle = fetchDeeplinkArticleViewModel.deeplinkArticle else { return nil }
+		return remoteArticle
+	}
+
 	func getArticleLocalyOrRemotely(_ date: String) -> Article? {
+
 		if articlesVM.articles.map({ $0.date }).contains(date) {
 			return getArticleLocaly(date)
 		}
-
-		fetchDeeplinkArticleViewModel.fetchRemoteDeeplinkArticle(date)
-		guard let article = fetchDeeplinkArticleViewModel.deeplinkArticle else { return nil }
-		return article
+		return getArticleRemotely(date)
 	}
 }
