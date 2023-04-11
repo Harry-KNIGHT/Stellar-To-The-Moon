@@ -8,6 +8,9 @@
 import Foundation
 import StellarMoonKit
 
+// Unused at the moment, need to fix too much bugs with remote URL
+// Deeplink shering will not be possible on first releases.
+/*
 class FetchDeeplinkArticleViewModel: ObservableObject {
 	@Published public var deeplinkArticle: Article?
 
@@ -17,3 +20,4 @@ class FetchDeeplinkArticleViewModel: ObservableObject {
 		}
 	}
 }
+*/

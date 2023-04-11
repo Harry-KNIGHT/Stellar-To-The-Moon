@@ -11,7 +11,6 @@ import StellarMoonKit
 final class DeepLinkManager: ObservableObject {
 
 	private var articlesVM = ArticleViewModel()
-	private let fetchDeeplinkArticleViewModel = FetchDeeplinkArticleViewModel()
 	
 	@Published var selectedArticleID: String?
 	@Published var selectedRoute: AppRoute? = nil
@@ -28,7 +27,7 @@ final class DeepLinkManager: ObservableObject {
 		case "article":
 			if let id = components.queryItems?.first(where: { $0.name == "date" })?.value {
 				// Récupérer l'article correspondant à l'ID, puis définir la route sélectionnée.
-				if let article = getArticleLocalyOrRemotely(id) {
+				if let article = getArticleLocaly(id) {
 					selectedRoute = .articleDetail(article)
 				}
 			}
@@ -53,21 +52,25 @@ final class DeepLinkManager: ObservableObject {
 	}
 
 	private func getArticleLocaly(_ date: String) -> Article? {
+		guard articlesVM.articles.map({ $0.date }).contains(date) else { return nil }
 		return articlesVM.articles.first { $0.date == date }
 	}
-
-	private func getArticleRemotely(_ date: String) -> Article? {
-		fetchDeeplinkArticleViewModel.fetchRemoteDeeplinkArticle(date)
-
-		guard let remoteArticle = fetchDeeplinkArticleViewModel.deeplinkArticle else { return nil }
-		return remoteArticle
-	}
-
-	func getArticleLocalyOrRemotely(_ date: String) -> Article? {
-
-		if articlesVM.articles.map({ $0.date }).contains(date) {
-			return getArticleLocaly(date)
-		}
-		return getArticleRemotely(date)
-	}
 }
+
+//  Remote URL causing to much bugs, seeing if users use this feature
+//  for implement it on all the app
+//
+//	private func getArticleRemotely(_ date: String) -> Article? {
+//		fetchDeeplinkArticleViewModel.fetchRemoteDeeplinkArticle(date)
+//
+//		guard let remoteArticle = fetchDeeplinkArticleViewModel.deeplinkArticle else { return nil }
+//		return remoteArticle
+//	}
+//
+//	func getArticleLocalyOrRemotely(_ date: String) -> Article? {
+//
+//		if articlesVM.articles.map({ $0.date }).contains(date) {
+//			return getArticleLocaly(date)
+//		}
+//		return getArticleRemotely(date)
+//	}
