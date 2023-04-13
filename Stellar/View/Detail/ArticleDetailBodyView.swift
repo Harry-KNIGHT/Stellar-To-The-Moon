@@ -12,6 +12,7 @@ struct ArticleDetailBodyView: View {
 	let article: Article
 	@Binding var isImageDownloading: Bool
 	@Binding var isImageDownloaded: Bool
+	@Binding var showShareImage: Bool
 
     var body: some View {
 		VStack(alignment: .leading) {
@@ -19,7 +20,8 @@ struct ArticleDetailBodyView: View {
 				HeadbandsDetailActions(
 					article: article,
 					isImageDowloaded: $isImageDownloaded,
-					isDownloadingImage: $isImageDownloading
+					isDownloadingImage: $isImageDownloading,
+					showShareImage: $showShareImage
 				)
 				.padding(.vertical, 10)
 			}
@@ -43,7 +45,8 @@ struct ArticleDetailBodyView_Previews: PreviewProvider {
 		ArticleDetailBodyView(
 			article: .articleSample,
 			isImageDownloading: .constant(false),
-			isImageDownloaded: .constant(false)
+			isImageDownloaded: .constant(false),
+			showShareImage: .constant(false)
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())

@@ -18,6 +18,7 @@ struct ArticleDetailView: View {
 	@EnvironmentObject var astronomyApi: DownloadImageViewModel
 	@State private var isImageDownloaded = false
 	@State private var isImageDownloading = false
+	@State private var showShareImage = false
 
 	var isShowingRandArticleGenration = false
 	var body: some View {
@@ -39,7 +40,8 @@ struct ArticleDetailView: View {
 				ArticleDetailBodyView(
 					article: article,
 					isImageDownloading: $isImageDownloading,
-					isImageDownloaded: $isImageDownloaded
+					isImageDownloaded: $isImageDownloaded,
+					showShareImage: $showShareImage
 				)
 				.padding(.horizontal)
 				.padding(.bottom)
