@@ -25,4 +25,14 @@ class DownloadImageViewModel: ObservableObject {
 			throw ApiError.cantFetchImage
 		}
 	}
+	
+	func downloadImageForSharing(url: URL, completion: @escaping (UIImage?) -> Void) {
+		URLSession.shared.dataTask(with: url) { data, response, error in
+			guard let data = data, error == nil, let image = UIImage(data: data) else {
+				completion(nil)
+				return
+			}
+			completion(image)
+		}.resume()
+	}
 }

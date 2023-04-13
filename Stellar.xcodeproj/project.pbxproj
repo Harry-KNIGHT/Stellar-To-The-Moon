@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C03D00A29E89A490060FE4A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C03D00929E89A490060FE4A /* ActivityViewController.swift */; };
 		3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C03EADE2937EC190023EC26 /* FavoritesListView.swift */; };
 		3C08D3602984537E0030D45B /* SearchDateArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */; };
 		3C08D3642985C4BA0030D45B /* GenerateRandomArticleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */; };
@@ -96,6 +97,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C03D00929E89A490060FE4A /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		3C03EADE2937EC190023EC26 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
 		3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateArticleViewModel.swift; sourceTree = "<group>"; };
 		3C08D3632985C4BA0030D45B /* GenerateRandomArticleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomArticleButton.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 			children = (
 				3C5555D0289057E80093122A /* ArticleDetailView.swift */,
 				3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailActions.swift */,
+				3C03D00929E89A490060FE4A /* ActivityViewController.swift */,
 				3CB0ADCB29B4A74800261ECF /* ArticleDetailBodyView.swift */,
 			);
 			path = Detail;
@@ -646,6 +649,7 @@
 				3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */,
 				3CA718D0292965530075E0D5 /* AddFavoriteButtonCell.swift in Sources */,
 				3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */,
+				3C03D00A29E89A490060FE4A /* ActivityViewController.swift in Sources */,
 				3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */,
 				3CBF0C452891371E00010691 /* FavoritesArticlesView.swift in Sources */,
 				3CC944B528B3A74800447BB6 /* DownloadImageViewModel.swift in Sources */,

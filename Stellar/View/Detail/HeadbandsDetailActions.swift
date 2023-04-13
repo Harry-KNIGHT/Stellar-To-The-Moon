@@ -14,7 +14,10 @@ struct HeadbandsDetailActions: View {
 
 	@Binding var showShareImage: Bool
 
-    var body: some View {
+	@StateObject var downloadImageVm = DownloadImageViewModel()
+	@State var sharedImage: UIImage? = nil
+
+	var body: some View {
 		HStack {
 			Spacer()
 
@@ -29,24 +32,35 @@ struct HeadbandsDetailActions: View {
 			Spacer()
 
 			Button(action: {
-				self.showShareImage = true
+				Task {
+					guard let imageHdUrl = article.hdurl else { return }
+					guard let imageUrl = URL(string: imageHdUrl) else { return }
+					downloadImageVm.downloadImageForSharing(url: imageUrl) { image in
+						showShareImage = true
+						sharedImage = image
+					}
+				}
 			}, label: {
-				Image(systemName: "plus.circle")
+				Image(systemName: "square.and.arrow.up")
 			})
 
 			.navigationButtonLabelStyle(.title)
 			.sheet(isPresented: $showShareImage) {
-					   // Provide the items you want to share as an array, e.g., [yourImage]
-					   ActivityViewController(activityItems: ["Sharing this image from my app", UIImage(systemName: "photo")!])
-				   }
+				// Provide the items you want to share as an array, e.g., [yourImage]
+				if let image = sharedImage {
+					ActivityViewController(activityItems: ["\(article.title)", image])
+				} else {
+					Text("Error: Image not available for sharing.")
+				}
+			}
 			Spacer()
 		}
-    }
+	}
 }
 
 struct HeadbandsDetailActions_Previews: PreviewProvider {
-    static var previews: some View {
-        HeadbandsDetailActions(
+	static var previews: some View {
+		HeadbandsDetailActions(
 			article: .articleSample,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false),
@@ -54,19 +68,5 @@ struct HeadbandsDetailActions_Previews: PreviewProvider {
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())
-    }
-}
-
-struct ActivityViewController: UIViewControllerRepresentable {
-	let activityItems: [Any]
-	let applicationActivities: [UIActivity]? = nil
-
-	func makeUIViewController(context: Context) -> UIActivityViewController {
-		let controller = UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
-		return controller
-	}
-
-	func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
-		// No updates needed
 	}
 }
