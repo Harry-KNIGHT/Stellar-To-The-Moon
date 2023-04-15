@@ -32,14 +32,7 @@ struct HeadbandsDetailActions: View {
 			Spacer()
 
 			Button(action: {
-				Task {
-					guard let imageHdUrl = article.hdurl else { return }
-					guard let imageUrl = URL(string: imageHdUrl) else { return }
-					downloadImageVm.downloadImageForSharing(url: imageUrl) { image in
-						showShareImage = true
-						sharedImage = image
-					}
-				}
+				downloadImageThenShowSheet(url: article.hdurl, showSharedImage: &showShareImage)
 			}, label: {
 				Image(systemName: "square.and.arrow.up")
 			})
@@ -54,6 +47,17 @@ struct HeadbandsDetailActions: View {
 				}
 			}
 			Spacer()
+		}
+	}
+
+	func downloadImageThenShowSheet(url: String?, showSharedImage: inout Bool) {
+		Task {
+			guard let imageHdUrl = article.hdurl else { return }
+			let image = try await downloadImageVm.getImage(from: imageHdUrl)
+			sharedImage = image
+			if self.sharedImage != nil {
+				showShareImage = true
+			}
 		}
 	}
 }
