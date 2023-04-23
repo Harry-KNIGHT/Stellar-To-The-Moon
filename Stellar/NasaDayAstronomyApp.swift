@@ -19,7 +19,7 @@ struct NasaDayAstronomyApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreen()
 				.environmentObject(astronomyVM)
 				.environmentObject(articlesVM)
 				.environmentObject(favoriteVM)

@@ -48,7 +48,6 @@
 		3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4D2891AA1D00010691 /* LoadingView.swift */; };
 		3CC944B528B3A74800447BB6 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */; };
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
-		3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA110288E759A00AB15C7 /* ContentView.swift */; };
 		3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA112288E759B00AB15C7 /* Assets.xcassets */; };
 		3CDBA116288E759B00AB15C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */; };
 		3CEC397F29A6A4E7009CEB2A /* HeadbandsDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailActions.swift */; };
@@ -142,7 +141,6 @@
 		3CCCAD6229DF5E780022E9A2 /* StellarMoonKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = StellarMoonKit; path = ../StellarMoonKit; sourceTree = "<group>"; };
 		3CDBA10B288E759A00AB15C7 /* Stellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDayAstronomyApp.swift; sourceTree = "<group>"; };
-		3CDBA110288E759A00AB15C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3CDBA112288E759B00AB15C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadbandsDetailActions.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 		3C5555D8289059880093122A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3CDBA110288E759A00AB15C7 /* ContentView.swift */,
 				3CFD11692892E1E200F14F65 /* Screens */,
 				3C03EAE02937EC540023EC26 /* Lists */,
 				3C03EADD2937E97A0023EC26 /* Grids */,
@@ -632,7 +629,6 @@
 				3C44F35629AA826000E47CB1 /* NotificationService.swift in Sources */,
 				3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */,
 				3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */,
-				3CDBA111288E759A00AB15C7 /* ContentView.swift in Sources */,
 				3C7F967B293A33D700B949DD /* CopyrightStyle.swift in Sources */,
 				3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */,
 				3CA718CC292950CC0075E0D5 /* VideoPlaceHolderCell.swift in Sources */,
