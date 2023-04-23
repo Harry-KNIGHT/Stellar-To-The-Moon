@@ -15,7 +15,7 @@ struct ArticleImageListCell: View {
 	var isInFavoriteListView: Bool
 
 	var body: some View {
-		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
+		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
 			ZStack(alignment: .bottomLeading) {
 				image
 					.resizable()

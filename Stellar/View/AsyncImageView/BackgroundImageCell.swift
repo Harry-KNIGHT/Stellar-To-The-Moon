@@ -13,7 +13,7 @@ struct BackgroundImageCell: View {
 	let article: Article
 	@Environment(\.colorScheme) var colorScheme
     var body: some View {
-		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
+		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
 			image
 				.resizable()
 				.scaledToFill()

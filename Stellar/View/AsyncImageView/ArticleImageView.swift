@@ -20,7 +20,7 @@ struct ArticleImageView: View {
 
 	@State private var animate = false
 	var body: some View {
-		CachedAsyncImage(url: URL(string: article.url), urlCache: .imageCache) { image in
+		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
 			image
 				.resizable()
 				.aspectRatio(contentMode: .fill)
