@@ -26,7 +26,7 @@ struct ArticleDetailView: View {
 				if article.mediaType == .image {
 					ArticleImageView(article: article)
 				} else {
-					VideoView(videoID: article.url)
+					VideoView(videoID: article.mediaUrl)
 						.frame(minHeight: 450, maxHeight: 800)
 						.accessibilityLabel("Video of the article")
 				}

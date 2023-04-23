@@ -35,19 +35,13 @@ struct DownloadImageButton: View {
 		Task {
 			do {
 				self.isDownloadingImage = true
-
-				guard let urlString = article.hdurl else {
-					throw ApiError.urlNotFound
-				}
 				Task {
 					let imageSaver = ImageSaver()
-					let image = try await articleDetailVm.getImage(from: urlString)
+					let image = try await articleDetailVm.getImage(from: article.mediaUrl)
 					imageSaver.writeToPhotoAlbum(image: image)
 					self.isImageDowloaded = true
 					self.isDownloadingImage = false
 				}
-			} catch {
-				print("Error \(error.localizedDescription)")
 			}
 		}
 	}

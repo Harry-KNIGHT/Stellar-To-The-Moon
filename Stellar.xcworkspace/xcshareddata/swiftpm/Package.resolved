@@ -6,7 +6,16 @@
       "location" : "https://github.com/OneSignal/OneSignal-XCFramework",
       "state" : {
         "branch" : "main",
-        "revision" : "539db4b16e3718b3a0ed4ca210421a6def8442b0"
+        "revision" : "091f9c572b4a522f93cd1d4f2f524e3818a253f2"
+      }
+    },
+    {
+      "identity" : "stellarmoonkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Harry-KNIGHT/StellarMoonKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "624a5c7462b9f8a99fdbc63c633bbba639b8b25d"
       }
     },
     {
