@@ -28,6 +28,7 @@ struct MainScreen: View {
 				articleVm.getArticles(to: Date.now)
 			}
 		}
+		.navigationViewStyle(StackNavigationViewStyle())
 	}
 }
 
