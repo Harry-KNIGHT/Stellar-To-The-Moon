@@ -17,7 +17,6 @@ struct VideoPlaceHolderCell: View {
 		ZStack(alignment: .bottomLeading) {
 			ZStack {
 				RoundedRectangle(cornerRadius: 0)
-
 					.foregroundStyle(linearGradient)
 				Image(systemName: "play.fill")
 					.foregroundStyle(.white)

@@ -16,9 +16,10 @@ struct MainScreen: View {
 	var body: some View {
 		NavigationView {
 			VStack {
-				if articleVm.articles.isEmpty {
+				switch articleVm.articles.isEmpty {
+				case true:
 					LoadingView()
-				} else {
+				default:
 					ArticlesGridView(showFavoritesSheet: $showFavoritesSheet, showBirthdayPicker: $showBirthdayPicker)
 				}
 			}

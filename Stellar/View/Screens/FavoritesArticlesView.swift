@@ -12,9 +12,11 @@ struct FavoritesArticlesView: View {
 	var body: some View {
 		NavigationView {
 			VStack {
-				if favoriteVM.favoriteArticles.isEmpty {
+				switch favoriteVM.favoriteArticles.isEmpty {
+				case true:
 					EmptyView()
-				} else {
+				default:
+
 					FavoritesListView()
 				}
 			}
