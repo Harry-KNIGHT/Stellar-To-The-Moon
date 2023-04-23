@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
-import UIKit
 import StellarMoonKit
+import UIKit
 
 struct ArticleDetailView: View {
 	public let article: Article
 	var isInFavoriteDetail: Bool
+
+	// MARK: Properties
+	var isShowingRandArticleGenration = false
 
 	@State private var isSheetPresented = false
 
@@ -19,13 +22,15 @@ struct ArticleDetailView: View {
 	@State private var isImageDownloaded = false
 	@State private var isImageDownloading = false
 
-	var isShowingRandArticleGenration = false
+	// MARK: - Body
+
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			VStack(spacing: 0) {
-				if article.mediaType == .image {
+				switch article.mediaType {
+				case .image:
 					ArticleImageView(article: article)
-				} else {
+				case .video:
 					VideoView(videoID: article.mediaUrl)
 						.frame(minHeight: 450, maxHeight: 800)
 						.accessibilityLabel("Video of the article")
@@ -51,6 +56,8 @@ struct ArticleDetailView: View {
 		.navigationBarTitle(article.title)
 	}
 }
+
+// MARK: - Preview
 
 struct ArticleDetailView_Previews: PreviewProvider {
 	static var previews: some View {
