@@ -12,7 +12,7 @@ class SearchDateArticleViewModel: ObservableObject {
 	@Published var article: Article?
 
 	@MainActor
-	func generateOneArticle()  {
+	func generateOneArticle() {
 		Task {
 			do {
 				article = try await GenerateRandomArticleApi.generateOneArticle()
