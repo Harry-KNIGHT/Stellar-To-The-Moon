@@ -679,12 +679,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarStickers/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Stellar;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 3.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -698,12 +699,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarStickers/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Stellar;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 3.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -717,7 +719,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = StellarNotificationServiceExtension/StellarNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
@@ -729,6 +731,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 3.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -743,7 +746,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = StellarNotificationServiceExtension/StellarNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
@@ -755,6 +758,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 3.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -939,7 +943,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Stellar/Stellar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -958,6 +962,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -974,7 +979,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Stellar/Stellar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 59;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -993,6 +998,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
