@@ -22,7 +22,7 @@ struct ArticlesGridView: View {
 		ScrollView {
 			LazyVGrid(columns:  twoColumns, spacing: 0) {
 				ForEach(articleVm.articles.reversed()) { article in
-					NavigationLink(destination: ArticleDetailView(article: article, isInFavoriteDetail: false)) {
+					NavigationLink(destination: ArticleDetailView(article: article)) {
 						if article.mediaType == .image {
 							ArticleImageListCell(article: article, isInFavoriteListView: false)
 						} else {

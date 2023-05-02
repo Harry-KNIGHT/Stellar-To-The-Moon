@@ -20,17 +20,6 @@ struct ArticleImageListCell: View {
 				image
 					.resizable()
 					.accessibilityLabel("Image of \(article.title)")
-				if !isInFavoriteListView {
-					HStack {
-						Text(article.title)
-							.lineLimit(1)
-							.foregroundStyle(.white)
-							.padding(.leading, 4)
-						Spacer()
-					}
-					.padding(.top, 2)
-					.background(.linearGradient(colors: [.clear, .black.opacity(0.7)], startPoint: .top, endPoint: .center))
-				}
 			}
 			.border(isInFavoriteListView ? .clear : .black)
 			.frame(maxWidth: deviceSizeDivisedByTwo, maxHeight: deviceSizeDivisedByTwo)

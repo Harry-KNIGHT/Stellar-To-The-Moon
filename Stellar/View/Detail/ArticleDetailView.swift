@@ -11,7 +11,6 @@ import UIKit
 
 struct ArticleDetailView: View {
 	public let article: Article
-	var isInFavoriteDetail: Bool
 
 	// MARK: Properties
 	var isShowingRandArticleGenration = false
@@ -51,7 +50,6 @@ struct ArticleDetailView: View {
 				.background(.regularMaterial)
 			}
 		}
-		.background(BackgroundImageCell(article: article).opacity(isInFavoriteDetail ? 0.0 : 1.0))
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarTitle(article.title)
 	}
@@ -62,12 +60,12 @@ struct ArticleDetailView: View {
 struct ArticleDetailView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			ArticleDetailView(article: .articleSample, isInFavoriteDetail: true)
+			ArticleDetailView(article: .articleSample)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
-			ArticleDetailView(article: .articleSample, isInFavoriteDetail: false, isShowingRandArticleGenration: true)
+			ArticleDetailView(article: .articleSample, isShowingRandArticleGenration: true)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 				.environmentObject(SearchDateArticleViewModel())
