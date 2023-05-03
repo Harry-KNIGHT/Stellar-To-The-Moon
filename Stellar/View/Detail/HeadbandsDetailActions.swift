@@ -19,13 +19,15 @@ struct HeadbandsDetailActions: View {
 
 			AddFavoriteButtonCell(article: article)
 			Spacer()
-
-			DownloadImageButton(
-				article: article,
-				isImageDowloaded: $isImageDowloaded,
-				isDownloadingImage: $isDownloadingImage
-			)
-			Spacer()
+			
+			if article.mediaType == .image {
+				DownloadImageButton(
+					article: article,
+					isImageDowloaded: $isImageDowloaded,
+					isDownloadingImage: $isDownloadingImage
+				)
+				Spacer()
+			}
 
 			if isOnRandomArticleGeneration {
 				GenerateRandomArticleButton()
@@ -38,14 +40,14 @@ struct HeadbandsDetailActions: View {
 struct HeadbandsDetailActions_Previews: PreviewProvider {
     static var previews: some View {
         HeadbandsDetailActions(
-			article: .articleSample,
+			article: .imageArticleSample,
 			isOnRandomArticleGeneration: false, isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())
 		HeadbandsDetailActions(
-			article: .articleSample,
+			article: .imageArticleSample,
 			isOnRandomArticleGeneration: true,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)

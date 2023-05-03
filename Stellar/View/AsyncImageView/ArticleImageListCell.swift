@@ -39,7 +39,7 @@ struct ArticleImageListCell: View {
 
 struct ArticleImageListCell_Previews: PreviewProvider {
 	static var previews: some View {
-		ArticleImageListCell(article: .articleSample, isInFavoriteListView: false)
+		ArticleImageListCell(article: .imageArticleSample, isInFavoriteListView: false)
 			.previewLayout(.sizeThatFits)
 	}
 }

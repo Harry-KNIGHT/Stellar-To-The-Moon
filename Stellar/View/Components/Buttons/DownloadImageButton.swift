@@ -49,7 +49,7 @@ struct DownloadImageButton: View {
 struct DownloadImageButton_Previews: PreviewProvider {
 	static var previews: some View {
 		DownloadImageButton(
-			article: .articleSample,
+			article: .imageArticleSample,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)

@@ -9,7 +9,7 @@ import SwiftUI
 import StellarMoonKit
 
 struct CopyrightStyle: ViewModifier {
-	let article: Article = .articleSample
+	let article: Article = .imageArticleSample
 
 	func body(content: Content) -> some View {
 		content
