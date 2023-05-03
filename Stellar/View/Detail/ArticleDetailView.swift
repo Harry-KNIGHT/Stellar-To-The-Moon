@@ -33,7 +33,7 @@ struct ArticleDetailView: View {
 					VideoView(videoID: article.mediaUrl)
 						.scaledToFit()
 						.accessibilityLabel("Video of the article")
-						.padding(.bottom)
+					randomImageOnVideoView()
 				}
 
 
@@ -48,6 +48,16 @@ struct ArticleDetailView: View {
 		}
 		.navigationBarTitleDisplayMode(.inline)
 		.navigationBarTitle(article.title)
+	}
+
+	private func randomImageOnVideoView() -> some View {
+		return HStack {
+			Spacer()
+			Spacer()
+			GenerateRandomArticleButton()
+			Spacer()
+		}
+		.padding(.vertical)
 	}
 }
 
