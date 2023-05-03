@@ -50,9 +50,9 @@ struct RowCell: View {
 
 struct RowCell_Previews: PreviewProvider {
 	static var previews: some View {
-		RowCell(article: .articleSample, isInFavoriteListView: false)
+		RowCell(article: .imageArticleSample, isInFavoriteListView: false)
 			.previewLayout(.sizeThatFits)
-		RowCell(article: .articleSample, isInFavoriteListView: true)
+		RowCell(article: .imageArticleSample, isInFavoriteListView: true)
 			.previewLayout(.sizeThatFits)
 			.preferredColorScheme(.dark)
 	}

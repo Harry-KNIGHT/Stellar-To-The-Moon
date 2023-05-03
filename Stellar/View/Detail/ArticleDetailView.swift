@@ -54,12 +54,12 @@ struct ArticleDetailView: View {
 struct ArticleDetailView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			ArticleDetailView(article: .articleSample)
+			ArticleDetailView(article: .imageArticleSample)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
-			ArticleDetailView(article: .articleSample, isOnRandomArticleGeneration: true)
+			ArticleDetailView(article: .imageArticleSample, isOnRandomArticleGeneration: true)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 				.environmentObject(SearchDateArticleViewModel())

@@ -41,7 +41,7 @@ struct VideoPlaceHolderCell: View {
 
 struct VideoPlaceHolderCell_Previews: PreviewProvider {
 	static var previews: some View {
-		VideoPlaceHolderCell(article: .articleSample)
+		VideoPlaceHolderCell(article: .imageArticleSample)
 			.previewLayout(.sizeThatFits)
 	}
 }

@@ -44,7 +44,7 @@ struct ArticleDetailBodyView: View {
 struct ArticleDetailBodyView_Previews: PreviewProvider {
     static var previews: some View {
 		ArticleDetailBodyView(
-			article: .articleSample,
+			article: .imageArticleSample,
 			isOnRandomArticleGeneration: false,
 			isImageDownloading: .constant(false),
 			isImageDownloaded: .constant(false)
