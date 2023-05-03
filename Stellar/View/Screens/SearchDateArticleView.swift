@@ -19,7 +19,9 @@ struct SearchDateArticleView: View {
 			}
 		}
 		.onAppear {
-			searchDateVM.generateOneArticle()
+			if searchDateVM.article == nil {
+				searchDateVM.generateOneArticle()
+			}
 		}
 	}
 }
