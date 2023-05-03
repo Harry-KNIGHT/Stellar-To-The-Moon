@@ -28,7 +28,7 @@ struct ArticleDetailBodyView: View {
 			
 			VStack(alignment: .leading, spacing: 10) {
 				Text(article.explanation)
-					.fontWeight(.medium)
+					.font(.title3)
 					.multilineTextAlignment(.leading)
 					.textSelection(.enabled)
 					.accessibilityLabel(article.explanation)
