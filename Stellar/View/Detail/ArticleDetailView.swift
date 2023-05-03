@@ -32,8 +32,8 @@ struct ArticleDetailView: View {
 				case .video:
 					VideoView(videoID: article.mediaUrl)
 						.scaledToFit()
-						.frame(height: 300)
 						.accessibilityLabel("Video of the article")
+						.padding(.bottom)
 				}
 
 
@@ -61,7 +61,7 @@ struct ArticleDetailView_Previews: PreviewProvider {
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
-			ArticleDetailView(article: .imageArticleSample, isOnRandomArticleGeneration: true)
+			ArticleDetailView(article: .videoArticleSample, isOnRandomArticleGeneration: true)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 				.environmentObject(SearchDateArticleViewModel())
