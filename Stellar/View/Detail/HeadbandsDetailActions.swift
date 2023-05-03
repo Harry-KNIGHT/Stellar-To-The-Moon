@@ -20,14 +20,14 @@ struct HeadbandsDetailActions: View {
 			AddFavoriteButtonCell(article: article)
 			Spacer()
 			
-			if article.mediaType == .image {
-				DownloadImageButton(
-					article: article,
-					isImageDowloaded: $isImageDowloaded,
-					isDownloadingImage: $isDownloadingImage
-				)
-				Spacer()
-			}
+
+			DownloadImageButton(
+				article: article,
+				isImageDowloaded: $isImageDowloaded,
+				isDownloadingImage: $isDownloadingImage
+			)
+			Spacer()
+
 
 			if isOnRandomArticleGeneration {
 				GenerateRandomArticleButton()

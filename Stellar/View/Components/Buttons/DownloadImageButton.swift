@@ -17,7 +17,12 @@ struct DownloadImageButton: View {
 
 	var body: some View {
 		Button(action: {
-			downloadImage(article: article, isDownloadingImage: isDownloadingImage, isImageDowloaded: isImageDowloaded)
+			switch article.mediaType {
+			case .image:
+				downloadImage(article: article, isDownloadingImage: isDownloadingImage, isImageDowloaded: isImageDowloaded)
+			case .video:
+				downloadImageVM.downloadImageToCameraRoll(article.mediaUrl)
+			}
 		}, label: {
 			if isDownloadingImage {
 				ProgressView()
