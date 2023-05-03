@@ -13,13 +13,9 @@ struct GenerateRandomArticleButton: View {
 		Button(action: {
 			generateArticleVM.generateOneArticle()
 		}, label: {
-			Text("Next image")
-				.font(.title3)
-				.fontWeight(.semibold)
-				.frame(maxWidth: .infinity)
+			Image(systemName: "forward")
 		})
-		.buttonStyle(.borderedProminent)
-		.shadow(radius: 3)
+		.navigationButtonLabelStyle(.title)
     }
 }
 

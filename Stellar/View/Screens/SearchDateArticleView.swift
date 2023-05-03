@@ -10,11 +10,12 @@ import SwiftUI
 struct SearchDateArticleView: View {
 	@EnvironmentObject private var searchDateVM: SearchDateArticleViewModel
 	@ObservedObject private var articlesVM = ArticleViewModel()
+	@EnvironmentObject private var favoritesVM: FavoriteViewModel
 
 	var body: some View {
 		NavigationView {
 			if let search = searchDateVM.article  {
-				ArticleDetailView(article: search, isShowingRandArticleGenration: true)
+				ArticleDetailView(article: search, isOnRandomArticleGeneration: true)
 			}
 		}
 		.onAppear {
@@ -29,6 +30,7 @@ struct SearchDateArticleView_Previews: PreviewProvider {
 			SearchDateArticleView()
 				.environmentObject(SearchDateArticleViewModel())
 				.environmentObject(ArticleViewModel())
+				.environmentObject(FavoriteViewModel())
 		}
 	}
 }

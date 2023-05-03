@@ -10,14 +10,17 @@ import StellarMoonKit
 
 struct ArticleDetailBodyView: View {
 	let article: Article
+	let isOnRandomArticleGeneration: Bool
 	@Binding var isImageDownloading: Bool
 	@Binding var isImageDownloaded: Bool
+
 
     var body: some View {
 		VStack(alignment: .leading) {
 			if article.mediaType == .image {
 				HeadbandsDetailActions(
 					article: article,
+					isOnRandomArticleGeneration: isOnRandomArticleGeneration,
 					isImageDowloaded: $isImageDownloaded,
 					isDownloadingImage: $isImageDownloading
 				)
@@ -42,6 +45,7 @@ struct ArticleDetailBodyView_Previews: PreviewProvider {
     static var previews: some View {
 		ArticleDetailBodyView(
 			article: .articleSample,
+			isOnRandomArticleGeneration: false,
 			isImageDownloading: .constant(false),
 			isImageDownloaded: .constant(false)
 		)

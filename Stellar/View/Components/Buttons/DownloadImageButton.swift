@@ -30,7 +30,6 @@ struct DownloadImageButton: View {
 		.navigationButtonLabelStyle(.title)
 	}
 
-
 	func downloadImage(article: Article, isDownloadingImage: Bool, isImageDowloaded: Bool) {
 		Task {
 			do {

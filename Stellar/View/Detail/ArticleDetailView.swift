@@ -13,7 +13,7 @@ struct ArticleDetailView: View {
 	public let article: Article
 
 	// MARK: Properties
-	var isShowingRandArticleGenration = false
+	var isOnRandomArticleGeneration = false
 
 	@State private var isSheetPresented = false
 
@@ -35,19 +35,13 @@ struct ArticleDetailView: View {
 						.accessibilityLabel("Video of the article")
 				}
 
-				if isShowingRandArticleGenration {
-					GenerateRandomArticleButton()
-						.padding(5)
-				}
-
 				ArticleDetailBodyView(
 					article: article,
+					isOnRandomArticleGeneration: isOnRandomArticleGeneration,
 					isImageDownloading: $isImageDownloading,
 					isImageDownloaded: $isImageDownloaded
 				)
 				.padding(.horizontal)
-				.padding(.bottom)
-				.background(.regularMaterial)
 			}
 		}
 		.navigationBarTitleDisplayMode(.inline)
@@ -65,7 +59,7 @@ struct ArticleDetailView_Previews: PreviewProvider {
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
-			ArticleDetailView(article: .articleSample, isShowingRandArticleGenration: true)
+			ArticleDetailView(article: .articleSample, isOnRandomArticleGeneration: true)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 				.environmentObject(SearchDateArticleViewModel())

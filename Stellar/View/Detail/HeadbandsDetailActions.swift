@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HeadbandsDetailActions: View {
 	let article: Article
+	var isOnRandomArticleGeneration: Bool
+
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
     var body: some View {
@@ -24,6 +26,11 @@ struct HeadbandsDetailActions: View {
 				isDownloadingImage: $isDownloadingImage
 			)
 			Spacer()
+
+			if isOnRandomArticleGeneration {
+				GenerateRandomArticleButton()
+				Spacer()
+			}
 		}
     }
 }
@@ -32,6 +39,14 @@ struct HeadbandsDetailActions_Previews: PreviewProvider {
     static var previews: some View {
         HeadbandsDetailActions(
 			article: .articleSample,
+			isOnRandomArticleGeneration: false, isImageDowloaded: .constant(false),
+			isDownloadingImage: .constant(false)
+		)
+		.environmentObject(DownloadImageViewModel())
+		.environmentObject(FavoriteViewModel())
+		HeadbandsDetailActions(
+			article: .articleSample,
+			isOnRandomArticleGeneration: true,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
