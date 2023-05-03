@@ -17,15 +17,15 @@ struct ArticleDetailBodyView: View {
 
     var body: some View {
 		VStack(alignment: .leading) {
-			if article.mediaType == .image {
-				HeadbandsDetailActions(
-					article: article,
-					isOnRandomArticleGeneration: isOnRandomArticleGeneration,
-					isImageDowloaded: $isImageDownloaded,
-					isDownloadingImage: $isImageDownloading
-				)
-				.padding(.vertical, 10)
-			}
+			
+			HeadbandsDetailActions(
+				article: article,
+				isOnRandomArticleGeneration: isOnRandomArticleGeneration,
+				isImageDowloaded: $isImageDownloaded,
+				isDownloadingImage: $isImageDownloading
+			)
+			.padding(.vertical, 10)
+			
 			VStack(alignment: .leading, spacing: 10) {
 				Text(article.explanation)
 					.fontWeight(.medium)

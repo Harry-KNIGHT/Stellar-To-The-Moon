@@ -64,5 +64,12 @@ struct ArticleDetailView_Previews: PreviewProvider {
 				.environmentObject(FavoriteViewModel())
 				.environmentObject(SearchDateArticleViewModel())
 		}
+
+		NavigationView {
+			ArticleDetailView(article: .videoArticleSample, isOnRandomArticleGeneration: true)
+				.environmentObject(DownloadImageViewModel())
+				.environmentObject(FavoriteViewModel())
+				.environmentObject(SearchDateArticleViewModel())
+		}
 	}
 }
