@@ -31,9 +31,11 @@ struct ArticleDetailView: View {
 					ArticleImageView(article: article)
 				case .video:
 					VideoView(videoID: article.mediaUrl)
-						.frame(minHeight: 450, maxHeight: 800)
+						.scaledToFit()
+						.frame(height: 300)
 						.accessibilityLabel("Video of the article")
 				}
+
 
 				ArticleDetailBodyView(
 					article: article,
@@ -54,12 +56,12 @@ struct ArticleDetailView: View {
 struct ArticleDetailView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			ArticleDetailView(article: .articleSample)
+			ArticleDetailView(article: .imageArticleSample)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
-			ArticleDetailView(article: .articleSample, isOnRandomArticleGeneration: true)
+			ArticleDetailView(article: .imageArticleSample, isOnRandomArticleGeneration: true)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 				.environmentObject(SearchDateArticleViewModel())

@@ -38,14 +38,14 @@ struct HeadbandsDetailActions: View {
 struct HeadbandsDetailActions_Previews: PreviewProvider {
     static var previews: some View {
         HeadbandsDetailActions(
-			article: .articleSample,
+			article: .imageArticleSample,
 			isOnRandomArticleGeneration: false, isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())
 		HeadbandsDetailActions(
-			article: .articleSample,
+			article: .imageArticleSample,
 			isOnRandomArticleGeneration: true,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)

@@ -28,6 +28,6 @@ struct BackgroundImageCell: View {
 
 struct BackgroundImageCell_Previews: PreviewProvider {
     static var previews: some View {
-		BackgroundImageCell(article: .articleSample)
+		BackgroundImageCell(article: .imageArticleSample)
     }
 }

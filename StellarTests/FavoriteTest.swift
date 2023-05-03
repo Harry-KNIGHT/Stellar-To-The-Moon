@@ -27,14 +27,14 @@ final class FavoriteTest: XCTestCase {
 	}
 
 	func test_addFavorite() throws {
-		let _ = favoriteVM.favoriteArticles.append(.articleSample)
+		let _ = favoriteVM.favoriteArticles.append(..imageArticleSample)
 
 		XCTAssertEqual(favoriteVM.favoriteArticles.count, 1)
 		XCTAssertFalse(favoriteVM.favoriteArticles.isEmpty)
 	}
 
 	func test_removeFavorite() throws {
-		let _ = favoriteVM.favoriteArticles.append(.articleSample)
+		let _ = favoriteVM.favoriteArticles.append(..imageArticleSample)
 
 		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
 		XCTAssertTrue(favoriteVM.favoriteArticles.isEmpty)
@@ -42,14 +42,14 @@ final class FavoriteTest: XCTestCase {
 
 	func test_addOrDeletFavorite() throws {
 		// Add astronomy article sample on the array
-		let _: Void = favoriteVM.addOrDeletFavorite(article: .articleSample)
-		XCTAssertTrue(favoriteVM.favoriteArticles.contains(.articleSample))
+		let _: Void = favoriteVM.addOrDeletFavorite(article: ..imageArticleSample)
+		XCTAssertTrue(favoriteVM.favoriteArticles.contains(..imageArticleSample))
 		XCTAssertEqual(favoriteVM.favoriteArticles.count, 1)
 		XCTAssertNotEqual(favoriteVM.favoriteArticles.count, 10)
 
 		// Remove astronomy article sample from the array
-		let _: Void = favoriteVM.addOrDeletFavorite(article: .articleSample)
-		XCTAssertFalse(favoriteVM.favoriteArticles.contains(.articleSample))
+		let _: Void = favoriteVM.addOrDeletFavorite(article: ..imageArticleSample)
+		XCTAssertFalse(favoriteVM.favoriteArticles.contains(..imageArticleSample))
 		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
 		XCTAssertNotEqual(favoriteVM.favoriteArticles.count, 5)
 	}

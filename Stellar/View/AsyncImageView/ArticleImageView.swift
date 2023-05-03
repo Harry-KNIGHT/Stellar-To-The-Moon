@@ -38,7 +38,7 @@ struct ArticleImageView: View {
 
 struct AstronomyImageView_Previews: PreviewProvider {
 	static var previews: some View {
-		ArticleImageView(article: .articleSample)
+		ArticleImageView(article: .imageArticleSample)
 			.environmentObject(DownloadImageViewModel())
 	}
 }
