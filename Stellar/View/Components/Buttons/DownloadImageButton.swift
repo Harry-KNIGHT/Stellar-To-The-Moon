@@ -21,7 +21,9 @@ struct DownloadImageButton: View {
 			case .image:
 				downloadImage(article: article, isDownloadingImage: isDownloadingImage, isImageDowloaded: isImageDowloaded)
 			case .video:
-				downloadImageVM.downloadImageToCameraRoll(article.mediaUrl)
+				Task {
+					try await downloadImageVM.downloadImageToCameraRoll(article.mediaUrl)
+				}
 			}
 		}, label: {
 			if isDownloadingImage {

@@ -10,7 +10,7 @@ import UIKit
 import StellarMoonKit
 import PhotosUI
 
-class DownloadImageViewModel: ObservableObject {
+final class DownloadImageViewModel: ObservableObject {
 	func getImage(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
 			throw ApiError.urlNotFound
@@ -27,24 +27,42 @@ class DownloadImageViewModel: ObservableObject {
 		}
 	}
 
-	func downloadImageToCameraRoll(_ articleMediaUrl: String) {
+	enum DownloadError: Error {
+		case invalidUrl
+		case downloadFailed
+		case writeToFileFailed
+		case assetCreationFailed
+	}
 
-		DispatchQueue.global(qos: .background).async {
-			if let url = URL(string: articleMediaUrl),
-				let urlData = NSData(contentsOf: url) {
-				let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
-				let filePath="\(documentsPath)/tempFile.mp4"
-				DispatchQueue.main.async {
-					urlData.write(toFile: filePath, atomically: true)
-					PHPhotoLibrary.shared().performChanges({
-						PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: filePath))
-					}) { completed, error in
-						if completed {
-							print("Video is saved!")
-						}
-					}
-				}
+	func downloadImageToCameraRoll(_ articleMediaUrl: String) async throws {
+		guard let url = URL(string: articleMediaUrl) else {
+			throw DownloadError.invalidUrl
+		}
+
+		let (data, response) = try await URLSession.shared.data(from: url)
+
+		guard let httpResponse = response as? HTTPURLResponse,
+			  (200...299).contains(httpResponse.statusCode) else {
+			throw DownloadError.downloadFailed
+		}
+
+		let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+		let filePath = "\(documentsPath)/tempFile.mp4"
+
+		do {
+			try data.write(to: URL(fileURLWithPath: filePath))
+		} catch {
+			throw DownloadError.writeToFileFailed
+		}
+
+		do {
+			try await PHPhotoLibrary.shared().performChanges {
+				let request = PHAssetCreationRequest.forAsset()
+				request.addResource(with: .video, fileURL: URL(fileURLWithPath: filePath), options: .none)
 			}
+		} catch {
+			print(error.localizedDescription)
+			throw DownloadError.assetCreationFailed
 		}
 	}
 }
