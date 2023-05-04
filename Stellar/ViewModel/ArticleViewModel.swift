@@ -28,10 +28,10 @@ class ArticleViewModel: ObservableObject {
 		}
 	}
 
-	@MainActor func getArticles(from hundredDayBefore: Int64 = Date().millisecondsSince1970, to today: Date) {
+	@MainActor func getArticles() {
 		Task {
 			do {
-				articles = try await FetchArticlesApi.fetchAstronomiesObject(from: hundredDayBefore, to: today)
+				articles = try await FetchArticlesApi.fetchArticles()
 				save()
 			} catch {
 				print("Error \(error.localizedDescription)")
