@@ -27,7 +27,7 @@ struct DownloadImageButton: View {
 				Image(systemName: "square.and.arrow.down")
 			}
 		})
-		.navigationButtonLabelStyle(.title)
+		.customButtonStyle(.title)
 	}
 
 	func downloadImage(article: Article, isDownloadingImage: Bool, isImageDowloaded: Bool) {

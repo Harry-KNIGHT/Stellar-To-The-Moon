@@ -15,7 +15,7 @@
 		3C20C9F129C5A51A0045523A /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C20C9F029C5A51A0045523A /* Stickers.xcassets */; };
 		3C20C9F529C5A51A0045523A /* StellarStickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C20C9EE29C5A5190045523A /* StellarStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C266B9D2981BEC400A9A888 /* RandomArticleButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* RandomArticleButtonCell.swift */; };
-		3C266B9F2981C06500A9A888 /* NavigationButtonLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */; };
+		3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */; };
 		3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */; };
 		3C44F34D29AA810E00E47CB1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F34C29AA810E00E47CB1 /* NotificationService.swift */; };
 		3C44F35129AA810E00E47CB1 /* StellarNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -104,7 +104,7 @@
 		3C20C9F029C5A51A0045523A /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		3C20C9F229C5A51A0045523A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C266B9C2981BEC400A9A888 /* RandomArticleButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArticleButtonCell.swift; sourceTree = "<group>"; };
-		3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonLabelStyle.swift; sourceTree = "<group>"; };
+		3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageListCell.swift; sourceTree = "<group>"; };
 		3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C44F34C29AA810E00E47CB1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 		3C7F9677293A32D500B949DD /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				3C266B9E2981C06500A9A888 /* NavigationButtonLabelStyle.swift */,
+				3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */,
 				3CF9A87A29D4C7BD009A8DBB /* PinchZoom.swift */,
 			);
 			path = ViewModifiers;
@@ -625,7 +625,7 @@
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
 				3C5555D3289058C50093122A /* MainScreen.swift in Sources */,
 				3CEC397F29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift in Sources */,
-				3C266B9F2981C06500A9A888 /* NavigationButtonLabelStyle.swift in Sources */,
+				3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */,
 				3CB0ADCC29B4A74800261ECF /* ArticleDetailBodyView.swift in Sources */,
 				3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,

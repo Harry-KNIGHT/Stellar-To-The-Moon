@@ -17,7 +17,7 @@ struct AddFavoriteButtonCell: View {
 			favoriteVM.addOrDeletFavorite(article: article)
 		}, label: {
 			Image(systemName: favoriteVM.isArticleIsInFavorites(article) ? "star.fill" : "star")
-				.navigationButtonLabelStyle(.title)
+				.customButtonStyle(.title)
 		})
 		.accessibilityLabel("Add this article to favorites")
 	}

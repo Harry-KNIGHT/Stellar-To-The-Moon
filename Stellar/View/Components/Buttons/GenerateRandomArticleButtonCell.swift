@@ -15,7 +15,7 @@ struct GenerateRandomArticleButtonCell: View {
 		}, label: {
 			Image(systemName: "forward")
 		})
-		.navigationButtonLabelStyle(.title)
+		.customButtonStyle(.title)
     }
 }
 
