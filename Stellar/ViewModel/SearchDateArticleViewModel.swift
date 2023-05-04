@@ -1,5 +1,5 @@
 //
-//  SearchDateArticleViewModel.swift
+//  SearchDateFetchArticlesViewModel.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 27/01/2023.

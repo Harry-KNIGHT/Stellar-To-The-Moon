@@ -36,7 +36,7 @@ struct DownloadImageButton: View {
 				self.isDownloadingImage = true
 				Task {
 					let imageSaver = ImageSaver()
-					let image = try await articleDetailVm.getImage(from: article.mediaUrl)
+					let image = try await articleDetailVm.downloadImageToCameraRoll(from: article.mediaUrl)
 					imageSaver.writeToPhotoAlbum(image: image)
 					self.isImageDowloaded = true
 					self.isDownloadingImage = false

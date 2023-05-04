@@ -1,5 +1,5 @@
 //
-//  ArticleViewModel.swift
+//  FetchArticlesViewModel.swift
 //  NasaDayAstronomy
 //
 //  Created by Elliot Knight on 26/07/2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 @preconcurrency import StellarMoonKit
 
-class ArticleViewModel: ObservableObject {
+class FetchArticlesViewModel: ObservableObject {
 	@Published var articles: [Article]
 
 	init() {

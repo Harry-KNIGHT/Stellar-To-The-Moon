@@ -10,7 +10,7 @@ import UIKit
 import StellarMoonKit
 
 class DownloadImageViewModel: ObservableObject {
-	func getImage(from url: String) async throws -> UIImage {
+	func downloadImageToCameraRoll(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
 			throw ApiError.urlNotFound
 		}

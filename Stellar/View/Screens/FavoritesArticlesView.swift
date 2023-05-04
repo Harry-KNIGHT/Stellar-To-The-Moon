@@ -29,7 +29,7 @@ struct FavoritesArticlesView_Previews: PreviewProvider {
 	static var previews: some View {
 		FavoritesArticlesView()
 			.environmentObject(FavoriteViewModel())
-			.environmentObject(ArticleViewModel())
+			.environmentObject(FetchArticlesViewModel())
 	}
 }
 

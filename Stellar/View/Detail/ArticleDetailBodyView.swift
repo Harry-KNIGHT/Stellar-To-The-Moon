@@ -18,7 +18,7 @@ struct ArticleDetailBodyView: View {
     var body: some View {
 		VStack(alignment: .leading) {
 			
-			HeadbandsDetailActions(
+			HeadbandsDetailButtonsView(
 				article: article,
 				isOnRandomArticleGeneration: isOnRandomArticleGeneration,
 				isImageDowloaded: $isImageDownloaded,

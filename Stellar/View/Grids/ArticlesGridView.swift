@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArticlesGridView: View {
-	@EnvironmentObject var articleVm: ArticleViewModel
+	@EnvironmentObject var articleVm: FetchArticlesViewModel
 
 	private let twoColumns = [
 		GridItem(.flexible(), spacing: 0),
@@ -34,7 +34,7 @@ struct ArticlesGridView: View {
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				ShowRandomArticleView(showBirthdayPicker: $showBirthdayPicker)
+				RandomArticleButtonCell(showBirthdayPicker: $showBirthdayPicker)
 
 				if !articleVm.articles.isEmpty.self {
 					ShowFavSheetButtonCell(showFavoritesSheet: $showFavoritesSheet)
@@ -52,7 +52,7 @@ struct ArticlesGridView_Previews: PreviewProvider {
 				showFavoritesSheet: .constant(false),
 				showBirthdayPicker: .constant(false)
 			)
-			.environmentObject(ArticleViewModel())
+			.environmentObject(FetchArticlesViewModel())
 		}
 	}
 }

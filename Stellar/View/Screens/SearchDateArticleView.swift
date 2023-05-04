@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchDateArticleView: View {
 	@EnvironmentObject private var searchDateVM: SearchDateArticleViewModel
-	@ObservedObject private var articlesVM = ArticleViewModel()
+	@ObservedObject private var articlesVM = FetchArticlesViewModel()
 	@EnvironmentObject private var favoritesVM: FavoriteViewModel
 
 	var body: some View {
@@ -31,7 +31,7 @@ struct SearchDateArticleView_Previews: PreviewProvider {
 		NavigationView {
 			SearchDateArticleView()
 				.environmentObject(SearchDateArticleViewModel())
-				.environmentObject(ArticleViewModel())
+				.environmentObject(FetchArticlesViewModel())
 				.environmentObject(FavoriteViewModel())
 		}
 	}

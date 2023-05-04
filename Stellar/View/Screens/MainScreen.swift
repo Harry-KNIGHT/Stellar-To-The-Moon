@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainScreen: View {
-	@EnvironmentObject private var articleVm: ArticleViewModel
+	@EnvironmentObject private var articleVm: FetchArticlesViewModel
 	@State private var showFavoritesSheet = false
 	@State private var showLoadingIndicator = true
 	@State private var showBirthdayPicker = false
@@ -36,7 +36,7 @@ struct MainScreen: View {
 struct AstronomyImageGrid_Previews: PreviewProvider {
 	static var previews: some View {
 		MainScreen()
-			.environmentObject(ArticleViewModel())
+			.environmentObject(FetchArticlesViewModel())
 			.environmentObject(FavoriteViewModel())
 			.environmentObject(SearchDateArticleViewModel())
 			.environmentObject(DownloadImageViewModel())
