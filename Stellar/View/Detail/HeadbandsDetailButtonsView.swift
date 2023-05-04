@@ -1,5 +1,5 @@
 //
-//  HeadbandsDetailActions.swift
+//  HeadbandsDetailButtonsView.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 22/02/2023.
@@ -7,7 +7,7 @@
 import StellarMoonKit
 import SwiftUI
 
-struct HeadbandsDetailActions: View {
+struct HeadbandsDetailButtonsView: View {
 	let article: Article
 	var isOnRandomArticleGeneration: Bool
 
@@ -30,23 +30,23 @@ struct HeadbandsDetailActions: View {
 			}
 
 			if isOnRandomArticleGeneration {
-				GenerateRandomArticleButton()
+				GenerateRandomArticleButtonCell()
 				Spacer()
 			}
 		}
     }
 }
 
-struct HeadbandsDetailActions_Previews: PreviewProvider {
+struct HeadbandsDetailButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-        HeadbandsDetailActions(
+		HeadbandsDetailButtonsView(
 			article: .imageArticleSample,
 			isOnRandomArticleGeneration: false, isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())
-		HeadbandsDetailActions(
+		HeadbandsDetailButtonsView(
 			article: .imageArticleSample,
 			isOnRandomArticleGeneration: true,
 			isImageDowloaded: .constant(false),

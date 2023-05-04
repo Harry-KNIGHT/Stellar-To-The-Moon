@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoadingView: View {
 	@State private var showLoadingIndicator = true
-	@EnvironmentObject var articleVm: ArticleViewModel
+	@EnvironmentObject var articleVm: FetchArticlesViewModel
     var body: some View {
 		ZStack {
 			VStack {
@@ -34,6 +34,6 @@ struct LoadingView: View {
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingView()
-			.environmentObject(ArticleViewModel())
+			.environmentObject(FetchArticlesViewModel())
     }
 }

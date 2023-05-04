@@ -1,5 +1,5 @@
 //
-//  ShowRandomArticleView.swift
+//  RandomArticleButtonCell.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 25/01/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShowRandomArticleView: View {
+struct RandomArticleButtonCell: View {
 	@Binding var showBirthdayPicker: Bool
 
     var body: some View {
@@ -15,7 +15,7 @@ struct ShowRandomArticleView: View {
 			showBirthdayPicker.toggle()
 		}, label: {
 			Image(systemName: "shuffle.circle.fill")
-				.navigationButtonLabelStyle()
+				.customButtonStyle()
 		})
 		.sheet(isPresented: $showBirthdayPicker) {
 			SearchDateArticleView()
@@ -23,8 +23,8 @@ struct ShowRandomArticleView: View {
     }
 }
 
-struct ShowRandomArticleView_Previews: PreviewProvider {
+struct RandomArticleButtonCell_Previews: PreviewProvider {
     static var previews: some View {
-		ShowRandomArticleView(showBirthdayPicker: .constant(false))
+		RandomArticleButtonCell(showBirthdayPicker: .constant(false))
     }
 }

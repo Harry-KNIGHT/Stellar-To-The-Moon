@@ -11,7 +11,7 @@ import OneSignal
 @main
 struct NasaDayAstronomyApp: App {
 	@StateObject var astronomyVM = DownloadImageViewModel()
-	@StateObject var articlesVM = ArticleViewModel()
+	@StateObject var articlesVM = FetchArticlesViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
 	@StateObject var searchDateArticleVM = SearchDateArticleViewModel()
 
