@@ -53,4 +53,28 @@ final class FavoriteTest: XCTestCase {
 		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
 		XCTAssertNotEqual(favoriteVM.favoriteArticles.count, 5)
 	}
+
+	func test_given_arrayWithOneArticle_when_deletIt_then_articleArrayIsEmpty() {
+
+		// GIVEN
+		favoriteVM.addOrDeletFavorite(article: .imageArticleSample)
+
+		// WHEN
+		favoriteVM.addOrDeletFavorite(article: .imageArticleSample)
+
+		// THEN
+		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
+	}
+
+	func test_given_addArticle_when_deletAttOssets_then_arrayIsEmpty() {
+		// GIVEN
+		favoriteVM.favoriteArticles = [.imageArticleSample, .videoArticleSample]
+
+		// WHEN
+		let indexToRemove = IndexSet([0])
+
+		favoriteVM.deletFavorite(at: indexToRemove)
+
+		XCTAssertEqual(favoriteVM.favoriteArticles.count, 1)
+	}
 }
