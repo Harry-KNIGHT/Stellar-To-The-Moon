@@ -26,7 +26,7 @@ struct LoadingView: View {
 			.accessibilityLabel("Stellar is loading data, please wait.")
 		}
 		.onAppear {
-			articleVm.getArticles(to: Date.now)
+			articleVm.getArticles()
 		}
     }
 }

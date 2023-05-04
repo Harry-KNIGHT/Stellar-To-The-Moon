@@ -26,7 +26,7 @@ struct MainScreen: View {
 			.navigationTitle("navigationTitle_homepage")
 			.navigationBarTitleDisplayMode(.inline)
 			.onAppear {
-				articleVm.getArticles(to: Date.now)
+				articleVm.getArticles()
 			}
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
