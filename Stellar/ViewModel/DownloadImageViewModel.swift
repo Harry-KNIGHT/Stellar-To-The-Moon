@@ -34,7 +34,7 @@ final class DownloadImageViewModel: ObservableObject {
 		case assetCreationFailed
 	}
 
-	func downloadImageToCameraRoll(_ articleMediaUrl: String) async throws {
+	func downloadVideoToCameraRoll(_ articleMediaUrl: String) async throws {
 		guard let url = URL(string: articleMediaUrl) else {
 			throw DownloadError.invalidUrl
 		}
