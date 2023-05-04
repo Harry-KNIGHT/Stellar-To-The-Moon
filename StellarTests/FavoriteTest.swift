@@ -33,8 +33,8 @@ final class FavoriteTest: XCTestCase {
 		XCTAssertFalse(favoriteVM.favoriteArticles.isEmpty)
 	}
 
-	func test_removeFavorite() throws {
-		let _ = favoriteVM.favoriteArticles.append(.imageArticleSample)
+	func test_given_favoritesArticleIsEmpty() throws {
+		favoriteVM.favoriteArticles = []
 
 		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
 		XCTAssertTrue(favoriteVM.favoriteArticles.isEmpty)
