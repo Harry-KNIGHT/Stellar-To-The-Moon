@@ -17,11 +17,8 @@ class SearchDateArticleViewModel: ObservableObject {
 			do {
 				let fetchedArticle = try await GenerateRandomArticleApi.generateOneArticle()
 				fetchAgainIfArticleMediaTypeIsVideo(fetchedArticle: fetchedArticle)
-
 			} catch {
-				DispatchQueue.main.async {
-					print(error)
-				}
+				throw ApiError.cantFetchImage
 			}
 		}
 	}
