@@ -1,5 +1,5 @@
 //
-//  FavoriteTest.swift
+//  FavoritesViewModelTests.swift
 //  StellarTests
 //
 //  Created by Elliot Knight on 01/01/2023.
@@ -9,7 +9,7 @@ import XCTest
 import StellarMoonKit
 @testable import Stellar
 
-final class FavoriteTest: XCTestCase {
+final class FavoritesViewModelTests: XCTestCase {
 	var favoriteVM: FavoriteViewModel!
     override func setUpWithError() throws {
 		favoriteVM = FavoriteViewModel()
@@ -20,11 +20,6 @@ final class FavoriteTest: XCTestCase {
     override func tearDownWithError() throws {
 		favoriteVM = nil
     }
-
-	func test_emptyFavorite() throws {
-		XCTAssertEqual(favoriteVM.favoriteArticles.count, 0)
-		XCTAssertTrue(favoriteVM.favoriteArticles.isEmpty)
-	}
 
 	func test_given_initWithNoSavedData_when_arrayIsEmpty_then_keepEmptyArray() {
 
