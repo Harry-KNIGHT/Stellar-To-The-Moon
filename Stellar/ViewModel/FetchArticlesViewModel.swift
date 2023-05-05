@@ -31,7 +31,9 @@ class FetchArticlesViewModel: ObservableObject {
 	@MainActor func getArticles() {
 		Task {
 			do {
-				articles = try await FetchArticlesApi.fetchArticles()
+				let fetchedArticles = try await FetchArticlesApi.fetchArticles()
+				let filteredArticles = fetchedArticles.filter { $0.mediaType == .image }
+				articles = filteredArticles
 				save()
 			} catch {
 				print("Error \(error.localizedDescription)")
