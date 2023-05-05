@@ -7,38 +7,46 @@
 import StellarMoonKit
 import SwiftUI
 
+// MARK: - View
+
 struct HeadbandsDetailButtonsView: View {
+
+	// MARK: Properties
+
 	let article: Article
 	var isOnRandomArticleGeneration: Bool
 
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
-    var body: some View {
+
+	var body: some View {
 		HStack {
 			Spacer()
 
 			AddFavoriteButtonCell(article: article)
 			Spacer()
 			
-			if article.mediaType == .image {
-				DownloadImageButton(
-					article: article,
-					isImageDowloaded: $isImageDowloaded,
-					isDownloadingImage: $isDownloadingImage
-				)
-				Spacer()
-			}
+
+			DownloadImageButton(
+				article: article,
+				isImageDowloaded: $isImageDowloaded,
+				isDownloadingImage: $isDownloadingImage
+			)
+			Spacer()
+
 
 			if isOnRandomArticleGeneration {
 				GenerateRandomArticleButtonCell()
 				Spacer()
 			}
 		}
-    }
+	}
 }
 
+// MARK: - Preview
+
 struct HeadbandsDetailButtonsView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		HeadbandsDetailButtonsView(
 			article: .imageArticleSample,
 			isOnRandomArticleGeneration: false, isImageDowloaded: .constant(false),
@@ -54,5 +62,5 @@ struct HeadbandsDetailButtonsView_Previews: PreviewProvider {
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())
-    }
+	}
 }

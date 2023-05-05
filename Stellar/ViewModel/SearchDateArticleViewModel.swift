@@ -15,11 +15,25 @@ class SearchDateArticleViewModel: ObservableObject {
 	func generateOneArticle() {
 		Task {
 			do {
-				article = try await GenerateRandomArticleApi.generateOneArticle()
+				let fetchedArticle = try await GenerateRandomArticleApi.generateOneArticle()
+				fetchAgainIfArticleMediaTypeIsVideo(fetchedArticle: fetchedArticle)
+
 			} catch {
 				DispatchQueue.main.async {
 					print(error)
 				}
+			}
+		}
+	}
+
+	@MainActor
+	private func fetchAgainIfArticleMediaTypeIsVideo(fetchedArticle: Article) {
+		Task {
+			switch fetchedArticle.mediaType {
+			case .video:
+				generateOneArticle()
+			case .image:
+				article = fetchedArticle
 			}
 		}
 	}

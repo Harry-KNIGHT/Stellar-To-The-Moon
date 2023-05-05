@@ -31,11 +31,17 @@ class FetchArticlesViewModel: ObservableObject {
 	@MainActor func getArticles() {
 		Task {
 			do {
-				articles = try await FetchArticlesApi.fetchArticles()
-				save()
+				let fetchedArticles = try await FetchArticlesApi.fetchArticles()
+				filterFetchedArticles(fetchedArticles: fetchedArticles)
 			} catch {
 				print("Error \(error.localizedDescription)")
 			}
 		}
+	}
+
+	private func filterFetchedArticles(fetchedArticles: [Article]) {
+		let filteredArticles = fetchedArticles.filter { $0.mediaType == .image }
+		articles = filteredArticles
+		save()
 	}
 }
