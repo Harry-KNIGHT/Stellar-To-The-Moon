@@ -15,16 +15,12 @@ struct RowCell: View {
 
 	var body: some View {
 		HStack(alignment: .center, spacing: 10) {
-			if article.mediaType == .image {
-				if isInFavoriteListView {
-					ArticleImageListCell(article: article, isInFavoriteListView: isInFavoriteListView)
-						.frame(width: 90, height: 90)
-						.cornerRadius(10)
-				} else {
-					ArticleImageListCell(article: article, isInFavoriteListView: isInFavoriteListView)
-				}
+			if isInFavoriteListView {
+				ArticleImageListCell(article: article, isInFavoriteListView: isInFavoriteListView)
+					.frame(width: 90, height: 90)
+					.cornerRadius(10)
 			} else {
-				VideoPlaceHolderCell(article: article)
+				ArticleImageListCell(article: article, isInFavoriteListView: isInFavoriteListView)
 			}
 			VStack(alignment: .leading, spacing: 3) {
 				Text(article.title)

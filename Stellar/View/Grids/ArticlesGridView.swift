@@ -23,11 +23,8 @@ struct ArticlesGridView: View {
 			LazyVGrid(columns:  twoColumns, spacing: 0) {
 				ForEach(articleVm.articles.reversed()) { article in
 					NavigationLink(destination: ArticleDetailView(article: article)) {
-						if article.mediaType == .image {
-							ArticleImageListCell(article: article, isInFavoriteListView: false)
-						} else {
-							VideoPlaceHolderCell(article: article)
-						}
+						
+						ArticleImageListCell(article: article, isInFavoriteListView: false)
 					}
 				}
 			}

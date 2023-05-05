@@ -26,14 +26,7 @@ struct ArticleDetailView: View {
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			VStack(spacing: 0) {
-				switch article.mediaType {
-				case .image:
-					ArticleImageView(article: article)
-				case .video:
-					VideoView(videoID: article.mediaUrl)
-						.frame(minHeight: 450, maxHeight: 800)
-						.accessibilityLabel("Video of the article")
-				}
+				ArticleImageView(article: article)
 
 				ArticleDetailBodyView(
 					article: article,
