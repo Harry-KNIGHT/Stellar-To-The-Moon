@@ -1,3 +1,11 @@
 debug.log
 .DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
 /*.xcuserstate
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
