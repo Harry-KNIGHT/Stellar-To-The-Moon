@@ -23,6 +23,7 @@
 		3C44F35929AA82AF00E47CB1 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 3C44F35829AA82AF00E47CB1 /* OneSignal */; };
 		3C46134C292A68320087214C /* BackgroundImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46134B292A68320087214C /* BackgroundImageCell.swift */; };
 		3C4B73CE29DF5FA600462FFB /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C4B73CD29DF5FA600462FFB /* StellarMoonKit */; };
+		3C4ED4F829E5E60E0004F9E3 /* FetchDeeplinkArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4ED4F729E5E60E0004F9E3 /* FetchDeeplinkArticleViewModel.swift */; };
 		3C5555CB288F12640093122A /* ArticleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* ArticleImageView.swift */; };
 		3C5555CD288F21440093122A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5555CC288F21440093122A /* README.md */; };
 		3C5555D1289057E80093122A /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D0289057E80093122A /* ArticleDetailView.swift */; };
@@ -31,6 +32,11 @@
 		3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C57F3312938A1DB001F74A0 /* CachedAsyncImage */; };
 		3C57F3342938A213001F74A0 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57F3332938A213001F74A0 /* URLCache.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
+<<<<<<< HEAD
+=======
+		3C70B64729E4430B008D8C0F /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70B64629E4430B008D8C0F /* DeeplinkManager.swift */; };
+		3C7F967B293A33D700B949DD /* CopyrightStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F967A293A33D700B949DD /* CopyrightStyle.swift */; };
+>>>>>>> 4f0bcd0 (Add deeplinkManager)
 		3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9680293A390200B949DD /* DownloadImageButton.swift */; };
 		3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */; };
 		3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */; };
@@ -112,6 +118,7 @@
 		3C44F35B29AA82DC00E47CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C44F35C29AA93B600E47CB1 /* StellarNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StellarNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		3C46134B292A68320087214C /* BackgroundImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageCell.swift; sourceTree = "<group>"; };
+		3C4ED4F729E5E60E0004F9E3 /* FetchDeeplinkArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDeeplinkArticleViewModel.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* ArticleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageView.swift; sourceTree = "<group>"; };
 		3C5555CC288F21440093122A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3C5555D0289057E80093122A /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
@@ -119,6 +126,8 @@
 		3C5555D5289058FF0093122A /* FetchArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchArticlesViewModel.swift; sourceTree = "<group>"; };
 		3C57F3332938A213001F74A0 /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		3C70B64629E4430B008D8C0F /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
+		3C7F967A293A33D700B949DD /* CopyrightStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightStyle.swift; sourceTree = "<group>"; };
 		3C7F9680293A390200B949DD /* DownloadImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageButton.swift; sourceTree = "<group>"; };
 		3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingArticleImagePlaceholder.swift; sourceTree = "<group>"; };
 		3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFavSheetButtonCell.swift; sourceTree = "<group>"; };
@@ -255,6 +264,14 @@
 			path = ImageSaver;
 			sourceTree = "<group>";
 		};
+		3C70B64829E4430E008D8C0F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3C70B64629E4430B008D8C0F /* DeeplinkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		3C7F9677293A32D500B949DD /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +306,7 @@
 				3C5555D5289058FF0093122A /* FetchArticlesViewModel.swift */,
 				3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */,
 				3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */,
+				3C4ED4F729E5E60E0004F9E3 /* FetchDeeplinkArticleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -337,6 +355,7 @@
 				3C44F35B29AA82DC00E47CB1 /* Info.plist */,
 				3C5555D8289059880093122A /* View */,
 				3CBF0C43289134F300010691 /* ViewModel */,
+				3C70B64829E4430E008D8C0F /* Manager */,
 				3C0F8FBC29D716CF001134B5 /* Ressources */,
 				3C57F3352938A219001F74A0 /* Extensions */,
 				3C5555CC288F21440093122A /* README.md */,
@@ -591,6 +610,7 @@
 			files = (
 				3C08D3642985C4BA0030D45B /* GenerateRandomArticleButtonCell.swift in Sources */,
 				3C5555CB288F12640093122A /* ArticleImageView.swift in Sources */,
+				3C70B64729E4430B008D8C0F /* DeeplinkManager.swift in Sources */,
 				3C08D3602984537E0030D45B /* SearchDateArticleViewModel.swift in Sources */,
 				3CF9A87D29D4C8DF009A8DBB /* ScreenBound.swift in Sources */,
 				3C5555D6289058FF0093122A /* FetchArticlesViewModel.swift in Sources */,
@@ -605,6 +625,7 @@
 				3C44F35629AA826000E47CB1 /* NotificationService.swift in Sources */,
 				3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */,
 				3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */,
+				3C7F967B293A33D700B949DD /* CopyrightStyle.swift in Sources */,
 				3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
 				3C5555D3289058C50093122A /* MainScreen.swift in Sources */,
@@ -613,6 +634,7 @@
 				3CB0ADCC29B4A74800261ECF /* ArticleDetailBodyView.swift in Sources */,
 				3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
+				3C4ED4F829E5E60E0004F9E3 /* FetchDeeplinkArticleViewModel.swift in Sources */,
 				3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */,
 				3CA718D0292965530075E0D5 /* AddFavoriteButtonCell.swift in Sources */,
 				3CBF0C4E2891AA1D00010691 /* LoadingView.swift in Sources */,
@@ -835,7 +857,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+<<<<<<< HEAD
 				MARKETING_VERSION = 3.5.13;
+=======
+				MARKETING_VERSION = 3.4.7;
+>>>>>>> 73d74c2 (Upgrade marketing version)
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -891,7 +917,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+<<<<<<< HEAD
 				MARKETING_VERSION = 3.5.13;
+=======
+				MARKETING_VERSION = 3.4.7;
+>>>>>>> 73d74c2 (Upgrade marketing version)
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -31,6 +31,7 @@ struct ArticleDetailView: View {
 				ArticleDetailBodyView(
 					article: article,
 					isOnRandomArticleGeneration: isOnRandomArticleGeneration,
+
 					isImageDownloading: $isImageDownloading,
 					isImageDownloaded: $isImageDownloaded
 				)
@@ -52,7 +53,9 @@ struct ArticleDetailView_Previews: PreviewProvider {
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
+
 			ArticleDetailView(article: .imageArticleSample, isOnRandomArticleGeneration: true)
+
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
 				.environmentObject(SearchDateArticleViewModel())
