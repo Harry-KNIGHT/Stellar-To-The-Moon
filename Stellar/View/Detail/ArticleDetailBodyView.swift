@@ -17,6 +17,7 @@ struct ArticleDetailBodyView: View {
 
     var body: some View {
 		VStack(alignment: .leading) {
+			
 			HeadbandsDetailButtonsView(
 				article: article,
 				isOnRandomArticleGeneration: isOnRandomArticleGeneration,
@@ -24,7 +25,7 @@ struct ArticleDetailBodyView: View {
 				isDownloadingImage: $isImageDownloading
 			)
 			.padding(.vertical, 10)
-
+			
 			VStack(alignment: .leading, spacing: 10) {
 				Text(article.explanation)
 					.font(.title3)

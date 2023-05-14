@@ -31,13 +31,8 @@ class FetchArticlesViewModel: ObservableObject {
 	@MainActor func getArticles() {
 		Task {
 			do {
-<<<<<<< HEAD:Stellar/ViewModel/FetchArticlesViewModel.swift
 				let fetchedArticles = try await FetchArticlesApi.fetchArticles()
 				filterFetchedArticles(fetchedArticles: fetchedArticles)
-=======
-				articles = try await FetchArticlesApi.fetchArticles()
-				save()
->>>>>>> 852faa4 (Make branch compile again):Stellar/ViewModel/ArticleViewModel.swift
 			} catch {
 				print("Error \(error.localizedDescription)")
 			}
