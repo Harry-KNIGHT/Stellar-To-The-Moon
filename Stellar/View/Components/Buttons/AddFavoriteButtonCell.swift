@@ -10,7 +10,7 @@ import StellarMoonKit
 
 struct AddFavoriteButtonCell: View {
 	let article: Article
-	@ObservedObject var favoriteVM = FavoriteViewModel()
+	@EnvironmentObject var favoriteVM: FavoriteViewModel
 	
 	var body: some View {
 		Button(action: {

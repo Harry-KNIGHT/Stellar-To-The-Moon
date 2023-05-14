@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RandomArticleButtonCell: View {
 	@Binding var showBirthdayPicker: Bool
-	var isShowingRandArticleGeneration: Bool
 
     var body: some View {
         Button(action: {
@@ -26,9 +25,6 @@ struct RandomArticleButtonCell: View {
 
 struct RandomArticleButtonCell_Previews: PreviewProvider {
     static var previews: some View {
-		ShowRandomArticleView(
-			showBirthdayPicker: .constant(false),
-			isShowingRandArticleGeneration: true
-		)
+		RandomArticleButtonCell(showBirthdayPicker: .constant(false))
     }
 }

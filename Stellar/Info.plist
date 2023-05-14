@@ -2,17 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>stellar</string>
-			</array>
-		</dict>
-	</array>
 	<key>NSUserNotificationsUsageDescription</key>
 	<string>We would like to send you notifications to keep you informed of new astronomical images and features.</string>
 	<key>OneSignal_app_groups_key</key>
