@@ -51,7 +51,7 @@ struct HeadbandsDetailActions: View {
 struct HeadbandsDetailActions_Previews: PreviewProvider {
     static var previews: some View {
 		HeadbandsDetailActions(
-			article: .articleSample,
+			article: .imageArticleSample,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false),
 			isShowingRandArticleGenration: false

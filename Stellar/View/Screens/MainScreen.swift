@@ -30,6 +30,9 @@ struct MainScreen: View {
 			}
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
+		.onAppear {
+			articleVm.getArticles()
+		}
 	}
 }
 
