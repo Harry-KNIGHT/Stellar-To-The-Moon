@@ -16,6 +16,7 @@
 		3C20C9F529C5A51A0045523A /* StellarStickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C20C9EE29C5A5190045523A /* StellarStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C266B9D2981BEC400A9A888 /* RandomArticleButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* RandomArticleButtonCell.swift */; };
 		3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */; };
+		3C36E86B2A12A92F00BB9CDB /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E86A2A12A92F00BB9CDB /* DeeplinkManager.swift */; };
 		3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */; };
 		3C44F34D29AA810E00E47CB1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F34C29AA810E00E47CB1 /* NotificationService.swift */; };
 		3C44F35129AA810E00E47CB1 /* StellarNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -103,6 +104,7 @@
 		3C20C9F229C5A51A0045523A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C266B9C2981BEC400A9A888 /* RandomArticleButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArticleButtonCell.swift; sourceTree = "<group>"; };
 		3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		3C36E86A2A12A92F00BB9CDB /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageListCell.swift; sourceTree = "<group>"; };
 		3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C44F34C29AA810E00E47CB1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 				3C20C9F229C5A51A0045523A /* Info.plist */,
 			);
 			path = StellarStickers;
+			sourceTree = "<group>";
+		};
+		3C36E86C2A12A93300BB9CDB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3C36E86A2A12A92F00BB9CDB /* DeeplinkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */ = {
@@ -308,12 +318,12 @@
 		3CDBA102288E759A00AB15C7 = {
 			isa = PBXGroup;
 			children = (
+				3C4B73CC29DF5FA600462FFB /* Frameworks */,
+				3CDBA10C288E759A00AB15C7 /* Products */,
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
-				3CA91F062961B6730030069B /* StellarTests */,
 				3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */,
 				3C20C9EF29C5A5190045523A /* StellarStickers */,
-				3CDBA10C288E759A00AB15C7 /* Products */,
-				3C4B73CC29DF5FA600462FFB /* Frameworks */,
+				3CA91F062961B6730030069B /* StellarTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,6 +346,7 @@
 				3C44F35529AA826000E47CB1 /* NotificationService.swift */,
 				3C44F35B29AA82DC00E47CB1 /* Info.plist */,
 				3C5555D8289059880093122A /* View */,
+				3C36E86C2A12A93300BB9CDB /* Managers */,
 				3CBF0C43289134F300010691 /* ViewModel */,
 				3C0F8FBC29D716CF001134B5 /* Ressources */,
 				3C57F3352938A219001F74A0 /* Extensions */,
@@ -612,6 +623,7 @@
 				3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */,
 				3CB0ADCC29B4A74800261ECF /* ArticleDetailBodyView.swift in Sources */,
 				3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */,
+				3C36E86B2A12A92F00BB9CDB /* DeeplinkManager.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
 				3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */,
 				3CA718D0292965530075E0D5 /* AddFavoriteButtonCell.swift in Sources */,
