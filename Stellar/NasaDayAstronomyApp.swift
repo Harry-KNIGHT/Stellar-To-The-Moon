@@ -42,6 +42,7 @@ struct NasaDayAstronomyApp: App {
 					.navigationTitle("navigationTitle_homepage")
 					.navigationBarTitleDisplayMode(.inline)
 			}
+			.navigationViewStyle(StackNavigationViewStyle())
 			.onOpenURL { url in
 				deeplinkManager.handleUrl(url)
 			}

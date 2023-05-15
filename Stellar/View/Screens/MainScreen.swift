@@ -12,24 +12,21 @@ struct MainScreen: View {
 	@State private var showFavoritesSheet = false
 	@State private var showLoadingIndicator = true
 	@State private var showBirthdayPicker = false
-
+	
 	var body: some View {
-		NavigationView {
-			VStack {
-				switch articleVm.articles.isEmpty {
-				case true:
-					LoadingView()
-				default:
-					ArticlesGridView(showFavoritesSheet: $showFavoritesSheet, showBirthdayPicker: $showBirthdayPicker)
-				}
-			}
-			.navigationTitle("navigationTitle_homepage")
-			.navigationBarTitleDisplayMode(.inline)
-			.onAppear {
-				articleVm.getArticles()
+		VStack {
+			switch articleVm.articles.isEmpty {
+			case true:
+				LoadingView()
+			default:
+				ArticlesGridView(showFavoritesSheet: $showFavoritesSheet, showBirthdayPicker: $showBirthdayPicker)
 			}
 		}
-		.navigationViewStyle(StackNavigationViewStyle())
+		.navigationTitle("navigationTitle_homepage")
+		.navigationBarTitleDisplayMode(.inline)
+		.onAppear {
+			articleVm.getArticles()
+		}
 	}
 }
 
