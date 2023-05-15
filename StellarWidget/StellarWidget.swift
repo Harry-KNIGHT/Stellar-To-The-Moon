@@ -45,6 +45,7 @@ struct StellarWidgetEntryView : View {
     var body: some View {
 		Link(destination: URL(string: "stellar://article?date=\(entry.article.date)")!) {
 			NetworkImage(url: URL(string: entry.article.mediaUrl))
+				.widgetURL(URL(string: "stellar://article?date=\(entry.article.date)")!)
 		}
     }
 }
