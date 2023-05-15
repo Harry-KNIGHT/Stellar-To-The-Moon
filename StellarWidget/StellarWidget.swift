@@ -23,8 +23,8 @@ struct Provider: TimelineProvider {
 		Task {
 			do {
 				let articlesArray = try await FetchArticlesApi.fetchArticles()
-				let todaysArticle = articlesArray[0]
-				let entry = SimpleEntry(date: Date(), article: todaysArticle)
+				let todaysArticle = articlesArray.randomElement()
+				let entry = SimpleEntry(date: Date(), article: todaysArticle ?? articlesArray[0])
 				let timeline = Timeline(entries: [entry], policy: .atEnd)
 				completion(timeline)
 			} catch {
