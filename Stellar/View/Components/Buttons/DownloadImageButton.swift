@@ -10,7 +10,7 @@ import StellarMoonKit
 
 struct DownloadImageButton: View {
 	let article: Article
-	@EnvironmentObject var downloadImageVm: DownloadImageViewModel
+	@ObservedObject private var downloadImageVm = DownloadImageViewModel()
 
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool

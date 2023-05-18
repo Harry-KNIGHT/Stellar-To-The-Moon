@@ -12,6 +12,7 @@ import SwiftUI
 struct HeadbandsDetailButtonsView: View {
 
 	// MARK: Properties
+	@ObservedObject private var downloadImageVm = DownloadImageViewModel()
 
 	let article: Article
 	var isOnRandomArticleGeneration: Bool

@@ -14,7 +14,7 @@ struct ArticleDetailBodyView: View {
 	@Binding var isImageDownloading: Bool
 	@Binding var isImageDownloaded: Bool
 
-
+	@ObservedObject private var downloadImageVm = DownloadImageViewModel()
     var body: some View {
 		VStack(alignment: .leading) {
 			
@@ -51,5 +51,6 @@ struct ArticleDetailBodyView_Previews: PreviewProvider {
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())
+		.environmentObject(DownloadImageViewModel())
     }
 }
