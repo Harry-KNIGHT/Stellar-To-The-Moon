@@ -10,7 +10,7 @@ import StellarMoonKit
 
 struct DownloadImageButton: View {
 	let article: Article
-	@EnvironmentObject var articleDetailVm: DownloadImageViewModel
+	@EnvironmentObject var downloadImageVm: DownloadImageViewModel
 
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
@@ -36,7 +36,7 @@ struct DownloadImageButton: View {
 				self.isDownloadingImage = true
 				Task {
 					let imageSaver = ImageSaver()
-					let image = try await articleDetailVm.downloadImageToCameraRoll(from: article.mediaUrl)
+					let image = try await downloadImageVm.downloadImageToCameraRoll(from: article.mediaUrl)
 					imageSaver.writeToPhotoAlbum(image: image)
 					self.isImageDowloaded = true
 					self.isDownloadingImage = false
