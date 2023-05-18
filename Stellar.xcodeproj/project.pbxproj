@@ -132,11 +132,13 @@
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		3C7F9680293A390200B949DD /* DownloadImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageButton.swift; sourceTree = "<group>"; };
 		3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingArticleImagePlaceholder.swift; sourceTree = "<group>"; };
-		3C87A8672A165198000D5716 /* StellarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = StellarTests.xctest; path = "/Users/elliotknight/Documents/SwiftUI/Stellar-To-The-Moon/build/Debug-iphoneos/StellarTests.xctest"; sourceTree = "<absolute>"; };
 		3C87A86A2A1652B8000D5716 /* StellarStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C87A86C2A1652B9000D5716 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		3C87A86E2A1652B9000D5716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C87A8722A1652B9000D5716 /* Stellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C87A87B2A1689BE000D5716 /* StellarNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C87A87C2A1689BE000D5716 /* StellarWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C87A87D2A1689BE000D5716 /* StellarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StellarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFavSheetButtonCell.swift; sourceTree = "<group>"; };
 		3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteButtonCell.swift; sourceTree = "<group>"; };
 		3CA91F0E2961B6AB0030069B /* FavoritesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModelTests.swift; sourceTree = "<group>"; };
@@ -159,8 +161,6 @@
 		3CDEB3C52A161FEF00877A6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CDEB3C72A161FEF00877A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CDEB3D02A16218300877A6B /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
-		3CDEB3D42A16376900877A6B /* StellarNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = StellarNotificationServiceExtension.appex; path = "/Users/elliotknight/Documents/SwiftUI/Stellar-To-The-Moon/build/Debug-iphoneos/StellarNotificationServiceExtension.appex"; sourceTree = "<absolute>"; };
-		3CDEB3D62A16376D00877A6B /* StellarWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = StellarWidgetsExtension.appex; path = "/Users/elliotknight/Documents/SwiftUI/Stellar-To-The-Moon/build/Debug-iphoneos/StellarWidgetsExtension.appex"; sourceTree = "<absolute>"; };
 		3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadbandsDetailButtonsView.swift; sourceTree = "<group>"; };
 		3CF9A87A29D4C7BD009A8DBB /* PinchZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchZoom.swift; sourceTree = "<group>"; };
 		3CF9A87C29D4C8DF009A8DBB /* ScreenBound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBound.swift; sourceTree = "<group>"; };
@@ -352,6 +352,9 @@
 				3CA91F062961B6730030069B /* StellarTests */,
 				3C87A86A2A1652B8000D5716 /* StellarStickers.appex */,
 				3C87A8722A1652B9000D5716 /* Stellar.app */,
+				3C87A87B2A1689BE000D5716 /* StellarNotificationServiceExtension.appex */,
+				3C87A87C2A1689BE000D5716 /* StellarWidgetsExtension.appex */,
+				3C87A87D2A1689BE000D5716 /* StellarTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -466,7 +469,7 @@
 			);
 			name = StellarNotificationServiceExtension;
 			productName = StellarNotificationServiceExtension;
-			productReference = 3CDEB3D42A16376900877A6B /* StellarNotificationServiceExtension.appex */;
+			productReference = 3C87A87B2A1689BE000D5716 /* StellarNotificationServiceExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		3C87A8692A1652B8000D5716 /* StellarStickers */ = {
@@ -499,7 +502,7 @@
 			);
 			name = StellarTests;
 			productName = StellarTests;
-			productReference = 3C87A8672A165198000D5716 /* StellarTests.xctest */;
+			productReference = 3C87A87D2A1689BE000D5716 /* StellarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3CDBA10A288E759A00AB15C7 /* Stellar */ = {
@@ -546,7 +549,7 @@
 				3CDEB3CE2A16213400877A6B /* StellarMoonKit */,
 			);
 			productName = StellarWidgetsExtension;
-			productReference = 3CDEB3D62A16376D00877A6B /* StellarWidgetsExtension.appex */;
+			productReference = 3C87A87C2A1689BE000D5716 /* StellarWidgetsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -754,7 +757,7 @@
 				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = StellarNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -780,7 +783,7 @@
 				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = StellarNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -844,7 +847,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -869,7 +872,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1084,7 +1087,7 @@
 				INFOPLIST_FILE = StellarWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = StellarWidgets;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1111,7 +1114,7 @@
 				INFOPLIST_FILE = StellarWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = StellarWidgets;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
