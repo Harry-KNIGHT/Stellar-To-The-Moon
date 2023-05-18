@@ -1034,6 +1034,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Stellar/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To send you location-based notifications, we need your permission to access your location when you use the app.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "If you autorise Stellar To The Moon to access to your library, you'll be able to download images, use it as wallpaper, share it and so on.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1069,6 +1070,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Stellar/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To send you location-based notifications, we need your permission to access your location when you use the app.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "If you autorise Stellar To The Moon to access to your library, you'll be able to download images, use it as wallpaper, share it and so on.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
