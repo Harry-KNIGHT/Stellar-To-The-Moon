@@ -23,6 +23,7 @@ struct Provider: TimelineProvider {
 		Task {
 			do {
 				let articlesArray = try await FetchArticlesApi.fetchArticles()
+				let filterArticles = articlesArray.filter { $0.mediaType == .image }
 				let todaysArticle = articlesArray.randomElement()
 				let entry = SimpleEntry(date: Date(), article: todaysArticle ?? articlesArray[0])
 				let timeline = Timeline(entries: [entry], policy: .atEnd)
