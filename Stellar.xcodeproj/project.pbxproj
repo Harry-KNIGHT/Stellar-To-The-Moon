@@ -224,13 +224,6 @@
 			path = StellarNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
-		3C4B73CC29DF5FA600462FFB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3C5555D8289059880093122A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +311,6 @@
 		3CDBA102288E759A00AB15C7 = {
 			isa = PBXGroup;
 			children = (
-				3C4B73CC29DF5FA600462FFB /* Frameworks */,
 				3CDBA10C288E759A00AB15C7 /* Products */,
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
 				3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */,
