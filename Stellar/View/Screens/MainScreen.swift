@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct MainScreen: View {
 	@EnvironmentObject private var articleVm: FetchArticlesViewModel
 	@State private var showFavoritesSheet = false
 	@State private var showLoadingIndicator = true
 	@State private var showBirthdayPicker = false
-	
 	var body: some View {
 		VStack {
 			switch articleVm.articles.isEmpty {
@@ -37,5 +37,6 @@ struct AstronomyImageGrid_Previews: PreviewProvider {
 			.environmentObject(FavoriteViewModel())
 			.environmentObject(SearchDateArticleViewModel())
 			.environmentObject(DownloadImageViewModel())
+			.environmentObject(LocationManager())
 	}
 }

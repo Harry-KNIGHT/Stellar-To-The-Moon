@@ -14,6 +14,7 @@ struct NasaDayAstronomyApp: App {
 	@StateObject var articlesVM = FetchArticlesViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
 	@StateObject var searchDateArticleVM = SearchDateArticleViewModel()
+	@StateObject private var locationManager = LocationManager()
 
 	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
@@ -28,6 +29,7 @@ struct NasaDayAstronomyApp: App {
 					.environmentObject(favoriteVM)
 					.environmentObject(searchDateArticleVM)
 					.environmentObject(deeplinkManager)
+					.environmentObject(locationManager)
 					.sheet(item: $deeplinkManager.selectedRoute) { route in
 						switch route {
 						case .articleDetail(let article):
@@ -37,6 +39,7 @@ struct NasaDayAstronomyApp: App {
 								.environmentObject(favoriteVM)
 								.environmentObject(searchDateArticleVM)
 								.environmentObject(deeplinkManager)
+								.environmentObject(locationManager)
 						}
 					}
 					.navigationTitle("navigationTitle_homepage")
@@ -45,6 +48,9 @@ struct NasaDayAstronomyApp: App {
 			.navigationViewStyle(StackNavigationViewStyle())
 			.onOpenURL { url in
 				deeplinkManager.handleUrl(url)
+			}
+			.onAppear {
+				locationManager.askForUserLocation()
 			}
 		}
 	}
