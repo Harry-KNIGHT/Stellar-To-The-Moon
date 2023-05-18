@@ -17,15 +17,6 @@
 		3C266B9D2981BEC400A9A888 /* RandomArticleButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9C2981BEC400A9A888 /* RandomArticleButtonCell.swift */; };
 		3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */; };
 		3C36E86B2A12A92F00BB9CDB /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E86A2A12A92F00BB9CDB /* DeeplinkManager.swift */; };
-		3C36E8732A12BF2B00BB9CDB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36E8722A12BF2B00BB9CDB /* WidgetKit.framework */; };
-		3C36E8752A12BF2B00BB9CDB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36E8742A12BF2B00BB9CDB /* SwiftUI.framework */; };
-		3C36E8782A12BF2B00BB9CDB /* StellarWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E8772A12BF2B00BB9CDB /* StellarWidgetBundle.swift */; };
-		3C36E87A2A12BF2B00BB9CDB /* StellarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E8792A12BF2B00BB9CDB /* StellarWidget.swift */; };
-		3C36E87C2A12BF2C00BB9CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C36E87B2A12BF2C00BB9CDB /* Assets.xcassets */; };
-		3C36E8802A12BF2C00BB9CDB /* StellarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C36E8712A12BF2B00BB9CDB /* StellarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3C36E8842A12BFA600BB9CDB /* FetchArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* FetchArticlesViewModel.swift */; };
-		3C36E8862A12C09800BB9CDB /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C36E8852A12C09800BB9CDB /* StellarMoonKit */; };
-		3C36E8892A12C37700BB9CDB /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E8872A12C35100BB9CDB /* NetworkImage.swift */; };
 		3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */; };
 		3C44F34D29AA810E00E47CB1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44F34C29AA810E00E47CB1 /* NotificationService.swift */; };
 		3C44F35129AA810E00E47CB1 /* StellarNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -72,13 +63,6 @@
 			remoteGlobalIDString = 3C20C9ED29C5A5190045523A;
 			remoteInfo = StellarStickers;
 		};
-		3C36E87E2A12BF2C00BB9CDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C36E8702A12BF2B00BB9CDB;
-			remoteInfo = StellarWidgetExtension;
-		};
 		3C44F34F29AA810E00E47CB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CDBA103288E759A00AB15C7 /* Project object */;
@@ -102,7 +86,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3C36E8802A12BF2C00BB9CDB /* StellarWidgetExtension.appex in Embed Foundation Extensions */,
 				3C20C9F529C5A51A0045523A /* StellarStickers.appex in Embed Foundation Extensions */,
 				3C44F35129AA810E00E47CB1 /* StellarNotificationServiceExtension.appex in Embed Foundation Extensions */,
 			);
@@ -123,14 +106,6 @@
 		3C266B9C2981BEC400A9A888 /* RandomArticleButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArticleButtonCell.swift; sourceTree = "<group>"; };
 		3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		3C36E86A2A12A92F00BB9CDB /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
-		3C36E8712A12BF2B00BB9CDB /* StellarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C36E8722A12BF2B00BB9CDB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		3C36E8742A12BF2B00BB9CDB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		3C36E8772A12BF2B00BB9CDB /* StellarWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarWidgetBundle.swift; sourceTree = "<group>"; };
-		3C36E8792A12BF2B00BB9CDB /* StellarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarWidget.swift; sourceTree = "<group>"; };
-		3C36E87B2A12BF2C00BB9CDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3C36E87D2A12BF2C00BB9CDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C36E8872A12C35100BB9CDB /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageListCell.swift; sourceTree = "<group>"; };
 		3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StellarNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C44F34C29AA810E00E47CB1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -172,16 +147,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3C36E86E2A12BF2B00BB9CDB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C36E8752A12BF2B00BB9CDB /* SwiftUI.framework in Frameworks */,
-				3C36E8862A12C09800BB9CDB /* StellarMoonKit in Frameworks */,
-				3C36E8732A12BF2B00BB9CDB /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3C44F34729AA810E00E47CB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,18 +217,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		3C36E8762A12BF2B00BB9CDB /* StellarWidget */ = {
-			isa = PBXGroup;
-			children = (
-				3C36E8772A12BF2B00BB9CDB /* StellarWidgetBundle.swift */,
-				3C36E8792A12BF2B00BB9CDB /* StellarWidget.swift */,
-				3C36E8872A12C35100BB9CDB /* NetworkImage.swift */,
-				3C36E87B2A12BF2C00BB9CDB /* Assets.xcassets */,
-				3C36E87D2A12BF2C00BB9CDB /* Info.plist */,
-			);
-			path = StellarWidget;
-			sourceTree = "<group>";
-		};
 		3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,15 +225,6 @@
 				3C44F34E29AA810E00E47CB1 /* Info.plist */,
 			);
 			path = StellarNotificationServiceExtension;
-			sourceTree = "<group>";
-		};
-		3C4B73CC29DF5FA600462FFB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3C36E8722A12BF2B00BB9CDB /* WidgetKit.framework */,
-				3C36E8742A12BF2B00BB9CDB /* SwiftUI.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3C5555D8289059880093122A /* View */ = {
@@ -373,7 +317,6 @@
 				3CDBA10C288E759A00AB15C7 /* Products */,
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
 				3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */,
-				3C36E8762A12BF2B00BB9CDB /* StellarWidget */,
 				3C20C9EF29C5A5190045523A /* StellarStickers */,
 				3CA91F062961B6730030069B /* StellarTests */,
 			);
@@ -386,7 +329,6 @@
 				3CA91F052961B6730030069B /* StellarTests.xctest */,
 				3C44F34A29AA810E00E47CB1 /* StellarNotificationServiceExtension.appex */,
 				3C20C9EE29C5A5190045523A /* StellarStickers.appex */,
-				3C36E8712A12BF2B00BB9CDB /* StellarWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -482,26 +424,6 @@
 			productReference = 3C20C9EE29C5A5190045523A /* StellarStickers.appex */;
 			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
-		3C36E8702A12BF2B00BB9CDB /* StellarWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3C36E8832A12BF2C00BB9CDB /* Build configuration list for PBXNativeTarget "StellarWidgetExtension" */;
-			buildPhases = (
-				3C36E86D2A12BF2B00BB9CDB /* Sources */,
-				3C36E86E2A12BF2B00BB9CDB /* Frameworks */,
-				3C36E86F2A12BF2B00BB9CDB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = StellarWidgetExtension;
-			packageProductDependencies = (
-				3C36E8852A12C09800BB9CDB /* StellarMoonKit */,
-			);
-			productName = StellarWidgetExtension;
-			productReference = 3C36E8712A12BF2B00BB9CDB /* StellarWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C44F35429AA810E00E47CB1 /* Build configuration list for PBXNativeTarget "StellarNotificationServiceExtension" */;
@@ -551,7 +473,6 @@
 			dependencies = (
 				3C44F35029AA810E00E47CB1 /* PBXTargetDependency */,
 				3C20C9F429C5A51A0045523A /* PBXTargetDependency */,
-				3C36E87F2A12BF2C00BB9CDB /* PBXTargetDependency */,
 			);
 			name = Stellar;
 			packageProductDependencies = (
@@ -571,14 +492,11 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					3C20C9ED29C5A5190045523A = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					3C36E8702A12BF2B00BB9CDB = {
-						CreatedOnToolsVersion = 14.3;
 					};
 					3C44F34929AA810E00E47CB1 = {
 						CreatedOnToolsVersion = 14.2;
@@ -616,7 +534,6 @@
 				3CA91F042961B6730030069B /* StellarTests */,
 				3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */,
 				3C20C9ED29C5A5190045523A /* StellarStickers */,
-				3C36E8702A12BF2B00BB9CDB /* StellarWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -627,14 +544,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C20C9F129C5A51A0045523A /* Stickers.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C36E86F2A12BF2B00BB9CDB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C36E87C2A12BF2C00BB9CDB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,17 +575,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3C36E86D2A12BF2B00BB9CDB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C36E8782A12BF2B00BB9CDB /* StellarWidgetBundle.swift in Sources */,
-				3C36E8842A12BFA600BB9CDB /* FetchArticlesViewModel.swift in Sources */,
-				3C36E8892A12C37700BB9CDB /* NetworkImage.swift in Sources */,
-				3C36E87A2A12BF2B00BB9CDB /* StellarWidget.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3C44F34629AA810E00E47CB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -741,11 +639,6 @@
 			target = 3C20C9ED29C5A5190045523A /* StellarStickers */;
 			targetProxy = 3C20C9F329C5A51A0045523A /* PBXContainerItemProxy */;
 		};
-		3C36E87F2A12BF2C00BB9CDB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3C36E8702A12BF2B00BB9CDB /* StellarWidgetExtension */;
-			targetProxy = 3C36E87E2A12BF2C00BB9CDB /* PBXContainerItemProxy */;
-		};
 		3C44F35029AA810E00E47CB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3C44F34929AA810E00E47CB1 /* StellarNotificationServiceExtension */;
@@ -764,7 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarStickers/Info.plist;
@@ -783,7 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarStickers/Info.plist;
@@ -797,68 +690,12 @@
 			};
 			name = Release;
 		};
-		3C36E8812A12BF2C00BB9CDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
-				DEVELOPMENT_TEAM = 99M75C322U;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StellarWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = StellarWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 4.5.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3C36E8822A12BF2C00BB9CDB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
-				DEVELOPMENT_TEAM = 99M75C322U;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StellarWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = StellarWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 4.5.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.NasaAstronomy.StellarWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		3C44F35229AA810E00E47CB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = StellarNotificationServiceExtension/StellarNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
@@ -884,7 +721,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = StellarNotificationServiceExtension/StellarNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 99M75C322U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StellarNotificationServiceExtension/Info.plist;
@@ -1006,7 +843,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 4.5.14;
+				MARKETING_VERSION = 3.5.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1062,7 +899,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 4.5.14;
+				MARKETING_VERSION = 3.5.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1080,7 +917,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Stellar/Stellar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -1115,7 +952,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Stellar/Stellar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_ASSET_PATHS = "\"Stellar/Preview Content\"";
 				DEVELOPMENT_TEAM = 99M75C322U;
 				ENABLE_PREVIEWS = YES;
@@ -1150,15 +987,6 @@
 			buildConfigurations = (
 				3C20C9F729C5A51A0045523A /* Debug */,
 				3C20C9F829C5A51A0045523A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3C36E8832A12BF2C00BB9CDB /* Build configuration list for PBXNativeTarget "StellarWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3C36E8812A12BF2C00BB9CDB /* Debug */,
-				3C36E8822A12BF2C00BB9CDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1229,11 +1057,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3C36E8852A12C09800BB9CDB /* StellarMoonKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3CB7A11F29F5AF3F00F074F1 /* XCRemoteSwiftPackageReference "StellarMoonKit" */;
-			productName = StellarMoonKit;
-		};
 		3C44F35829AA82AF00E47CB1 /* OneSignal */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3C44F35729AA82AF00E47CB1 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
