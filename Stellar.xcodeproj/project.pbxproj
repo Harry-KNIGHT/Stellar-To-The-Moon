@@ -49,6 +49,7 @@
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
 		3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA112288E759B00AB15C7 /* Assets.xcassets */; };
 		3CDBA116288E759B00AB15C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */; };
+		3CDEB3B52A161DDC00877A6B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDEB3B42A161DDC00877A6B /* LocationManager.swift */; };
 		3CEC397F29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift */; };
 		3CF9A87B29D4C7BD009A8DBB /* PinchZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9A87A29D4C7BD009A8DBB /* PinchZoom.swift */; };
 		3CF9A87D29D4C8DF009A8DBB /* ScreenBound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9A87C29D4C8DF009A8DBB /* ScreenBound.swift */; };
@@ -139,6 +140,7 @@
 		3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDayAstronomyApp.swift; sourceTree = "<group>"; };
 		3CDBA112288E759B00AB15C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3CDEB3B42A161DDC00877A6B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadbandsDetailButtonsView.swift; sourceTree = "<group>"; };
 		3CF9A87A29D4C7BD009A8DBB /* PinchZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchZoom.swift; sourceTree = "<group>"; };
 		3CF9A87C29D4C8DF009A8DBB /* ScreenBound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBound.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				3C36E86A2A12A92F00BB9CDB /* DeeplinkManager.swift */,
+				3CDEB3B42A161DDC00877A6B /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				3CF9A87B29D4C7BD009A8DBB /* PinchZoom.swift in Sources */,
 				3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */,
 				3C44F35629AA826000E47CB1 /* NotificationService.swift in Sources */,
+				3CDEB3B52A161DDC00877A6B /* LocationManager.swift in Sources */,
 				3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */,
 				3C7F9685293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift in Sources */,
 				3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */,
