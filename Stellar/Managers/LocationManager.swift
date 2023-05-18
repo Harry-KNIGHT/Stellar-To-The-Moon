@@ -8,11 +8,10 @@
 import CoreLocation
 
 class LocationManager: ObservableObject {
-
 	private let locationManager = CLLocationManager()
 
 	func askUserLocation() {
-		if CLLocationManager.authorizationStatus() == .notDetermined {
+		if locationManager.authorizationStatus == .notDetermined {
 			// Set the desired accuracy and distance filter
 			locationManager.desiredAccuracy = kCLLocationAccuracyBest
 			locationManager.distanceFilter = kCLDistanceFilterNone
