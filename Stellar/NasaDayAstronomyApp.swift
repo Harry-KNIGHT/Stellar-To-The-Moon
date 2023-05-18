@@ -18,6 +18,7 @@ struct NasaDayAstronomyApp: App {
 	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
 	@StateObject var deeplinkManager = DeepLinkManager()
+	@StateObject private var locationManager = LocationManager()
 
 	var body: some Scene {
 		WindowGroup {
@@ -28,6 +29,7 @@ struct NasaDayAstronomyApp: App {
 					.environmentObject(favoriteVM)
 					.environmentObject(searchDateArticleVM)
 					.environmentObject(deeplinkManager)
+					.environmentObject(locationManager)
 					.sheet(item: $deeplinkManager.selectedRoute) { route in
 						switch route {
 						case .articleDetail(let article):
@@ -37,6 +39,7 @@ struct NasaDayAstronomyApp: App {
 								.environmentObject(favoriteVM)
 								.environmentObject(searchDateArticleVM)
 								.environmentObject(deeplinkManager)
+								.environmentObject(locationManager)
 						}
 					}
 					.navigationTitle("navigationTitle_homepage")
@@ -45,6 +48,9 @@ struct NasaDayAstronomyApp: App {
 			.navigationViewStyle(StackNavigationViewStyle())
 			.onOpenURL { url in
 				deeplinkManager.handleUrl(url)
+			}
+			.onAppear {
+				locationManager.askUserLocation()
 			}
 		}
 	}
