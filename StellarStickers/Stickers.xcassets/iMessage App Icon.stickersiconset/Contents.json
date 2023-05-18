@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "icon-stellar-resized-29@2x 1.png",
+      "filename" : "icon-stellar-resized-29@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
@@ -25,7 +25,7 @@
       "size" : "60x45"
     },
     {
-      "filename" : "icon-stellar-resized-29@2x.png",
+      "filename" : "icon-stellar-resized-29@2x 1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
