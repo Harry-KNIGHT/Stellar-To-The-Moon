@@ -138,6 +138,7 @@
 		3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadbandsDetailButtonsView.swift; sourceTree = "<group>"; };
 		3CF9A87A29D4C7BD009A8DBB /* PinchZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchZoom.swift; sourceTree = "<group>"; };
 		3CF9A87C29D4C8DF009A8DBB /* ScreenBound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBound.swift; sourceTree = "<group>"; };
+		3CFFA1C52A67C35500102514 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +268,7 @@
 				3C5555D2289058C50093122A /* MainScreen.swift */,
 				3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */,
 				3CA718CD292964990075E0D5 /* ShowFavSheetButtonCell.swift */,
-				3C5555D5289058FF0093122A /* FetchArticlesViewModel.swift */,
+				3CFFA1C82A67C62900102514 /* ViewModel */,
 				3CFD11662892E15E00F14F65 /* Detail */,
 			);
 			path = ArticlesList;
@@ -280,7 +281,7 @@
 				3C03EADE2937EC190023EC26 /* FavoritesListView.swift */,
 				3CBB34A328BE35F700AC0EDF /* RowCell.swift */,
 				3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */,
-				3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */,
+				3CFFA1C62A67C61600102514 /* ViewModel */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -288,10 +289,10 @@
 		3CCE9D982A672A3A00BD4060 /* RandomArticle */ = {
 			isa = PBXGroup;
 			children = (
-				3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */,
 				3C266B9C2981BEC400A9A888 /* RandomArticleButtonCell.swift */,
 				3CAD9C3D2981BC2A00384F4D /* SearchDateArticleView.swift */,
 				3C08D3632985C4BA0030D45B /* GenerateRandomArticleButtonCell.swift */,
+				3CFFA1C92A67C63B00102514 /* ViewModel */,
 			);
 			path = RandomArticle;
 			sourceTree = "<group>";
@@ -299,6 +300,7 @@
 		3CDBA102288E759A00AB15C7 = {
 			isa = PBXGroup;
 			children = (
+				3CFFA1C52A67C35500102514 /* Domain */,
 				3CDBA10D288E759A00AB15C7 /* Stellar */,
 				3C87A86B2A1652B8000D5716 /* StellarStickers */,
 				3C44F34B29AA810E00E47CB1 /* StellarNotificationServiceExtension */,
@@ -313,10 +315,7 @@
 		3CDBA10D288E759A00AB15C7 /* Stellar */ = {
 			isa = PBXGroup;
 			children = (
-				3C44F35A29AA82D300E47CB1 /* Stellar.entitlements */,
-				3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */,
-				3C44F35529AA826000E47CB1 /* NotificationService.swift */,
-				3C44F35B29AA82DC00E47CB1 /* Info.plist */,
+				3CFFA1CA2A67C68400102514 /* Application */,
 				3C5555D8289059880093122A /* Presentation */,
 				3C36E86C2A12A93300BB9CDB /* Managers */,
 				3C0F8FBC29D716CF001134B5 /* Ressources */,
@@ -339,13 +338,13 @@
 		3CFD11662892E15E00F14F65 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */,
 				3C5555CA288F12640093122A /* ArticleImageView.swift */,
 				3C5555D0289057E80093122A /* ArticleDetailView.swift */,
 				3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift */,
 				3CB0ADCB29B4A74800261ECF /* ArticleDetailBodyView.swift */,
 				3C7F9684293A3DFF00B949DD /* LoadingArticleImagePlaceholder.swift */,
 				3C7F9680293A390200B949DD /* DownloadImageButton.swift */,
+				3CFFA1C72A67C62200102514 /* ViewModel */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -356,6 +355,49 @@
 				3CBF0C4628913B5700010691 /* EmptyView.swift */,
 			);
 			path = EmptyView;
+			sourceTree = "<group>";
+		};
+		3CFFA1C62A67C61600102514 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3CFFA1C72A67C62200102514 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3CFFA1C82A67C62900102514 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3C5555D5289058FF0093122A /* FetchArticlesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3CFFA1C92A67C63B00102514 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3C08D35F2984537E0030D45B /* SearchDateArticleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3CFFA1CA2A67C68400102514 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3C44F35A29AA82D300E47CB1 /* Stellar.entitlements */,
+				3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */,
+				3C44F35529AA826000E47CB1 /* NotificationService.swift */,
+				3C44F35B29AA82DC00E47CB1 /* Info.plist */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
