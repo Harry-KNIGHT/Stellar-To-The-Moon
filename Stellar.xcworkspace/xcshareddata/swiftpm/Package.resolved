@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "onesignal-xcframework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OneSignal/OneSignal-XCFramework",
+      "state" : {
+        "branch" : "main",
+        "revision" : "091f9c572b4a522f93cd1d4f2f524e3818a253f2"
+      }
+    },
+    {
       "identity" : "stellarmoonkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Harry-KNIGHT/StellarMoonKit",
