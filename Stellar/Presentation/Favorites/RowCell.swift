@@ -8,6 +8,7 @@
 import SwiftUI
 import StellarMoonKit
 
+// TODO: delet isInFavoriteListView bc it's used only on FavoritesListView.
 struct RowCell: View {
 	let article: Article
 	private let size: CGFloat = 90

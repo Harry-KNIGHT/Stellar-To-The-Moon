@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// TODO: Turn class final and move into apropriate file
 class ImageSaver: NSObject {
 	func writeToPhotoAlbum(image: UIImage) {
 		UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)

@@ -15,12 +15,8 @@ struct MainScreen: View {
 	
 	var body: some View {
 		VStack {
-			switch articleVm.articles.isEmpty {
-			case true:
-				LoadingView()
-			default:
-				ArticlesGridView(showFavoritesSheet: $showFavoritesSheet, showBirthdayPicker: $showBirthdayPicker)
-			}
+			ArticlesGridView(showFavoritesSheet: $showFavoritesSheet, showBirthdayPicker: $showBirthdayPicker)
+
 		}
 		.navigationTitle("navigationTitle_homepage")
 		.navigationBarTitleDisplayMode(.inline)
