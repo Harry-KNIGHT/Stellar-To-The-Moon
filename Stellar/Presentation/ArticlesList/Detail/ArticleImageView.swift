@@ -12,13 +12,6 @@ import UIKit
 
 struct ArticleImageView: View {
 	let article: Article
-	@EnvironmentObject private var articleDetailVm: DownloadImageViewModel
-	
-	@Environment(\.colorScheme) private var colorScheme
-	
-	@State private var isLoadingVisible = true
-
-	@State private var animate = false
 	var body: some View {
 		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
 			image
@@ -31,7 +24,7 @@ struct ArticleImageView: View {
 				)
 				.accessibilityLabel(article.title)
 		} placeholder: {
-			LoadingArticleImagePlaceholder(isLoadingVisible: $isLoadingVisible)
+			LoadingArticleImagePlaceholder()
 		}
 	}
 }
@@ -39,6 +32,5 @@ struct ArticleImageView: View {
 struct AstronomyImageView_Previews: PreviewProvider {
 	static var previews: some View {
 		ArticleImageView(article: .imageArticleSample)
-			.environmentObject(DownloadImageViewModel())
 	}
 }

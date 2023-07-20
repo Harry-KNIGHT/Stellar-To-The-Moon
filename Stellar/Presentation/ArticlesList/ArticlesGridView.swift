@@ -16,7 +16,6 @@ struct ArticlesGridView: View {
 	]
 
 	@Binding var showFavoritesSheet: Bool
-	@Binding var showBirthdayPicker: Bool
 
 	var body: some View {
 		ScrollView {
@@ -32,11 +31,7 @@ struct ArticlesGridView: View {
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				RandomArticleButtonCell(showBirthdayPicker: $showBirthdayPicker)
-
-				if !articleVm.articles.isEmpty.self {
-					ShowFavSheetButtonCell(showFavoritesSheet: $showFavoritesSheet)
-				}
+				ShowFavSheetButtonCell(showFavoritesSheet: $showFavoritesSheet)
 			}
 		}
 	}
@@ -46,10 +41,7 @@ struct ArticlesGridView: View {
 struct ArticlesGridView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			ArticlesGridView(
-				showFavoritesSheet: .constant(false),
-				showBirthdayPicker: .constant(false)
-			)
+			ArticlesGridView(showFavoritesSheet: .constant(false))
 			.environmentObject(FetchArticlesViewModel())
 		}
 	}

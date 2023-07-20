@@ -13,8 +13,6 @@ struct ArticleDetailView: View {
 	public let article: Article
 
 	// MARK: Properties
-	var isOnRandomArticleGeneration = false
-
 	@State private var isSheetPresented = false
 
 	@EnvironmentObject var astronomyApi: DownloadImageViewModel
@@ -30,7 +28,6 @@ struct ArticleDetailView: View {
 
 				ArticleDetailBodyView(
 					article: article,
-					isOnRandomArticleGeneration: isOnRandomArticleGeneration,
 					isImageDownloading: $isImageDownloading,
 					isImageDownloaded: $isImageDownloaded
 				)
@@ -52,10 +49,9 @@ struct ArticleDetailView_Previews: PreviewProvider {
 				.environmentObject(FavoriteViewModel())
 		}
 		NavigationView {
-			ArticleDetailView(article: .imageArticleSample, isOnRandomArticleGeneration: true)
+			ArticleDetailView(article: .imageArticleSample)
 				.environmentObject(DownloadImageViewModel())
 				.environmentObject(FavoriteViewModel())
-				.environmentObject(SearchDateArticleViewModel())
 		}
 	}
 }

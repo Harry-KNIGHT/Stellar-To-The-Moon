@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LoadingArticleImagePlaceholder: View {
-	@Binding var isLoadingVisible: Bool
 	var body: some View {
 		ZStack {
 			Rectangle()
@@ -25,6 +24,6 @@ struct LoadingArticleImagePlaceholder: View {
 
 struct LoadingArticleImagePlaceholder_Previews: PreviewProvider {
 	static var previews: some View {
-		LoadingArticleImagePlaceholder(isLoadingVisible: .constant(false))
+		LoadingArticleImagePlaceholder()
 	}
 }

@@ -15,7 +15,6 @@ struct HeadbandsDetailButtonsView: View {
 	@ObservedObject private var downloadImageVm = DownloadImageViewModel()
 
 	let article: Article
-	var isOnRandomArticleGeneration: Bool
 
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool
@@ -34,12 +33,6 @@ struct HeadbandsDetailButtonsView: View {
 				isDownloadingImage: $isDownloadingImage
 			)
 			Spacer()
-
-
-			if isOnRandomArticleGeneration {
-				GenerateRandomArticleButtonCell()
-				Spacer()
-			}
 		}
 	}
 }
@@ -50,14 +43,13 @@ struct HeadbandsDetailButtonsView_Previews: PreviewProvider {
 	static var previews: some View {
 		HeadbandsDetailButtonsView(
 			article: .imageArticleSample,
-			isOnRandomArticleGeneration: false, isImageDowloaded: .constant(false),
+			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
 		.environmentObject(DownloadImageViewModel())
 		.environmentObject(FavoriteViewModel())
 		HeadbandsDetailButtonsView(
 			article: .imageArticleSample,
-			isOnRandomArticleGeneration: true,
 			isImageDowloaded: .constant(false),
 			isDownloadingImage: .constant(false)
 		)
