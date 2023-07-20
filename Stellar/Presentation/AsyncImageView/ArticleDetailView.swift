@@ -24,7 +24,7 @@ struct ArticleDetailView: View {
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			VStack(spacing: 0) {
-				ArticleImageView(article: article)
+				ArticleDetailPhotoView(article: article)
 
 				ArticleDetailBodyView(
 					article: article,

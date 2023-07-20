@@ -30,6 +30,7 @@ struct DownloadImageButton: View {
 		.customButtonStyle(.title)
 	}
 
+	// TODO: À RETIRER DE LA VUE!
 	func downloadImage(article: Article, isDownloadingImage: Bool, isImageDowloaded: Bool) {
 		Task {
 			do {

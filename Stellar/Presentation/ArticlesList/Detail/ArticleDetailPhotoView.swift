@@ -1,5 +1,5 @@
 //
-//  ArticleImageView.swift
+//  ArticleDetailPhotoView.swift
 //  NasaDayAstronomy
 //
 //  Created by Elliot Knight on 25/07/2022.
@@ -10,7 +10,7 @@ import StellarMoonKit
 import CachedAsyncImage
 import UIKit
 
-struct ArticleImageView: View {
+struct ArticleDetailPhotoView: View {
 	let article: Article
 	var body: some View {
 		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
@@ -24,13 +24,22 @@ struct ArticleImageView: View {
 				)
 				.accessibilityLabel(article.title)
 		} placeholder: {
-			LoadingArticleImagePlaceholder()
+			ZStack {
+				Rectangle()
+					.frame(minHeight: 200, maxHeight: 350)
+					.foregroundStyle(.regularMaterial)
+
+				ProgressView()
+					.frame(width: 100, height: 50)
+					.foregroundColor(.primary)
+					.accessibilityLabel("Loading image")
+			}
 		}
 	}
 }
 
-struct AstronomyImageView_Previews: PreviewProvider {
+struct ArticleDetailPhotoView_Previews: PreviewProvider {
 	static var previews: some View {
-		ArticleImageView(article: .imageArticleSample)
+		ArticleDetailPhotoView(article: .imageArticleSample)
 	}
 }

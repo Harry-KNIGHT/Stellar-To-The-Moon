@@ -31,7 +31,7 @@ struct ArticlesGridView: View {
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				ShowFavSheetButtonCell(showFavoritesSheet: $showFavoritesSheet)
+				DisplayFavoritesSheetView(showFavoritesSheet: $showFavoritesSheet)
 			}
 		}
 	}
