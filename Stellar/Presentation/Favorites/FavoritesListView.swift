@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct FavoritesListView: View {
-	@EnvironmentObject public var favoriteVM: FavoriteViewModel
+	@EnvironmentObject private var favoriteVM: FavoriteViewModel
 
 	var body: some View {
-		List {
-			ForEach(favoriteVM.favoriteArticles) { article in
-				NavigationLink(destination: ArticleDetailView(article: article)) {
-					RowCell(article: article, isInFavoriteListView: true)
+		if favoriteVM.favoriteArticles.isEmpty {
+			EmptyView()
+		} else {
+			List {
+				ForEach(favoriteVM.favoriteArticles) { article in
+					NavigationLink(destination: ArticleDetailView(article: article)) {
+						RowCell(article: article)
+					}
 				}
+				.onDelete(perform: favoriteVM.deletFavorite)
+				.onMove(perform: favoriteVM.moveFavorite)
 			}
-			.onDelete(perform: favoriteVM.deletFavorite)
-			.onMove(perform: favoriteVM.moveFavorite)
-		}
-		.toolbar {
-			ToolbarItem(placement: .navigationBarLeading) {
-				EditButton()
+			.toolbar {
+				ToolbarItem(placement: .navigationBarLeading) {
+					EditButton()
+				}
 			}
 		}
 	}

@@ -36,7 +36,6 @@
 		3CB7A12129F5AF3F00F074F1 /* StellarMoonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB7A12029F5AF3F00F074F1 /* StellarMoonKit */; };
 		3CBB34A428BE35F700AC0EDF /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBB34A328BE35F700AC0EDF /* RowCell.swift */; };
 		3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */; };
-		3CBF0C452891371E00010691 /* FavoritesArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C442891371E00010691 /* FavoritesArticlesView.swift */; };
 		3CBF0C4728913B5700010691 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF0C4628913B5700010691 /* EmptyView.swift */; };
 		3CC944B528B3A74800447BB6 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */; };
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
@@ -109,7 +108,6 @@
 		3CB0ADCB29B4A74800261ECF /* ArticleDetailBodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailBodyView.swift; sourceTree = "<group>"; };
 		3CBB34A328BE35F700AC0EDF /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
 		3CBF0C41289134EE00010691 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
-		3CBF0C442891371E00010691 /* FavoritesArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesArticlesView.swift; sourceTree = "<group>"; };
 		3CBF0C4628913B5700010691 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		3CC944B428B3A74800447BB6 /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
 		3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDayAstronomyApp.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 		3CCE9D972A6729FA00BD4060 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				3CBF0C442891371E00010691 /* FavoritesArticlesView.swift */,
 				3C03EADE2937EC190023EC26 /* FavoritesListView.swift */,
 				3CBB34A328BE35F700AC0EDF /* RowCell.swift */,
 				3CA718CF292965530075E0D5 /* AddFavoriteButtonCell.swift */,
@@ -532,7 +529,6 @@
 				3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */,
 				3CA718D0292965530075E0D5 /* AddFavoriteButtonCell.swift in Sources */,
 				3CA718CE292964990075E0D5 /* ShowFavSheetButtonCell.swift in Sources */,
-				3CBF0C452891371E00010691 /* FavoritesArticlesView.swift in Sources */,
 				3CC944B528B3A74800447BB6 /* DownloadImageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
