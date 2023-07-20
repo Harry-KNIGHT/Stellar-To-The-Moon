@@ -17,7 +17,7 @@ struct FavoritesListView: View {
 			List {
 				ForEach(favoriteVM.favoriteArticles) { article in
 					NavigationLink(destination: ArticleDetailView(article: article)) {
-						RowCell(article: article)
+						ListRowCell(article: article)
 					}
 				}
 				.onDelete(perform: favoriteVM.deletFavorite)

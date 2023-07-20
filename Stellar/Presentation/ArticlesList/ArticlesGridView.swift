@@ -24,7 +24,8 @@ struct ArticlesGridView: View {
 				ForEach(articleVm.articles.reversed()) { article in
 					NavigationLink(destination: ArticleDetailView(article: article)) {
 						
-						ArticleImageListCell(article: article, isInFavoriteListView: false)
+						ArticleImageListCell(article: article)
+							.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
 					}
 				}
 			}

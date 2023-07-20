@@ -12,8 +12,6 @@ import CachedAsyncImage
 struct ArticleImageListCell: View {
 	let article: Article
 
-	var isInFavoriteListView: Bool
-
 	var body: some View {
 		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
 			ZStack(alignment: .bottomLeading) {
@@ -21,12 +19,9 @@ struct ArticleImageListCell: View {
 					.resizable()
 					.accessibilityLabel("Image of \(article.title)")
 			}
-			.border(isInFavoriteListView ? .clear : .black)
-			.frame(maxWidth: deviceSizeDivisedByTwo, maxHeight: deviceSizeDivisedByTwo)
 		} placeholder: {
 			ZStack {
 				RoundedRectangle(cornerRadius: 0)
-					.frame(maxWidth: deviceSizeDivisedByTwo, minHeight: deviceSizeDivisedByTwo)
 					.foregroundStyle(.secondary)
 				ProgressView()
 					.foregroundStyle(.primary)
@@ -39,7 +34,7 @@ struct ArticleImageListCell: View {
 
 struct ArticleImageListCell_Previews: PreviewProvider {
 	static var previews: some View {
-		ArticleImageListCell(article: .imageArticleSample, isInFavoriteListView: false)
+		ArticleImageListCell(article: .imageArticleSample)
 			.previewLayout(.sizeThatFits)
 	}
 }

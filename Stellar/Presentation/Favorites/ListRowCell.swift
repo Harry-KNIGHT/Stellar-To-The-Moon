@@ -1,5 +1,5 @@
 //
-//  RowCell.swift
+//  ListRowCell.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 30/08/2022.
@@ -9,13 +9,12 @@ import SwiftUI
 import StellarMoonKit
 
 // TODO: delet isInFavoriteListView bc it's used only on FavoritesListView.
-struct RowCell: View {
+struct ListRowCell: View {
 	let article: Article
 
 	var body: some View {
 		HStack(alignment: .center, spacing: 10) {
-
-			ArticleImageListCell(article: article, isInFavoriteListView: false)
+			ArticleImageListCell(article: article)
 				.frame(width: 90, height: 90)
 				.cornerRadius(10)
 
@@ -41,11 +40,11 @@ struct RowCell: View {
 	}
 }
 
-struct RowCell_Previews: PreviewProvider {
+struct ListRowCell_Previews: PreviewProvider {
 	static var previews: some View {
-		RowCell(article: .imageArticleSample)
+		ListRowCell(article: .imageArticleSample)
 			.previewLayout(.sizeThatFits)
-		RowCell(article: .imageArticleSample)
+		ListRowCell(article: .imageArticleSample)
 			.previewLayout(.sizeThatFits)
 			.preferredColorScheme(.dark)
 	}
