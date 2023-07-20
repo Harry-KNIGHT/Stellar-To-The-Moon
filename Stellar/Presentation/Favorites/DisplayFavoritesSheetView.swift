@@ -1,5 +1,5 @@
 //
-//  ShowFavSheetButtonCell.swift
+//  DisplayFavoritesSheetView.swift
 //  Stellar
 //
 //  Created by Elliot Knight on 19/11/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShowFavSheetButtonCell: View {
+struct DisplayFavoritesSheetView: View {
 	@Binding var showFavoritesSheet: Bool
 
     var body: some View {
@@ -20,13 +20,13 @@ struct ShowFavSheetButtonCell: View {
 		})
 		.accessibilityLabel("See your favorites astronomy articles.")
 		.sheet(isPresented: $showFavoritesSheet) {
-			FavoritesArticlesView()
+			FavoritesListView()
 		}
     }
 }
 
-struct ShowFavSheetButtonCell_Previews: PreviewProvider {
+struct DisplayFavoritesSheetView_Previews: PreviewProvider {
     static var previews: some View {
-		ShowFavSheetButtonCell(showFavoritesSheet: .constant(false))
+		DisplayFavoritesSheetView(showFavoritesSheet: .constant(false))
     }
 }

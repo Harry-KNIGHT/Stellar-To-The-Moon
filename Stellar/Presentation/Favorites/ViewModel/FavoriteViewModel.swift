@@ -35,7 +35,7 @@ class FavoriteViewModel: ObservableObject {
 	}
 
 	/// Delet Favorite from list swipe
-	/// - Parameter offsets: offset permit to delet article with swipe gesture 
+	/// - Parameter offsets: offset permit to delet article with swipe gesture
 	func deletFavorite(at offsets: IndexSet) {
 		favoriteArticles.remove(atOffsets: offsets)
 		save()
@@ -70,5 +70,9 @@ class FavoriteViewModel: ObservableObject {
 
 	func isArticleIsInFavorites(_ article: Article) -> Bool {
 		return self.favoriteArticles.contains(article)
+	}
+
+	func setFavoriteIcon(article: Article) -> String {
+		return isArticleIsInFavorites(article) ? "star.fill" : "star"
 	}
 }

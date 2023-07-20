@@ -16,7 +16,6 @@ struct ArticlesGridView: View {
 	]
 
 	@Binding var showFavoritesSheet: Bool
-	@Binding var showBirthdayPicker: Bool
 
 	var body: some View {
 		ScrollView {
@@ -24,18 +23,15 @@ struct ArticlesGridView: View {
 				ForEach(articleVm.articles.reversed()) { article in
 					NavigationLink(destination: ArticleDetailView(article: article)) {
 						
-						ArticleImageListCell(article: article, isInFavoriteListView: false)
+						ArticleImageListCell(article: article)
+							.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
 					}
 				}
 			}
 		}
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				RandomArticleButtonCell(showBirthdayPicker: $showBirthdayPicker)
-
-				if !articleVm.articles.isEmpty.self {
-					ShowFavSheetButtonCell(showFavoritesSheet: $showFavoritesSheet)
-				}
+				DisplayFavoritesSheetView(showFavoritesSheet: $showFavoritesSheet)
 			}
 		}
 	}
@@ -45,10 +41,7 @@ struct ArticlesGridView: View {
 struct ArticlesGridView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			ArticlesGridView(
-				showFavoritesSheet: .constant(false),
-				showBirthdayPicker: .constant(false)
-			)
+			ArticlesGridView(showFavoritesSheet: .constant(false))
 			.environmentObject(FetchArticlesViewModel())
 		}
 	}

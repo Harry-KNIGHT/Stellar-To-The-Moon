@@ -12,7 +12,6 @@ struct NasaDayAstronomyApp: App {
 	@StateObject var astronomyVM = DownloadImageViewModel()
 	@StateObject var articlesVM = FetchArticlesViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
-	@StateObject var searchDateArticleVM = SearchDateArticleViewModel()
 
 	var body: some Scene {
 		WindowGroup {
@@ -20,7 +19,6 @@ struct NasaDayAstronomyApp: App {
 					.environmentObject(astronomyVM)
 					.environmentObject(articlesVM)
 					.environmentObject(favoriteVM)
-					.environmentObject(searchDateArticleVM)
 		}
 	}
 }
