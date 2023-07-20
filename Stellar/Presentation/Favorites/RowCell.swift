@@ -7,6 +7,7 @@
 
 import SwiftUI
 import StellarMoonKit
+import Design
 
 // TODO: delet isInFavoriteListView bc it's used only on FavoritesListView.
 struct RowCell: View {
@@ -17,11 +18,11 @@ struct RowCell: View {
 	var body: some View {
 		HStack(alignment: .center, spacing: 10) {
 			if isInFavoriteListView {
-				ArticleImageListCell(article: article, isInFavoriteListView: isInFavoriteListView)
+				AsyncImageArticleView(article: article, isInFavoriteListView: isInFavoriteListView)
 					.frame(width: 90, height: 90)
 					.cornerRadius(10)
 			} else {
-				ArticleImageListCell(article: article, isInFavoriteListView: isInFavoriteListView)
+				AsyncImageArticleView(article: article, isInFavoriteListView: isInFavoriteListView)
 			}
 			VStack(alignment: .leading, spacing: 3) {
 				Text(article.title)

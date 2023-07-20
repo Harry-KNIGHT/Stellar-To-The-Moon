@@ -7,7 +7,6 @@
 
 import SwiftUI
 import StellarMoonKit
-import CachedAsyncImage
 import UIKit
 
 struct ArticleImageView: View {
@@ -20,7 +19,7 @@ struct ArticleImageView: View {
 
 	@State private var animate = false
 	var body: some View {
-		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
+		AsyncImage(url: URL(string: article.mediaUrl)) { image in
 			image
 				.resizable()
 				.aspectRatio(contentMode: .fill)

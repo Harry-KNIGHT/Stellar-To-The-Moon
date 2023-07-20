@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Design
 
 struct FavoritesArticlesView: View {
 	@EnvironmentObject private var favoriteVM: FavoriteViewModel
@@ -14,9 +15,8 @@ struct FavoritesArticlesView: View {
 			VStack {
 				switch favoriteVM.favoriteArticles.isEmpty {
 				case true:
-					EmptyView()
+					EmptyFavoritesView()
 				default:
-
 					FavoritesListView()
 				}
 			}
