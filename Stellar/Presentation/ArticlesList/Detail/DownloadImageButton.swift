@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StellarMoonKit
+import Api
 
 struct DownloadImageButton: View {
 	let article: Article

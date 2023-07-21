@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
-@preconcurrency import StellarMoonKit
+// TODO: Use business entity for remove this import
+import Api
+import Domain
 
 class FetchArticlesViewModel: ObservableObject {
 	@Published var articles: [Article]
+	private let repository: ArticlesRepository
 
-	init() {
+	init(repository: ArticlesRepository) {
+		self.repository = repository
+
 		if let data = UserDefaults.standard.data(forKey: "SavedData") {
 			if let decoded = try? JSONDecoder().decode([Article].self, from: data) {
 				articles = decoded
@@ -28,15 +33,14 @@ class FetchArticlesViewModel: ObservableObject {
 		}
 	}
 
-	@MainActor func getArticles() {
-		Task {
-			do {
-				let fetchedArticles = try await FetchArticlesApi.fetchArticles()
-				filterFetchedArticles(fetchedArticles: fetchedArticles)
-			} catch {
-				print("Error \(error.localizedDescription)")
-			}
+	@MainActor
+	func getArticles() async {
+		do {
+			self.articles = try await repository.getArticles()
+		} catch {
+			self.articles = []
 		}
+
 	}
 
 	private func filterFetchedArticles(fetchedArticles: [Article]) {

@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import Api
+import Domain
 
 @main
 struct NasaDayAstronomyApp: App {
 	@StateObject var astronomyVM = DownloadImageViewModel()
-	@StateObject var articlesVM = FetchArticlesViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
+	@StateObject var articlesVM = FetchArticlesViewModel(
+		repository: ArticlesRepositoryDefault(api: ArticlesService())
+	)
 
 	var body: some Scene {
 		WindowGroup {

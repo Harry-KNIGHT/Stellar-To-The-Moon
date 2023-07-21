@@ -1,13 +1,13 @@
 //
-//  File.swift
+//  ArticlesRepository.swift
 //  
 //
 //  Created by Elliot Knight on 19/07/2023.
 //
 
 import Foundation
-import StellarMoonKit
+import Api
 
-protocol ArticleRepository {
+public protocol ArticlesRepository {
 	func getArticles() async throws -> [Article]
 }

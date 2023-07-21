@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import StellarMoonKit
+import Api
 
 class DownloadImageViewModel: ObservableObject {
 	func downloadImageToCameraRoll(from url: String) async throws -> UIImage {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import StellarMoonKit
+import Api
 
 class FavoriteViewModel: ObservableObject {
 	@Published var favoriteArticles: [Article]

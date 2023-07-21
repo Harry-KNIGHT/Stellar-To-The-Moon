@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Domain
+import Api
 
 struct MainScreen: View {
-	@EnvironmentObject private var articleVm: FetchArticlesViewModel
+	@EnvironmentObject private var articlesVM: FetchArticlesViewModel
 	@State private var showFavoritesSheet = false
 
 	var body: some View {
@@ -19,8 +21,8 @@ struct MainScreen: View {
 
 		.navigationTitle("navigationTitle_homepage")
 		.navigationBarTitleDisplayMode(.inline)
-		.onAppear {
-			articleVm.getArticles()
+		.task {
+			await articlesVM.getArticles()
 		}
 	}
 }
@@ -28,7 +30,7 @@ struct MainScreen: View {
 struct AstronomyImageGrid_Previews: PreviewProvider {
 	static var previews: some View {
 		MainScreen()
-			.environmentObject(FetchArticlesViewModel())
+			.environmentObject(FetchArticlesViewModel(repository: ArticlesRepositoryDefault(api: ArticlesService())))
 			.environmentObject(FavoriteViewModel())
 			.environmentObject(DownloadImageViewModel())
 	}

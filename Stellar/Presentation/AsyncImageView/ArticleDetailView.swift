@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StellarMoonKit
+import Api
 import UIKit
 
 struct ArticleDetailView: View {
