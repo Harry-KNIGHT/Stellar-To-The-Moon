@@ -18,7 +18,6 @@
 		3C5555D1289057E80093122A /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D0289057E80093122A /* ArticleDetailView.swift */; };
 		3C5555D3289058C50093122A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D2289058C50093122A /* MainScreen.swift */; };
 		3C5555D6289058FF0093122A /* FetchArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* FetchArticlesViewModel.swift */; };
-		3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C57F3312938A1DB001F74A0 /* CachedAsyncImage */; };
 		3C57F3342938A213001F74A0 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57F3332938A213001F74A0 /* URLCache.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
 		3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7F9680293A390200B949DD /* DownloadImageButton.swift */; };
@@ -123,7 +122,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0049132A6D3B700010F2C6 /* Domain in Frameworks */,
-				3C57F3322938A1DB001F74A0 /* CachedAsyncImage in Frameworks */,
 				3CB6FFAE2A6D36BD008EB5C2 /* StellarApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +382,6 @@
 			);
 			name = Stellar;
 			packageProductDependencies = (
-				3C57F3312938A1DB001F74A0 /* CachedAsyncImage */,
 				3CB6FFAD2A6D36BD008EB5C2 /* StellarApi */,
 				3C0049122A6D3B700010F2C6 /* Domain */,
 			);
@@ -426,7 +423,6 @@
 			);
 			mainGroup = 3CDBA102288E759A00AB15C7;
 			packageReferences = (
-				3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 3CDBA102288E759A00AB15C7;
 			projectDirPath = "";
@@ -836,26 +832,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		3C0049122A6D3B700010F2C6 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
-		};
-		3C57F3312938A1DB001F74A0 /* CachedAsyncImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3C57F3302938A1DB001F74A0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
-			productName = CachedAsyncImage;
 		};
 		3CB6FFAD2A6D36BD008EB5C2 /* StellarApi */ = {
 			isa = XCSwiftPackageProductDependency;
