@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StellarMoonKit
+import 
 
 struct AddFavoriteButtonCell: View {
 	let article: Article

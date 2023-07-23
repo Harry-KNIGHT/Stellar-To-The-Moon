@@ -5,9 +5,12 @@
 //  Created by Elliot Knight on 23/07/2023.
 //
 
+import StellarApi
 import Foundation
 
-public struct Article: Identifiable, Equatable {
+// MARK: - Article model
+
+public struct Article: Codable, Equatable {
 
 	// MARK: Initializer
 
@@ -29,7 +32,6 @@ public struct Article: Identifiable, Equatable {
 
 	// MARK: Properties
 
-	public var id: String { explanation }
 	public let title: String
 	public let copyright: String?
 	public let explanation: String
@@ -47,15 +49,15 @@ public struct Article: Identifiable, Equatable {
 	}
 }
 
-// MARK: MediaType
+// MARK: MediaType enum
 
-public enum MediaType: String {
+public enum MediaType: String, Codable {
 	case image = "image"
 	case video = "video"
 }
 
 
-// MARK: For previews.
+// MARK: Article extension
 
 extension Article {
 	public static var imageArticleSample = Article(

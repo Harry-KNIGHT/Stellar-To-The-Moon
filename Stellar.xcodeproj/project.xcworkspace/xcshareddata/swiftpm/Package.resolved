@@ -1,30 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "activityindicatorview",
+      "identity" : "swiftui-cached-async-image",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/ActivityIndicatorView",
+      "location" : "https://github.com/lorenzofiamingo/swiftui-cached-async-image",
       "state" : {
-        "revision" : "0fb57e69b6130b4beb8ba49eaafe13563f2f6bd6",
-        "version" : "1.1.0"
-      }
-    },
-    {
-      "identity" : "refreshablescrollview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Q42/RefreshableScrollView",
-      "state" : {
-        "revision" : "45ab1092d36ca77bbbeee1534251085d974dc40e",
-        "version" : "0.0.2"
-      }
-    },
-    {
-      "identity" : "stellarmoonkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Harry-KNIGHT/StellarMoonKit",
-      "state" : {
-        "branch" : "main",
-        "revision" : "072b8f149facb482d24b96328b5585e22776c023"
+        "revision" : "467a3d17479887943ab917a379e62bbaff60ac8a",
+        "version" : "2.1.1"
       }
     }
   ],

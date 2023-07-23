@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import StellarMoonKit
+import 
 @testable import Stellar
 
 final class FavoritesViewModelTests: XCTestCase {

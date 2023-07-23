@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StellarMoonKit
+import Domain
 import CachedAsyncImage
 
 struct ArticleImageListCell: View {

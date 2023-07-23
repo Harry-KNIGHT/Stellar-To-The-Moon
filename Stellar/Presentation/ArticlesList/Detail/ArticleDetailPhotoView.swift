@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StellarMoonKit
+
 import CachedAsyncImage
 import UIKit
 

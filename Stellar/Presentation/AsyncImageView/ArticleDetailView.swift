@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import StellarMoonKit
 import UIKit
+import Domain
 
 struct ArticleDetailView: View {
 	public let article: Article
