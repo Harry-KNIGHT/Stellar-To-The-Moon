@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import 
+import Domain
 
 // TODO: delet isInFavoriteListView bc it's used only on FavoritesListView.
 struct ListRowCell: View {

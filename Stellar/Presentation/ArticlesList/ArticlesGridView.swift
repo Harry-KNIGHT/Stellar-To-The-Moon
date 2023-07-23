@@ -20,13 +20,13 @@ struct ArticlesGridView: View {
 	var body: some View {
 		ScrollView {
 			LazyVGrid(columns:  twoColumns, spacing: 0) {
-				ForEach(articleVm.articles.reversed()) { article in
-					NavigationLink(destination: ArticleDetailView(article: article)) {
-						
-						ArticleImageListCell(article: article)
-							.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
-					}
-				}
+//				ForEach(articleVm.articles.reversed()) { article in
+//					NavigationLink(destination: ArticleDetailView(article: article)) {
+//						
+//						ArticleImageListCell(article: article)
+//							.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
+//					}
+//				}
 			}
 		}
 		.toolbar {

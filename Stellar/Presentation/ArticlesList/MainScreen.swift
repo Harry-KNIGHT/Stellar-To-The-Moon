@@ -19,9 +19,9 @@ struct MainScreen: View {
 
 		.navigationTitle("navigationTitle_homepage")
 		.navigationBarTitleDisplayMode(.inline)
-		.onAppear {
-			articleVm.getArticles()
-		}
+//		.onAppear {
+//			articleVm.getArticles()
+//		}
 	}
 }
 

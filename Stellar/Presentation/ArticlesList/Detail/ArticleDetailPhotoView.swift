@@ -9,6 +9,7 @@ import SwiftUI
 
 import CachedAsyncImage
 import UIKit
+import Domain
 
 struct ArticleDetailPhotoView: View {
 	let article: Article

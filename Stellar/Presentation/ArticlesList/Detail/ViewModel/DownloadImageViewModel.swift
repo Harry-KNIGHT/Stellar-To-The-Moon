@@ -13,7 +13,7 @@ class DownloadImageViewModel: ObservableObject {
 	func downloadImageToCameraRoll(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
 //			throw ApiError.urlNotFound
-			print("Error")
+			return UIImage.checkmark
 		}
 		do {
 			let (data, _) = try await URLSession.shared.data(from: url)
@@ -21,10 +21,10 @@ class DownloadImageViewModel: ObservableObject {
 				return image
 			} else {
 //				throw ApiError.noDataForImage
-				print("Error")
+				return UIImage.checkmark
 			}
 		} catch {
-			print("Error")
+			return UIImage.checkmark
 		}
 	}
 }

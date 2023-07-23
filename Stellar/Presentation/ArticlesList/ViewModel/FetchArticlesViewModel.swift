@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Domain
 
 class FetchArticlesViewModel: ObservableObject {
 	@Published var articles: [Article]
@@ -27,21 +27,21 @@ class FetchArticlesViewModel: ObservableObject {
 			UserDefaults.standard.set(encoded, forKey: "SavedData")
 		}
 	}
+//
+//	@MainActor func getArticles() {
+//		Task {
+//			do {
+//				let fetchedArticles = try await FetchArticlesApi.fetchArticles()
+//				filterFetchedArticles(fetchedArticles: fetchedArticles)
+//			} catch {
+//				print("Error \(error.localizedDescription)")
+//			}
+//		}
+//	}
 
-	@MainActor func getArticles() {
-		Task {
-			do {
-				let fetchedArticles = try await FetchArticlesApi.fetchArticles()
-				filterFetchedArticles(fetchedArticles: fetchedArticles)
-			} catch {
-				print("Error \(error.localizedDescription)")
-			}
-		}
-	}
-
-	private func filterFetchedArticles(fetchedArticles: [Article]) {
-		let filteredArticles = fetchedArticles.filter { $0.mediaType == .image }
-		articles = filteredArticles
-		save()
-	}
+//	private func filterFetchedArticles(fetchedArticles: [Article]) {
+//		let filteredArticles = fetchedArticles.filter { $0.mediaType == .image }
+//		articles = filteredArticles
+//		save()
+//	}
 }
