@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C0049132A6D3B700010F2C6 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 3C0049122A6D3B700010F2C6 /* Domain */; };
 		3C03EADF2937EC190023EC26 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C03EADE2937EC190023EC26 /* FavoritesListView.swift */; };
 		3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */; };
 		3C0F8FBE29D716FF001134B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0F8FBD29D716FF001134B5 /* Localizable.strings */; };
+		3C15ADA52A6EF12A000659A5 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 3C15ADA42A6EF12A000659A5 /* Domain */; };
 		3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */; };
 		3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */; };
 		3C5555CB288F12640093122A /* ArticleDetailPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* ArticleDetailPhotoView.swift */; };
@@ -121,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0049132A6D3B700010F2C6 /* Domain in Frameworks */,
+				3C15ADA52A6EF12A000659A5 /* Domain in Frameworks */,
 				3CB6FFAE2A6D36BD008EB5C2 /* StellarApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +383,7 @@
 			name = Stellar;
 			packageProductDependencies = (
 				3CB6FFAD2A6D36BD008EB5C2 /* StellarApi */,
-				3C0049122A6D3B700010F2C6 /* Domain */,
+				3C15ADA42A6EF12A000659A5 /* Domain */,
 			);
 			productName = NasaDayAstronomy;
 			productReference = 3C87A8722A1652B9000D5716 /* Stellar.app */;
@@ -833,7 +833,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3C0049122A6D3B700010F2C6 /* Domain */ = {
+		3C15ADA42A6EF12A000659A5 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
 		};
