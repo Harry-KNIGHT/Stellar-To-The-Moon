@@ -20,37 +20,20 @@ class FetchArticlesViewModel: ObservableObject {
 			await getArticles()
 		}
 	}
-//	init() {
-//		if let data = UserDefaults.standard.data(forKey: "SavedData") {
-//			if let decoded = try? JSONDecoder().decode([Article].self, from: data) {
-//				articles = decoded
-//				return
-//			}
-//		}
-//		// No Saved data
-//		articles = []
-//	}
 
-	private func save() {
-		if let encoded = try? JSONEncoder().encode(articles) {
-			UserDefaults.standard.set(encoded, forKey: "SavedData")
-		}
-	}
-
-	@MainActor func getArticles() async {
+	@MainActor
+	private func getArticles() async {
 		Task {
 			do {
 				let fetchedArticles = try await repository.getArticles()
 				articles = fetchedArticles
 			} catch {
-				print("Error \(error.localizedDescription)")
+				throw ViewModelErrors.emptyDataReceived
 			}
 		}
 	}
+}
 
-//	private func filterFetchedArticles(fetchedArticles: [Article]) {
-//		let filteredArticles = fetchedArticles.filter { $0.mediaType == .image }
-//		articles = filteredArticles
-//		save()
-//	}
+enum ViewModelErrors: Error {
+	case emptyDataReceived
 }
