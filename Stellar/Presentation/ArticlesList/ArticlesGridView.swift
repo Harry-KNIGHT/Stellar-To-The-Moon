@@ -45,9 +45,7 @@ struct ArticlesGridView: View {
 
 struct ArticlesGridView_Previews: PreviewProvider {
 	static var previews: some View {
-		NavigationView {
-			ArticlesGridView()
-				.environmentObject(FetchArticlesViewModel(repository: ArticleRepositoryDefault(api: ArticlesService())))
-		}
+		ArticlesGridView()
+			.environmentObject(FetchArticlesViewModel(repository: ArticleRepositoryDefault(api: ArticlesService())))
 	}
 }
