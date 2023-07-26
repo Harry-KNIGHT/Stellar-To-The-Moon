@@ -33,6 +33,7 @@
 		3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */; };
 		3CDBA113288E759B00AB15C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA112288E759B00AB15C7 /* Assets.xcassets */; };
 		3CDBA116288E759B00AB15C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */; };
+		3CEABB452A71794200DE6AAB /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEABB442A71794200DE6AAB /* DownloadImageViewModel.swift */; };
 		3CEC397F29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift */; };
 		3CF9A87B29D4C7BD009A8DBB /* PinchZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9A87A29D4C7BD009A8DBB /* PinchZoom.swift */; };
 		3CF9A87D29D4C8DF009A8DBB /* ScreenBound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9A87C29D4C8DF009A8DBB /* ScreenBound.swift */; };
@@ -100,6 +101,7 @@
 		3CDBA10E288E759A00AB15C7 /* NasaDayAstronomyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDayAstronomyApp.swift; sourceTree = "<group>"; };
 		3CDBA112288E759B00AB15C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3CEABB442A71794200DE6AAB /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
 		3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadbandsDetailButtonsView.swift; sourceTree = "<group>"; };
 		3CF9A87A29D4C7BD009A8DBB /* PinchZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchZoom.swift; sourceTree = "<group>"; };
 		3CF9A87C29D4C8DF009A8DBB /* ScreenBound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBound.swift; sourceTree = "<group>"; };
@@ -280,8 +282,17 @@
 				3CEC397E29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift */,
 				3CB0ADCB29B4A74800261ECF /* ArticleDetailBodyView.swift */,
 				3C7F9680293A390200B949DD /* DownloadImageButton.swift */,
+				3CEABB462A717AD500DE6AAB /* ViewModels */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		3CEABB462A717AD500DE6AAB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3CEABB442A71794200DE6AAB /* DownloadImageViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		3CFD116A2892EE6700F14F65 /* EmptyView */ = {
@@ -464,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5555CB288F12640093122A /* ArticleDetailPhotoView.swift in Sources */,
+				3CEABB452A71794200DE6AAB /* DownloadImageViewModel.swift in Sources */,
 				3CF9A87D29D4C8DF009A8DBB /* ScreenBound.swift in Sources */,
 				3C5555D6289058FF0093122A /* FetchArticlesViewModel.swift in Sources */,
 				3C57F3342938A213001F74A0 /* URLCache.swift in Sources */,
