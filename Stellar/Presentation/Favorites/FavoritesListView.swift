@@ -15,13 +15,13 @@ struct FavoritesListView: View {
 			EmptyView()
 		} else {
 			List {
-//				ForEach(favoriteVM.favoriteArticles) { article in
-//					NavigationLink(destination: ArticleDetailView(article: article)) {
-//						ListRowCell(article: article)
-//					}
-//				}
-//				.onDelete(perform: favoriteVM.deletFavorite)
-//				.onMove(perform: favoriteVM.moveFavorite)
+				ForEach(favoriteVM.favoriteArticles) { article in
+					NavigationLink(destination: ArticleDetailView(article: article)) {
+						ListRowCell(article: article)
+					}
+				}
+				.onDelete(perform: favoriteVM.deletFavorite)
+				.onMove(perform: favoriteVM.moveFavorite)
 			}
 			.toolbar {
 				ToolbarItem(placement: .navigationBarLeading) {
