@@ -7,22 +7,27 @@
 
 import Foundation
 import UIKit
-import StellarMoonKit
+import Domain
 
-class DownloadImageViewModel: ObservableObject {
-	func downloadImageToCameraRoll(from url: String) async throws -> UIImage {
+final class DownloadImageViewModel: ObservableObject {
+	public func downloadImageToCameraRoll(from url: String) async throws -> UIImage {
 		guard let url = URL(string: url) else {
-			throw ApiError.urlNotFound
+			throw DownloadImageError.urlNotFound
 		}
 		do {
 			let (data, _) = try await URLSession.shared.data(from: url)
 			if let image = UIImage(data: data) {
 				return image
 			} else {
-				throw ApiError.noDataForImage
+				throw DownloadImageError.emptyImageData
 			}
 		} catch {
-			throw ApiError.cantFetchImage
+			return UIImage.checkmark
 		}
 	}
+}
+
+enum DownloadImageError: Error {
+	case urlNotFound
+	case emptyImageData
 }

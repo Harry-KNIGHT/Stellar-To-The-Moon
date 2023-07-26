@@ -6,14 +6,13 @@
 //
 
 import SwiftUI
-import StellarMoonKit
-import CachedAsyncImage
+import Domain
 
 struct ArticleImageListCell: View {
 	let article: Article
 
 	var body: some View {
-		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
+		AsyncImage(url: URL(string: article.mediaUrl)) { image in
 			ZStack(alignment: .bottomLeading) {
 				image
 					.resizable()

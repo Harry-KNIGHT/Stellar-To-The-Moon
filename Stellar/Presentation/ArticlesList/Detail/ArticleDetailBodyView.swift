@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StellarMoonKit
+import Domain
 
 struct ArticleDetailBodyView: View {
 	let article: Article
@@ -22,7 +22,7 @@ struct ArticleDetailBodyView: View {
 				isImageDowloaded: $isImageDownloaded,
 				isDownloadingImage: $isImageDownloading
 			)
-			.padding(.vertical, 10)
+//			.padding(.vertical, 10)
 			
 			VStack(alignment: .leading, spacing: 10) {
 				Text(article.explanation)

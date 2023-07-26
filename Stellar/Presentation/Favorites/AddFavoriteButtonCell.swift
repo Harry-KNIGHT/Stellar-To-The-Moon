@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StellarMoonKit
+import Domain
 
 struct AddFavoriteButtonCell: View {
 	let article: Article
@@ -14,7 +14,7 @@ struct AddFavoriteButtonCell: View {
 	
 	var body: some View {
 		Button(action: {
-			favoriteVM.addOrDeletFavorite(article: article)
+//			favoriteVM.addOrDeletFavorite(article: article)
 		}, label: {
 			Image(systemName: favoriteVM.setFavoriteIcon(article: article))
 				.customButtonStyle(.title)
@@ -25,7 +25,9 @@ struct AddFavoriteButtonCell: View {
 
 struct AddFavoriteButtonCell_Previews: PreviewProvider {
 	static var previews: some View {
-		AddFavoriteButtonCell(article: .imageArticleSample)
+		AddFavoriteButtonCell(
+			article: .imageArticleSample
+		)
 			.environmentObject(FavoriteViewModel())
 	}
 }

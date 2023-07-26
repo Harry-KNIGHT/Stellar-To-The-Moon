@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-import StellarMoonKit
-import CachedAsyncImage
+
 import UIKit
+import Domain
 
 struct ArticleDetailPhotoView: View {
 	let article: Article
 	var body: some View {
-		CachedAsyncImage(url: URL(string: article.mediaUrl), urlCache: .imageCache) { image in
+		AsyncImage(url: URL(string: article.mediaUrl)) { image in
 			image
 				.resizable()
 				.aspectRatio(contentMode: .fill)

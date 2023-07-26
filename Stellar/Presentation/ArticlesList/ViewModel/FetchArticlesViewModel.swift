@@ -6,42 +6,34 @@
 //
 
 import SwiftUI
-@preconcurrency import StellarMoonKit
+import Domain
 
 class FetchArticlesViewModel: ObservableObject {
-	@Published var articles: [Article]
+	@Published var articles: [Article] = []
+	private let repository: ArticleRepository
 
-	init() {
-		if let data = UserDefaults.standard.data(forKey: "SavedData") {
-			if let decoded = try? JSONDecoder().decode([Article].self, from: data) {
-				articles = decoded
-				return
-			}
-		}
-		// No Saved data
-		articles = []
-	}
 
-	private func save() {
-		if let encoded = try? JSONEncoder().encode(articles) {
-			UserDefaults.standard.set(encoded, forKey: "SavedData")
+	init(repository: ArticleRepository) {
+		self.repository = repository
+
+		Task {
+			await getArticles()
 		}
 	}
 
-	@MainActor func getArticles() {
+	@MainActor
+	private func getArticles() async {
 		Task {
 			do {
-				let fetchedArticles = try await FetchArticlesApi.fetchArticles()
-				filterFetchedArticles(fetchedArticles: fetchedArticles)
+				let fetchedArticles = try await repository.getArticles()
+				articles = fetchedArticles
 			} catch {
-				print("Error \(error.localizedDescription)")
+				throw ViewModelErrors.emptyDataReceived
 			}
 		}
 	}
+}
 
-	private func filterFetchedArticles(fetchedArticles: [Article]) {
-		let filteredArticles = fetchedArticles.filter { $0.mediaType == .image }
-		articles = filteredArticles
-		save()
-	}
+enum ViewModelErrors: Error {
+	case emptyDataReceived
 }

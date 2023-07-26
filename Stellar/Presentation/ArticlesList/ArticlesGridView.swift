@@ -6,29 +6,36 @@
 //
 
 import SwiftUI
+import StellarApi
+import Domain
 
 struct ArticlesGridView: View {
-	@EnvironmentObject var articleVm: FetchArticlesViewModel
+	@StateObject private var articleVm = FetchArticlesViewModel(repository: ArticleRepositoryDefault(api: ArticlesService()))
 
 	private let twoColumns = [
 		GridItem(.flexible(), spacing: 0),
 		GridItem(.flexible(), spacing: 0)
 	]
 
-	@Binding var showFavoritesSheet: Bool
+	@State private var showFavoritesSheet: Bool = false
 
 	var body: some View {
 		ScrollView {
 			LazyVGrid(columns:  twoColumns, spacing: 0) {
 				ForEach(articleVm.articles.reversed()) { article in
 					NavigationLink(destination: ArticleDetailView(article: article)) {
-						
 						ArticleImageListCell(article: article)
 							.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
 					}
 				}
 			}
 		}
+		.navigationTitle("navigationTitle_homepage")
+		.navigationBarTitleDisplayMode(.inline)
+//		.onAppear {
+//			articleVm.getArticles()
+//		}
+
 		.toolbar {
 			ToolbarItemGroup(placement: .navigationBarTrailing) {
 				DisplayFavoritesSheetView(showFavoritesSheet: $showFavoritesSheet)
@@ -41,8 +48,8 @@ struct ArticlesGridView: View {
 struct ArticlesGridView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
-			ArticlesGridView(showFavoritesSheet: .constant(false))
-			.environmentObject(FetchArticlesViewModel())
+			ArticlesGridView()
+				.environmentObject(FetchArticlesViewModel(repository: ArticleRepositoryDefault(api: ArticlesService())))
 		}
 	}
 }
