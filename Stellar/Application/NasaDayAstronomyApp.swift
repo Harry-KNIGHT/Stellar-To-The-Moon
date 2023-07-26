@@ -10,14 +10,12 @@ import SwiftUI
 @main
 struct NasaDayAstronomyApp: App {
 	@StateObject var astronomyVM = DownloadImageViewModel()
-	@StateObject var articlesVM = FetchArticlesViewModel()
 	@StateObject var favoriteVM = FavoriteViewModel()
 
 	var body: some Scene {
 		WindowGroup {
 				MainScreen()
 					.environmentObject(astronomyVM)
-					.environmentObject(articlesVM)
 					.environmentObject(favoriteVM)
 		}
 	}

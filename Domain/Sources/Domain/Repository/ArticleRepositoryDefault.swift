@@ -8,10 +8,16 @@
 import Foundation
 import StellarApi
 
-class ArticleRepositoryDefault: ArticleRepository {
-	func getArticles() async throws -> [Article] {
+public final class ArticleRepositoryDefault: ArticleRepository {
+	private let api: ArticlesService
+
+	public init(api: ArticlesService) {
+		self.api = api
+	}
+
+	public func getArticles() async throws -> [Article] {
 		do {
-			let articles = try await ArticlesService().getArticles()
+			let articles = try await api.getArticles()
 			return articles.map { .init(dto: $0) }
 		} catch {
 			throw ArticleRepositoryError.noArticles

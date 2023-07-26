@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import StellarApi
+import Domain
 
 struct MainScreen: View {
-	@EnvironmentObject private var articleVm: FetchArticlesViewModel
+	@StateObject private var getArticlesVm = FetchArticlesViewModel(
+		repository: ArticleRepositoryDefault(api: ArticlesService()))
 	@State private var showFavoritesSheet = false
 
 	var body: some View {
@@ -28,7 +31,6 @@ struct MainScreen: View {
 struct AstronomyImageGrid_Previews: PreviewProvider {
 	static var previews: some View {
 		MainScreen()
-			.environmentObject(FetchArticlesViewModel())
 			.environmentObject(FavoriteViewModel())
 			.environmentObject(DownloadImageViewModel())
 	}

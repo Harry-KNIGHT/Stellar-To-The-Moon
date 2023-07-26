@@ -9,35 +9,39 @@ import SwiftUI
 import Domain
 
 class FetchArticlesViewModel: ObservableObject {
-	@Published var articles: [Article]
+	@Published var articles: [Article] = []
+	private let repository: ArticleRepository
 
-	init() {
-		if let data = UserDefaults.standard.data(forKey: "SavedData") {
-			if let decoded = try? JSONDecoder().decode([Article].self, from: data) {
-				articles = decoded
-				return
-			}
-		}
-		// No Saved data
-		articles = []
+
+	init(repository: ArticleRepository) {
+		self.repository = repository
 	}
+//	init() {
+//		if let data = UserDefaults.standard.data(forKey: "SavedData") {
+//			if let decoded = try? JSONDecoder().decode([Article].self, from: data) {
+//				articles = decoded
+//				return
+//			}
+//		}
+//		// No Saved data
+//		articles = []
+//	}
 
 	private func save() {
 		if let encoded = try? JSONEncoder().encode(articles) {
 			UserDefaults.standard.set(encoded, forKey: "SavedData")
 		}
 	}
-//
-//	@MainActor func getArticles() {
-//		Task {
-//			do {
-//				let fetchedArticles = try await FetchArticlesApi.fetchArticles()
-//				filterFetchedArticles(fetchedArticles: fetchedArticles)
-//			} catch {
-//				print("Error \(error.localizedDescription)")
-//			}
-//		}
-//	}
+
+	@MainActor func getArticles() {
+		Task {
+			do {
+				let fetchedArticles = try await repository.getArticles()
+			} catch {
+				print("Error \(error.localizedDescription)")
+			}
+		}
+	}
 
 //	private func filterFetchedArticles(fetchedArticles: [Article]) {
 //		let filteredArticles = fetchedArticles.filter { $0.mediaType == .image }

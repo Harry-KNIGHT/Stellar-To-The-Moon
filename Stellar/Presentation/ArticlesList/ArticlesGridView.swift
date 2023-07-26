@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import StellarApi
+import Domain
 
 struct ArticlesGridView: View {
 	@EnvironmentObject var articleVm: FetchArticlesViewModel
@@ -42,7 +44,7 @@ struct ArticlesGridView_Previews: PreviewProvider {
 	static var previews: some View {
 		NavigationView {
 			ArticlesGridView(showFavoritesSheet: .constant(false))
-			.environmentObject(FetchArticlesViewModel())
+				.environmentObject(FetchArticlesViewModel(repository: ArticleRepositoryDefault(api: ArticlesService())))
 		}
 	}
 }

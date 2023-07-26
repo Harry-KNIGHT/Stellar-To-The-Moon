@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ArticleRepository {
+public protocol ArticleRepository {
 	func getArticles() async throws -> [Article]
 }
