@@ -152,16 +152,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		3C5555D8289059880093122A /* Presentation */ = {
+		3C5555D8289059880093122A /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				3CCE9D962A67295D00BD4060 /* ArticlesList */,
-				3CCE9D972A6729FA00BD4060 /* Favorites */,
-				3CFD116A2892EE6700F14F65 /* EmptyView */,
 				3CBF0C4028906B3100010691 /* AsyncImageView */,
-				3C2AEB542A69EAC800C10AE1 /* Utils */,
+				3CEABB432A71720B00DE6AAB /* Detail */,
+				3CFD116A2892EE6700F14F65 /* EmptyView */,
+				3CCE9D972A6729FA00BD4060 /* Favorites */,
 			);
-			path = Presentation;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		3C57F3352938A219001F74A0 /* Extensions */ = {
@@ -210,7 +210,6 @@
 		3CBF0C4028906B3100010691 /* AsyncImageView */ = {
 			isa = PBXGroup;
 			children = (
-				3C5555D0289057E80093122A /* ArticleDetailView.swift */,
 				3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */,
 			);
 			path = AsyncImageView;
@@ -258,7 +257,8 @@
 			children = (
 				3C44F35A29AA82D300E47CB1 /* Stellar.entitlements */,
 				3CFFA1CA2A67C68400102514 /* Application */,
-				3C5555D8289059880093122A /* Presentation */,
+				3C5555D8289059880093122A /* Features */,
+				3C2AEB542A69EAC800C10AE1 /* Utils */,
 				3C0F8FBC29D716CF001134B5 /* Ressources */,
 				3C5555CC288F21440093122A /* README.md */,
 				3CDBA112288E759B00AB15C7 /* Assets.xcassets */,
@@ -273,6 +273,14 @@
 				3CDBA115288E759B00AB15C7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3CEABB432A71720B00DE6AAB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3C5555D0289057E80093122A /* ArticleDetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		3CFD11662892E15E00F14F65 /* Detail */ = {
