@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import StellarApi
 
 extension Date {
 	// MARK: - Fetch articles from one date in days.

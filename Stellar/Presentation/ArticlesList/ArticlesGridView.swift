@@ -20,25 +20,23 @@ struct ArticlesGridView: View {
 	@State private var showFavoritesSheet: Bool = false
 
 	var body: some View {
-		ScrollView {
-			LazyVGrid(columns:  twoColumns, spacing: 0) {
-				ForEach(articleVm.articles.reversed()) { article in
-					NavigationLink(destination: ArticleDetailView(article: article)) {
-						ArticleImageListCell(article: article)
-							.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
+		NavigationView {
+			ScrollView {
+				LazyVGrid(columns:  twoColumns, spacing: 0) {
+					ForEach(articleVm.articles.reversed()) { article in
+						NavigationLink(destination: ArticleDetailView(article: article)) {
+							ArticleImageListCell(article: article)
+								.frame(width: deviceSizeDivisedByTwo, height: deviceSizeDivisedByTwo)
+						}
 					}
 				}
 			}
-		}
-		.navigationTitle("navigationTitle_homepage")
-		.navigationBarTitleDisplayMode(.inline)
-//		.onAppear {
-//			articleVm.getArticles()
-//		}
-
-		.toolbar {
-			ToolbarItemGroup(placement: .navigationBarTrailing) {
-				DisplayFavoritesSheetView(showFavoritesSheet: $showFavoritesSheet)
+			.navigationTitle("navigationTitle_homepage")
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar {
+				ToolbarItemGroup(placement: .navigationBarTrailing) {
+					DisplayFavoritesSheetView(showFavoritesSheet: $showFavoritesSheet)
+				}
 			}
 		}
 	}
