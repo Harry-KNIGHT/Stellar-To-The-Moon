@@ -68,6 +68,7 @@ class FavoriteViewModel: ObservableObject {
 		}
 	}
 
+
 	func isArticleIsInFavorites(_ article: Article) -> Bool {
 		return self.favoriteArticles.contains(article)
 	}
