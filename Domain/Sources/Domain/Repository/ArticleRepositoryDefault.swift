@@ -11,8 +11,8 @@ import StellarApi
 class ArticleRepositoryDefault: ArticleRepository {
 	func getArticles() async throws -> [Article] {
 		do {
-			let articles = try await SellerService.getArticles()
-			return articles.map { Article(dto: articles) }
+			let articles = try await ArticlesService().getArticles()
+			return articles.map { .init(dto: $0) }
 		} catch {
 			throw ArticleRepositoryError.noArticles
 		}

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ArticlesService {
+public struct ArticlesService {
 
 	public init() { }
 
-	func getArticles(_ daysInterval: Double = 100) async throws -> [ArticleDTO]  {
+	public func getArticles(_ daysInterval: Double = 100) async throws -> [ArticleDTO]  {
 		let url = "https://apod.ellanan.com/api?start_date=\(Date.now.daysAgo(daysInterval))"
 		
 		guard let url = URL(string: url) else {
