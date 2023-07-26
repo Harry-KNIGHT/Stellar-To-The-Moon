@@ -58,15 +58,15 @@ class FavoriteViewModel: ObservableObject {
 
 	/// Add or delet article if it's on array yet or no.
 	/// - Parameter article: Picture, description and copyright.
-//	func addOrDeletFavorite(article: Article) {
-//		if self.favoriteArticles.contains(where: { $0.id == article.id }) {
-//			deletSelectedFavorite(article: article)
-//			save()
-//		} else {
-//			addToFavorite(article: article)
-//			save()
-//		}
-//	}
+	func addOrDeletFavorite(article: Article) {
+		if self.favoriteArticles.contains(where: { $0.id == article.id }) {
+			deletSelectedFavorite(article: article)
+			save()
+		} else {
+			addToFavorite(article: article)
+			save()
+		}
+	}
 
 	func isArticleIsInFavorites(_ article: Article) -> Bool {
 		return self.favoriteArticles.contains(article)
