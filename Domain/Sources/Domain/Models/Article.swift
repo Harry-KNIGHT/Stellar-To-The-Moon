@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Article model
 
-public struct Article: Codable, Equatable {
+public struct Article: Identifiable, Codable, Equatable {
 
 	// MARK: Initializer
 
@@ -30,7 +30,7 @@ public struct Article: Codable, Equatable {
 	}
 
 	// MARK: Properties
-
+	public var id = UUID()
 	public let title: String
 	public let copyright: String?
 	public let explanation: String

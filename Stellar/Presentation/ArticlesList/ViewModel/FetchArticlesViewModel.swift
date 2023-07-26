@@ -15,6 +15,10 @@ class FetchArticlesViewModel: ObservableObject {
 
 	init(repository: ArticleRepository) {
 		self.repository = repository
+
+		Task {
+			await getArticles()
+		}
 	}
 //	init() {
 //		if let data = UserDefaults.standard.data(forKey: "SavedData") {
@@ -33,10 +37,11 @@ class FetchArticlesViewModel: ObservableObject {
 		}
 	}
 
-	@MainActor func getArticles() {
+	@MainActor func getArticles() async {
 		Task {
 			do {
 				let fetchedArticles = try await repository.getArticles()
+				articles = fetchedArticles
 			} catch {
 				print("Error \(error.localizedDescription)")
 			}

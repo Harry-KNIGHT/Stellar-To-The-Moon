@@ -16,7 +16,6 @@
 		3C5555CB288F12640093122A /* ArticleDetailPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* ArticleDetailPhotoView.swift */; };
 		3C5555CD288F21440093122A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5555CC288F21440093122A /* README.md */; };
 		3C5555D1289057E80093122A /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D0289057E80093122A /* ArticleDetailView.swift */; };
-		3C5555D3289058C50093122A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D2289058C50093122A /* MainScreen.swift */; };
 		3C5555D6289058FF0093122A /* FetchArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D5289058FF0093122A /* FetchArticlesViewModel.swift */; };
 		3C57F3342938A213001F74A0 /* URLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57F3332938A213001F74A0 /* URLCache.swift */; };
 		3C6878F2289A5C3300B99797 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6878F1289A5C3300B99797 /* ImageSaver.swift */; };
@@ -83,7 +82,6 @@
 		3C5555CA288F12640093122A /* ArticleDetailPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailPhotoView.swift; sourceTree = "<group>"; };
 		3C5555CC288F21440093122A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3C5555D0289057E80093122A /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
-		3C5555D2289058C50093122A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		3C5555D5289058FF0093122A /* FetchArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchArticlesViewModel.swift; sourceTree = "<group>"; };
 		3C57F3332938A213001F74A0 /* URLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCache.swift; sourceTree = "<group>"; };
 		3C6878F1289A5C3300B99797 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 		3CCE9D962A67295D00BD4060 /* ArticlesList */ = {
 			isa = PBXGroup;
 			children = (
-				3C5555D2289058C50093122A /* MainScreen.swift */,
 				3C0C46542937EE18004DABB7 /* ArticlesGridView.swift */,
 				3CFFA1C82A67C62900102514 /* ViewModel */,
 				3CFD11662892E15E00F14F65 /* Detail */,
@@ -489,7 +486,6 @@
 				3C7F9681293A390200B949DD /* DownloadImageButton.swift in Sources */,
 				3C0C46552937EE18004DABB7 /* ArticlesGridView.swift in Sources */,
 				3CDBA10F288E759A00AB15C7 /* NasaDayAstronomyApp.swift in Sources */,
-				3C5555D3289058C50093122A /* MainScreen.swift in Sources */,
 				3CEC397F29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift in Sources */,
 				3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */,
 				3CB0ADCC29B4A74800261ECF /* ArticleDetailBodyView.swift in Sources */,
