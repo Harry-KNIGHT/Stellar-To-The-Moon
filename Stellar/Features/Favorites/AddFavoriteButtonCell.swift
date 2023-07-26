@@ -14,7 +14,7 @@ struct AddFavoriteButtonCell: View {
 	
 	var body: some View {
 		Button(action: {
-//			favoriteVM.addOrDeletFavorite(article: article)
+		favoriteVM.addOrDeletFavorite(article: article)
 		}, label: {
 			Image(systemName: favoriteVM.setFavoriteIcon(article: article))
 				.customButtonStyle(.title)
