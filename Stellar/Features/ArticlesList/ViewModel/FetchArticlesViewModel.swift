@@ -9,7 +9,7 @@ import SwiftUI
 import Domain
 
 class FetchArticlesViewModel: ObservableObject {
-	@Published var articles: [Article] = []
+	@Published var articles: [ArticlePresentation] = []
 	private let repository: ArticleRepository
 
 
@@ -26,7 +26,17 @@ class FetchArticlesViewModel: ObservableObject {
 		Task {
 			do {
 				let fetchedArticles = try await repository.getArticles()
-				articles = fetchedArticles
+
+				articles = fetchedArticles.map {
+					ArticlePresentation(
+						title: $0.title,
+						copyright: $0.copyright,
+						explanation: $0.explanation,
+						date: $0.date,
+						mediaUrl: $0.mediaUrl,
+						isFavorite: false
+					)
+				}
 			} catch {
 				throw ViewModelErrors.emptyDataReceived
 			}

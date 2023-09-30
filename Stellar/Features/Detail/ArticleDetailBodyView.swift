@@ -9,7 +9,7 @@ import SwiftUI
 import Domain
 
 struct ArticleDetailBodyView: View {
-	let article: Article
+	let article: ArticlePresentation
 	@Binding var isImageDownloading: Bool
 	@Binding var isImageDownloaded: Bool
 

@@ -11,7 +11,7 @@ import UIKit
 import Domain
 
 struct ArticleDetailPhotoView: View {
-	let article: Article
+	let article: ArticlePresentation
 	var body: some View {
 		AsyncImage(url: URL(string: article.mediaUrl)) { image in
 			image

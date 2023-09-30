@@ -15,7 +15,7 @@ struct HeadbandsDetailButtonsView: View {
 	// MARK: Properties
 	@ObservedObject private var downloadImageVm = DownloadImageViewModel()
 
-	let article: Article
+	let article: ArticlePresentation
 
 	@Binding var isImageDowloaded: Bool
 	@Binding var isDownloadingImage: Bool

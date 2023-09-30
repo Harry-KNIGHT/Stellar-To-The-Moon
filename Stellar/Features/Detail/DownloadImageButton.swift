@@ -9,7 +9,7 @@ import SwiftUI
 import Domain
 
 struct DownloadImageButton: View {
-	let article: Article
+	let article: ArticlePresentation
 	@ObservedObject private var downloadImageVm = DownloadImageViewModel()
 
 	@Binding var isImageDowloaded: Bool
@@ -31,7 +31,7 @@ struct DownloadImageButton: View {
 	}
 
 	// TODO: À RETIRER DE LA VUE!
-	func downloadImage(article: Article, isDownloadingImage: Bool, isImageDowloaded: Bool) {
+	func downloadImage(article: ArticlePresentation, isDownloadingImage: Bool, isImageDowloaded: Bool) {
 		Task {
 			do {
 				self.isDownloadingImage = true

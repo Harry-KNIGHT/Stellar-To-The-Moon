@@ -9,7 +9,7 @@ import SwiftUI
 import Domain
 
 struct ArticleImageListCell: View {
-	let article: Article
+	let article: ArticlePresentation
 
 	var body: some View {
 		AsyncImage(url: URL(string: article.mediaUrl)) { image in

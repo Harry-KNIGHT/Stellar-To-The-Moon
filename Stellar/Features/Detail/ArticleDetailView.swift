@@ -10,7 +10,7 @@ import UIKit
 import Domain
 
 struct ArticleDetailView: View {
-	public let article: Article
+	public let article: ArticlePresentation
 
 	// MARK: Properties
 	@State private var isSheetPresented = false

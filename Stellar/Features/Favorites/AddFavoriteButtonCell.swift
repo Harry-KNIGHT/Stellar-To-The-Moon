@@ -9,7 +9,7 @@ import SwiftUI
 import Domain
 
 struct AddFavoriteButtonCell: View {
-	let article: Article
+	let article: ArticlePresentation
 	@StateObject var favoriteVM = FavoriteViewModel()
 	
 	var body: some View {

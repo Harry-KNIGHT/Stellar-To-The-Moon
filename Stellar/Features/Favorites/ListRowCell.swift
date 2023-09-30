@@ -10,7 +10,7 @@ import Domain
 
 // TODO: delet isInFavoriteListView bc it's used only on FavoritesListView.
 struct ListRowCell: View {
-	let article: Article
+	let article: ArticlePresentation
 
 	var body: some View {
 		HStack(alignment: .center, spacing: 10) {

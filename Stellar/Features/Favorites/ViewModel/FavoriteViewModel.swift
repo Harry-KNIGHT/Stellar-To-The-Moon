@@ -9,13 +9,13 @@ import Foundation
 import Domain
 
 class FavoriteViewModel: ObservableObject {
-	@Published var favoriteArticles: [Article]
+	@Published var favoriteArticles: [ArticlePresentation]
 
 	// MARK: Initializer
 	
 	init() {
 		if let data = UserDefaults.standard.data(forKey: "SavedFavoritesData") {
-			if let decoded = try? JSONDecoder().decode([Article].self, from: data) {
+			if let decoded = try? JSONDecoder().decode([ArticlePresentation].self, from: data) {
 				favoriteArticles = decoded
 				return
 			}
@@ -28,7 +28,7 @@ class FavoriteViewModel: ObservableObject {
 
 	/// Add or delet article if it's on array yet or no.
 	/// - Parameter article: Picture, description and copyright.
-	func addOrDeletFavorite(article: Article) {
+	func addOrDeletFavorite(article: ArticlePresentation) {
 		if self.favoriteArticles.contains(where: { $0.id == article.id }) {
 			deletSelectedFavorite(article: article)
 			save()
@@ -38,12 +38,12 @@ class FavoriteViewModel: ObservableObject {
 		}
 	}
 
-	func isArticleIsInFavorites(_ article: Article) -> Bool {
-		return self.favoriteArticles.contains(article)
+	func isArticleIsInFavorites(_ article: ArticlePresentation) -> Bool {
+		return article.isFavorite
 	}
 
-	func setFavoriteIcon(article: Article) -> String {
-		return isArticleIsInFavorites(article) ? "star.fill" : "star"
+	func setFavoriteIcon(article: ArticlePresentation) -> String {
+		return article.isFavorite ? "star.fill" : "star"
 	}
 
 	/// Permit to move index of each article in the array manually.
@@ -72,13 +72,13 @@ class FavoriteViewModel: ObservableObject {
 
 	/// Add article to favorite
 	/// - Parameter article: Article is from NasaAstronomy model
-	private func addToFavorite(article: Article) {
+	private func addToFavorite(article: ArticlePresentation) {
 		self.favoriteArticles.insert(article, at: 0)
 	}
 
 	/// Delet selected article
 	/// - Parameter article: Article is from NasaAstronomy model
-	private func deletSelectedFavorite(article: Article) {
+	private func deletSelectedFavorite(article: ArticlePresentation) {
 		self.favoriteArticles.removeAll { $0.date == article.date }
 	}
 }

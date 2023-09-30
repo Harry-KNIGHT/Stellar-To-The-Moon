@@ -13,6 +13,7 @@
 		3C15ADA52A6EF12A000659A5 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 3C15ADA42A6EF12A000659A5 /* Domain */; };
 		3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C266B9E2981C06500A9A888 /* CustomButtonStyle.swift */; };
 		3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */; };
+		3C52A81B2AC7F152004D08E6 /* ArticlePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52A81A2AC7F152004D08E6 /* ArticlePresentation.swift */; };
 		3C5555CB288F12640093122A /* ArticleDetailPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555CA288F12640093122A /* ArticleDetailPhotoView.swift */; };
 		3C5555CD288F21440093122A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5555CC288F21440093122A /* README.md */; };
 		3C5555D1289057E80093122A /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5555D0289057E80093122A /* ArticleDetailView.swift */; };
@@ -79,6 +80,7 @@
 		3C385C202A6D396F0027882B /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		3C41BEA42928D3B5002043D4 /* ArticleImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageListCell.swift; sourceTree = "<group>"; };
 		3C44F35A29AA82D300E47CB1 /* Stellar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stellar.entitlements; sourceTree = "<group>"; };
+		3C52A81A2AC7F152004D08E6 /* ArticlePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePresentation.swift; sourceTree = "<group>"; };
 		3C5555CA288F12640093122A /* ArticleDetailPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailPhotoView.swift; sourceTree = "<group>"; };
 		3C5555CC288F21440093122A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3C5555D0289057E80093122A /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,14 @@
 				3C7F9677293A32D500B949DD /* ViewModifiers */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3C52A81C2AC7F15A004D08E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C52A81A2AC7F152004D08E6 /* ArticlePresentation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3C5555D8289059880093122A /* Features */ = {
@@ -257,6 +267,7 @@
 				3C44F35A29AA82D300E47CB1 /* Stellar.entitlements */,
 				3CFFA1CA2A67C68400102514 /* Application */,
 				3C5555D8289059880093122A /* Features */,
+				3C52A81C2AC7F15A004D08E6 /* Models */,
 				3C2AEB542A69EAC800C10AE1 /* Utils */,
 				3C0F8FBC29D716CF001134B5 /* Ressources */,
 				3C5555CC288F21440093122A /* README.md */,
@@ -490,6 +501,7 @@
 				3CEC397F29A6A4E7009CEB2A /* HeadbandsDetailButtonsView.swift in Sources */,
 				3C266B9F2981C06500A9A888 /* CustomButtonStyle.swift in Sources */,
 				3CB0ADCC29B4A74800261ECF /* ArticleDetailBodyView.swift in Sources */,
+				3C52A81B2AC7F152004D08E6 /* ArticlePresentation.swift in Sources */,
 				3CBB34A428BE35F700AC0EDF /* ListRowCell.swift in Sources */,
 				3CBF0C42289134EE00010691 /* FavoriteViewModel.swift in Sources */,
 				3C41BEA52928D3B5002043D4 /* ArticleImageListCell.swift in Sources */,
